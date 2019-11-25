@@ -1,5 +1,4 @@
-# :closed_book: 无限文档 
-
+# :closed_book: 无限文档
 
 目录
 
@@ -7,7 +6,7 @@
 - [CSS]()
 - [JS]()
   - [模块化]()
-    - [原生js实现模块化]()
+    - [原生 js 实现模块化]()
   - [ECMAScript]()
   - [ES6](https://github.com/ArcherGrey/UnlimitedDocsWork/labels/ES6)
     - [类型扩展]()
@@ -33,9 +32,10 @@
 ---
 
 ## :books: 书籍
+
 - 前端
   - [JS 函数式编程指南 pdf](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/book/mostly-adequate-guide-chinese.pdf)
-    - [gitbook版本](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
+    - [gitbook 版本](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
 
 ---
 
@@ -56,7 +56,7 @@
 - [javascript 比赛](https://2019.js13kgames.com/)
 - [语雀](https://www.yuque.com/)
 - [ScriptOJ 是首个 Web 前端开发评测系统](http://scriptoj.mangojuice.top/)
-- [张鑫旭 网站 css前端](https://www.zhangxinxu.com/)
+- [张鑫旭 网站 css 前端](https://www.zhangxinxu.com/)
 
 ---
 
@@ -65,7 +65,7 @@
 - jQuery
 - Vue [文档](https://cn.vuejs.org/index.html)
   - [chrome devtools](https://github.com/ArcherGrey/UnlimitedDocsWork/issues/5)
-- React 
+- React
   - [react 小书（入门）](http://huziketang.mangojuice.top/books/react/)
   - [react 小书配套练习](http://scriptoj.mangojuice.top/problemsGroups/593a2e29b3838c385539fa4f)
   - [redux 文档](https://www.redux.org.cn/)
@@ -88,9 +88,9 @@
   - [github emoji](https://github.com/caiyongji/emoji-list)
 - 图标
   - [阿里巴巴矢量图标库](https://www.iconfont.cn/)
-- git 
+- git
   - [国内镜像](https://github.com/waylau/git-for-win)
-  - [Git的奇技淫巧](https://github.com/521xueweihan/git-tips)
+  - [Git 的奇技淫巧](https://github.com/521xueweihan/git-tips)
 
 ---
 
@@ -111,6 +111,6 @@
 
 #### Vue
 
-名称|错误信息|原因|解决
-:-:|:-:|:-:|:-:
-排序后数组导致渲染无限循环|You may have an infinite update loop in a component render function. |array.sort()改变了数组自身，导致了过滤器又一次被触发|确保在副本上对数组排序：return value.slice().sort(...)
+|            名称            |                               错误信息                               |                         原因                         |                          解决                          |
+| :------------------------: | :------------------------------------------------------------------: | :--------------------------------------------------: | :----------------------------------------------------: |
+| 排序后数组导致渲染无限循环 | You may have an infinite update loop in a component render function. | array.sort()改变了数组自身，导致了过滤器又一次被触发 | 确保在副本上对数组排序：return value.slice().sort(...) |
