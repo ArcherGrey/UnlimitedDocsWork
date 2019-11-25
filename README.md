@@ -11,7 +11,7 @@
   - [ES6]()
     - [类型扩展]()
       - [模板字面量](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/docs/JavaScript/es6/type/%E6%A8%A1%E6%9D%BF%E5%AD%97%E9%9D%A2%E9%87%8F.md)
-      - [set 和 map]()
+      - [set 和 map](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/docs/JavaScript/es6/type/set_map.md)
   - [DOM]()
   - [特殊技巧]()
 - [HTTP]()
@@ -91,6 +91,8 @@
 - git
   - [国内镜像](https://github.com/waylau/git-for-win)
   - [Git 的奇技淫巧](https://github.com/521xueweihan/git-tips)
+- 切图工具
+  - [pxcook](https://www.fancynode.com.cn/pxcook)
 
 ---
 
