@@ -5,7 +5,7 @@
 - [HTML]()
 - [CSS]()
   - [常用]()
-    - [纯 CSS 自定义关闭按钮]()
+    - [纯 CSS 自定义关闭按钮](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/docs/Css/normal/closebutton.md)
 - [JS]()
   - [模块化]()
     - [原生 js 实现模块化](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/docs/JavaScript/module/%E5%8E%9F%E7%94%9Fjs%E6%A8%A1%E5%9D%97%E5%8C%96.md)
@@ -95,6 +95,7 @@
   - [Git 的奇技淫巧](https://github.com/521xueweihan/git-tips)
 - 切图工具
   - [pxcook](https://www.fancynode.com.cn/pxcook)
+  - phototshop
 
 ---
 
@@ -118,3 +119,8 @@
 |            名称            |                               错误信息                               |                         原因                         |                          解决                          |
 | :------------------------: | :------------------------------------------------------------------: | :--------------------------------------------------: | :----------------------------------------------------: |
 | 排序后数组导致渲染无限循环 | You may have an infinite update loop in a component render function. | array.sort()改变了数组自身，导致了过滤器又一次被触发 | 确保在副本上对数组排序：return value.slice().sort(...) |
+
+## 注意
+
+- css
+  - chrome 中文最小有效字体是 12px
