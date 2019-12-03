@@ -27,9 +27,12 @@
         - [Some Background on OpenLayers]()
         - [Raster Reprojection]()
 - [前端框架]()
+
+  - [vue]()
+    - [计算属性]()
+
 - [后端相关]()
 - [前端工具]()
-- [参考资料]()
 
 ---
 
