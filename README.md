@@ -17,7 +17,7 @@
   - [DOM]()
   - [ajax]()
     - [基础]()
-      - [请求方式]()
+      - [请求方式](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/docs/JavaScript/ajax/basic/request.md)
   - [特殊技巧]()
 - [HTTP]()
 - [WebGis]()
