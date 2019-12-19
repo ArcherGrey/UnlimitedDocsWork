@@ -37,6 +37,7 @@
 
   - [vue]()
     - [计算属性](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/docs/FE_framework/vue/computed.md)
+    - [生命周期](./docs/FE_framework/vue/life.md)
 
 - [后端相关]()
 - [前端工具]()
