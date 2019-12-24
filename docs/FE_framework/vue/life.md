@@ -4,8 +4,8 @@
 
 - `beforeCreate` 实例创建前：这个阶段实例的 `data、methods` 是读不到的
 - `created` 实例创建后：这个阶段已经完成了数据绑定(`data observer`)，属性和方法的运算， `watch/event` 事件回调。`mount` 挂载阶段还没开始，`$el` 属性目前不可见，数据并没有在 `DOM` 元素上进行渲染
-- `beforeMount`：在挂载开始之前被调用：相关的 render 函数首次被调用。
-- mounted：el 选项的 DOM 节点 被新创建的 vm.\$el 替换，并挂载到实例上去之后调用此生命周期函数。此时实例的数据在 DOM 节点上进行渲染
+- `beforeMount`：在挂载开始之前被调用：相关的 `render` 函数首次被调用。
+- `mounted`：`el` 选项的 `DOM` 节点 被新创建的 `vm.$el` 替换，并挂载到实例上去之后调用此生命周期函数。此时实例的数据在 DOM 节点上进行渲染
 - beforeUpdate：数据更新时调用，但不进行 DOM 重新渲染，在数据更新时 DOM 没渲染前可以在这个生命函数里进行状态处理
 - updated：这个状态下数据更新并且 DOM 重新渲染，当这个生命周期函数被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。当实例每次进行数据更新时 updated 都会执行
 - beforeDestory：实例销毁之前调用。
