@@ -77,6 +77,7 @@
 - [ScriptOJ 是首个 Web 前端开发评测系统](http://scriptoj.mangojuice.top/)
 - [张鑫旭 网站 css 前端](https://www.zhangxinxu.com/)
 - [游戏编程](https://www.codingame.com/start)
+- [typescript 文档](https://typescript.bootcss.com/)
 
 ---
 
