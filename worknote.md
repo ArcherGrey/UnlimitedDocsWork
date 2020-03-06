@@ -35,6 +35,19 @@
 ---
 
 - 农业智慧气象服务平台
+
   - react
   - typescript
   - BrowserSync
+
+- 1-2
+
+---
+
+- 数据可视化系统
+
+- vue
+- echarts
+- 数据格式设置
+- 基准线设置
+- 页面样式
