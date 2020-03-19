@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .content {
+        height: 100%;
+        width: 100%;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+      }
+      .top {
+        /* height: 300px; */
+        width: 100%;
+        background-color: bisque;
+      }
+      .bottom {
+        flex: 1;
+        background-color: brown;
+      }
+      .bar {
+        height: 6px;
+        width: 100%;
+        cursor: row-resize;
+        background-color: black;
+        opacity: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content" id="resize" @mouseup="endMove" @mousemove="resize">
+      <div class="top" :style="{height:topH}"></div>
+      <div class="bar" @mousedown="beginMove"></div>
+      <div class="bottom"></div>
+    </div>
+    <script>
+      let vm = new Vue({
+        el: "#resize",
+        data: {
+          mark: false,
+          topH: "300px"
+        },
+        methods: {
+          beginMove() {
+            this.mark = true;
+          },
+          endMove() {
+            this.mark = false;
+          },
+          resize(e) {
+            if (this.mark && e.clientY > 100) {
+              this.topH = e.clientY + "px";
+            }
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
