@@ -52,9 +52,7 @@
 - [github]()
   - [无法登录](./docs/github/host.md)
 - [工作总结]()
-- [git]()
-  - [图解 git](https://marklodato.github.io/visual-git-guide/index-zh-cn.html)
-  - [git 在线可视化练习](https://learngitbranching.js.org/)
+
 ---
 
 ## :books: 书籍
@@ -120,6 +118,8 @@
 - git
   - [国内镜像](https://github.com/waylau/git-for-win)
   - [Git 的奇技淫巧](https://github.com/521xueweihan/git-tips)
+  - [图解 git](https://marklodato.github.io/visual-git-guide/index-zh-cn.html)
+  - [git 在线可视化练习](https://learngitbranching.js.org/)
 - 切图工具
   - [pxcook](https://www.fancynode.com.cn/pxcook)
   - phototshop
