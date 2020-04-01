@@ -54,6 +54,7 @@
 - [工作总结]()
 - [git]()
   - [图解 git](https://marklodato.github.io/visual-git-guide/index-zh-cn.html)
+  - [git 在线可视化练习](https://learngitbranching.js.org/)
 ---
 
 ## :books: 书籍
