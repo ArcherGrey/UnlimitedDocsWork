@@ -3,12 +3,7 @@
 目录
 
 - [HTML]()
-- [CSS]()
-  - [常用](./doc/Css/normal/index)
-  - [布局]()
-    - [盒模型]()
-      - [介绍](./docs/Css/layout/box/index.md)
-      - [flex](./docs/Css/layout/box/flex.md)
+- [CSS](./doc/Css/index.md)
 - [JS]()
   - [模块化]()
     - [原生 js 实现模块化](./docs/JavaScript/module/原生js模块化.md)
