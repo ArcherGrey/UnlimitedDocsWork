@@ -4,7 +4,7 @@
 
 - [HTML]()
 - [CSS]()
-  - [常用]()
+  - [常用](./doc/Css/normal)
     - [纯 CSS 自定义关闭按钮](./docs/Css/normal/closebutton.md)
     - [利用伪元素自定义图标](./docs/Css/normal/fakeicon.md)
     - [滚动效果](./docs/Css/normal/roll.md)
@@ -52,6 +52,7 @@
 - [github]()
   - [无法登录](./docs/github/host.md)
 - [工作总结]()
+- [算法]()
 
 ---
 
@@ -123,6 +124,7 @@
 - 切图工具
   - [pxcook](https://www.fancynode.com.cn/pxcook)
   - phototshop
+  - pageruler chrome 插件 可以得到页面元素尺寸
 - 接口调试
   - [postman]()
 
