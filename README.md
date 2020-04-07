@@ -4,12 +4,7 @@
 
 - [HTML]()
 - [CSS]()
-  - [常用](./doc/Css/normal)
-    - [纯 CSS 自定义关闭按钮](./docs/Css/normal/closebutton.md)
-    - [利用伪元素自定义图标](./docs/Css/normal/fakeicon.md)
-    - [滚动效果](./docs/Css/normal/roll.md)
-    - [可调整宽高 div](./docs/Css/normal/resizediv.md)
-    - [伪类实现悬浮动画](./docs/Css/normal/hoverAnime.md)
+  - [常用](./doc/Css/normal/index)
   - [布局]()
     - [盒模型]()
       - [介绍](./docs/Css/layout/box/index.md)
