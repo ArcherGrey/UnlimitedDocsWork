@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./anime.js"></script>
+
+    <!-- 引入样式 -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        background: cadetblue;
+        margin: 0;
+      }
+      #main {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .index {
+        background-color: coral;
+        border-radius: 30%;
+
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div v-for="item in data" class="index" @mouseover="anime">
+        {{item.label}}
+      </div>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>

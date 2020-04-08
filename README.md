@@ -74,6 +74,7 @@
 - [张鑫旭 网站 css 前端](https://www.zhangxinxu.com/)
 - [游戏编程](https://www.codingame.com/start)
 - [typescript 文档](https://typescript.bootcss.com/)
+- [screeps 编程游戏]()
 
 ---
 
@@ -140,6 +141,13 @@
 |            名称            |                               错误信息                               |                         原因                         |                          解决                          |
 | :------------------------: | :------------------------------------------------------------------: | :--------------------------------------------------: | :----------------------------------------------------: |
 | 排序后数组导致渲染无限循环 | You may have an infinite update loop in a component render function. | array.sort()改变了数组自身，导致了过滤器又一次被触发 | 确保在副本上对数组排序：return value.slice().sort(...) |
+
+#### 模块
+
+|                 名称                  |                                                                                                    错误信息                                                                                                    |             原因             |                解决                 |
+| :-----------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------: | :---------------------------------: |
+|              import 报错              |                                                                                    Uncaught SyntaxError:Unexpected token {                                                                                     | 模块是新功能需要声明强制使用 |   `<script>` 添加 `type="module"`   |
+| html 文件引用本地 js 文件出现跨域问题 | index.html:1 Access to script at 'file:///xxx' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https. |     file 协议会导致跨域      | 安装 anywhere npm 包 使用 http 协议 |
 
 ## 注意
 
