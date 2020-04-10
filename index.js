@@ -49,6 +49,27 @@ var Main = {
         ],
       });
     },
+    hideContentAnime() {
+      anime({
+        targets: "#content",
+        rotate: [
+          {
+            value: 0,
+            duration: 10,
+            easing: "easeInOutSine",
+          },
+          {
+            value: 3600,
+            duration: 1000,
+            easing: "easeInOutSine",
+          },
+        ],
+        scale: [
+          { value: 1, easing: "easeOutSine", duration: 100 },
+          { value: 0, easing: "easeInOutQuad", duration: 300 },
+        ],
+      });
+    },
     mouseover(e) {
       anime({
         targets: e.target,
@@ -86,6 +107,7 @@ var Main = {
       }, 100);
     },
     backToLast() {
+      this.hideContentAnime();
       let level = this.lastIndex.split(".");
       switch (level.length) {
         case 1:
