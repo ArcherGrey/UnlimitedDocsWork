@@ -28,6 +28,27 @@ var Main = {
         delay: anime.stagger(100),
       });
     },
+    showContentAnime() {
+      anime({
+        targets: "#content",
+        rotate: [
+          {
+            value: 0,
+            duration: 10,
+            easing: "easeInOutSine",
+          },
+          {
+            value: 3600,
+            duration: 1000,
+            easing: "easeInOutSine",
+          },
+        ],
+        scale: [
+          { value: 0.1, easing: "easeOutSine", duration: 100 },
+          { value: 1, easing: "easeInOutQuad", duration: 1200 },
+        ],
+      });
+    },
     mouseover(e) {
       anime({
         targets: e.target,
@@ -42,7 +63,6 @@ var Main = {
     },
     clickIndex(item) {
       if (item.children instanceof Array) {
-        debugger;
         this.data = item.children;
         this.lastIndex = item.id;
         setTimeout(() => {
@@ -54,7 +74,7 @@ var Main = {
         axios.get(item.path).then(function (response) {
           document.getElementById("content").innerHTML = marked(response.data);
           console.log(response);
-
+          context.showContentAnime();
           context.data = [];
         });
       }
@@ -66,7 +86,6 @@ var Main = {
       }, 100);
     },
     backToLast() {
-      debugger;
       let level = this.lastIndex.split(".");
       switch (level.length) {
         case 1:
