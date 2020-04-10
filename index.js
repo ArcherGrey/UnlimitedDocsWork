@@ -10,30 +10,96 @@ var Main = {
       filterText: "",
       data: indexData,
       count: 0,
+      index: indexData,
+      lastIndex: {},
     };
   },
   mounted() {
-    anime({
-      targets: ".index",
-      translateX: 100,
-      scale: [
-        { value: 0.1, easing: "easeOutSine", duration: 500 },
-        { value: 1, easing: "easeInOutQuad", duration: 1200 },
-      ],
-      delay: anime.stagger(200, { grid: [14, 5], from: "center" }),
-    });
+    this.indexAnime();
   },
   methods: {
-    anime() {
-      let x = this.count % 2 === 0 ? 250 : -250;
-      this.count++;
+    indexAnime() {
       anime({
         targets: ".index",
-        translateX: x,
+        scale: [
+          { value: 0.1, easing: "easeOutSine", duration: 100 },
+          { value: 1, easing: "easeInOutQuad", duration: 500 },
+        ],
         delay: anime.stagger(100),
       });
+    },
+    mouseover(e) {
+      anime({
+        targets: e.target,
+        scale: { value: 1.2, easing: "easeInOutQuad", duration: 1000 },
+      });
+    },
+    mouseleave(e) {
+      anime({
+        targets: e.target,
+        scale: { value: 1, easing: "easeOutSine", duration: 1000 },
+      });
+    },
+    clickIndex(item) {
+      if (item.children instanceof Array) {
+        debugger;
+        this.data = item.children;
+        this.lastIndex = item.id;
+        setTimeout(() => {
+          this.indexAnime();
+        }, 100);
+      } else if (item.path) {
+        this.lastIndex = item.id;
+        let context = this;
+        axios.get(item.path).then(function (response) {
+          document.getElementById("content").innerHTML = marked(response.data);
+          console.log(response);
+
+          context.data = [];
+        });
+      }
+    },
+    backToIndex() {
+      this.data = this.index;
+      setTimeout(() => {
+        this.indexAnime();
+      }, 100);
+    },
+    backToLast() {
+      debugger;
+      let level = this.lastIndex.split(".");
+      switch (level.length) {
+        case 1:
+          this.data = this.index;
+          break;
+        case 2:
+          this.data = this.index.filter((e) => {
+            return e.id == level[0];
+          })[0].children;
+          break;
+        case 3:
+          this.data = this.index
+            .filter((e) => {
+              return e.id == level[0];
+            })[0]
+            .children.filter((e) => {
+              return e.id == level[0] + "." + level[1];
+            })[0].children;
+      }
+      level.pop();
+      if (level.length > 1) {
+        this.lastIndex = level.join(".");
+      } else if (level.length === 0) {
+        this.lastIndex = "";
+      } else {
+        this.lastIndex = level[0];
+      }
+
+      setTimeout(() => {
+        this.indexAnime();
+      }, 100);
     },
   },
 };
 var Ctor = Vue.extend(Main);
-new Ctor().$mount("#main");
+new Ctor().$mount("#app");

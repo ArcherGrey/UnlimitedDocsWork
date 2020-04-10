@@ -5,18 +5,8 @@
 - [HTML]()
 - [CSS](./doc/Css/index.md)
 - [JS]()
-  - [模块化]()
-    - [原生 js 实现模块化](./docs/JavaScript/module/原生js模块化.md)
-    - [各种模块化方案技术](./docs/JavaScript/module/module.md)
-  - [ECMAScript]()
   - [ES6]()
-    - [类型扩展]()
-      - [模板字面量](./docs/JavaScript/es6/type/模板字面量.md)
-      - [set 和 map](./docs/JavaScript/es6/type/set_map.md)
-  - [DOM]()
   - [ajax]()
-    - [基础]()
-      - [请求方式](./docs/JavaScript/ajax/basic/request.md)
   - [特殊技巧]()
 - [HTTP]()
 - [WebGis]()
@@ -118,6 +108,8 @@
   - pageruler chrome 插件 可以得到页面元素尺寸
 - 接口调试
   - [postman]()
+- npm
+  - anywhere 随时在本地搭建 http 环境
 
 ---
 
@@ -135,6 +127,12 @@
 ## :question: 问题和解决
 
 ### 前端
+
+#### 项目
+
+|   名称   | 错误信息 |       原因        |                  解决                   |
+| :------: | :------: | :---------------: | :-------------------------------------: |
+| 编译报错 | 缺少模块 | node_modules 异常 | 刪除 node_modules 里面的内容重新 instal |
 
 #### Vue
 
