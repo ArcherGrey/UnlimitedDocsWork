@@ -44,6 +44,8 @@
   - [mongodb]()
     - [使用说明](./docs/BackEnd/mongo/index.md)
 - [算法]()
+  - [leetcode]()
+    - [队列&栈](./docs/Algorithm/leetcode/queue_stack.md)
 - [github]()
   - [无法登录](./docs/github/host.md)
 - [工作总结]()

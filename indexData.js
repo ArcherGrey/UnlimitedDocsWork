@@ -131,4 +131,21 @@ export const index = [
     id: "9",
     label: "github",
   },
+  {
+    id: "10",
+    label: "算法",
+    children: [
+      {
+        id: "10.1",
+        label: "leetcode",
+        children: [
+          {
+            id: "10.1.1",
+            label: "队列&栈",
+            path: "./docs/Algorithm/leetcode/queue_stack.md",
+          },
+        ],
+      },
+    ],
+  },
 ];
