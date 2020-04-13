@@ -24,11 +24,19 @@ body {
   margin-left: 10%;
   width: 36%;
   height: 90%;
-  background-color: #252423;
+  background-color: #555555;
   height: 70%;
   overflow-y: scroll;
   font-size: 1.1rem;
   color: #a4ff4f;
+  word-wrap: break-word;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  border: 5px solid #2ebf21;
+}
+#content::-webkit-scrollbar {
+  width: 1px;
+  background-color: transparent;
 }
 /* #content::before {
   content: "";
@@ -46,13 +54,18 @@ h2,
 h3 {
   margin: 1rem 1rem;
 }
+h1,
+h2,
+h3 {
+  color: crimson;
+}
 pre code {
-  position: relative;
+  /* position: relative; */
   display: inline-block;
   width: 100%;
-  padding: 8px 12px;
+  /* padding: 8px 12px; */
   background-color: rgba(0, 0, 0, 0.226);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 5px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
 }
 /* #content:hover {

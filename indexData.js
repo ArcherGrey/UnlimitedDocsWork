@@ -84,12 +84,12 @@ export const index = [
           {
             id: "3.2.1",
             label: "模板字面量",
-            path: "./docs/JavaScript/es6/type/模板字面量.md",
+            path: "./docs/JavaScript/es6/模板字面量.md",
           },
           {
             id: "3.2.2",
             label: "set 和 map",
-            path: "./docs/JavaScript/es6/type/set_map.md",
+            path: "./docs/JavaScript/es6/set_map.md",
           },
         ],
       },
@@ -100,7 +100,7 @@ export const index = [
           {
             id: "3.3.1",
             label: "请求方式",
-            path: "./docs/JavaScript/ajax/basic/request.md",
+            path: "./docs/JavaScript/ajax/request.md",
           },
         ],
       },
@@ -113,6 +113,7 @@ export const index = [
   {
     id: "5",
     label: "webGis",
+    children: [{}],
   },
   {
     id: "6",
