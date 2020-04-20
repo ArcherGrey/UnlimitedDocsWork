@@ -164,3 +164,36 @@ MyCircularQueue.prototype.isFull = function() {
  * var param_6 = obj.isFull()
  */
 ```
+
+### 队列和广度优先搜索
+
+广度优先搜索（`BFS`）的一个常见应用是找出从根节点到目标节点的最短路径
+
+类似层次遍历，越接近根节点越早遍历，也就是在第 `k` 轮添加节点，那么最短路径就是 `k`
+
+模板 ：
+
+```JavaScript
+// 返回根节点和目标节点之间的最短路径长度
+function BFS(root,targer){
+    let queue=[]; // 存储等待处理的节点
+    let step=0; // 记录根节点到当前节点的步数
+    queue.push(root); // 初始状态根节点入队
+    while(queue.length===0){ // 队列不空就不断遍历
+        step++;
+        let size = queue.length;
+        for(var i=0;i<size;++i){
+            let cur = queue.shift(); // 需要处理的节点出队
+            if(cur == target){ // 如果当前节点就是目标节点就返回
+                return step;
+            }
+            // 如果不是就把当前节点的邻节点入队
+            for(var i=0;i<cur.children;++i){
+                queue.push(cur.children[i]);
+            }
+        }
+    }
+    return -1; // 没有找到目标节点就返回 -1
+
+}
+```

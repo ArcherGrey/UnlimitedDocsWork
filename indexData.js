@@ -137,12 +137,23 @@ export const index = [
     children: [
       {
         id: "10.1",
-        label: "leetcode",
+        label: "leetcode探索",
         children: [
           {
             id: "10.1.1",
             label: "队列&栈",
-            path: "./docs/Algorithm/leetcode/queue_stack.md",
+            path: "./docs/Algorithm/leetcode_Class/queue_stack.md",
+          },
+        ],
+      },
+      {
+        id: "10.2",
+        label: "leetcode题解",
+        children: [
+          {
+            id: "10.2.1",
+            label: "200. 岛屿数量",
+            path: "./docs/Algorithm/leetcode/200.md",
           },
         ],
       },
