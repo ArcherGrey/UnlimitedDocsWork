@@ -95,8 +95,4 @@
 ## :question: 一些遇到的坑
 
 - [element-ui](./docs/question/element.md)
-
-## 注意
-
-- css
-  - chrome 中文最小有效字体是 12px
+- [css](./docs/question/css.md)
