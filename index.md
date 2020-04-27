@@ -49,6 +49,7 @@
   - [leetcode 探索]()
     - [队列&栈](./docs/Algorithm/leetcode_Class/queue_stack.md)
   - [leetcode 题解]()
+    - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)
     - 待完成[面试题 51. 数组中的逆序对](./docs/Algorithm/leetcode/i51.md)
 - [github]()
