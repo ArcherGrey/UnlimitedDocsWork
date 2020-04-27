@@ -55,6 +55,17 @@ export const index = [
           },
         ],
       },
+      {
+        id: "2.3",
+        label: "技巧",
+        children: [
+          {
+            id: "2.3.1",
+            label: "精简 css 代码",
+            path: "./docs/Css/tricks/cssBattle.md",
+          },
+        ],
+      },
     ],
   },
   {
@@ -151,9 +162,14 @@ export const index = [
         label: "leetcode题解",
         children: [
           {
-            id: "10.2.1",
+            id: "10.2.200",
             label: "200. 岛屿数量",
             path: "./docs/Algorithm/leetcode/200.md",
+          },
+          {
+            id: "10.2.i51",
+            label: "面试题 51. 数组中的逆序对",
+            path: "./docs/Algorithm/leetcode/i51.md",
           },
         ],
       },

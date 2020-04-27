@@ -2,6 +2,8 @@
 
 - [HTML]()
 - [CSS]()
+  - [技巧]()
+    - [精简 css 代码](./docs/Css/tricks/cssBattle.md)
   - [常用]()
     - [纯 CSS 自定义关闭按钮](./docs/Css/normal/closebutton.md)
     - [利用伪元素自定义图标](./docs/Css/normal/fakeicon.md)
@@ -48,6 +50,7 @@
     - [队列&栈](./docs/Algorithm/leetcode_Class/queue_stack.md)
   - [leetcode 题解]()
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)
+    - 待完成[面试题 51. 数组中的逆序对](./docs/Algorithm/leetcode/i51.md)
 - [github]()
   - [无法登录](./docs/github/host.md)
 - [工作总结]()

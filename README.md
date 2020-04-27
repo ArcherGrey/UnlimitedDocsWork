@@ -78,6 +78,8 @@
   - [postman]()
 - npm
   - anywhere 随时在本地搭建 http 环境
+- 壁纸软件
+  - Wallpaper Engine
 
 ---
 
