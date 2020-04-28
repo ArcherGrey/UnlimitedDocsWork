@@ -36,8 +36,11 @@
 - [前端框架]()
 
   - [vue]()
-    - [计算属性](./docs/FE_framework/vue/computed.md)
-    - [生命周期](./docs/FE_framework/vue/life.md)
+    - [基础]()
+      - [计算属性](./docs/FE_framework/vue/computed.md)
+      - [生命周期](./docs/FE_framework/vue/life.md)
+    - [可复用性 & 组合]()
+      - [过滤器](./docs/FE_framework/vue/filter.md)
 
 - [前端工具]()
 - [后端相关]()
@@ -52,6 +55,12 @@
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)
     - 待完成[面试题 51. 数组中的逆序对](./docs/Algorithm/leetcode/i51.md)
+    - [面试题 56 - I. 数组中数字出现的次数](./docs/Algorithm/leetcode/i56.md)
 - [github]()
   - [无法登录](./docs/github/host.md)
 - [工作总结]()
+
+# 问题
+
+- 交互
+- 样式

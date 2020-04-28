@@ -22,35 +22,19 @@
   <body>
     <div id="app">
       <div id="main">
-        <div
-          class="backBtn"
-          v-if="data!=index"
-          @click="backToIndex"
-          @mouseover="mouseover"
-          @mouseleave="mouseleave"
+        <el-input placeholder="输入关键字进行搜索" v-model="filterText">
+        </el-input>
+
+        <el-tree
+          class="filter-tree"
+          :data="data"
+          :filter-node-method="filterNode"
+          ref="tree"
+          @node-click="clickIndex"
         >
-          回到首页
-        </div>
-        <div
-          class="backLBtn"
-          v-if="data!=index"
-          @click="backToLast"
-          @mouseover="mouseover"
-          @mouseleave="mouseleave"
-        >
-          回到上级
-        </div>
-        <div
-          v-for="item in data"
-          class="index"
-          @mouseover="mouseover"
-          @mouseleave="mouseleave"
-          @click="clickIndex(item)"
-        >
-          {{item.label}}
-        </div>
+        </el-tree>
       </div>
-      <div id="content"></div>
+      <div id="content" ref="content"></div>
     </div>
     <script src="index.js" type="module"></script>
   </body>

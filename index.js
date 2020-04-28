@@ -1,7 +1,11 @@
 import { index as indexData } from "./indexData.js";
 
 var Main = {
-  watch: {},
+  watch: {
+    filterText(val) {
+      this.$refs.tree.filter(val);
+    }
+  },
 
   methods: {},
 
@@ -11,7 +15,7 @@ var Main = {
       data: indexData,
       count: 0,
       index: indexData,
-      lastIndex: {},
+      lastIndex: {}
     };
   },
   mounted() {
@@ -23,124 +27,47 @@ var Main = {
         targets: ".index",
         scale: [
           { value: 0.1, easing: "easeOutSine", duration: 100 },
-          { value: 1, easing: "easeInOutQuad", duration: 500 },
+          { value: 1, easing: "easeInOutQuad", duration: 500 }
         ],
-        delay: anime.stagger(100),
+        delay: anime.stagger(100)
       });
     },
     showContentAnime() {
       anime({
         targets: "#content",
-        rotate: [
-          {
-            value: 0,
-            duration: 10,
-            easing: "easeInOutSine",
-          },
-          {
-            value: 3600,
-            duration: 1000,
-            easing: "easeInOutSine",
-          },
-        ],
-        scale: [
-          { value: 0.1, easing: "easeOutSine", duration: 100 },
-          { value: 1, easing: "easeInOutQuad", duration: 1200 },
-        ],
+        // scale: [
+        //   { value: 0.1, easing: "easeOutSine", duration: 100 },
+        //   { value: 1, easing: "easeInOutQuad", duration: 1200 }
+        // ]
+        opacity: [0.1, 1],
+        duration: 10000
       });
     },
     hideContentAnime() {
       anime({
         targets: "#content",
-        rotate: [
-          {
-            value: 0,
-            duration: 10,
-            easing: "easeInOutSine",
-          },
-          {
-            value: 3600,
-            duration: 1000,
-            easing: "easeInOutSine",
-          },
-        ],
-        scale: [
-          { value: 1, easing: "easeOutSine", duration: 100 },
-          { value: 0, easing: "easeInOutQuad", duration: 300 },
-        ],
-      });
-    },
-    mouseover(e) {
-      anime({
-        targets: e.target,
-        scale: { value: 1.2, easing: "easeInOutQuad", duration: 1000 },
-      });
-    },
-    mouseleave(e) {
-      anime({
-        targets: e.target,
-        scale: { value: 1, easing: "easeOutSine", duration: 1000 },
+        opacity: [1, 0.1],
+        duration: 10000
       });
     },
     clickIndex(item) {
-      if (item.children instanceof Array) {
-        this.data = item.children;
-        this.lastIndex = item.id;
-        setTimeout(() => {
-          this.indexAnime();
-        }, 100);
-      } else if (item.path) {
-        this.lastIndex = item.id;
+      if (item.path) {
         let context = this;
         axios.get(item.path).then(function (response) {
-          document.getElementById("content").innerHTML = marked(response.data);
-          console.log(response);
           context.showContentAnime();
-          context.data = [];
+          // 更新 content 内容
+          document.getElementById("content").innerHTML = marked(response.data);
+
+          // 新页面重新拉回顶部
+          context.$refs.content.scrollTop = 0;
         });
       }
     },
-    backToIndex() {
-      this.data = this.index;
-      setTimeout(() => {
-        this.indexAnime();
-      }, 100);
-    },
-    backToLast() {
-      this.hideContentAnime();
-      let level = this.lastIndex.split(".");
-      switch (level.length) {
-        case 1:
-          this.data = this.index;
-          break;
-        case 2:
-          this.data = this.index.filter((e) => {
-            return e.id == level[0];
-          })[0].children;
-          break;
-        case 3:
-          this.data = this.index
-            .filter((e) => {
-              return e.id == level[0];
-            })[0]
-            .children.filter((e) => {
-              return e.id == level[0] + "." + level[1];
-            })[0].children;
-      }
-      level.pop();
-      if (level.length > 1) {
-        this.lastIndex = level.join(".");
-      } else if (level.length === 0) {
-        this.lastIndex = "";
-      } else {
-        this.lastIndex = level[0];
-      }
-
-      setTimeout(() => {
-        this.indexAnime();
-      }, 100);
-    },
-  },
+    filterNode(value, data) {
+      if (!value) return true;
+      return data.label.indexOf(value) !== -1;
+    }
+  }
 };
 var Ctor = Vue.extend(Main);
 new Ctor().$mount("#app");
