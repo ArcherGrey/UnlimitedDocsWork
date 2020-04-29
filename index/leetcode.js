@@ -13,6 +13,11 @@ export const leetcode = {
       path: "./docs/Algorithm/leetcode/200.md"
     },
     {
+      id: "10.2.1095",
+      label: "1095. 山脉数组中查找目标值",
+      path: "./docs/Algorithm/leetcode/1095.md"
+    },
+    {
       id: "10.2.i51",
       label: "面试题 51. 数组中的逆序对",
       path: "./docs/Algorithm/leetcode/i51.md"

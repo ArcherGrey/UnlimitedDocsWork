@@ -24,11 +24,11 @@ body {
 #content {
   margin-left: 10%;
   width: 36%;
-  background-color: #555555;
+  background-color: #f5e2e2;
   height: 70%;
   overflow-y: scroll;
   font-size: 1.1rem;
-  color: #a4ff4f;
+  color: #0b0c0b;
   word-wrap: break-word;
   padding: 1rem 1.2rem;
   border-radius: 10px;

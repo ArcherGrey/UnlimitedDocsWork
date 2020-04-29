@@ -37,8 +37,9 @@
 
   - [vue]()
     - [基础]()
-      - [计算属性](./docs/FE_framework/vue/computed.md)
+      - [计算属性和监听器](./docs/FE_framework/vue/computed.md)
       - [生命周期](./docs/FE_framework/vue/life.md)
+      - [v-if & v-show](./docs/FE_framework/vue/conditional.md)
     - [可复用性 & 组合]()
       - [过滤器](./docs/FE_framework/vue/filter.md)
 
@@ -54,6 +55,7 @@
   - [leetcode 题解]()
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)
+    - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
     - 待完成[面试题 51. 数组中的逆序对](./docs/Algorithm/leetcode/i51.md)
     - [面试题 56 - I. 数组中数字出现的次数](./docs/Algorithm/leetcode/i56.md)
 - [github]()
