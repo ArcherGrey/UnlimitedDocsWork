@@ -13,6 +13,16 @@ export const leetcode = {
       path: "./docs/Algorithm/leetcode/200.md"
     },
     {
+      id: "10.2.279",
+      label: "279. 完全平方数",
+      path: "./docs/Algorithm/leetcode/279.md"
+    },
+    {
+      id: "10.2.725",
+      label: "725. 打开转盘锁",
+      path: "./docs/Algorithm/leetcode/725.md"
+    },
+    {
       id: "10.2.1095",
       label: "1095. 山脉数组中查找目标值",
       path: "./docs/Algorithm/leetcode/1095.md"

@@ -91,6 +91,7 @@
 - ESLint
 - Markdown Preview Enhanced 流程图可视化
 - prettier 自动格式化
+- koroFileHeader 生成文件头部注释和函数注释
 
 ---
 

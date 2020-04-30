@@ -55,6 +55,8 @@
   - [leetcode 题解]()
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)
+    - [279. 完全平方数](./docs/Algorithm/leetcode/279.md)
+    - [725. 打开转盘锁](./docs/Algorithm/leetcode/725.md)
     - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
     - 待完成[面试题 51. 数组中的逆序对](./docs/Algorithm/leetcode/i51.md)
     - [面试题 56 - I. 数组中数字出现的次数](./docs/Algorithm/leetcode/i56.md)
