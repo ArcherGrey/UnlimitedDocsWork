@@ -92,7 +92,7 @@ export const index = [
       },
       {
         id: "3.2",
-        label: "es6",
+        label: "基础",
         children: [
           {
             id: "3.2.1",
@@ -103,6 +103,12 @@ export const index = [
             id: "3.2.2",
             label: "set 和 map",
             path: "./docs/JavaScript/es6/set_map.md"
+          },
+          ,
+          {
+            id: "3.2.3",
+            label: "各种 for",
+            path: "./docs/JavaScript/es6/for.md"
           }
         ]
       },
@@ -161,6 +167,17 @@ export const index = [
         ]
       },
       leetcode
+    ]
+  },
+  {
+    id: "11",
+    label: "翻译",
+    children: [
+      {
+        id: "11.1",
+        label: "计算机程序的构造和解释 SCIP",
+        path: "./docs/translate/SICP.md"
+      }
     ]
   }
 ];

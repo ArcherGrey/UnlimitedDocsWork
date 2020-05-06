@@ -1,36 +1,33 @@
 /**
- * @param {number} n
+ * @param {number[]} days
+ * @param {number[]} costs
  * @return {number}
  */
-var numSquares = function (n) {
-  let numSquares = []; // 保存小于 n 的完全平方数
-  for (let i = 1; i * i <= n; ++i) {
-    numSquares.push(i * i);
-  }
-  let level = 0;
-  let queue = new Set(); // set 保存直接过滤重复
-  queue.add(n);
 
-  while (queue.size > 0) {
-    level++;
-    let newQueue = new Set();
-    for (let ele of queue) {
-      for (let num of numSquares) {
-        // 完全平方数列表中找到了就返回
-        if (ele == num) {
-          return level;
-        }
-        // 如果小于当前的完全平方数，那肯定小于后面的，直接跳出循环
-        else if (ele < num) {
-          break;
-        }
-        // 如果大于就把差值加入到新队列中
-        else {
-          newQueue.add(ele - num);
-        }
-      }
-    }
-    queue = newQueue;
+var mincostTickets = function (days, costs) {
+  let mem = [];
+  let mark = new Set();
+  for (date of days) {
+    mark.add(date);
   }
-  return level;
+  return dp(1, mem, mark, costs);
 };
+
+function dp(i, mem, mark, costs) {
+  if (i > 365) return 0;
+  if (mem[i] != undefined) {
+    return mem[i];
+  }
+  if (mark.has(i)) {
+    mem[i] = Math.min(
+      Math.min(
+        dp(i + 1, mem, mark, costs) + costs[0],
+        dp(i + 7, mem, mark, costs) + costs[1]
+      ),
+      dp(i + 30, mem, mark, costs) + costs[2]
+    );
+  } else {
+    mem[i] = dp(i + 1, mem, mark, costs);
+  }
+  return mem[i];
+}

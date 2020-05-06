@@ -13,6 +13,11 @@ export const leetcode = {
       path: "./docs/Algorithm/leetcode/200.md"
     },
     {
+      id: "10.2.202",
+      label: "202. 快乐数",
+      path: "./docs/Algorithm/leetcode/202.md"
+    },
+    {
       id: "10.2.279",
       label: "279. 完全平方数",
       path: "./docs/Algorithm/leetcode/279.md"
@@ -21,6 +26,11 @@ export const leetcode = {
       id: "10.2.725",
       label: "725. 打开转盘锁",
       path: "./docs/Algorithm/leetcode/725.md"
+    },
+    {
+      id: "10.2.983",
+      label: "983. 最低票价",
+      path: "./docs/Algorithm/leetcode/983.md"
     },
     {
       id: "10.2.1095",
