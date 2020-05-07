@@ -8,6 +8,11 @@ export const leetcode = {
       path: "./docs/Algorithm/leetcode/33.md"
     },
     {
+      id: "10.2.155",
+      label: "155. 最小栈",
+      path: "./docs/Algorithm/leetcode/155.md"
+    },
+    {
       id: "10.2.200",
       label: "200. 岛屿数量",
       path: "./docs/Algorithm/leetcode/200.md"

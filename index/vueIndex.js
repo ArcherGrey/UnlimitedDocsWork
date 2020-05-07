@@ -33,6 +33,17 @@ export const vueIndex = {
           path: "./docs/FE_framework/vue/filter.md"
         }
       ]
+    },
+    {
+      id: "6.1.3",
+      label: "API",
+      children: [
+        {
+          label: "6.1.3.1",
+          label: "nextTick",
+          path: "./docs/FE_framework/vue/nextTick.md"
+        }
+      ]
     }
   ]
 };
