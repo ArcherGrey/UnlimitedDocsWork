@@ -3,6 +3,11 @@ export const leetcode = {
   label: "leetcode题解",
   children: [
     {
+      id: "10.2.20",
+      label: "20. 有效的括号",
+      path: "./docs/Algorithm/leetcode/20.md"
+    },
+    {
       id: "10.2.33",
       label: "33. 搜索旋转排序数组",
       path: "./docs/Algorithm/leetcode/33.md"
@@ -28,9 +33,19 @@ export const leetcode = {
       path: "./docs/Algorithm/leetcode/279.md"
     },
     {
+      id: "10.2.572",
+      label: "572. 另一个树的子树",
+      path: "./docs/Algorithm/leetcode/572.md"
+    },
+    {
       id: "10.2.725",
       label: "725. 打开转盘锁",
       path: "./docs/Algorithm/leetcode/725.md"
+    },
+    {
+      id: "10.2.739",
+      label: "739. 每日温度",
+      path: "./docs/Algorithm/leetcode/739.md"
     },
     {
       id: "10.2.983",

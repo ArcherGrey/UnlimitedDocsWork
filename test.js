@@ -1,55 +1,41 @@
 /**
- * initialize your data structure here.
+ * @param {number[]} T
+ * @return {number[]}
  */
-var MinStack = function () {
-  this.stack = [];
-  this.min = Number.MAX_SAFE_INTEGER;
-};
+var dailyTemperatures = function (T) {
+  let stack = [];
+  let res = new Array(T.length);
+  for (let i = 0; i < T.length; ++i) {
+    // 栈空直接入栈
+    if (stack.length === 0) {
+      stack.push({ index: i, value: T[i] });
+      continue;
+    }
+    // 栈顶元素
+    let top = stack[stack.length - 1];
 
-/**
- * @param {number} x
- * @return {void}
- */
-MinStack.prototype.push = function (x) {
-  // 当前值比min值更小
-  if (this.min >= x) {
-    // 将上一个min最小值保存入栈
-    this.stack.push(this.min);
-    // 更新当前最小值
-    this.min = x;
+    // 如果栈顶元素大于等于当前值，直接入栈
+    if (top.value >= T[i]) {
+      stack.push({ index: i, value: T[i] });
+      continue;
+    }
+    // 如果栈顶元素小于当前值，那么栈顶元素出栈，计算栈顶元素对应的索引差
+    //（出栈后继续判断栈顶直到栈空或者比当前值大）
+    while (stack.length > 0) {
+      top = stack[stack.length - 1];
+      if (top.value < T[i]) {
+        res[top.index] = i - top.index;
+        stack.pop();
+      } else {
+        break;
+      }
+    }
+    // 所有小于当前值的元素都出栈后，入栈当前值
+    stack.push({ index: i, value: T[i] });
   }
-  this.stack.push(x);
-};
-
-/**
- * @return {void}
- */
-MinStack.prototype.pop = function () {
-  // 如果弹出值 == 当前最小值，那么再弹一次的值为上一个最小值也即出栈后更新的最小值
-  if (this.stack.pop() == this.min) {
-    this.min = this.stack.pop();
+  // 剩余stack里面元素都是0
+  for (let j = 0; j < stack.length; ++j) {
+    res[stack[j].index] = 0;
   }
+  return res;
 };
-
-/**
- * @return {number}
- */
-MinStack.prototype.top = function () {
-  return this.stack[this.stack.length - 1];
-};
-
-/**
- * @return {number}
- */
-MinStack.prototype.getMin = function () {
-  return this.min;
-};
-
-/**
- * Your MinStack object will be instantiated and called as such:
- * var obj = new MinStack()
- * obj.push(x)
- * obj.pop()
- * var param_3 = obj.top()
- * var param_4 = obj.getMin()
- */
