@@ -10,13 +10,13 @@
   - [JS 函数式编程指南 pdf](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/book/mostly-adequate-guide-chinese.pdf)
     - [gitbook 版本](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
   - javaScript: the good parts
-  - Effective JavaScript 
+  - Effective JavaScript
   - JavaScript Patterns
   - High Performance JavaScript
   - Functional JavaScript
 - 编程思想
   - SICP
-   - [在线](https://sarabander.github.io/sicp/)
+  - [在线](https://sarabander.github.io/sicp/)
   - Code Complete
   - The Art of Readable Code
   - Clean Code
@@ -24,7 +24,7 @@
 
 ---
 
-## :secret: 一些有意思的网站
+## :secret: 一些有意思的网站和博客
 
 - [你不需要 jquery](https://blog.garstasio.com/you-dont-need-jquery/)
 - [nodejs 文档](https://nodejs.org/download/release/v8.9.1/docs/api/)
@@ -45,6 +45,7 @@
 - [游戏编程](https://www.codingame.com/start)
 - [typescript 文档](https://typescript.bootcss.com/)
 - [screeps 编程游戏]()
+- [前端技术博客](http://www.conardli.top/blog/)
 
 ---
 

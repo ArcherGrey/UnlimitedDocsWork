@@ -13,6 +13,11 @@ export const leetcode = {
       path: "./docs/Algorithm/leetcode/33.md"
     },
     {
+      id: "10.2.150",
+      label: "150. 逆波兰表达式求值",
+      path: "./docs/Algorithm/leetcode/150.md"
+    },
+    {
       id: "10.2.155",
       label: "155. 最小栈",
       path: "./docs/Algorithm/leetcode/155.md"

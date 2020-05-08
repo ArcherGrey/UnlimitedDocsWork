@@ -67,6 +67,7 @@
   - [leetcode 题解]()
     - [20. 有效的括号](./docs/Algorithm/leetcode/20.md)
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
+    - [150. 逆波兰表达式求值](./docs/Algorithm/leetcode/150.md)
     - [155. 最小栈](./docs/Algorithm/leetcode/155.md)
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)
     - [202. 快乐数](./docs/Algorithm/leetcode/202.md)
