@@ -15,7 +15,11 @@ var Main = {
       data: indexData,
       count: 0,
       index: indexData,
-      lastIndex: {}
+      lastIndex: {},
+      defaultProps: {
+        children: "children",
+        label: "label"
+      }
     };
   },
   mounted() {

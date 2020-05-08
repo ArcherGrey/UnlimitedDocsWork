@@ -3,8 +3,7 @@ import { leetcode } from "./index/leetcode.js";
 export const index = [
   {
     id: "1",
-    label: "html",
-    children: [{ id: 1, label: "" }]
+    label: "html"
   },
   {
     id: "2",
@@ -104,7 +103,6 @@ export const index = [
             label: "set 和 map",
             path: "./docs/JavaScript/es6/set_map.md"
           },
-          ,
           {
             id: "3.2.3",
             label: "各种 for",
@@ -131,8 +129,7 @@ export const index = [
   },
   {
     id: "5",
-    label: "webGis",
-    children: [{}]
+    label: "webGis"
   },
   {
     id: "6",

@@ -33,6 +33,11 @@ export const leetcode = {
       path: "./docs/Algorithm/leetcode/202.md"
     },
     {
+      id: "10.2.221",
+      label: "221. 最大正方形",
+      path: "./docs/Algorithm/leetcode/221.md"
+    },
+    {
       id: "10.2.279",
       label: "279. 完全平方数",
       path: "./docs/Algorithm/leetcode/279.md"
