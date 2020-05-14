@@ -1,5 +1,7 @@
-import { vueIndex } from "./index/vueIndex.js";
-import { leetcode } from "./index/leetcode.js";
+import { vueIndex } from "./index/Vue.js";
+import { leetcode } from "./index/Leetcode.js";
+// import { FETools } from "./index/FE_Tools.js";
+// import { Question } from "./Question.js";
 export const index = [
   {
     id: "1",
@@ -143,6 +145,7 @@ export const index = [
   {
     id: "8",
     label: "前端工具"
+    // children: [FETools]
   },
   {
     id: "9",
@@ -177,4 +180,15 @@ export const index = [
       }
     ]
   }
+  // {
+  //   id: "12",
+  //   label: "问题总结",
+  //   children: [
+  //     {
+  //       id: "12.1",
+  //       label: "css",
+  //       path: "./docs/question"
+  //     }
+  //   ]
+  // }
 ];
