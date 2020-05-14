@@ -1,96 +1,103 @@
+const commonPath = "./docs/Algorithm/leetcode/";
+const id = "10.2";
 export const leetcode = {
-  id: "10.2",
+  id: id,
   label: "leetcode题解",
   children: [
     {
-      id: "10.2.20",
+      id: `${id}.20`,
       label: "20. 有效的括号",
-      path: "./docs/Algorithm/leetcode/20.md"
+      path: `${commonPath}20.md`
     },
     {
-      id: "10.2.33",
+      id: `${id}.33`,
       label: "33. 搜索旋转排序数组",
-      path: "./docs/Algorithm/leetcode/33.md"
+      path: `${commonPath}33.md`
     },
     {
-      id: "10.2.50",
+      id: `${id}.50`,
       label: "50. Pow(x,n)",
-      path: "./docs/Algorithm/leetcode/50.md"
+      path: `${commonPath}50.md`
     },
     {
-      id: "10.2.69",
+      id: `${id}.69`,
       label: "69. x 的平方根",
-      path: "./docs/Algorithm/leetcode/69.md"
+      path: `${commonPath}69.md`
     },
     {
-      id: "10.2.136",
+      id: `${id}.133`,
+      label: "133. 克隆图",
+      path: `${commonPath}133.md`
+    },
+    {
+      id: `${id}.136`,
       label: "136. 只出现一次的数字",
-      path: "./docs/Algorithm/leetcode/136.md"
+      path: `${commonPath}136.md`
     },
     {
-      id: "10.2.150",
+      id: `${id}.150`,
       label: "150. 逆波兰表达式求值",
-      path: "./docs/Algorithm/leetcode/150.md"
+      path: `${commonPath}150.md`
     },
     {
-      id: "10.2.155",
+      id: `${id}.155`,
       label: "155. 最小栈",
-      path: "./docs/Algorithm/leetcode/155.md"
+      path: `${commonPath}155.md`
     },
     {
-      id: "10.2.200",
+      id: `${id}.200`,
       label: "200. 岛屿数量",
-      path: "./docs/Algorithm/leetcode/200.md"
+      path: `${commonPath}200.md`
     },
     {
-      id: "10.2.202",
+      id: `${id}.202`,
       label: "202. 快乐数",
-      path: "./docs/Algorithm/leetcode/202.md"
+      path: `${commonPath}202.md`
     },
     {
-      id: "10.2.221",
+      id: `${id}.221`,
       label: "221. 最大正方形",
-      path: "./docs/Algorithm/leetcode/221.md"
+      path: `${commonPath}221.md`
     },
     {
-      id: "10.2.279",
+      id: `${id}.279`,
       label: "279. 完全平方数",
-      path: "./docs/Algorithm/leetcode/279.md"
+      path: `${commonPath}279.md`
     },
     {
-      id: "10.2.572",
+      id: `${id}.572`,
       label: "572. 另一个树的子树",
-      path: "./docs/Algorithm/leetcode/572.md"
+      path: `${commonPath}572.md`
     },
     {
-      id: "10.2.725",
+      id: `${id}.725`,
       label: "725. 打开转盘锁",
-      path: "./docs/Algorithm/leetcode/725.md"
+      path: `${commonPath}725.md`
     },
     {
-      id: "10.2.739",
+      id: `${id}.739`,
       label: "739. 每日温度",
-      path: "./docs/Algorithm/leetcode/739.md"
+      path: `${commonPath}739.md`
     },
     {
-      id: "10.2.983",
+      id: `${id}.983`,
       label: "983. 最低票价",
-      path: "./docs/Algorithm/leetcode/983.md"
+      path: `${commonPath}983.md`
     },
     {
-      id: "10.2.1095",
+      id: `${id}.1095`,
       label: "1095. 山脉数组中查找目标值",
-      path: "./docs/Algorithm/leetcode/1095.md"
+      path: `${commonPath}1095.md`
     },
     {
-      id: "10.2.i51",
+      id: `${id}.i51`,
       label: "面试题 51. 数组中的逆序对",
-      path: "./docs/Algorithm/leetcode/i51.md"
+      path: `${commonPath}i51.md`
     },
     {
-      id: "10.2.i56",
+      id: `${id}.i56`,
       label: "面试题56 - I. 数组中数字出现的次数",
-      path: "./docs/Algorithm/leetcode/i56.md"
+      path: `${commonPath}i56.md`
     }
   ]
 };

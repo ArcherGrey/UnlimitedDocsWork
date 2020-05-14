@@ -51,48 +51,73 @@
 
 ## :triangular_ruler: 常用库、框架、工具
 
-- jQuery
-- Vue [文档](https://cn.vuejs.org/index.html)
-  - [chrome devtools](https://github.com/ArcherGrey/UnlimitedDocsWork/issues/5)
-  - 二维码 vue-qr
-- React
-  - [react 小书（入门）](http://huziketang.mangojuice.top/books/react/)
-  - [react 小书配套练习](http://scriptoj.mangojuice.top/problemsGroups/593a2e29b3838c385539fa4f)
-  - [redux 文档](https://www.redux.org.cn/)
-- 模拟操作
-  - Puppeteer [文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
-- nodejs
-  - express [文档](https://expressjs.com/en/4x/api.html)
-- JavaScript 函数式编程
-  - `Ramda` 支持 curry 化
-- 网页模板
-  - pug 模板引擎 [文档](https://pug.bootcss.com/api/getting-started.html)
-- 打包工具
-  - webpack [官网](https://www.webpackjs.com/)
-- 开发工具
-  - sublime : 最轻便
-  - atom：有点厚重
-  - vscode：综合最好
-- github
-  - shields.io ：说明文档中各种小图标 [网址](https://shields.io/)
-  - [github emoji](https://github.com/caiyongji/emoji-list)
-- 图标
-  - [阿里巴巴矢量图标库](https://www.iconfont.cn/)
+- 前端
+
+  - 框架
+    - Vue [文档](https://cn.vuejs.org/index.html)
+      - [chrome devtools](https://github.com/ArcherGrey/UnlimitedDocsWork/issues/5)
+      - 二维码 vue-qr
+    - React
+      - [react 小书（入门）](http://huziketang.mangojuice.top/books/react/)
+      - [react 小书配套练习](http://scriptoj.mangojuice.top/problemsGroups/593a2e29b3838c385539fa4f)
+      - [redux 文档](https://www.redux.org.cn/)
+  - 操作 dom
+    - jQuery
+  - 截取 html 网页转换 pdf 图片
+    - html2canvas
+  - 模拟操作
+    - Puppeteer [文档](https://zhaoqize.github.io/puppeteer-api-zh_CN/#/)
+  - 函数式编程
+    - `Ramda` 支持 curry 化
+  - 网页模板
+    - pug 模板引擎 [文档](https://pug.bootcss.com/api/getting-started.html)
+  - 打包工具
+    - webpack [官网](https://www.webpackjs.com/)
+  - 开发工具
+    - sublime : 最轻便
+    - atom：有点厚重
+    - vscode：综合最好
+  - 切图工具
+    - [pxcook](https://www.fancynode.com.cn/pxcook)
+    - phototshop
+    - pageruler chrome 插件 可以得到页面元素尺寸
+  - 接口调试
+    - [postman]()
+  - npm
+    - anywhere 随时在本地搭建 http 环境
+  - 图标
+    - [阿里巴巴矢量图标库](https://www.iconfont.cn/)
+
+---
+
+- 后端
+
+  - nodejs
+    - express [文档](https://expressjs.com/en/4x/api.html)
+
+---
+
 - git
+
   - [国内镜像](https://github.com/waylau/git-for-win)
   - [Git 的奇技淫巧](https://github.com/521xueweihan/git-tips)
   - [图解 git](https://marklodato.github.io/visual-git-guide/index-zh-cn.html)
   - [git 在线可视化练习](https://learngitbranching.js.org/)
-- 切图工具
-  - [pxcook](https://www.fancynode.com.cn/pxcook)
-  - phototshop
-  - pageruler chrome 插件 可以得到页面元素尺寸
-- 接口调试
-  - [postman]()
-- npm
-  - anywhere 随时在本地搭建 http 环境
-- 壁纸软件
-  - Wallpaper Engine
+  - github
+    - shields.io ：说明文档中各种小图标 [网址](https://shields.io/)
+    - [github emoji](https://github.com/caiyongji/emoji-list)
+
+---
+
+- 操作系统
+  - linux
+    - wsl2 win 系统运行 linux
+
+---
+
+- 普通
+  - 壁纸软件
+    - Wallpaper Engine
 
 ---
 
@@ -112,3 +137,4 @@
 
 - [element-ui](./docs/question/element.md)
 - [css](./docs/question/css.md)
+- [浏览器](./docs/question/browser.md)
