@@ -216,3 +216,56 @@ function BFS(root,targer){
 - 20. 有效的括号
 - 739. 每日温度
 - 150. 逆波兰表达式求值
+
+### 深度优先搜索
+
+深度优先搜索的节点处理顺序和栈一样是后进先出的
+
+模板：
+
+```JavaScript
+/**
+ * @description: 递归 DFS 伪代码 隐式栈
+ * @param cur 当前节点
+ * @param target 目标节点
+ * @param visited 访问过节点
+ * @return: {Boolean}
+ */
+function DFS(cur, target, visited) {
+  if (cur == target) return true;
+  // 访问当前节点的邻居节点
+  for (node of cur.neighbors) {
+    // 如果这个节点没访问过
+    if (visited.indexOf(node) < 0) {
+      // 访问该节点
+      visited.push(node);
+      return DFS(node, target, visited);
+    }
+  }
+  return false;
+}
+
+/**
+ * @description: 迭代 DFS 伪代码 显示栈
+ * @param root 根节点
+ * @param target 目标节点
+ * @return: {Boolean}
+ */
+function DFS(root, target) {
+  let visited = [];
+  let stack = [];
+  stack.push(root);
+  while (stack.length > 0) {
+    let cur = stack.pop();
+    if (cur == target) return true;
+    for (node of cur.neighbors) {
+      if (visited.indexOf(node) < 0) {
+        visited.push(node);
+        stack.push(node);
+      }
+    }
+  }
+  return false;
+}
+
+```

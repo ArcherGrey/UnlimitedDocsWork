@@ -1,32 +1,27 @@
-/**
- * @param {character[][]} matrix
- * @return {number}
- */
-var maximalSquare = function (matrix) {
-  let res = 0;
-  if (matrix.length == 0) return res;
-  let rows = matrix.length,
-    cols = matrix[0].length;
-  let dp = new Array(rows);
-  for (let i = 0; i < dp.length; ++i) {
-    dp[i] = new Array(cols);
-    for (let j = 0; j < dp[i].length; ++j) {
-      dp[i][j] = 0;
+{
+  type: "heatmap",
+  coordinateSystem: "calendar",
+  data: this.chartData.dataSet[y].data.map(d => [
+    d[0],
+    d[1] === " " ? "-" : d[1]
+  ]),
+  label: {
+    show: form.dateShow,
+    formatter: function(params) {
+      var d = echarts.number.parseDate(params.value[0]);
+      return d.getDate();
+    },
+    textStyle: {
+      color: "#000"
+    }
+  },
+  itemStyle: {
+    color: "#D1EEEE"
+  },
+  tooltip: {
+    formatter(p) {
+      let [t, v] = p.value;
+      return `${t}<br />${v} ${form.dataUnit}`;
     }
   }
-  for (let i = 0; i < rows; ++i) {
-    for (let j = 0; j < cols; ++j) {
-      if (matrix[i][j] == "1") {
-        if (i == 0 || j == 0) {
-          dp[i][j] = 1;
-        } else {
-          dp[i][j] = Math.min(dp[i - 1][j], dp[i - 1][j - 1], dp[i][j - 1]) + 1;
-        }
-        if (dp[i][j] > res) {
-          res = dp[i][j];
-        }
-      }
-    }
-  }
-  return res * res;
-};
+}

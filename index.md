@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-05-06 15:35:16
+ * @LastEditTime: 2020-05-14 09:29:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \UnlimitedDocsWork\index.md
@@ -67,6 +67,9 @@
   - [leetcode 题解]()
     - [20. 有效的括号](./docs/Algorithm/leetcode/20.md)
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
+    - [50. Pow(x,n)](./docs/Algorithm/leetcode/50.md)
+    - [69. x 的平方根](./docs/Algorithm/leetcode/69.md)
+    - [136. 只出现一次的数字](./docs/Algorithm/leetcode/136.md)
     - [150. 逆波兰表达式求值](./docs/Algorithm/leetcode/150.md)
     - [155. 最小栈](./docs/Algorithm/leetcode/155.md)
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)

@@ -13,6 +13,21 @@ export const leetcode = {
       path: "./docs/Algorithm/leetcode/33.md"
     },
     {
+      id: "10.2.50",
+      label: "50. Pow(x,n)",
+      path: "./docs/Algorithm/leetcode/50.md"
+    },
+    {
+      id: "10.2.69",
+      label: "69. x 的平方根",
+      path: "./docs/Algorithm/leetcode/69.md"
+    },
+    {
+      id: "10.2.136",
+      label: "136. 只出现一次的数字",
+      path: "./docs/Algorithm/leetcode/136.md"
+    },
+    {
       id: "10.2.150",
       label: "150. 逆波兰表达式求值",
       path: "./docs/Algorithm/leetcode/150.md"
