@@ -1,6 +1,5 @@
-const path="./docs/Css/normal/";
-export const cssApply=
-{
+const path = "./docs/Css/normal/";
+export const cssApply = {
   id: "2.1",
   label: "常用",
   children: [
@@ -30,4 +29,4 @@ export const cssApply=
       path: `${path}hoverAnime.md`
     }
   ]
-},
+};

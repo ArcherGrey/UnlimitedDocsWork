@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-05-18 13:21:19
+ * @LastEditTime: 2020-05-18 16:43:52
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -72,7 +72,7 @@
     - [133. 克隆图](./docs/Algorithm/leetcode/133.md)
     - [136. 只出现一次的数字](./docs/Algorithm/leetcode/136.md)
     - [150. 逆波兰表达式求值](./docs/Algorithm/leetcode/150.md)
-    - [152. 逆波兰表达式求值](./docs/Algorithm/leetcode/152.md)
+    - [152. 乘积最大子数组](./docs/Algorithm/leetcode/152.md)
     - [155. 最小栈](./docs/Algorithm/leetcode/155.md)
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)
     - [202. 快乐数](./docs/Algorithm/leetcode/202.md)

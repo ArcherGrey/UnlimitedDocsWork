@@ -1,27 +1,22 @@
-{
-  type: "heatmap",
-  coordinateSystem: "calendar",
-  data: this.chartData.dataSet[y].data.map(d => [
-    d[0],
-    d[1] === " " ? "-" : d[1]
-  ]),
-  label: {
-    show: form.dateShow,
-    formatter: function(params) {
-      var d = echarts.number.parseDate(params.value[0]);
-      return d.getDate();
-    },
-    textStyle: {
-      color: "#000"
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var maxProduct = function (nums) {
+  let max, min, ans;
+  for (let i = 0; i < nums.length; ++i) {
+    let cur = nums[i];
+    if (i === 0) {
+      ans = cur;
+      max = cur;
+      min = cur;
+    } else {
+      let mx = max,
+        mn = min;
+      max = Math.max(mx * cur, mn * cur, cur);
+      min = Math.min(mx * cur, mn * cur, cur);
     }
-  },
-  itemStyle: {
-    color: "#D1EEEE"
-  },
-  tooltip: {
-    formatter(p) {
-      let [t, v] = p.value;
-      return `${t}<br />${v} ${form.dataUnit}`;
-    }
+    ans = Math.max(ans, max);
   }
-}
+  return ans;
+};
