@@ -20,8 +20,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
+重启生效
+
 3. 打开 `控制面板 -> windows 功能` 查看 `适用于 linux 的 windwos 子系统` 和 `虚拟机平台` 是否勾选
-
-> 下面这步待考证
-
-4. 下载并安装 wsl2 内核组件 [地址](https://aka.ms/wsl2kernel)
+4. 在微软应用商店选择一个 linux 安装
+5. 下载并安装 wsl2 内核组件 [地址](https://aka.ms/wsl2kernel)
+6. 在微软应用商店安装 Windows Terminal 在这里可以直接启动已安装的各版本 linux

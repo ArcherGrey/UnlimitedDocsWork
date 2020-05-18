@@ -1,5 +1,6 @@
 import { vueIndex } from "./index/Vue.js";
 import { leetcode } from "./index/Leetcode.js";
+import { cssApply } from "./index/CssApp.js";
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [
@@ -11,37 +12,7 @@ export const index = [
     id: "2",
     label: "css",
     children: [
-      {
-        id: "2.1",
-        label: "常用",
-        children: [
-          {
-            id: "2.1.1",
-            label: "纯 CSS 自定义关闭按钮",
-            path: "./docs/Css/normal/closebutton.md"
-          },
-          {
-            id: "2.1.2",
-            label: "利用伪元素自定义图标",
-            path: "./docs/Css/normal/fakeicon.md"
-          },
-          {
-            id: "2.1.3",
-            label: "滚动效果",
-            path: "./docs/Css/normal/roll.md"
-          },
-          {
-            id: "2.1.4",
-            label: "可调整宽高 div",
-            path: "./docs/Css/normal/resizediv.md"
-          },
-          {
-            id: "2.1.2",
-            label: "伪类实现悬浮动画",
-            path: "./docs/Css/normal/hoverAnime.md"
-          }
-        ]
-      },
+      cssApply,
       {
         id: "2.2",
         label: "布局",

@@ -65,6 +65,11 @@ export const leetcode = {
       path: `${commonPath}279.md`
     },
     {
+      id: `${id}.560`,
+      label: "560. 和为k的子数组",
+      path: `${commonPath}560.md`
+    },
+    {
       id: `${id}.572`,
       label: "572. 另一个树的子树",
       path: `${commonPath}572.md`

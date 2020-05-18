@@ -1,22 +1,16 @@
-/**
- * @description: 迭代 DFS 伪代码 显示栈
- * @param root 根节点
- * @param target 目标节点
- * @return: {Boolean}
- */
-function DFS(root, target) {
-  let visited = [];
-  let stack = [];
-  stack.push(root);
-  while (stack.length > 0) {
-    let cur = stack.pop();
-    if (cur == target) return true;
-    for (node of cur.neighbors) {
-      if (visited.indexOf(node) < 0) {
-        visited.push(node);
-        stack.push(node);
+function bubbleSort(arr) {
+  var i = arr.length,
+    j;
+  var tempExchangVal;
+  while (i > 0) {
+    for (j = 0; j < i - 1; j++) {
+      if (arr[j].length > arr[j + 1].length) {
+        tempExchangVal = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = tempExchangVal;
       }
     }
+    i--;
   }
-  return false;
+  return arr;
 }
