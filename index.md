@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-05-18 16:43:52
+ * @LastEditTime: 2020-05-20 13:56:28
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -80,10 +80,12 @@
     - [279. 完全平方数](./docs/Algorithm/leetcode/279.md)
     - 待补充 [560. 和为 k 的子数组](./docs/Algorithm/leetcode/560.md)
     - [572. 另一个树的子树](./docs/Algorithm/leetcode/572.md)
+    - [680. 验证回文字符串 Ⅱ](./docs/Algorithm/leetcode/680.md)
     - [725. 打开转盘锁](./docs/Algorithm/leetcode/725.md)
     - [739. 每日温度](./docs/Algorithm/leetcode/739.md)
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
     - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
+    - [1371. 每个元音包含偶数次的最长子字符串](./docs/Algorithm/leetcode/1371.md)
     - 待完成[面试题 51. 数组中的逆序对](./docs/Algorithm/leetcode/i51.md)
     - [面试题 56 - I. 数组中数字出现的次数](./docs/Algorithm/leetcode/i56.md)
 - [github]()
