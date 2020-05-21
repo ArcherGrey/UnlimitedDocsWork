@@ -8,6 +8,7 @@ export const leetcode = {
   id: "10.2",
   label: "leetcode题解",
   children: [
+    item(parent, 5, "最长回文子串"),
     item(parent, 20, "有效的括号"),
     item(parent, 33, "搜索旋转排序数组"),
     item(parent, 50, "Pow(x,n)"),

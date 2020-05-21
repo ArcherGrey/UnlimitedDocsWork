@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-05-20 13:56:28
+ * @LastEditTime: 2020-05-21 16:45:42
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -65,6 +65,7 @@
   - [leetcode 探索]()
     - 待完成 [队列&栈](./docs/Algorithm/leetcode_Class/queue_stack.md)
   - [leetcode 题解]()
+    - 待补充 [5. 最长回文子串](./docs/Algorithm/leetcode/5.md)
     - [20. 有效的括号](./docs/Algorithm/leetcode/20.md)
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [50. Pow(x,n)](./docs/Algorithm/leetcode/50.md)

@@ -118,6 +118,9 @@
 - 普通
   - 壁纸软件
     - Wallpaper Engine
+  - 截图
+    - GifCam
+      - [位置](./software/)
 
 ---
 
