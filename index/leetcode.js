@@ -13,6 +13,7 @@ export const leetcode = {
     item(parent, 33, "搜索旋转排序数组"),
     item(parent, 50, "Pow(x,n)"),
     item(parent, 69, "x 的平方根"),
+    item(parent, 105, "从前序与中序遍历序列构造二叉树"),
     item(parent, 133, "克隆图"),
     item(parent, 136, "只出现一次的数字"),
     item(parent, 150, "逆波兰表达式求值"),

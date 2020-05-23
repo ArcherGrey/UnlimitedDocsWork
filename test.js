@@ -1,27 +1,28 @@
 /**
- * @param {string} s
- * @return {string}
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
  */
-var longestPalindrome = function (s) {
-  if (!s || s.length == 0) return "";
-  let start = 0,
-    end = 0;
-  for (let i = 0; i < s.length; ++i) {
-    let l1 = expandAroundCenter(s, i, i); // 中心为一个字符的情况
-    let l2 = expandAroundCenter(s, i, i + 1); // 中心为两个相同字符的情况
-    let l = Math.max(l1, l2);
-    if (l > end - start) {
-      start = i - Math.floor((l - 1) / 2);
-      end = i + Math.floor(l / 2);
+/**
+ * @param {number[]} preorder
+ * @param {number[]} inorder
+ * @return {TreeNode}
+ */
+var buildTree = function (preorder, inorder) {
+  if (!preorder.length) return null;
+  let root = new TreeNode(preorder[0]);
+  let stack = [root];
+  let index = 0;
+  for (let i = 1; i < preorder.length; ++i) {
+    let val = preorder[i];
+    let node = stack.pop();
+    if (node.val != inorder[index]) {
+      node.left = new TreeNode(val);
+      stack.push(node.left);
+    } else {
+      while (stack.length > 0 && stack) {}
     }
   }
-  return s.substring(start, end + 1);
 };
-
-function expandAroundCenter(s, l, r) {
-  while (l >= 0 && r < s.length && s[l] == s[r]) {
-    l--;
-    r++;
-  }
-  return r - l - 1;
-}
