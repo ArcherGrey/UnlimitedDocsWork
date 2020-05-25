@@ -1,28 +1,26 @@
 /**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
+ * @param {number} capacity
  */
-/**
- * @param {number[]} preorder
- * @param {number[]} inorder
- * @return {TreeNode}
- */
-var buildTree = function (preorder, inorder) {
-  if (!preorder.length) return null;
-  let root = new TreeNode(preorder[0]);
-  let stack = [root];
-  let index = 0;
-  for (let i = 1; i < preorder.length; ++i) {
-    let val = preorder[i];
-    let node = stack.pop();
-    if (node.val != inorder[index]) {
-      node.left = new TreeNode(val);
-      stack.push(node.left);
-    } else {
-      while (stack.length > 0 && stack) {}
-    }
-  }
+var LRUCache = function (capacity) {
+  this.len = capacity;
 };
+
+/**
+ * @param {number} key
+ * @return {number}
+ */
+LRUCache.prototype.get = function (key) {};
+
+/**
+ * @param {number} key
+ * @param {number} value
+ * @return {void}
+ */
+LRUCache.prototype.put = function (key, value) {};
+
+/**
+ * Your LRUCache object will be instantiated and called as such:
+ * var obj = new LRUCache(capacity)
+ * var param_1 = obj.get(key)
+ * obj.put(key,value)
+ */

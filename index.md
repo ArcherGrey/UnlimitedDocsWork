@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-05-22 18:49:32
+ * @LastEditTime: 2020-05-25 09:22:02
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -72,9 +72,11 @@
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [50. Pow(x,n)](./docs/Algorithm/leetcode/50.md)
     - [69. x 的平方根](./docs/Algorithm/leetcode/69.md)
-    - 待补充 [105. 从前序与中序遍历序列构造二叉树](./docs/Algorithm/leetcode/105.md)
+    - [76. 最小覆盖子串](./docs/Algorithm/leetcode/76.md)
+    - [105. 从前序与中序遍历序列构造二叉树](./docs/Algorithm/leetcode/105.md)
     - [133. 克隆图](./docs/Algorithm/leetcode/133.md)
     - [136. 只出现一次的数字](./docs/Algorithm/leetcode/136.md)
+    - [146. LRU 缓存机制](./docs/Algorithm/leetcode/146.md)
     - [150. 逆波兰表达式求值](./docs/Algorithm/leetcode/150.md)
     - [152. 乘积最大子数组](./docs/Algorithm/leetcode/152.md)
     - [155. 最小栈](./docs/Algorithm/leetcode/155.md)
