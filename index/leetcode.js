@@ -25,6 +25,7 @@ export const leetcode = {
     item(parent, 202, "快乐数"),
     item(parent, 221, "最大正方形"),
     item(parent, 279, "完全平方数"),
+    item(parent, 287, "寻找重复数"),
     item(parent, 560, "和为k的子数组"),
     item(parent, 572, "另一个树的子树"),
     item(parent, 680, "验证回文字符串 Ⅱ"),
