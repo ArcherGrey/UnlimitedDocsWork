@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-05-26 09:19:29
+ * @LastEditTime: 2020-05-27 09:26:56
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -90,6 +90,7 @@
     - [680. 验证回文字符串 Ⅱ](./docs/Algorithm/leetcode/680.md)
     - [725. 打开转盘锁](./docs/Algorithm/leetcode/725.md)
     - [739. 每日温度](./docs/Algorithm/leetcode/739.md)
+    - [974. 和可被 K 整除的子数组](./docs/Algorithm/leetcode/974.md)
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
     - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
     - [1371. 每个元音包含偶数次的最长子字符串](./docs/Algorithm/leetcode/1371.md)

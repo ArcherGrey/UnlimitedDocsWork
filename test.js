@@ -1,26 +1,25 @@
 /**
- * @param {number} capacity
- */
-var LRUCache = function (capacity) {
-  this.len = capacity;
-};
-
-/**
- * @param {number} key
+ * @param {number[]} A
+ * @param {number} K
  * @return {number}
  */
-LRUCache.prototype.get = function (key) {};
-
-/**
- * @param {number} key
- * @param {number} value
- * @return {void}
- */
-LRUCache.prototype.put = function (key, value) {};
-
-/**
- * Your LRUCache object will be instantiated and called as such:
- * var obj = new LRUCache(capacity)
- * var param_1 = obj.get(key)
- * obj.put(key,value)
- */
+var subarraysDivByK = function (A, K) {
+  let record = [];
+  for (let j = 0; j < K; ++j) {
+    record[j] = 0;
+  }
+  record[0] = 1;
+  let sum = 0,
+    ans = 0;
+  for (let i = 0; i < A.length; ++i) {
+    sum += A[i];
+    // 兼容负数情况
+    let mod = ((sum % K) + K) % K;
+    record[mod] = record[mod] + 1;
+  }
+  for (let q = 0; q < record.length; ++q) {
+    // 排列组合
+    ans += (record[q] * (record[q] - 1)) / 2;
+  }
+  return ans;
+};

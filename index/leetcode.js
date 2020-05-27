@@ -31,6 +31,7 @@ export const leetcode = {
     item(parent, 680, "验证回文字符串 Ⅱ"),
     item(parent, 725, "打开转盘锁"),
     item(parent, 739, "每日温度"),
+    item(parent, 974, "和可被 K 整除的子数组"),
     item(parent, 983, "最低票价"),
     item(parent, 1095, "山脉数组中查找目标值"),
     item(parent, 1371, "每个元音包含偶数次的最长子字符串"),
