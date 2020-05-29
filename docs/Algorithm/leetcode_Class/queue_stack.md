@@ -274,3 +274,4 @@ function DFS(root, target) {
 
 - 200. 岛屿数量
 - 133. 克隆图
+- 494. 目标和

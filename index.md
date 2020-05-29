@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-05-27 09:26:56
+ * @LastEditTime: 2020-05-28 19:12:18
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -85,6 +85,8 @@
     - [221. 最大正方形](./docs/Algorithm/leetcode/221.md)
     - [279. 完全平方数](./docs/Algorithm/leetcode/279.md)
     - [287. 寻找重复数](./docs/Algorithm/leetcode/287.md)
+    - [394. 字符串解码](./docs/Algorithm/leetcode/394.md)
+    - 待补充 [494. 目标和](./docs/Algorithm/leetcode/494.md)
     - 待补充 [560. 和为 k 的子数组](./docs/Algorithm/leetcode/560.md)
     - [572. 另一个树的子树](./docs/Algorithm/leetcode/572.md)
     - [680. 验证回文字符串 Ⅱ](./docs/Algorithm/leetcode/680.md)

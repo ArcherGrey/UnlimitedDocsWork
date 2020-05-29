@@ -1,25 +1,29 @@
 /**
- * @param {number[]} A
- * @param {number} K
+ * @param {number[]} nums
+ * @param {number} S
  * @return {number}
  */
-var subarraysDivByK = function (A, K) {
-  let record = [];
-  for (let j = 0; j < K; ++j) {
-    record[j] = 0;
+var findTargetSumWays = function (nums, S) {
+  let dp = new Array(2001);
+  for (let x = 0; x < 2001; ++x) {
+    dp[x] = 0;
   }
-  record[0] = 1;
-  let sum = 0,
-    ans = 0;
-  for (let i = 0; i < A.length; ++i) {
-    sum += A[i];
-    // 兼容负数情况
-    let mod = ((sum % K) + K) % K;
-    record[mod] = record[mod] + 1;
+  dp[nums[0] + 1000] = 1;
+  dp[-nums[0] + 1000] += 1;
+
+  for (let i = 1; i < nums.length; ++i) {
+    let next = new Array(2001);
+    for (let x = 0; x < 2001; ++x) {
+      next[x] = 0;
+    }
+    for (let sum = -1000; sum <= 1000; ++sum) {
+      if (dp[sum + 1000] > 0) {
+        next[sum + nums[i] + 1000] += dp[sum + 1000];
+        next[sum - nums[i] + 1000] += dp[sum + 1000];
+      }
+    }
+    dp = next;
   }
-  for (let q = 0; q < record.length; ++q) {
-    // 排列组合
-    ans += (record[q] * (record[q] - 1)) / 2;
-  }
-  return ans;
+
+  return S > 1000 ? 0 : dp[S + 1000];
 };
