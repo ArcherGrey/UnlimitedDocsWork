@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./utils/vue.js"></script>
+    <script src="./utils/element.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+    <title>Document</title>
+    <style>
+      .infinite-list {
+        height: 300px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .infinite-list .infinite-list-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        background: #e8f3fe;
+        margin: 10px;
+        color: #7dbcfc;
+      }
+
+      .infinite-list .infinite-list-item + .list-item {
+        margin-top: 10px;
+      }
+
+      .infinite-list-wrapper {
+        height: 300px;
+        text-align: center;
+      }
+
+      .infinite-list-wrapper .list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .infinite-list-wrapper .list-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        background: #fff6f6;
+        color: #ff8484;
+      }
+
+      .infinite-list-wrapper .list-item + .list-item {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <template>
+        <div class="infinite-list-wrapper" style="overflow: auto;">
+          <ul
+            class="list"
+            v-infinite-scroll="load"
+            infinite-scroll-disabled="disabled"
+          >
+            <li v-for="i in count" class="list-item">{{ i }}</li>
+          </ul>
+          <p v-if="loading">加载中...</p>
+          <p v-if="noMore">没有更多了</p>
+        </div>
+      </template>
+    </div>
+
+    <script>
+      var Main = {
+        data() {
+          return {
+            count: 10,
+            loading: false
+          };
+        },
+        computed: {
+          noMore() {
+            return this.count >= 20;
+          },
+          disabled() {
+            return this.loading || this.noMore;
+          }
+        },
+        methods: {
+          load() {
+            this.loading = true;
+            setTimeout(() => {
+              this.count += 2;
+              this.loading = false;
+            }, 2000);
+          }
+        }
+      };
+      var Ctor = Vue.extend(Main);
+      new Ctor().$mount("#app");
+    </script>
+  </body>
+</html>
