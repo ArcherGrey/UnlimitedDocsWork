@@ -133,6 +133,7 @@
 - Markdown Preview Enhanced 流程图可视化
 - prettier 自动格式化
 - koroFileHeader 生成文件头部注释和函数注释
+- kanban 工作任务管理
 
 ---
 
@@ -141,3 +142,5 @@
 - [element-ui](./docs/question/element.md)
 - [css](./docs/question/css.md)
 - [浏览器](./docs/question/browser.md)
+- [javaScript](./docs/question/javaScript.md)
+- [git](./docs/question/git.md)

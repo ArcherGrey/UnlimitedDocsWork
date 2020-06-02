@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-02 13:41:34
+ * @LastEditTime: 2020-06-02 15:43:27
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -71,11 +71,15 @@
     - 待补充 [5. 最长回文子串](./docs/Algorithm/leetcode/5.md)
     - [20. 有效的括号](./docs/Algorithm/leetcode/20.md)
     - [26. 删除排序数组中的重复项](./docs/Algorithm/leetcode/26.md)
+    - [27. 移除元素](./docs/Algorithm/leetcode/27.md)
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
+    - [35. 搜索插入位置](./docs/Algorithm/leetcode/35.md)
     - [50. Pow(x,n)](./docs/Algorithm/leetcode/50.md)
+    - [66. 加一](./docs/Algorithm/leetcode/66.md)
     - [69. x 的平方根](./docs/Algorithm/leetcode/69.md)
     - [76. 最小覆盖子串](./docs/Algorithm/leetcode/76.md)
     - [84. 柱状图中最大的矩形](./docs/Algorithm/leetcode/84.md)
+    - [88. 合并两个有序数组](./docs/Algorithm/leetcode/88.md)
     - [94. 二叉树中序遍历](./docs/Algorithm/leetcode/94.md)
     - [105. 从前序与中序遍历序列构造二叉树](./docs/Algorithm/leetcode/105.md)
     - [133. 克隆图](./docs/Algorithm/leetcode/133.md)
