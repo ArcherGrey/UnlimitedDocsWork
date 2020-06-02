@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-05-30 11:22:21
+ * @LastEditTime: 2020-06-02 13:41:34
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -67,13 +67,16 @@
   - [leetcode 探索]()
     - 待完成 [队列&栈](./docs/Algorithm/leetcode_Class/queue_stack.md)
   - [leetcode 题解]()
+    - [1. 两数之和](./docs/Algorithm/leetcode/1.md)
     - 待补充 [5. 最长回文子串](./docs/Algorithm/leetcode/5.md)
     - [20. 有效的括号](./docs/Algorithm/leetcode/20.md)
+    - [26. 删除排序数组中的重复项](./docs/Algorithm/leetcode/26.md)
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [50. Pow(x,n)](./docs/Algorithm/leetcode/50.md)
     - [69. x 的平方根](./docs/Algorithm/leetcode/69.md)
     - [76. 最小覆盖子串](./docs/Algorithm/leetcode/76.md)
     - [84. 柱状图中最大的矩形](./docs/Algorithm/leetcode/84.md)
+    - [94. 二叉树中序遍历](./docs/Algorithm/leetcode/94.md)
     - [105. 从前序与中序遍历序列构造二叉树](./docs/Algorithm/leetcode/105.md)
     - [133. 克隆图](./docs/Algorithm/leetcode/133.md)
     - [136. 只出现一次的数字](./docs/Algorithm/leetcode/136.md)
@@ -98,8 +101,10 @@
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
     - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
     - [1371. 每个元音包含偶数次的最长子字符串](./docs/Algorithm/leetcode/1371.md)
+    - [1431. 拥有最多糖果的孩子](./docs/Algorithm/leetcode/1431.md)
     - 待完成[面试题 51. 数组中的逆序对](./docs/Algorithm/leetcode/i51.md)
     - [面试题 56 - I. 数组中数字出现的次数](./docs/Algorithm/leetcode/i56.md)
+    - [面试题 64. 求 1+2+…+n](./docs/Algorithm/leetcode/i64.md)
 - [github]()
   - [无法登录](./docs/github/host.md)
 - [工作总结]()

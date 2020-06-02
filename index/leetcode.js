@@ -1,4 +1,4 @@
-import { item } from "./common.js";
+import { leetcodeItem as item } from "./common.js";
 const parent = {
   id: "10.2",
   path: "./docs/Algorithm/leetcode/"
@@ -8,13 +8,16 @@ export const leetcode = {
   id: "10.2",
   label: "leetcode题解",
   children: [
+    item(parent, 1, "两数之和"),
     item(parent, 5, "最长回文子串"),
     item(parent, 20, "有效的括号"),
+    item(parent, 26, "删除排序数组中的重复项"),
     item(parent, 33, "搜索旋转排序数组"),
     item(parent, 50, "Pow(x,n)"),
     item(parent, 69, "x 的平方根"),
     item(parent, 76, "最小覆盖子串"),
     item(parent, 84, "柱状图中最大的矩形"),
+    item(parent, 94, "二叉树中序遍历"),
     item(parent, 105, "从前序与中序遍历序列构造二叉树"),
     item(parent, 133, "克隆图"),
     item(parent, 136, "只出现一次的数字"),
@@ -39,7 +42,9 @@ export const leetcode = {
     item(parent, 983, "最低票价"),
     item(parent, 1095, "山脉数组中查找目标值"),
     item(parent, 1371, "每个元音包含偶数次的最长子字符串"),
+    item(parent, 1431, "拥有最多糖果的孩子"),
     item(parent, "i51", "数组中的逆序对"),
-    item(parent, "i56", "I. 数组中数字出现的次数")
+    item(parent, "i56", "I. 数组中数字出现的次数"),
+    item(parent, "i64", "求 1+2+…+n")
   ]
 };
