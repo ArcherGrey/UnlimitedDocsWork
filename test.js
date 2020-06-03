@@ -1,16 +1,21 @@
 /**
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
+ * @param {number[]} numbers
+ * @param {number} target
+ * @return {number[]}
  */
-var merge = function (nums1, m, nums2, n) {
-  let p1 = m - 1,
-    p2 = n - 1,
-    p = m + n - 1;
-  while (p1 >= 0 && p2 >= 0) {
-    nums1[p--] = nums1[p1] > nums2[p2] ? nums1[p1--] : nums2[p2--];
+
+var twoSum = function (numbers, target) {
+  let l = 0,
+    r = numbers.length - 1;
+  while (l <= r) {
+    let sum = numbers[l] + numbers[r];
+    if (sum == target) {
+      return [l + 1, r + 1];
+    } else if (sum < target) {
+      l++;
+    } else {
+      r--;
+    }
   }
-  return nums1;
+  return [];
 };
