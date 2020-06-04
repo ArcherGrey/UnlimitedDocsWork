@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-03 11:33:49
+ * @LastEditTime: 2020-06-04 17:44:45
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -93,10 +93,13 @@
     - [152. 乘积最大子数组](./docs/Algorithm/leetcode/152.md)
     - [155. 最小栈](./docs/Algorithm/leetcode/155.md)
     - [167. 两数之和 II - 输入有序数组](./docs/Algorithm/leetcode/167.md)
+    - [169. 多数元素](./docs/Algorithm/leetcode/169.md)
+    - [189. 旋转数组](./docs/Algorithm/leetcode/189.md)
     - [198. 打家劫舍](./docs/Algorithm/leetcode/198.md)
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)
     - [202. 快乐数](./docs/Algorithm/leetcode/202.md)
     - [221. 最大正方形](./docs/Algorithm/leetcode/221.md)
+    - [238. 除自身以外数组的乘积](./docs/Algorithm/leetcode/238.md)
     - [279. 完全平方数](./docs/Algorithm/leetcode/279.md)
     - [287. 寻找重复数](./docs/Algorithm/leetcode/287.md)
     - [394. 字符串解码](./docs/Algorithm/leetcode/394.md)

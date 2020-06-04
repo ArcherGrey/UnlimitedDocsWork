@@ -114,6 +114,7 @@
 - 操作系统
   - linux
     - wsl2 win 系统运行 linux
+    - [教程](http://c.biancheng.net/linux_tutorial/10/)
 
 ---
 

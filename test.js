@@ -1,21 +1,16 @@
 /**
- * @param {number[]} numbers
- * @param {number} target
- * @return {number[]}
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {void} Do not return anything, modify nums in-place instead.
  */
-
-var twoSum = function (numbers, target) {
-  let l = 0,
-    r = numbers.length - 1;
-  while (l <= r) {
-    let sum = numbers[l] + numbers[r];
-    if (sum == target) {
-      return [l + 1, r + 1];
-    } else if (sum < target) {
-      l++;
-    } else {
-      r--;
-    }
-  }
-  return [];
+var rotate = function (nums, k) {
+  reverse(nums, 0, nums, length - 1);
+  reverse(nums, 0, k - 1);
+  reverse(nums, k, nums.length - 1);
 };
+
+function reverse(nums, i, j) {
+  for (; i <= j; i++, j--) {
+    [nums[i], nums[j]] = [nums[j], nums[i]];
+  }
+}
