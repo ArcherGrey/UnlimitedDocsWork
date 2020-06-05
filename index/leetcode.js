@@ -56,6 +56,7 @@ export const leetcode = {
     item(parent, 1095, "山脉数组中查找目标值"),
     item(parent, 1371, "每个元音包含偶数次的最长子字符串"),
     item(parent, 1431, "拥有最多糖果的孩子"),
+    item(parent, "i29", "顺时针打印矩阵"),
     item(parent, "i51", "数组中的逆序对"),
     item(parent, "i56", "I. 数组中数字出现的次数"),
     item(parent, "i64", "求 1+2+…+n")

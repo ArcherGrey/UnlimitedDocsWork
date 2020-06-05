@@ -11,3 +11,7 @@
     - height:calc(100vh - 60px); 终于起效
     - 必须加单位 中间有空格
 - padding margin 所有带四个属性的都是顺时针 上右下左
+- div
+  - width 如果不指定会被内部撑开
+  - % 依赖父元素宽度
+  - `flex 1 1 auto` 自动延申的时候指定一个最大宽度 `calc(100% - xxx px)`
