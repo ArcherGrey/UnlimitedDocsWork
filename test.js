@@ -1,18 +1,14 @@
 /**
  * @param {number[]} nums
- * @param {number} k
- * @return {boolean}
+ * @return {void} Do not return anything, modify nums in-place instead.
  */
-var containsNearbyDuplicate = function (nums, k) {
-  let m = new Map();
-  for (let i = 0; i < nums.length; ++i) {
-    const cur = nums[i];
-    if (m.has(cur)) {
-      if (i - m.get(cur) <= k) {
-        return true;
-      }
+var moveZeroes = function (nums) {
+  let noZ = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] != 0) {
+      [nums[noZ], nums[i]] = [nums[i], nums[noZ]];
+      noZ++;
     }
-    m.set(cur, i);
   }
-  return false;
+  return nums;
 };
