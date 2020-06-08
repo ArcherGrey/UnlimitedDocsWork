@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-05 09:25:29
+ * @LastEditTime: 2020-06-08 11:11:19
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -98,6 +98,8 @@
     - [198. 打家劫舍](./docs/Algorithm/leetcode/198.md)
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)
     - [202. 快乐数](./docs/Algorithm/leetcode/202.md)
+    - [217. 存在重复元素](./docs/Algorithm/leetcode/217.md)
+    - [219. 存在重复元素 II](./docs/Algorithm/leetcode/219.md)
     - [221. 最大正方形](./docs/Algorithm/leetcode/221.md)
     - [238. 除自身以外数组的乘积](./docs/Algorithm/leetcode/238.md)
     - [279. 完全平方数](./docs/Algorithm/leetcode/279.md)
@@ -112,6 +114,7 @@
     - [821. 新 21 点](./docs/Algorithm/leetcode/821.md)
     - [974. 和可被 K 整除的子数组](./docs/Algorithm/leetcode/974.md)
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
+    - [990. 等式方程的可满足性](./docs/Algorithm/leetcode/990.md)
     - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
     - [1371. 每个元音包含偶数次的最长子字符串](./docs/Algorithm/leetcode/1371.md)
     - [1431. 拥有最多糖果的孩子](./docs/Algorithm/leetcode/1431.md)

@@ -18,3 +18,13 @@
 - pre 会保留空格和换行符
 - 透明度
   - 在设置 div 的透明度的时候发现设置了父 div 的透明度（opacity=0.5），子 div 的透明度也随着改变了，并且设置子 div 的透明度不起作用，这种情况下可以使用 rgba 来设置父 div 的透明度：例如设置 div 黑色半透明，可以设置 div 的 background:rgba(0,0,0,0.5)
+- 梯形
+  - 设置高度为 0
+  - 设置底部边框 或者顶部边框 加上左右高度
+    ```css
+    height: 0;
+    width: 100px;
+    border-bottom: 100px solid #e5c3b2;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    ```
