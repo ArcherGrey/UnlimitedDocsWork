@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-08 19:00:30
+ * @LastEditTime: 2020-06-10 09:24:34
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -69,6 +69,7 @@
   - [leetcode 题解]()
     - [1. 两数之和](./docs/Algorithm/leetcode/1.md)
     - 待补充 [5. 最长回文子串](./docs/Algorithm/leetcode/5.md)
+    - [9. 回文数](./docs/Algorithm/leetcode/9.md)
     - [20. 有效的括号](./docs/Algorithm/leetcode/20.md)
     - [26. 删除排序数组中的重复项](./docs/Algorithm/leetcode/26.md)
     - [27. 移除元素](./docs/Algorithm/leetcode/27.md)
@@ -113,7 +114,10 @@
     - [485. 最大连续 1 的个数](./docs/Algorithm/leetcode/485.md)
     - 待补充 [494. 目标和](./docs/Algorithm/leetcode/494.md)
     - [509. 斐波那契数](./docs/Algorithm/leetcode/509.md)
+    - [532. 数组中的 K-diff 数对](./docs/Algorithm/leetcode/532.md)
     - 待补充 [560. 和为 k 的子数组](./docs/Algorithm/leetcode/560.md)
+    - [561. 数组拆分 I](./docs/Algorithm/leetcode/561.md)
+    - [566. 重塑矩阵](./docs/Algorithm/leetcode/566.md)
     - [572. 另一个树的子树](./docs/Algorithm/leetcode/572.md)
     - [680. 验证回文字符串 Ⅱ](./docs/Algorithm/leetcode/680.md)
     - [725. 打开转盘锁](./docs/Algorithm/leetcode/725.md)
@@ -126,6 +130,7 @@
     - [1371. 每个元音包含偶数次的最长子字符串](./docs/Algorithm/leetcode/1371.md)
     - [1431. 拥有最多糖果的孩子](./docs/Algorithm/leetcode/1431.md)
     - [面试题 29. 顺时针打印矩阵](./docs/Algorithm/leetcode/i29.md)
+    - [面试题 46. 把数字翻译成字符串](./docs/Algorithm/leetcode/i46.md)
     - 待完成[面试题 51. 数组中的逆序对](./docs/Algorithm/leetcode/i51.md)
     - [面试题 56 - I. 数组中数字出现的次数](./docs/Algorithm/leetcode/i56.md)
     - [面试题 64. 求 1+2+…+n](./docs/Algorithm/leetcode/i64.md)

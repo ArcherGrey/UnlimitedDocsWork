@@ -10,6 +10,7 @@ export const leetcode = {
   children: [
     item(parent, 1, "两数之和"),
     item(parent, 5, "最长回文子串"),
+    item(parent, 9, "回文数"),
     item(parent, 20, "有效的括号"),
     item(parent, 26, "删除排序数组中的重复项"),
     item(parent, 27, "移除元素"),
@@ -54,7 +55,10 @@ export const leetcode = {
     item(parent, 485, "最大连续1的个数"),
     item(parent, 494, "目标和"),
     item(parent, 509, "斐波那契数"),
+    item(parent, 532, "数组中的 K-diff 数对"),
     item(parent, 560, "和为k的子数组"),
+    item(parent, 561, "数组拆分 I"),
+    item(parent, 566, "重塑矩阵"),
     item(parent, 572, "另一个树的子树"),
     item(parent, 680, "验证回文字符串 Ⅱ"),
     item(parent, 725, "打开转盘锁"),
@@ -67,6 +71,7 @@ export const leetcode = {
     item(parent, 1371, "每个元音包含偶数次的最长子字符串"),
     item(parent, 1431, "拥有最多糖果的孩子"),
     item(parent, "i29", "顺时针打印矩阵"),
+    item(parent, "i46", "把数字翻译成字符串"),
     item(parent, "i51", "数组中的逆序对"),
     item(parent, "i56", "I. 数组中数字出现的次数"),
     item(parent, "i64", "求 1+2+…+n")
