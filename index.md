@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-10 09:24:34
+ * @LastEditTime: 2020-06-11 15:39:45
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -47,14 +47,8 @@
 - [前端框架]()
 
   - [vue]()
-    - [基础]()
-      - [计算属性和监听器](./docs/FE_framework/vue/computed.md)
-      - [生命周期](./docs/FE_framework/vue/life.md)
-      - [v-if & v-show](./docs/FE_framework/vue/conditional.md)
-    - [可复用性 & 组合]()
-      - [过滤器](./docs/FE_framework/vue/filter.md)
-    - [api]()
-      - [nextTick](./docs/FE_framework/vue/nextTick.md)
+    - [过滤器](./docs/FE_framework/vue/filter.md)
+    - [生命周期](./docs/FE_framework/vue/life.md)
 
 - [前端工具]()
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)
@@ -119,6 +113,8 @@
     - [561. 数组拆分 I](./docs/Algorithm/leetcode/561.md)
     - [566. 重塑矩阵](./docs/Algorithm/leetcode/566.md)
     - [572. 另一个树的子树](./docs/Algorithm/leetcode/572.md)
+    - [581. 最短无序连续子数组](./docs/Algorithm/leetcode/581.md)
+    - [605. 种花问题](./docs/Algorithm/leetcode/605.md)
     - [680. 验证回文字符串 Ⅱ](./docs/Algorithm/leetcode/680.md)
     - [725. 打开转盘锁](./docs/Algorithm/leetcode/725.md)
     - [739. 每日温度](./docs/Algorithm/leetcode/739.md)

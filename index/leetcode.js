@@ -60,6 +60,8 @@ export const leetcode = {
     item(parent, 561, "数组拆分 I"),
     item(parent, 566, "重塑矩阵"),
     item(parent, 572, "另一个树的子树"),
+    item(parent, 581, "最短无序连续子数组"),
+    item(parent, 605, "种花问题"),
     item(parent, 680, "验证回文字符串 Ⅱ"),
     item(parent, 725, "打开转盘锁"),
     item(parent, 739, "每日温度"),
