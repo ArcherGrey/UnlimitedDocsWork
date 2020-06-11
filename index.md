@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-11 15:39:45
+ * @LastEditTime: 2020-06-11 18:16:53
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -49,6 +49,7 @@
   - [vue]()
     - [过滤器](./docs/FE_framework/vue/filter.md)
     - [生命周期](./docs/FE_framework/vue/life.md)
+    - [vdom](./docs/FE_framework/vue/life.md)
 
 - [前端工具]()
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)

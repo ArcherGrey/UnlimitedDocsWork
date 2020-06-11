@@ -8,6 +8,7 @@ export const vueIndex = {
   label: "vue",
   children: [
     item(parent, 1, "过滤器", "filter"),
-    item(parent, 2, "生命周期", "life")
+    item(parent, 2, "生命周期", "life"),
+    item(parent, 2, "vdom", "vdom")
   ]
 };
