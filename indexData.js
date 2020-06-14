@@ -148,6 +148,11 @@ export const index = [
         id: "11.1",
         label: "计算机程序的构造和解释 SCIP",
         path: "./docs/translate/SICP.md"
+      },
+      {
+        id: "11.2",
+        label: "算法 第四版（红宝书）",
+        path: "./docs/translate/a4red.md"
       }
     ]
   }

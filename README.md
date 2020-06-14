@@ -21,6 +21,11 @@
   - The Art of Readable Code
   - Clean Code
   - The Clean Coder
+- 算法
+  - 算法设计手册
+  - 算法 第四版
+  - [Algorithms](http://jeffe.cs.illinois.edu/teaching/algorithms/book/Algorithms-JeffE.pdf)
+    - [github](https://github.com/jeffgerickson/algorithms)
 
 ---
 

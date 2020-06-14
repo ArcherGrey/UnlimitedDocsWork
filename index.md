@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-11 18:57:51
+ * @LastEditTime: 2020-06-12 18:48:03
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -72,8 +72,10 @@
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [35. 搜索插入位置](./docs/Algorithm/leetcode/35.md)
     - [50. Pow(x,n)](./docs/Algorithm/leetcode/50.md)
+    - [53. 最大子序和](./docs/Algorithm/leetcode/53.md)
     - [66. 加一](./docs/Algorithm/leetcode/66.md)
     - [69. x 的平方根](./docs/Algorithm/leetcode/69.md)
+    - [70. 爬楼梯](./docs/Algorithm/leetcode/70.md)
     - [76. 最小覆盖子串](./docs/Algorithm/leetcode/76.md)
     - [84. 柱状图中最大的矩形](./docs/Algorithm/leetcode/84.md)
     - [88. 合并两个有序数组](./docs/Algorithm/leetcode/88.md)
@@ -139,6 +141,7 @@
 - [工作总结]()
 - [翻译]
   - [SICP](./docs/translate/SICP.md)
+  - [算法 第四版 英文](./docs/translate/a4red.md)
 - [常见问题]
   - [css](./docs/question/css.md)
   - [element](./docs/question/element.md)
