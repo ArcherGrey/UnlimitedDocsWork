@@ -123,6 +123,14 @@
   - linux
     - wsl2 win 系统运行 linux
     - [教程](http://c.biancheng.net/linux_tutorial/10/)
+  -  macOS
+    - Homebrew 包管理工具
+      - [软件对应名称](https://github.com/cactusnix/brew-apps)
+      - [自动安装流程](https://zhuanlan.zhihu.com/p/111014448)
+      - 常用命令
+        - 本地软件库列表：brew ls
+        - 查找软件：brew search google（其中google替换为要查找的软件关键字）
+        - 查看brew版本：brew -v  更新brew版本：brew update
 
 ---
 
