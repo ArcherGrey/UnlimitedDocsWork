@@ -130,7 +130,7 @@
       - 常用命令
         - 本地软件库列表：brew ls
         - 查找软件：brew search google（其中google替换为要查找的软件关键字）
-        - 查看brew版本：brew -v  更新brew版本：brew update
+        - 查看brew版本：brew -v  更新brew版本：brew update 
 
 ---
 
