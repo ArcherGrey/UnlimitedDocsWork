@@ -5,48 +5,23 @@
  *     this.left = this.right = null;
  * }
  */
-
 /**
- * Encodes a tree to a single string.
- *
- * @param {TreeNode} root
- * @return {string}
- */
-var serialize = function (root) {
-  let str = "";
-  if (!root) str += "null,";
-  else {
-    str += root.val + ",";
-    str += serialize(root.left, str);
-    str += serialize(root.right, str);
-  }
-  return str;
-};
-
-/**
- * Decodes your encoded data to tree.
- *
- * @param {string} data
+ * @param {number[]} nums
  * @return {TreeNode}
  */
-var deserialize = function (data) {
-  let arr = data.split(",");
-  arr.pop();
-  return rd(arr);
-};
+var sortedArrayToBST = function (nums) {
+  function helper(l, r) {
+    if (l > r) return null;
+    let mid = ~~((l + r) / 2);
+    if ((l + r) % 2) {
+      mid++;
+    }
 
-var rd = function (arr) {
-  if (arr[0] == "null") {
-    arr.shift();
-    return null;
+    // 中序遍历
+    const root = new TreeNode(nums[mid]);
+    root.left = helper(l, mid - 1);
+    root.right = helper(mid + 1, r);
+    return root;
   }
-  let root = new TreeNode(arr.shift());
-  root.left = rd(arr);
-  root.right = rd(arr);
-  return root;
+  return helper(0, nums.length - 1);
 };
-
-/**
- * Your functions will be called as such:
- * deserialize(serialize(root));
- */
