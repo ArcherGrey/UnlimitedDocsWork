@@ -15,3 +15,6 @@
 - `nextTick`
   - 需要在视图更新之后，基于新的视图进行操作。
   - 需要注意的是，在 created 和 mounted 阶段，如果需要操作渲染后的试图，也要使用 nextTick 方法。
+- data 是对象类型时更新不刷新视图
+  - set
+  - Object.assign 创建新对象
