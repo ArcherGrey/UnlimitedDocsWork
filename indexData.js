@@ -1,6 +1,6 @@
-import { vueIndex } from "./index/Vue.js";
-import { leetcode } from "./index/Leetcode.js";
-import { cssApply } from "./index/CssApp.js";
+import { vueIndex } from "./index/vue.js";
+import { leetcode } from "./index/leetcode.js";
+import { cssApply } from "./index/cssApp.js";
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [
