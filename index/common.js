@@ -14,7 +14,7 @@ export function leetNoteItem(parent, id, name) {
   };
 }
 
-export function vueItem(parent, id, name, filename) {
+export function item(parent, id, name, filename) {
   return {
     id: `${parent.id}.${id}`,
     label: `${name}`,

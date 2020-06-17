@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-16 14:59:13
+ * @LastEditTime: 2020-06-17 09:25:19
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -130,6 +130,7 @@
     - [974. 和可被 K 整除的子数组](./docs/Algorithm/leetcode/974.md)
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
     - [990. 等式方程的可满足性](./docs/Algorithm/leetcode/990.md)
+    - [1014. 最佳观光组合](./docs/Algorithm/leetcode/1014.md)
     - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
     - [1371. 每个元音包含偶数次的最长子字符串](./docs/Algorithm/leetcode/1371.md)
     - [1431. 拥有最多糖果的孩子](./docs/Algorithm/leetcode/1431.md)

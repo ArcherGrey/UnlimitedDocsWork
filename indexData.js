@@ -1,6 +1,6 @@
 import { vueIndex } from "./index/vue.js";
 import { leetcode } from "./index/leetcode.js";
-import { cssApply } from "./index/css_app.js";
+import { cssApply, cssLayout } from "./index/css/index.js";
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [
@@ -11,36 +11,7 @@ export const index = [
   {
     id: "2",
     label: "css",
-    children: [
-      cssApply,
-      {
-        id: "2.2",
-        label: "布局",
-        children: [
-          {
-            id: "2.2.1",
-            label: "盒模型介绍",
-            path: "./docs/Css/layout/box/index.md"
-          },
-          {
-            id: "2.2.2",
-            label: "flex",
-            path: "./docs/Css/layout/box/flex.md"
-          }
-        ]
-      },
-      {
-        id: "2.3",
-        label: "技巧",
-        children: [
-          {
-            id: "2.3.1",
-            label: "精简 css 代码",
-            path: "./docs/Css/tricks/cssBattle.md"
-          }
-        ]
-      }
-    ]
+    children: [cssApply, cssLayout]
   },
   {
     id: "3",

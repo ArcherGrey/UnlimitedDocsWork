@@ -76,6 +76,7 @@ export const leetcode = {
     item(parent, 974, "和可被 K 整除的子数组"),
     item(parent, 983, "最低票价"),
     item(parent, 990, "等式方程的可满足性"),
+    item(parent, 1014, "最佳观光组合"),
     item(parent, 1095, "山脉数组中查找目标值"),
     item(parent, 1371, "每个元音包含偶数次的最长子字符串"),
     item(parent, 1431, "拥有最多糖果的孩子"),

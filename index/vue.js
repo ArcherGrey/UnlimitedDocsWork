@@ -1,4 +1,4 @@
-import { vueItem as item } from "./common.js";
+import { item } from "./common.js";
 const parent = {
   id: "6.1",
   path: "./docs/FE_framework/vue/"

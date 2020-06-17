@@ -1,27 +1,14 @@
 /**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
+ * @param {number[]} A
+ * @return {number}
  */
-/**
- * @param {number[]} nums
- * @return {TreeNode}
- */
-var sortedArrayToBST = function (nums) {
-  function helper(l, r) {
-    if (l > r) return null;
-    let mid = ~~((l + r) / 2);
-    if ((l + r) % 2) {
-      mid++;
-    }
-
-    // 中序遍历
-    const root = new TreeNode(nums[mid]);
-    root.left = helper(l, mid - 1);
-    root.right = helper(mid + 1, r);
-    return root;
+var maxScoreSightseeingPair = function (A) {
+  let ans = 0,
+    max = A[0] + 0;
+  for (let j = 1; j < A.length; ++j) {
+    ans = Math.max(ans, max + A[j] - j);
+    // 遍历同时维护最大值
+    max = Math.max(max, A[j] - j);
   }
-  return helper(0, nums.length - 1);
+  return ans;
 };
