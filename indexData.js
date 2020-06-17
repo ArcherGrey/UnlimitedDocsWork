@@ -1,6 +1,8 @@
 import { vueIndex } from "./index/vue.js";
 import { leetcode } from "./index/leetcode.js";
 import { cssApply, cssLayout } from "./index/css/index.js";
+import { feeIndex } from "./index/fee.js";
+import { networkIndex } from "./index/network.js";
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [
@@ -17,22 +19,6 @@ export const index = [
     id: "3",
     label: "JavaScript",
     children: [
-      {
-        id: "3.1",
-        label: "模块化",
-        children: [
-          {
-            id: "3.1.1",
-            label: "原生 js 实现模块化",
-            path: "./docs/JavaScript/module/原生js模块化.md"
-          },
-          {
-            id: "3.1.2",
-            label: "各种模块化方案技术",
-            path: "./docs/JavaScript/module/module.md"
-          }
-        ]
-      },
       {
         id: "3.2",
         label: "基础",
@@ -53,27 +39,18 @@ export const index = [
             path: "./docs/JavaScript/es6/for.md"
           }
         ]
-      },
-      {
-        id: "3.3",
-        label: "ajax",
-        children: [
-          {
-            id: "3.3.1",
-            label: "请求方式",
-            path: "./docs/JavaScript/ajax/request.md"
-          }
-        ]
       }
     ]
   },
   {
     id: "4",
-    label: "Http"
+    label: "网络",
+    children: [...networkIndex]
   },
   {
     id: "5",
-    label: "webGis"
+    label: "前端工程化",
+    children: [...feeIndex]
   },
   {
     id: "6",
