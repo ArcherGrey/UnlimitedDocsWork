@@ -1,14 +1,26 @@
 /**
- * @param {number[]} A
- * @return {number}
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
  */
-var maxScoreSightseeingPair = function (A) {
-  let ans = 0,
-    max = A[0] + 0;
-  for (let j = 1; j < A.length; ++j) {
-    ans = Math.max(ans, max + A[j] - j);
-    // 遍历同时维护最大值
-    max = Math.max(max, A[j] - j);
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
+var isSymmetric = function (root) {
+  if (!root) return true;
+  const q = [root, root];
+  while (q.length) {
+    let u = q.shift(),
+      v = q.shift();
+    if (!u && !v) continue;
+    if (!u || !v || u.val != v.val) return false;
+    q.push(u.left);
+    q.push(v.right);
+    q.push(u.right);
+    q.push(v.left);
   }
-  return ans;
+  return true;
 };

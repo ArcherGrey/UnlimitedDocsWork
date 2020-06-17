@@ -18,3 +18,7 @@
 - data 是对象类型时更新不刷新视图
   - set
   - Object.assign 创建新对象
+- 强制组件刷新（重新渲染）
+  - `forceUpdate`
+  - `v-if`
+  - 修改`key`
