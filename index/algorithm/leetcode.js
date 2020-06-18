@@ -1,4 +1,4 @@
-import { leetcodeItem as item } from "./common.js";
+import { leetcodeItem as item } from "../common.js";
 const parent = {
   id: "10.2",
   path: "./docs/Algorithm/leetcode/"
