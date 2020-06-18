@@ -1,4 +1,4 @@
-import { index as indexData } from "./indexData.js";
+import { index } from "./index/index.js";
 
 var Main = {
   watch: {
@@ -12,9 +12,8 @@ var Main = {
   data() {
     return {
       filterText: "",
-      data: indexData,
+      data: index, // 目录
       count: 0,
-      index: indexData,
       lastIndex: {},
       defaultProps: {
         children: "children",

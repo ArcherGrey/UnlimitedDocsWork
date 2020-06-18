@@ -1,8 +1,8 @@
-import { vueIndex } from "./index/vue.js";
-import { leetcode } from "./index/leetcode.js";
-import { cssApply, cssLayout } from "./index/css/index.js";
-import { feeIndex } from "./index/fee.js";
-import { networkIndex } from "./index/network.js";
+import { vueIndex } from "./vue.js";
+import { leetcode } from "./leetcode.js";
+import { cssApply, cssLayout } from "./css/index.js";
+import { feeIndex } from "./fee.js";
+import { networkIndex } from "./network.js";
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [

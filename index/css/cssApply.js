@@ -1,11 +1,11 @@
 import { item } from "../common.js";
 const parent = {
   id: "2.1",
-  path: "./docs/Css/normal/"
+  path: "./docs/Css/apply/"
 };
 export const cssApply = {
   id: "2.1",
-  label: "常用",
+  label: "应用",
   children: [
     item(parent, 1, "纯 CSS 自定义关闭按钮", "closebutton"),
     item(parent, 2, "利用伪元素自定义图标", "fakeicon"),
