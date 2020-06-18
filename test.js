@@ -6,18 +6,39 @@
  * }
  */
 /**
- * @param {TreeNode} root
- * @return {number}
+ * @param {string} S
+ * @return {TreeNode}
  */
-var maxDepth = function (root) {
-  if (!root) return 0;
-  let ans = 0;
-  let s = [root];
-  while (s.length) {
-    const node = s.pop();
-    if (node.left) s.push(node.left);
-    if (node.right) s.push(node.right);
-    if (node.left && node.right) ans = Math.max(s.length, ans);
+var recoverFromPreorder = function (S) {
+  let path = [];
+  let pos = 0;
+  while (pos < S.length) {
+    // 获取当前节点的深度
+    let level = 0;
+    while (S[pos] == "-") {
+      ++level;
+      ++pos;
+    }
+
+    // 获取当前节点的值
+    let val = 0;
+    while (pos < S.length && !isNaN(S[pos])) {
+      val = val * 10 + (S[pos] - "0");
+      ++pos;
+    }
+
+    let node = new TreeNode(val);
+    if (level == path.length) {
+      if (path.length) {
+        path[path.length - 1].left = node;
+      }
+    } else {
+      while (level != path.length) {
+        path.pop();
+      }
+      path[path.length - 1].right = node;
+    }
+    path.push(node);
   }
-  return ans;
+  return path[0];
 };

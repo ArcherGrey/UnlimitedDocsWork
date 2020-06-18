@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-17 18:25:19
+ * @LastEditTime: 2020-06-18 16:49:20
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -10,31 +10,28 @@
 
 - [HTML]()
 - [CSS]()
-  - [技巧]()
-    - [精简 css 代码](./docs/Css/tricks/cssBattle.md)
-  - [常用]()
-    - [纯 CSS 自定义关闭按钮](./docs/Css/normal/closebutton.md)
-    - [利用伪元素自定义图标](./docs/Css/normal/fakeicon.md)
-    - [滚动效果](./docs/Css/normal/roll.md)
-    - [可调整宽高 div](./docs/Css/normal/resizediv.md)
-    - [伪类实现悬浮动画](./docs/Css/normal/hoverAnime.md)
+  - [应用]()
+    - [纯 CSS 自定义关闭按钮](./docs/Css/apply/closebutton.md)
+    - [利用伪元素自定义图标](./docs/Css/apply/fakeicon.md)
+    - [滚动效果](./docs/Css/apply/roll.md)
+    - [可调整宽高 div](./docs/Css/apply/resizediv.md)
+    - [伪类实现悬浮动画](./docs/Css/apply/hoverAnime.md)
   - [布局]()
-    - [盒模型]()
-      - [介绍](./docs/Css/layout/box/index.md)
-      - [flex](./docs/Css/layout/box/flex.md)
+    - [盒模型](./docs/Css/layout/box/index.md)
+    - [flex](./docs/Css/layout/box/flex.md)
 - [JS]()
-  - [模块化]()
-    - [原生 js 实现模块化](./docs/JavaScript/module/原生js模块化.md)
-    - [各种模块化方案技术](./docs/JavaScript/module/module.md)
+
   - [基础]()
+
     - [模板字面量](./docs/JavaScript/es6/模板字面量.md)
     - [set 和 map](./docs/JavaScript/es6/set_map.md)
     - [各种 for](./docs/JavaScript/es6/for.md)
-  - [ajax]()
-    - [请求方式](./docs/JavaScript/ajax/request.md)
+
   - [代码规范]()
     - 待补充[注释规范]()
-- [HTTP]()
+
+- [网络]()
+  - [请求方式](./docs/Network/request.md)
 - [WebGis]()
   - [OpenLayers]()
     - [官方文档]()
@@ -53,12 +50,17 @@
 
 - [前端工具]()
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)
+- [前端工程化]()
+  - [原生 js 实现模块化](./docs/FEE/原生js模块化.md)
+  - [各种模块化方案技术](./docs/FEE/module.md)
 - [后端相关]()
   - [nodejs]()
 - [数据库]()
   - [mongodb]()
     - [使用说明](./docs/BackEnd/mongo/index.md)
 - [算法]()
+  - [树]()
+    - [二叉树深度遍历](./docs/Algorithm/tree/dfs/md)
   - [leetcode 探索]()
     - 待完成 [队列&栈](./docs/Algorithm/leetcode_Class/queue_stack.md)
   - [leetcode 题解]()
@@ -134,6 +136,7 @@
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
     - [990. 等式方程的可满足性](./docs/Algorithm/leetcode/990.md)
     - [1014. 最佳观光组合](./docs/Algorithm/leetcode/1014.md)
+    - [1028. 从先序遍历还原二叉树](./docs/Algorithm/leetcode/1028.md)
     - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
     - [1371. 每个元音包含偶数次的最长子字符串](./docs/Algorithm/leetcode/1371.md)
     - [1431. 拥有最多糖果的孩子](./docs/Algorithm/leetcode/1431.md)
