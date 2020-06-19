@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-18 16:49:20
+ * @LastEditTime: 2020-06-18 18:13:04
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -60,7 +60,7 @@
     - [使用说明](./docs/BackEnd/mongo/index.md)
 - [算法]()
   - [树]()
-    - [二叉树深度遍历](./docs/Algorithm/tree/dfs/md)
+    - 待补充 [二叉树深度遍历](./docs/Algorithm/tree/dfs/md)
   - [leetcode 探索]()
     - 待完成 [队列&栈](./docs/Algorithm/leetcode_Class/queue_stack.md)
   - [leetcode 题解]()
@@ -86,7 +86,11 @@
     - [101. 对称二叉树](./docs/Algorithm/leetcode/101.md)
     - [104. 二叉树的最大深度](./docs/Algorithm/leetcode/104.md)
     - [105. 从前序与中序遍历序列构造二叉树](./docs/Algorithm/leetcode/105.md)
+    - [107. 二叉树的层次遍历 II](./docs/Algorithm/leetcode/107.md)
     - [108. 将有序数组转换为二叉搜索树](./docs/Algorithm/leetcode/108.md)
+    - [110. 平衡二叉树](./docs/Algorithm/leetcode/110.md)
+    - [111. 二叉树的最小深度](./docs/Algorithm/leetcode/111.md)
+    - [112. 路径总和](./docs/Algorithm/leetcode/112.md)
     - [118. 杨辉三角](./docs/Algorithm/leetcode/118.md)
     - [119. 杨辉三角 II](./docs/Algorithm/leetcode/119.md)
     - [121. 买卖股票的最佳时机](./docs/Algorithm/leetcode/121.md)

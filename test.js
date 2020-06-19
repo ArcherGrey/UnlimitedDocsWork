@@ -6,39 +6,26 @@
  * }
  */
 /**
- * @param {string} S
- * @return {TreeNode}
+ * @param {TreeNode} root
+ * @param {number} sum
+ * @return {boolean}
  */
-var recoverFromPreorder = function (S) {
-  let path = [];
-  let pos = 0;
-  while (pos < S.length) {
-    // 获取当前节点的深度
-    let level = 0;
-    while (S[pos] == "-") {
-      ++level;
-      ++pos;
+var hasPathSum = function (root, sum) {
+  if (!root) return false;
+  // 用栈保存当前的节点和对应的值
+  let s = [{ node: root, val: sum - root.val }];
+  while (s.length) {
+    let cur = s.pop();
+    // 当前节点是叶节点且对应的值为0的时候返回真
+    if (!cur.node.left && !cur.node.right && cur.val == 0) {
+      return true;
     }
-
-    // 获取当前节点的值
-    let val = 0;
-    while (pos < S.length && !isNaN(S[pos])) {
-      val = val * 10 + (S[pos] - "0");
-      ++pos;
+    if (cur.node.left) {
+      s.push({ node: cur.node.left, val: cur.val - cur.node.left.val });
     }
-
-    let node = new TreeNode(val);
-    if (level == path.length) {
-      if (path.length) {
-        path[path.length - 1].left = node;
-      }
-    } else {
-      while (level != path.length) {
-        path.pop();
-      }
-      path[path.length - 1].right = node;
+    if (cur.node.right) {
+      s.push({ node: cur.node.right, val: cur.val - cur.node.right.val });
     }
-    path.push(node);
   }
-  return path[0];
+  return false;
 };
