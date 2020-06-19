@@ -1,13 +1,13 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-06-18 14:40:02
+ * @LastEditTime: 2020-06-19 16:25:01
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
 
 import { vueIndex } from "./vue.js";
-import { leetcode } from "./algorithm/index.js";
+import { leetcode, tree } from "./algorithm/index.js";
 import { cssApply, cssLayout } from "./css/index.js";
 import { feeIndex } from "./fee.js";
 import { networkIndex } from "./network.js";
@@ -93,7 +93,8 @@ export const index = [
           }
         ]
       },
-      leetcode
+      leetcode,
+      tree
     ]
   },
   {

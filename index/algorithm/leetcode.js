@@ -55,6 +55,8 @@ export const leetcode = {
     item(parent, 217, "存在重复元素"),
     item(parent, 219, "存在重复元素 II"),
     item(parent, 221, "最大正方形"),
+    item(parent, 226, "翻转二叉树"),
+    item(parent, 235, "二叉搜索树的最近公共祖先"),
     item(parent, 238, "除自身以外数组的乘积"),
     item(parent, 243, "最短单词距离"),
     item(parent, 268, "缺失数字"),
