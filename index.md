@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-18 18:13:04
+ * @LastEditTime: 2020-06-19 10:45:32
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -10,6 +10,8 @@
 
 - [HTML]()
 - [CSS]()
+  - [基础]()
+    - [word-break、word-wrap、white-space](./docs/Css/basic/word.md)
   - [应用]()
     - [纯 CSS 自定义关闭按钮](./docs/Css/apply/closebutton.md)
     - [利用伪元素自定义图标](./docs/Css/apply/fakeicon.md)
@@ -20,16 +22,12 @@
     - [盒模型](./docs/Css/layout/box/index.md)
     - [flex](./docs/Css/layout/box/flex.md)
 - [JS]()
-
   - [基础]()
-
     - [模板字面量](./docs/JavaScript/es6/模板字面量.md)
     - [set 和 map](./docs/JavaScript/es6/set_map.md)
     - [各种 for](./docs/JavaScript/es6/for.md)
-
   - [代码规范]()
     - 待补充[注释规范]()
-
 - [网络]()
   - [请求方式](./docs/Network/request.md)
 - [WebGis]()
@@ -42,12 +40,10 @@
         - [Some Background on OpenLayers]()
         - [Raster Reprojection]()
 - [前端框架]()
-
   - [vue]()
     - [过滤器](./docs/FE_framework/vue/filter.md)
     - [生命周期](./docs/FE_framework/vue/life.md)
     - [vdom](./docs/FE_framework/vue/life.md)
-
 - [前端工具]()
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)
 - [前端工程化]()
@@ -57,7 +53,7 @@
   - [nodejs]()
 - [数据库]()
   - [mongodb]()
-    - [使用说明](./docs/BackEnd/mongo/index.md)
+    - [使用说明](./docs/Database/mongo/index.md)
 - [算法]()
   - [树]()
     - 待补充 [二叉树深度遍历](./docs/Algorithm/tree/dfs/md)
@@ -95,6 +91,7 @@
     - [119. 杨辉三角 II](./docs/Algorithm/leetcode/119.md)
     - [121. 买卖股票的最佳时机](./docs/Algorithm/leetcode/121.md)
     - [122. 买卖股票的最佳时机 II](./docs/Algorithm/leetcode/122.md)
+    - [125. 验证回文串](./docs/Algorithm/leetcode/125.md)
     - [133. 克隆图](./docs/Algorithm/leetcode/133.md)
     - [136. 只出现一次的数字](./docs/Algorithm/leetcode/136.md)
     - [146. LRU 缓存机制](./docs/Algorithm/leetcode/146.md)
