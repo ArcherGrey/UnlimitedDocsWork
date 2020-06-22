@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-19 16:56:45
+ * @LastEditTime: 2020-06-22 10:54:40
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -110,7 +110,9 @@
     - [226. 翻转二叉树](./docs/Algorithm/leetcode/226.md)
     - [235. 二叉搜索树的最近公共祖先](./docs/Algorithm/leetcode/235.md)
     - [238. 除自身以外数组的乘积](./docs/Algorithm/leetcode/238.md)
+    - [257. 二叉树的所有路径](./docs/Algorithm/leetcode/257.md)
     - [268. 缺失数字](./docs/Algorithm/leetcode/268.md)
+    - [270. 最接近的二叉搜索树值](./docs/Algorithm/leetcode/270.md)
     - [279. 最短单词距离](./docs/Algorithm/leetcode/243.md)
     - [279. 完全平方数](./docs/Algorithm/leetcode/279.md)
     - [283. 移动零](./docs/Algorithm/leetcode/283.md)

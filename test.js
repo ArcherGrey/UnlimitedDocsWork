@@ -7,8 +7,7 @@
  */
 /**
  * @param {TreeNode} root
- * @param {TreeNode} p
- * @param {TreeNode} q
- * @return {TreeNode}
+ * @param {number} target
+ * @return {number}
  */
-var lowestCommonAncestor = function (root, p, q) {};
+var closestValue = function (root, target) {};

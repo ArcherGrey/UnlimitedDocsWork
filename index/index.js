@@ -1,14 +1,14 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-06-19 16:25:01
+ * @LastEditTime: 2020-06-22 11:57:43
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
 
 import { vueIndex } from "./vue.js";
 import { leetcode, tree } from "./algorithm/index.js";
-import { cssApply, cssLayout } from "./css/index.js";
+import { cssApply, cssLayout, cssBasic } from "./css/index.js";
 import { feeIndex } from "./fee.js";
 import { networkIndex } from "./network.js";
 // import { FETools } from "./index/FE_Tools.js";
@@ -21,7 +21,7 @@ export const index = [
   {
     id: "2",
     label: "css",
-    children: [cssApply, cssLayout]
+    children: [cssApply, cssLayout, cssBasic]
   },
   {
     id: "3",
