@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-22 17:07:35
+ * @LastEditTime: 2020-06-22 18:23:06
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -39,6 +39,7 @@
         - [Raster Reprojection]()
 - [前端框架]()
   - [vue]()
+    - [vue-devtools 安装使用](./docs/FE_framework/vue/devtools.md)
     - [过滤器](./docs/FE_framework/vue/filter.md)
     - [生命周期](./docs/FE_framework/vue/life.md)
     - [vdom](./docs/FE_framework/vue/life.md)
