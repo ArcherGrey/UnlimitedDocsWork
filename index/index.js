@@ -1,7 +1,7 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-06-22 11:57:43
+ * @LastEditTime: 2020-06-22 17:14:06
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
@@ -11,6 +11,7 @@ import { leetcode, tree } from "./algorithm/index.js";
 import { cssApply, cssLayout, cssBasic } from "./css/index.js";
 import { feeIndex } from "./fee.js";
 import { networkIndex } from "./network.js";
+import { lintIndex } from "./lint.js";
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [
@@ -53,12 +54,12 @@ export const index = [
   {
     id: "4",
     label: "网络",
-    children: [...networkIndex]
+    children: networkIndex
   },
   {
     id: "5",
     label: "前端工程化",
-    children: [...feeIndex]
+    children: feeIndex
   },
   {
     id: "6",
@@ -99,19 +100,8 @@ export const index = [
   },
   {
     id: "11",
-    label: "翻译",
-    children: [
-      {
-        id: "11.1",
-        label: "计算机程序的构造和解释 SCIP",
-        path: "./docs/translate/SICP.md"
-      },
-      {
-        id: "11.2",
-        label: "算法 第四版（红宝书）",
-        path: "./docs/translate/a4red.md"
-      }
-    ]
+    label: "规范",
+    children: lintIndex
   }
   // {
   //   id: "12",

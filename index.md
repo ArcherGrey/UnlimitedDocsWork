@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-22 10:54:40
+ * @LastEditTime: 2020-06-22 17:07:35
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -26,8 +26,6 @@
     - [模板字面量](./docs/JavaScript/es6/模板字面量.md)
     - [set 和 map](./docs/JavaScript/es6/set_map.md)
     - [各种 for](./docs/JavaScript/es6/for.md)
-  - [代码规范]()
-    - 待补充[注释规范]()
 - [网络]()
   - [请求方式](./docs/Network/request.md)
 - [WebGis]()
@@ -165,3 +163,5 @@
 - [操作系统]()
   - [linux]()
     - [wsl2 安装](./docs/os/linux/wsl2.md)
+- [规范]
+  - [git 提交规范]

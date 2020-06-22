@@ -91,6 +91,7 @@
     - [postman]()
   - npm
     - anywhere 随时在本地搭建 http 环境
+    - validate-commit-msg 检查项目中 Commit message 是否规范。
   - 图标
     - [阿里巴巴矢量图标库](https://www.iconfont.cn/)
   - 规范
@@ -123,14 +124,14 @@
   - linux
     - wsl2 win 系统运行 linux
     - [教程](http://c.biancheng.net/linux_tutorial/10/)
-  -  macOS
-    - Homebrew 包管理工具
-      - [软件对应名称](https://github.com/cactusnix/brew-apps)
-      - [自动安装流程](https://zhuanlan.zhihu.com/p/111014448)
-      - 常用命令
-        - 本地软件库列表：brew ls
-        - 查找软件：brew search google（其中google替换为要查找的软件关键字）
-        - 查看brew版本：brew -v  更新brew版本：brew update 
+  - macOS
+  - Homebrew 包管理工具
+    - [软件对应名称](https://github.com/cactusnix/brew-apps)
+    - [自动安装流程](https://zhuanlan.zhihu.com/p/111014448)
+    - 常用命令
+      - 本地软件库列表：brew ls
+      - 查找软件：brew search google（其中 google 替换为要查找的软件关键字）
+      - 查看 brew 版本：brew -v 更新 brew 版本：brew update
 
 ---
 
