@@ -20,6 +20,7 @@ export const leetcode = {
     item(parent, 50, "Pow(x,n)"),
     item(parent, 53, "最大子序和"),
     item(parent, 66, "加一"),
+    item(parent, 67, "二进制求和"),
     item(parent, 69, "x 的平方根"),
     item(parent, 70, "爬楼梯"),
     item(parent, 76, "最小覆盖子串"),
