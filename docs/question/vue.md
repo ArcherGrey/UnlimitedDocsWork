@@ -22,3 +22,9 @@
   - `forceUpdate`
   - `v-if`
   - 修改`key`
+
+# vuex
+
+- state 重置
+  - 不能直接修改 state 对象 ，这样无法触发 getter
+  - 需要保存一个初始值 origin，然后 object.assign(state,origin)

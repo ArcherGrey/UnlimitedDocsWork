@@ -1,7 +1,7 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-06-22 17:14:06
+ * @LastEditTime: 2020-06-23 19:56:48
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
@@ -102,6 +102,10 @@ export const index = [
     id: "11",
     label: "规范",
     children: lintIndex
+  },{
+    id: "12",
+    label: "可视化",
+    children: visualIndex
   }
   // {
   //   id: "12",
