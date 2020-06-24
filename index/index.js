@@ -1,7 +1,7 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-06-23 19:56:48
+ * @LastEditTime: 2020-06-24 16:02:45
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
@@ -12,6 +12,7 @@ import { cssApply, cssLayout, cssBasic } from "./css/index.js";
 import { feeIndex } from "./fee.js";
 import { networkIndex } from "./network.js";
 import { lintIndex } from "./lint.js";
+import { visualIndex } from "./visual.js";
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [
@@ -102,7 +103,8 @@ export const index = [
     id: "11",
     label: "规范",
     children: lintIndex
-  },{
+  },
+  {
     id: "12",
     label: "可视化",
     children: visualIndex
