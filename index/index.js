@@ -13,6 +13,7 @@ import { feeIndex } from "./fee.js";
 import { networkIndex } from "./network.js";
 import { lintIndex } from "./lint.js";
 import { visualIndex } from "./visual.js";
+import {gitIndex} from "./git.js"
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [
@@ -64,7 +65,7 @@ export const index = [
   },
   {
     id: "6",
-    label: "前端框架",
+    label: "前端框架和库",
     children: [vueIndex]
   },
   {
@@ -73,12 +74,12 @@ export const index = [
   },
   {
     id: "8",
-    label: "前端工具"
-    // children: [FETools]
+    label: "git",
+    children: gitIndex
   },
   {
     id: "9",
-    label: "github"
+    label: "待定"
   },
   {
     id: "10",
