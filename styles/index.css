@@ -13,8 +13,8 @@ body {
   height: 100%;
 }
 #main {
-  width: 30%;
-  height: 70%;
+  width: 26%;
+  height: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,10 +23,10 @@ body {
 }
 /* 内容样式 */
 #content {
-  margin-left: 10%;
-  width: 36%;
+  /* margin-left: 10%; */
+  width: 66%;
   background-color: #f5e2e2;
-  height: 70%;
+  height: 90%;
   overflow-y: scroll;
   font-size: 1.1rem;
   color: #0b0c0b;

@@ -14,6 +14,7 @@ import { networkIndex } from "./network.js";
 import { lintIndex } from "./lint.js";
 import { visualIndex } from "./visual.js";
 import {gitIndex} from "./git.js"
+import {macIndex,linuxIndex} from "./os/index.js"
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [
@@ -79,7 +80,8 @@ export const index = [
   },
   {
     id: "9",
-    label: "待定"
+    label: "操作系统",
+    children:[linuxIndex,macIndex]
   },
   {
     id: "10",

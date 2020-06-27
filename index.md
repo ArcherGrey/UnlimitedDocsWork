@@ -153,7 +153,7 @@
     - [面试题 64. 求 1+2+…+n](./docs/Algorithm/leetcode/i64.md)
 - [git]()
   - [github 无法登录](./docs/Git/host.md)
-  - [git 常用命令](./docs/Git/git.md)
+  - [git 简明教程](./docs/Git/git.md)
 - [工作总结]()
 - [翻译]
   - [SICP](./docs/translate/SICP.md)
@@ -167,5 +167,7 @@
 - [操作系统]()
   - [linux]()
     - [wsl2 安装](./docs/os/linux/wsl2.md)
+  - [mac]
+    - [mac 常用操作](./docs/os/mac/mac.md)
 - [规范]
   - [git 提交规范]

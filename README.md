@@ -7,7 +7,7 @@
 ## :books: 书籍
 
 - 前端
-  - [JS 函数式编程指南 pdf](https://github.com/ArcherGrey/UnlimitedDocsWork/blob/master/book/mostly-adequate-guide-chinese.pdf)
+  - [JS 函数式编程指南 pdf](https://github.com/ArcherGrey/DocWeb/tree/master/book/mostly-adequate-guide-chinese.pdf)
     - [gitbook 版本](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)
   - javaScript: the good parts
   - Effective JavaScript
