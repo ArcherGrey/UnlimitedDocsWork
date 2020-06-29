@@ -64,6 +64,7 @@ export const leetcode = {
     item(parent, 235, "二叉搜索树的最近公共祖先"),
     item(parent, 238, "除自身以外数组的乘积"),
     item(parent, 243, "最短单词距离"),
+    item(parent, 256, "粉刷房子"),
     item(parent, 257, "二叉树的所有路径"),
     item(parent, 268, "缺失数字"),
     item(parent, 270, "最接近的二叉搜索树值"),

@@ -41,5 +41,23 @@
 ```
 
 - select
+
   - 点击空白区域不收起
     - 手动绑定事件，点击空白执行收起操作
+
+- bread
+  - 点击重复路由报错
+
+```JavaScript
+// 防止点击重复路由报错
+const originalPush = Router.prototype.push;
+Router.prototype.push = function push(location, onResolve, onReject) {
+  if (onResolve || onReject)
+    return originalPush.call(this, location, onResolve, onReject);
+  return originalPush.call(this, location).catch(err => err);
+};
+const originalReplace = Router.prototype.replace;
+Router.prototype.replace = function replace(location) {
+  return originalReplace.call(this, location).catch(err => err);
+};
+```
