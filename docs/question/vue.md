@@ -22,9 +22,29 @@
   - `forceUpdate`
   - `v-if`
   - 修改`key`
+- `$emit` 无法触发
+  - 传入的事件名称只能使用小写，不能使用大写的驼峰规则命名
 
 # vuex
 
 - state 重置
   - 不能直接修改 state 对象 ，这样无法触发 getter
   - 需要保存一个初始值 origin，然后 object.assign(state,origin)
+
+# vue-route
+
+- 3.0.1 版本后点击重复路由会报错
+
+```JavaScript
+// 防止点击重复路由报错
+const originalPush = Router.prototype.push;
+Router.prototype.push = function push(location, onResolve, onReject) {
+  if (onResolve || onReject)
+    return originalPush.call(this, location, onResolve, onReject);
+  return originalPush.call(this, location).catch(err => err);
+};
+const originalReplace = Router.prototype.replace;
+Router.prototype.replace = function replace(location) {
+  return originalReplace.call(this, location).catch(err => err);
+};
+```
