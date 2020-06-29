@@ -56,6 +56,7 @@ export const leetcode = {
     item(parent, 200, "岛屿数量"),
     item(parent, 202, "快乐数"),
     item(parent, 209, "长度最小的子数组"),
+    item(parent, 215, "数组中的第 K 个最大元素"),
     item(parent, 217, "存在重复元素"),
     item(parent, 219, "存在重复元素 II"),
     item(parent, 221, "最大正方形"),
