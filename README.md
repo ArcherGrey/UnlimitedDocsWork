@@ -95,6 +95,7 @@
     - Commitizen 是一个撰写合格 Commit message 的工具。
     - conventional-changelog 就是生成 Change log 的工具
     - nrm npm 镜像管理工具
+    - rimraf 快速删除文件
   - 图标
     - [阿里巴巴矢量图标库](https://www.iconfont.cn/)
   - 规范

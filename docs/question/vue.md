@@ -23,7 +23,13 @@
   - `v-if`
   - 修改`key`
 - `$emit` 无法触发
+
   - 传入的事件名称只能使用小写，不能使用大写的驼峰规则命名
+
+- 报 $attrs is readonly和$listeners is readonly
+  - vue 与 vue-tempalte-compiler 的版本不一致造成
+  - 使用 element 和 element 版本也有关，都升级到最新
+  - 子组件使用的 vue 和父组件版本不一致
 
 # vuex
 
