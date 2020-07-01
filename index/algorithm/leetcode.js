@@ -88,6 +88,7 @@ export const leetcode = {
     item(parent, 624, "数组列表中的最大距离"),
     item(parent, 628, "三个数的最大乘积"),
     item(parent, 680, "验证回文字符串 Ⅱ"),
+    item(parent, 718, "最长重复子数组"),
     item(parent, 725, "打开转盘锁"),
     item(parent, 739, "每日温度"),
     item(parent, 821, "新21点"),

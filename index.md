@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-06-29 18:44:29
+ * @LastEditTime: 2020-07-01 09:33:34
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -139,6 +139,7 @@
     - [624. 数组列表中的最大距离](./docs/Algorithm/leetcode/624.md)
     - [628. 三个数的最大乘积](./docs/Algorithm/leetcode/628.md)
     - [680. 验证回文字符串 Ⅱ](./docs/Algorithm/leetcode/680.md)
+    - [718. 最长重复子数组](./docs/Algorithm/leetcode/718.md)
     - [725. 打开转盘锁](./docs/Algorithm/leetcode/725.md)
     - [739. 每日温度](./docs/Algorithm/leetcode/739.md)
     - [821. 新 21 点](./docs/Algorithm/leetcode/821.md)
