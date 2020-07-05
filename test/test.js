@@ -4,4 +4,3 @@
  * @return {boolean}
  */
 var isMatch = function (s, p) {};
-xxx;
