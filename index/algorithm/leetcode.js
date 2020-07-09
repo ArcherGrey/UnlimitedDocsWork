@@ -79,6 +79,7 @@ export const leetcode = {
     item(parent, 378, "有序矩阵中第K小的元素"),
     item(parent, 392, "判断子序列"),
     item(parent, 394, "字符串解码"),
+    item(parent, 404, "左叶子之和"),
     item(parent, 414, "第三大的数"),
     item(parent, 448, "找到所有数组中消失的数字"),
     item(parent, 485, "最大连续1的个数"),

@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-09 13:55:18
+ * @LastEditTime: 2020-07-09 17:50:54
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -131,6 +131,7 @@
     - [378. 有序矩阵中第 K 小的元素](./docs/Algorithm/leetcode/378.md)
     - [392. 判断子序列](./docs/Algorithm/leetcode/392.md)
     - [394. 字符串解码](./docs/Algorithm/leetcode/394.md)
+    - [404. 左叶子之和](./docs/Algorithm/leetcode/404.md)
     - [414. 第三大的数](./docs/Algorithm/leetcode/414.md)
     - [448. 找到所有数组中消失的数字](./docs/Algorithm/leetcode/448.md)
     - [485. 最大连续 1 的个数](./docs/Algorithm/leetcode/485.md)
