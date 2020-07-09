@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-05 22:03:07
+ * @LastEditTime: 2020-07-09 13:55:18
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -47,6 +47,7 @@
 - [前端工程化]()
   - [原生 js 实现模块化](./docs/FEE/原生js模块化.md)
   - [各种模块化方案技术](./docs/FEE/module.md)
+  - [yarn 常用命令](./docs/FEE/yarnBook.md)
 - [可视化]()
 - [后端相关]()
   - [nodejs]()
