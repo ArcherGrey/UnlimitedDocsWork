@@ -1,22 +1,26 @@
 /**
- * @param {number[]} prices
- * @return {number}
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
  */
-var maxProfit = function (prices) {
-  const n = prices.length;
-  if (n < 2) return 0;
-  let dp = new Array(n);
-  for (let i = 0; i < n; ++i) {
-    dp[i] = new Array(3).fill(0);
+var intersect = function (nums1, nums2) {
+  // 排序
+  nums1.sort((a, b) => a - b);
+  nums2.sort((a, b) => a - b);
+  // 双指针
+  let i = (j = 0);
+  let ans = [];
+  while (i < nums1.length && j < nums2.length) {
+    const a = nums1[i];
+    const b = nums2[j];
+    if (a === b) {
+      ans.push(a);
+      i++;
+      j++;
+    } else {
+      if (a > b) j++;
+      else i++;
+    }
   }
-  dp[0][0] = -prices[0];
-  dp[0][1] = dp[0][2] = 0;
-  let i = 1;
-  while (i < n) {
-    dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][2] - prices[i]);
-    dp[i][1] = dp[i - 1][0] + prices[i];
-    dp[i][2] = Math.max(dp[i - 1][1], dp[i - 1][2]);
-    i++;
-  }
-  return Math.max(dp[i - 1][1], dp[i - 1][2]);
+  return ans;
 };
