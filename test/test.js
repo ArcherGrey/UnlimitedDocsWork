@@ -1,26 +1,22 @@
 /**
- * @param {number[]} nums1
- * @param {number[]} nums2
- * @return {number[]}
+ * @param {number[][]} triangle
+ * @return {number}
  */
-var intersect = function (nums1, nums2) {
-  // 排序
-  nums1.sort((a, b) => a - b);
-  nums2.sort((a, b) => a - b);
-  // 双指针
-  let i = (j = 0);
-  let ans = [];
-  while (i < nums1.length && j < nums2.length) {
-    const a = nums1[i];
-    const b = nums2[j];
-    if (a === b) {
-      ans.push(a);
-      i++;
-      j++;
-    } else {
-      if (a > b) j++;
-      else i++;
+var minimumTotal = function (triangle) {
+  let n = triangle.length;
+  let dp1 = new Array(n).fill(0);
+  let dp2 = new Array(n).fill(0);
+  dp1[0] = triangle[0][0];
+  for (let i = 1; i < n; ++i) {
+    // 最左
+    dp2[0] = dp1[0] + triangle[i][0];
+    for (let j = 1; j < i; ++j) {
+      dp2[j] = Math.min(dp1[j], dp1[j - 1]) + triangle[i][j];
     }
+    // 最右
+    dp2[i] = dp1[i - 1] + triangle[i][i];
+    // 深拷贝 dp2替换dp1
+    [...dp1] = dp2;
   }
-  return ans;
+  return dp[n - 1].sort((a, b) => a - b)[0];
 };

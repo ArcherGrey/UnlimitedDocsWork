@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-13 09:29:58
+ * @LastEditTime: 2020-07-14 10:27:56
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -23,9 +23,10 @@
     - [flex](./docs/Css/layout/box/flex.md)
 - [JS]()
   - [基础]()
-    - [模板字面量](./docs/JavaScript/es6/模板字面量.md)
-    - [set 和 map](./docs/JavaScript/es6/set_map.md)
-    - [各种 for](./docs/JavaScript/es6/for.md)
+    - [模板字面量](./docs/JavaScript/basic/模板字面量.md)
+    - [set 和 map](./docs/JavaScript/basic/set_map.md)
+    - [各种 for](./docs/JavaScript/basic/for.md)
+    - 待补充 [深拷贝](./docs/JavaScript/basic/copy.md)
 - [网络]()
   - [请求方式](./docs/Network/request.md)
 - [WebGis]()
@@ -93,6 +94,7 @@
     - [112. 路径总和](./docs/Algorithm/leetcode/112.md)
     - [118. 杨辉三角](./docs/Algorithm/leetcode/118.md)
     - [119. 杨辉三角 II](./docs/Algorithm/leetcode/119.md)
+    - [120. 三角形最小路径和](./docs/Algorithm/leetcode/120.md)
     - [121. 买卖股票的最佳时机](./docs/Algorithm/leetcode/121.md)
     - [122. 买卖股票的最佳时机 II](./docs/Algorithm/leetcode/122.md)
     - [125. 验证回文串](./docs/Algorithm/leetcode/125.md)
@@ -180,6 +182,8 @@
   - [浏览器](./docs/question/browser.md)
   - [git](./docs/question/git.md)
   - [javascript](./docs/question/javascript.md)
+  - [npm](./docs/question/npm.md)
+  - [vue](./docs/question/vue.md)
 - [操作系统]()
   - [linux]()
     - [wsl2 安装](./docs/os/linux/wsl2.md)

@@ -41,6 +41,7 @@ export const leetcode = {
     item(parent, 112, "路径总和"),
     item(parent, 118, "杨辉三角"),
     item(parent, 119, "杨辉三角 II"),
+    item(parent, 120, "三角形最小路径和"),
     item(parent, 121, "买卖股票的最佳时机"),
     item(parent, 122, "买卖股票的最佳时机 II"),
     item(parent, 125, "验证回文串"),

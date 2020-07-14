@@ -1,7 +1,7 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-06-24 16:02:45
+ * @LastEditTime: 2020-07-14 10:23:28
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
@@ -13,8 +13,9 @@ import { feeIndex } from "./fee.js";
 import { networkIndex } from "./network.js";
 import { lintIndex } from "./lint.js";
 import { visualIndex } from "./visual.js";
-import {gitIndex} from "./git.js"
-import {macIndex,linuxIndex} from "./os/index.js"
+import { gitIndex } from "./git.js";
+import { macIndex, linuxIndex } from "./os/index.js";
+import { javascriptBasic } from "./javascript/index.js";
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [
@@ -30,29 +31,7 @@ export const index = [
   {
     id: "3",
     label: "JavaScript",
-    children: [
-      {
-        id: "3.2",
-        label: "基础",
-        children: [
-          {
-            id: "3.2.1",
-            label: "模板字面量",
-            path: "./docs/JavaScript/es6/模板字面量.md"
-          },
-          {
-            id: "3.2.2",
-            label: "set 和 map",
-            path: "./docs/JavaScript/es6/set_map.md"
-          },
-          {
-            id: "3.2.3",
-            label: "各种 for",
-            path: "./docs/JavaScript/es6/for.md"
-          }
-        ]
-      }
-    ]
+    children: [javascriptBasic]
   },
   {
     id: "4",
@@ -81,7 +60,7 @@ export const index = [
   {
     id: "9",
     label: "操作系统",
-    children:[linuxIndex,macIndex]
+    children: [linuxIndex, macIndex]
   },
   {
     id: "10",
