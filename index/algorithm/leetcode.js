@@ -30,6 +30,7 @@ export const leetcode = {
     item(parent, 84, "柱状图中最大的矩形"),
     item(parent, 88, "合并两个有序数组"),
     item(parent, 94, "二叉树中序遍历"),
+    item(parent, 96, "不同的二叉搜索树"),
     item(parent, 100, "相同的树"),
     item(parent, 101, "对称二叉树"),
     item(parent, 104, "二叉树的最大深度"),
