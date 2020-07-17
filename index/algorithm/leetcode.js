@@ -102,6 +102,7 @@ export const leetcode = {
     item(parent, 718, "最长重复子数组"),
     item(parent, 725, "打开转盘锁"),
     item(parent, 739, "每日温度"),
+    item(parent, 785, "判断二分图"),
     item(parent, 821, "新21点"),
     item(parent, 974, "和可被 K 整除的子数组"),
     item(parent, 983, "最低票价"),

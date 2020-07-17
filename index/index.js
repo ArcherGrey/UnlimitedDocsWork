@@ -1,7 +1,7 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-07-14 10:23:28
+ * @LastEditTime: 2020-07-16 17:35:09
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
@@ -15,7 +15,7 @@ import { lintIndex } from "./lint.js";
 import { visualIndex } from "./visual.js";
 import { gitIndex } from "./git.js";
 import { macIndex, linuxIndex } from "./os/index.js";
-import { javascriptBasic } from "./javascript/index.js";
+import { javascriptBasic, javascriptAdvanced } from "./javascript/index.js";
 // import { FETools } from "./index/FE_Tools.js";
 // import { Question } from "./Question.js";
 export const index = [
@@ -31,7 +31,7 @@ export const index = [
   {
     id: "3",
     label: "JavaScript",
-    children: [javascriptBasic]
+    children: [javascriptBasic, javascriptAdvanced]
   },
   {
     id: "4",
