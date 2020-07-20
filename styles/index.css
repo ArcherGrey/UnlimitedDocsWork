@@ -2,8 +2,13 @@ html,
 body {
   height: 100%;
   width: 100%;
-  background: cadetblue;
+  background: white;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #24292e;
 }
 #app {
   display: flex;
@@ -14,62 +19,84 @@ body {
 }
 #main {
   width: 26%;
-  height: 95%;
+  height: 94%;
+  margin-right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-size: 1.3rem;
+  border: 1px solid #e1e4e8;
 }
 /* 内容样式 */
 #content {
   /* margin-left: 10%; */
   width: 66%;
-  background-color: #f5e2e2;
   height: 90%;
   overflow-y: scroll;
-  font-size: 1.1rem;
   color: #0b0c0b;
-  word-wrap: break-word;
   padding: 1rem 1.2rem;
-  border-radius: 10px;
-  border: 5px solid #2ebf21;
+  border: 1px solid #e1e4e8;
+  background-color: #f1f8ff;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
 }
 /* 隐藏滑动条 */
 #content::-webkit-scrollbar {
   width: 1px;
   background-color: transparent;
 }
-/* #content::before {
-  content: "";
-  z-index: 0;
-  opacity: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: currentColor;
-  opacity: 0;
-} */
-p,
-h1,
-h2,
-h3 {
+
+#main div::-webkit-scrollbar {
+  width: 1px;
+  background-color: transparent;
+}
+p {
   margin: 1rem 1rem;
 }
-h1,
-h2,
+h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
 h3 {
-  color: crimson;
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  font-size: 1.25em;
 }
-pre code {
-  /* position: relative; */
-  display: inline-block;
-  width: 100%;
-  /* padding: 8px 12px; */
-  background-color: rgba(0, 0, 0, 0.226);
-  border: 5px solid rgba(0, 0, 0, 0.2);
-  border-radius: 3px;
+pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f6f8fa;
+  border: 6px solid #e1e4e8;
 }
+code {
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: initial;
+  border: 0;
+  display: inline;
+  border-radius: 6px;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+}
+
 /* #content:hover {
   opacity: 0.6;
 } */
