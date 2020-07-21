@@ -10,6 +10,20 @@ body {
   line-height: 1.5;
   color: #24292e;
 }
+/* 引用样式 */
+blockquote {
+  background-color: #fbedb7;
+  color: #8c8466;
+  padding: 0.25em 0.3em;
+}
+
+/* 目录样式 */
+h1 + ul {
+  background: white;
+  border: 1px solid #ebedef;
+  padding: 10px 30px;
+  width: fit-content;
+}
 
 /* 隐藏标签 a  下划线 */
 a {
