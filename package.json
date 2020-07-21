@@ -1,0 +1,9 @@
+{
+  "name": "UnlimitedDocsWork",
+  "version": "1.0.0",
+  "description": "文档索引合集",
+  "main": "index.js",
+  "repository": "https://github.com/ArcherGrey/UnlimitedDocsWork.git",
+  "author": "ArcherGrey <498792539@qq.com>",
+  "license": "MIT"
+}

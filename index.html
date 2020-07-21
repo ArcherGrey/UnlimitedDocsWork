@@ -36,7 +36,15 @@
         >
         </el-tree>
       </div>
-      <div id="content" ref="content"></div>
+      <div id="content" ref="content" @scroll="onScroll"></div>
+      <el-button
+        type="primary"
+        icon="el-icon-top"
+        circle
+        class="backtop-button"
+        @click="backTop"
+        v-show="showBackTop"
+      ></el-button>
     </div>
     <script src="index.js" type="module"></script>
   </body>

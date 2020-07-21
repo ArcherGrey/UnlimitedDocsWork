@@ -1,4 +1,7 @@
 import { index } from "./index/index.js";
+const cubic = value => Math.pow(value, 3);
+const easeInOutCubic = value =>
+  value < 0.5 ? cubic(value * 2) / 2 : 1 - cubic((1 - value) * 2) / 2;
 
 var Main = {
   watch: {
@@ -18,7 +21,8 @@ var Main = {
       defaultProps: {
         children: "children",
         label: "label"
-      }
+      },
+      showBackTop: false
     };
   },
   mounted() {
@@ -69,6 +73,29 @@ var Main = {
     filterNode(value, data) {
       if (!value) return true;
       return data.label.indexOf(value) !== -1;
+    },
+    backTop() {
+      const el = this.$refs.content;
+      const beginTime = Date.now();
+      const beginValue = el.scrollTop;
+      const rAF =
+        window.requestAnimationFrame || (func => setTimeout(func, 16));
+      const frameFunc = () => {
+        const progress = (Date.now() - beginTime) / 500;
+        if (progress < 1) {
+          el.scrollTop = beginValue * (1 - easeInOutCubic(progress));
+          rAF(frameFunc);
+        } else {
+          el.scrollTop = 0;
+        }
+      };
+      rAF(frameFunc);
+    },
+    onScroll(e) {
+      const top = e.target.scrollTop;
+      if (top < 300) {
+        this.showBackTop = false;
+      } else this.showBackTop = true;
     }
   }
 };
