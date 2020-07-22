@@ -1,6 +1,6 @@
 # :closed_book: 无限文档
 
-[在线地址](https://archergrey.github.io/UnlimitedDocsWork/)
+[在线地址](https://archergrey.github.io/UnlimitedDocsWork/dist)
 
 [文档目录](./index.md)
 

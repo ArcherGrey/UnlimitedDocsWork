@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        width: 100%;
+        height: 20px;
+        overflow-y: hidden;
+      }
+      .test {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content" onmouseover="stop()" onmouseout="begin()">
+      <div class="test">定时器滚动</div>
+      <div class="test">定时器滚动</div>
+    </div>
+    <script>
+      let timer = setInterval(() => {
+        let content = document.getElementsByClassName("content")[0];
+        let test = document.getElementsByClassName("test")[0];
+        if (content.scrollTop >= test.offsetHeight) {
+          content.scrollTop = 0;
+        } else {
+          content.scrollTop++;
+        }
+      }, 50);
+      function stop() {
+        clearInterval(timer);
+      }
+      function begin() {
+        timer = setInterval(() => {
+          let content = document.getElementsByClassName("content")[0];
+          let test = document.getElementsByClassName("test")[0];
+          if (content.scrollTop >= test.offsetHeight) {
+            content.scrollTop = 0;
+          } else {
+            content.scrollTop++;
+          }
+        }, 50);
+      }
+    </script>
+  </body>
+</html>
