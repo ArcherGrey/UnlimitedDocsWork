@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "rm -rf ./public/docs & cp -r docs ./public & vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "rm -rf ./public/docs & cp -r docs ./public & vue-cli-service build",
     "lint": "vue-cli-service lint",
     "update": "rm -rf ./public/docs & cp -r docs ./public"
   },
