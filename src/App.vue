@@ -44,7 +44,13 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 2000px) and (min-width: 800px) {
+    flex-direction: row;
+  }
+
   height: 100%;
 }
 </style>

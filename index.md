@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-21 15:41:01
+ * @LastEditTime: 2020-07-23 11:24:48
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -81,6 +81,7 @@
     - [44. 通配符匹配](./docs/Algorithm/leetcode/44.md)
     - [50. Pow(x,n)](./docs/Algorithm/leetcode/50.md)
     - [53. 最大子序和](./docs/Algorithm/leetcode/53.md)
+    - [64. 最小路径和](./docs/Algorithm/leetcode/64.md)
     - [66. 加一](./docs/Algorithm/leetcode/66.md)
     - [67. 二进制求和](./docs/Algorithm/leetcode/67.md)
     - [69. x 的平方根](./docs/Algorithm/leetcode/69.md)
@@ -163,6 +164,7 @@
     - [680. 验证回文字符串 Ⅱ](./docs/Algorithm/leetcode/680.md)
     - [718. 最长重复子数组](./docs/Algorithm/leetcode/718.md)
     - [725. 打开转盘锁](./docs/Algorithm/leetcode/725.md)
+    - [733. 图像渲染](./docs/Algorithm/leetcode/733.md)
     - [739. 每日温度](./docs/Algorithm/leetcode/739.md)
     - [785. 判断二分图](./docs/Algorithm/leetcode/785.md)
     - [821. 新 21 点](./docs/Algorithm/leetcode/821.md)

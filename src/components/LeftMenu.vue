@@ -68,11 +68,19 @@ export default {
 
 <style lang="scss" scoped>
 #main {
-  width: 26%;
-  height: 90%;
+  @media screen and (max-width: 400px) {
+    height: 26%;
+    width: 90%;
+    margin: 10px 0px 0px 0px;
+    padding: 10px;
+  }
+  @media screen and (max-width: 2000px) and (min-width: 800px) {
+    width: 26%;
+    height: 90%;
+    margin: 0 0 0 10px;
+    padding: 20px;
+  }
   display: flex;
-  margin: 0 10px;
-  padding: 20px;
   justify-content: center;
   align-items: center;
   flex-direction: column;

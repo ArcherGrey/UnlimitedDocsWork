@@ -1,34 +1,25 @@
 /**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
+ * @param {number[][]} image
+ * @param {number} sr
+ * @param {number} sc
+ * @param {number} newColor
+ * @return {number[][]}
  */
-/**
- * @param {number} n
- * @return {TreeNode[]}
- */
-var generateTrees = function (n) {
-  if (!n) return [];
-  function gTrees(l, r) {
-    if (l > r) return [null];
-    if (l == r) return [new TreeNode(l)];
-    let arr = [];
-    for (let i = l; i <= r; ++i) {
-      let la = gTrees(l, i - 1);
-      let ra = gTrees(i + 1, r);
-      for (let lt of la) {
-        for (let rt of ra) {
-          const root = new TreeNode(i);
-          root.left = lt;
-          root.right = rt;
-          arr.push(root);
-        }
-      }
+var floodFill = function(image, sr, sc, newColor) {
+  let m = image.length;
+  if (!m) return image;
+  let n = image[0].length;
+  let color = image[sr][sc];
+  if (color == newColor) return image;
+  function dfs(r, c) {
+    if (image[r][c] == color) {
+      image[r][c] = newColor;
+      if (r >= 1) dfs(r - 1, c);
+      if (r + 1 < m) dfs(r + 1, c);
+      if (c >= 1) dfs(r, c - 1);
+      if (c + 1 < n) dfs(r, c + 1);
     }
-    return arr;
   }
-  return gTrees(1, n);
+  dfs(sr, sc);
+  return image;
 };

@@ -55,16 +55,29 @@ export default {
 .content-wrap {
   position: relative;
   flex: 1 1 auto;
-  width: 66%;
-  height: 100%;
+  @media screen and (max-width: 400px) {
+    height: 66%;
+    width: 100%;
+  }
+  @media screen and (max-width: 2000px) and (min-width: 800px) {
+    width: 66%;
+    height: 100%;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
   #content {
-    /* margin-left: 10%; */
-    width: 95%;
-    height: 90%;
-    padding: 20px;
+    @media screen and (max-width: 400px) {
+      height: 92%;
+      width: 90%;
+      padding: 10px;
+    }
+    @media screen and (max-width: 2000px) and (min-width: 800px) {
+      width: 92%;
+      height: 90%;
+      padding: 20px;
+    }
+
     overflow-y: scroll;
     color: #0b0c0b;
     border: 1px solid #e1e4e8;
