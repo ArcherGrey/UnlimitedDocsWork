@@ -1,25 +1,31 @@
 /**
- * @param {number[][]} image
- * @param {number} sr
- * @param {number} sc
- * @param {number} newColor
- * @return {number[][]}
+ * @param {number[][]} rooms
+ * @return {boolean}
  */
-var floodFill = function(image, sr, sc, newColor) {
-  let m = image.length;
-  if (!m) return image;
-  let n = image[0].length;
-  let color = image[sr][sc];
-  if (color == newColor) return image;
-  function dfs(r, c) {
-    if (image[r][c] == color) {
-      image[r][c] = newColor;
-      if (r >= 1) dfs(r - 1, c);
-      if (r + 1 < m) dfs(r + 1, c);
-      if (c >= 1) dfs(r, c - 1);
-      if (c + 1 < n) dfs(r, c + 1);
+var canVisitAllRooms = function(rooms) {
+  const n = rooms.length;
+  if (!n) return true;
+  let keys = [...rooms[0]];
+  let mark = new Array(n);
+  mark[0] = 1;
+
+  while (keys.length) {
+    let f = false;
+    for (let i = 0; i < keys.length; ++i) {
+      const key = keys[i];
+      if (!mark[key]) {
+        f = true;
+        keys.splice(i, 1);
+        keys = keys.concat(rooms[key]);
+        mark[key] = 1;
+      }
+    }
+    if (!f) {
+      break;
     }
   }
-  dfs(sr, sc);
-  return image;
+  for (let i = 0; i < n; ++i) {
+    if (!mark[i]) return false;
+  }
+  return true;
 };
