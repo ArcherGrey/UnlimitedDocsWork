@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-24 10:11:08
+ * @LastEditTime: 2020-07-24 17:42:42
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -49,6 +49,7 @@
     - [过滤器](./docs/FE_framework/vue/filter.md)
     - [生命周期](./docs/FE_framework/vue/life.md)
     - [vdom](./docs/FE_framework/vue/life.md)
+    - [vue hook](./docs/FE_framework/vue/vhook.md)
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)
 - [前端工程化]()
   - [原生 js 实现模块化](./docs/FEE/原生js模块化.md)
