@@ -10,6 +10,7 @@ export const leetcode = {
   children: [
     item(parent, 1, "两数之和"),
     item(parent, 5, "最长回文子串"),
+    item(parent, 7, "整数反转"),
     item(parent, 9, "回文数"),
     item(parent, 15, "三数之和"),
     item(parent, 16, "最接近的三数之和"),

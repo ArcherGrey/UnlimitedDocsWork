@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-24 17:42:42
+ * @LastEditTime: 2020-07-27 17:09:42
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -70,6 +70,7 @@
   - [leetcode 题解]()
     - [1. 两数之和](./docs/Algorithm/leetcode/1.md)
     - 待补充 [5. 最长回文子串](./docs/Algorithm/leetcode/5.md)
+    - [7. 整数反转](./docs/Algorithm/leetcode/7.md)
     - [9. 回文数](./docs/Algorithm/leetcode/9.md)
     - [15. 三数之和](./docs/Algorithm/leetcode/15.md)
     - [16. 最接近的三数之和](./docs/Algorithm/leetcode/16.md)

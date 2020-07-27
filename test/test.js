@@ -1,31 +1,22 @@
 /**
- * @param {number[][]} rooms
- * @return {boolean}
+ * @param {number} x
+ * @return {number}
  */
-var canVisitAllRooms = function(rooms) {
-  const n = rooms.length;
-  if (!n) return true;
-  let keys = [...rooms[0]];
-  let mark = new Array(n);
-  mark[0] = 1;
+var reverse = function(x) {
+  let min = ~~(Math.pow(-2, 31) / 10),
+    max = ~~((Math.pow(2, 31) - 1) / 10),
+    maxmod = (Math.pow(2, 31) - 1) % 10,
+    minmod = Math.pow(-2, 31) % 10;
+  let r = 0;
+  while (x) {
+    // pop
+    let pop = x % 10;
+    x = ~~(x / 10);
+    if (r > max || (r == max && pop > maxmod)) return 0;
+    if (r < min || (r == min && pop < minmod)) return 0;
 
-  while (keys.length) {
-    let f = false;
-    for (let i = 0; i < keys.length; ++i) {
-      const key = keys[i];
-      if (!mark[key]) {
-        f = true;
-        keys.splice(i, 1);
-        keys = keys.concat(rooms[key]);
-        mark[key] = 1;
-      }
-    }
-    if (!f) {
-      break;
-    }
+    // push
+    r = r * 10 + pop;
   }
-  for (let i = 0; i < n; ++i) {
-    if (!mark[i]) return false;
-  }
-  return true;
+  return r;
 };
