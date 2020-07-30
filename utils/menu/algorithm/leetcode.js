@@ -84,6 +84,7 @@ export const leetcode = {
     item(parent, 297, "二叉树的序列化与反序列化"),
     item(parent, 303, "区域和检索 - 数组不可变"),
     item(parent, 309, "最佳买卖股票时机含冷冻期"),
+    item(parent, 343, "整数拆分"),
     item(parent, 349, "两个数组的交集"),
     item(parent, 350, "两个数组的交集 II"),
     item(parent, 378, "有序矩阵中第K小的元素"),

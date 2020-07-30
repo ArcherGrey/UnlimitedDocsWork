@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-28 10:28:24
+ * @LastEditTime: 2020-07-30 10:11:00
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -50,6 +50,7 @@
     - [生命周期](./docs/FE_framework/vue/life.md)
     - [vdom](./docs/FE_framework/vue/life.md)
     - [vue hook](./docs/FE_framework/vue/vhook.md)
+    - [插槽](./docs/FE_framework/vue/slot.md)
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)
 - [前端工程化]()
   - [原生 js 实现模块化](./docs/FEE/原生js模块化.md)
@@ -144,6 +145,7 @@
     - [297. 二叉树的序列化与反序列化](./docs/Algorithm/leetcode/297.md)
     - [303. 区域和检索 - 数组不可变](./docs/Algorithm/leetcode/303.md)
     - [309. 最佳买卖股票时机含冷冻期](./docs/Algorithm/leetcode/309.md)
+    - [343. 整数拆分](./docs/Algorithm/leetcode/343.md)
     - [349. 两个数组的交集](./docs/Algorithm/leetcode/349.md)
     - [350. 两个数组的交集 II](./docs/Algorithm/leetcode/350.md)
     - [378. 有序矩阵中第 K 小的元素](./docs/Algorithm/leetcode/378.md)

@@ -1,30 +1,16 @@
 /**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
+ * @param {number} n
+ * @return {number}
  */
-/**
- * @param {TreeNode} root
- * @return {TreeNode}
- */
-var convertBiNode = function(root) {
-  if (!root) return null;
-  // 最左叶子是头节点
-  let head = convertBiNode(root.left);
-  if (!head) {
-    // 不存在最左叶子，那么根节点是头节点
-    head = root;
+var integerBreak = function(n) {
+  if (n < 4) return n - 1;
+  let q = ~~(n / 3),
+    r = n % 3;
+  if (!r) {
+    return Math.pow(3, q);
+  } else if (r == 1) {
+    return Math.pow(3, q - 1) * 4;
   } else {
-    let t = head;
-    //
-    while (t.right) {
-      t = t.right;
-    }
-    t.right = root;
+    return Math.pow(3, q) * 2;
   }
-  root.left = null;
-  root.right = convertBiNode(root.right);
-  return head;
 };
