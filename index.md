@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-30 10:11:00
+ * @LastEditTime: 2020-07-30 15:05:36
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -57,6 +57,7 @@
   - [各种模块化方案技术](./docs/FEE/module.md)
   - [yarn 常用命令](./docs/FEE/yarnBook.md)
   - [webpack 概念](./docs/FEE/webpack_concepts.md)
+  - [自动化导入模块](./docs/FEE/reqcontext.md)
 - [可视化]()
 - [后端相关]()
   - [nodejs]()
