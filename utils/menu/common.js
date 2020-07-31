@@ -14,9 +14,9 @@ export function leetNoteItem(parent, id, name) {
   };
 }
 
-export function item(parent, id, name, filename) {
+export function item(parent, name, filename) {
   return {
-    id: `${parent.id}.${id}`,
+    id: `${parent.id}.${name}`,
     label: `${name}`,
     path: `${parent.path}${filename}.md`
   };

@@ -6,7 +6,5 @@ const parent = {
 export const macIndex = {
   id: "9.2",
   label: "mac",
-  children: [
-    item(parent, 1, "mac 常用操作", "mac")
-  ]
+  children: [item(parent, "mac 常用操作", "mac")]
 };

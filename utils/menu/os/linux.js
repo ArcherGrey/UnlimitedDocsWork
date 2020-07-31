@@ -6,7 +6,5 @@ const parent = {
 export const linuxIndex = {
   id: "9.1",
   label: "linux",
-  children: [
-    item(parent, 1, "wsl2 安装", "wsl2")
-  ]
+  children: [item(parent, "wsl2 安装", "wsl2")]
 };

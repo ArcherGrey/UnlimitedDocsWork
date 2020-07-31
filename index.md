@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-30 15:05:36
+ * @LastEditTime: 2020-07-31 16:15:07
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -29,6 +29,13 @@
     - [set 和 map](./docs/JavaScript/basic/set_map.md)
     - [各种 for](./docs/JavaScript/basic/for.md)
     - 待补充 [深拷贝](./docs/JavaScript/basic/copy.md)
+    - [记忆化](./docs/JavaScript/basic/mem.md)
+    - [内存管理](./docs/JavaScript/basic/memmanager.md)
+    - [作用域、上下文](./docs/JavaScript/basic/context.md)
+    - [json 和 jsonp](./docs/JavaScript/basic/json.md)
+    - [闭包](./docs/JavaScript/basic/closure.md)
+    - [包装对象](./docs/JavaScript/basic/package.md)
+    - [call apply bind](./docs/JavaScript/basic/cab.md)
   - [进阶]()
     - [函数式编程](./docs/JavaScript/adv/func.md)
 
@@ -215,4 +222,5 @@
   - [mac]
     - [mac 常用操作](./docs/os/mac/mac.md)
 - [规范]
-  - [git 提交规范]
+  - [git 提交规范](./docs/Lint/git_commit.md)
+  - [css 命名规范](./docs/Lint/css.md)

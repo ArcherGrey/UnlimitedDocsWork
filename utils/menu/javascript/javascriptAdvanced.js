@@ -6,5 +6,5 @@ const parent = {
 export const javascriptAdvanced = {
   id: "3.2",
   label: "高级",
-  children: [item(parent, 1, "函数式编程", "func")]
+  children: [item(parent, "函数式编程", "func")]
 };
