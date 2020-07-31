@@ -8,6 +8,7 @@ export const cssLayout = {
   label: "布局",
   children: [
     item(parent, "盒模型介绍", "index"),
-    item(parent, "flex 布局", "flex")
+    item(parent, "flex 布局", "flex"),
+    item(parent, "圣杯 双飞翼 布局", "layout1")
   ]
 };

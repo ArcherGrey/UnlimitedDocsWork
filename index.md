@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-31 16:15:07
+ * @LastEditTime: 2020-07-31 17:24:38
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -9,10 +9,12 @@
 # 个人文档目录
 
 - [HTML]()
+  - [浏览器内部工作原理](./docs/Html/explorer.md)
 - [CSS]()
   - [基础]()
     - [word-break、word-wrap、white-space](./docs/Css/basic/word.md)
     - [自适应和响应式](./docs/Css/basic/rdad.md)
+    - [水平垂直居中](./docs/Css/basic/vhmid.md)
   - [应用]()
     - [纯 CSS 自定义关闭按钮](./docs/Css/apply/closebutton.md)
     - [利用伪元素自定义图标](./docs/Css/apply/fakeicon.md)
@@ -20,8 +22,9 @@
     - [可调整宽高 div](./docs/Css/apply/resizediv.md)
     - [伪类实现悬浮动画](./docs/Css/apply/hoverAnime.md)
   - [布局]()
-    - [盒模型](./docs/Css/layout/box/index.md)
-    - [flex](./docs/Css/layout/box/flex.md)
+    - [盒模型](./docs/Css/layout/index.md)
+    - [flex](./docs/Css/layout/flex.md)
+    - [圣杯 双飞翼 布局](./docs/Css/layout/layout1.md)
 - [JS]()
 
   - [基础]()
@@ -29,18 +32,30 @@
     - [set 和 map](./docs/JavaScript/basic/set_map.md)
     - [各种 for](./docs/JavaScript/basic/for.md)
     - 待补充 [深拷贝](./docs/JavaScript/basic/copy.md)
-    - [记忆化](./docs/JavaScript/basic/mem.md)
     - [内存管理](./docs/JavaScript/basic/memmanager.md)
     - [作用域、上下文](./docs/JavaScript/basic/context.md)
     - [json 和 jsonp](./docs/JavaScript/basic/json.md)
     - [闭包](./docs/JavaScript/basic/closure.md)
     - [包装对象](./docs/JavaScript/basic/package.md)
     - [call apply bind](./docs/JavaScript/basic/cab.md)
+    - [继承](./docs/JavaScript/basic/class.md)
+    - [创建对象](./docs/JavaScript/basic/create.md)
+    - [== 和 ===](./docs/JavaScript/basic/equal.md)
+    - [new](./docs/JavaScript/basic/new.md)
+    - [原型链](./docs/JavaScript/basic/prototype.md)
+    - [执行机制](./docs/JavaScript/basic/run.md)
+    - [this](./docs/JavaScript/basic/this.md)
+    - [类型判断](./docs/JavaScript/basic/typeof.md)
   - [进阶]()
     - [函数式编程](./docs/JavaScript/adv/func.md)
+    - [记忆化](./docs/JavaScript/adv/mem.md)
+    - [防抖和节流](./docs/JavaScript/adv/debounce.md)
+    - [设计模式](./docs/JavaScript/adv/design.md)
 
 - [网络]()
   - [请求方式](./docs/Network/request.md)
+  - [cookie session](./docs/Network/cookie.md)
+  - [sessionStorage 和 localStorage](./docs/Network/storage.md)
 - [WebGis]()
   - [OpenLayers]()
     - [官方文档]()
@@ -72,8 +87,11 @@
   - [mongodb]()
     - [使用说明](./docs/Database/mongo/index.md)
 - [算法]()
+  - [排序查找]()
+    - [二分查找](./docs/Algorithm/sort/bs.md)
+    - [快速排序](./docs/Algorithm/sort/quick.md)
   - [树]()
-    - 待补充 [二叉树深度遍历](./docs/Algorithm/tree/dfs/md)
+    - 待补充 [二叉树深度遍历](./docs/Algorithm/tree/dfs.md)
   - [leetcode 探索]()
     - 待完成 [队列&栈](./docs/Algorithm/leetcode_Class/queue_stack.md)
   - [leetcode 题解]()
@@ -224,3 +242,4 @@
 - [规范]
   - [git 提交规范](./docs/Lint/git_commit.md)
   - [css 命名规范](./docs/Lint/css.md)
+  - [JavaScript 分号结尾](./docs/Lint/semicolon.md)

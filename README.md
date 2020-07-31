@@ -4,6 +4,13 @@
 
 [文档目录](./index.md)
 
+使用：
+
+```
+yarn install
+yarn server
+```
+
 ## :books: 书籍
 
 - 前端

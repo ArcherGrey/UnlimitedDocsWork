@@ -5,5 +5,6 @@ const parent = {
 };
 export const lintIndex = [
   item(parent, "git 提交规范", "git_commit"),
-  item(parent, "css 规范", "css")
+  item(parent, "css 规范", "css"),
+  item(parent, "JavaScript 分号结尾", "semicolon")
 ];

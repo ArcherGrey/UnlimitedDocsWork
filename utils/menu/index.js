@@ -1,17 +1,18 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-07-16 17:35:09
+ * @LastEditTime: 2020-07-31 17:23:19
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
 
 import { vueIndex } from "./vue.js";
-import { leetcode, tree } from "./algorithm/index.js";
+import { leetcode, tree, sort } from "./algorithm/index.js";
 import { cssApply, cssLayout, cssBasic } from "./css/index.js";
 import { feeIndex } from "./fee.js";
 import { networkIndex } from "./network.js";
 import { lintIndex } from "./lint.js";
+import { htmlIndex } from "./html.js";
 import { visualIndex } from "./visual.js";
 import { gitIndex } from "./git.js";
 import { macIndex, linuxIndex } from "./os/index.js";
@@ -21,7 +22,8 @@ import { javascriptBasic, javascriptAdvanced } from "./javascript/index.js";
 export const menu = [
   {
     id: "1",
-    label: "html"
+    label: "html",
+    children: htmlIndex
   },
   {
     id: "2",
@@ -78,7 +80,8 @@ export const menu = [
         ]
       },
       leetcode,
-      tree
+      tree,
+      sort
     ]
   },
   {

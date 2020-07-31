@@ -8,6 +8,7 @@ export const cssBasic = {
   label: "基础",
   children: [
     item(parent, "word-break、word-wrap、white-space", "word"),
-    item(parent, "响应式 & 自适应", "rdad")
+    item(parent, "响应式 & 自适应", "rdad"),
+    item(parent, "水平垂直居中", "vhmid")
   ]
 };
