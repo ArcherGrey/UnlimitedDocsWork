@@ -22,6 +22,7 @@ export const leetcode = {
     item(parent, 27, "移除元素"),
     item(parent, 33, "搜索旋转排序数组"),
     item(parent, 35, "搜索插入位置"),
+    item(parent, 36, "有效的数独"),
     item(parent, 41, "缺失的第一个正数"),
     item(parent, 44, "通配符匹配"),
     item(parent, 50, "Pow(x,n)"),

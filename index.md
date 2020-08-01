@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-07-31 17:24:38
+ * @LastEditTime: 2020-07-31 18:27:46
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -109,6 +109,7 @@
     - [27. 移除元素](./docs/Algorithm/leetcode/27.md)
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [35. 搜索插入位置](./docs/Algorithm/leetcode/35.md)
+    - [36. 有效的数独](./docs/Algorithm/leetcode/36.md)
     - [41. 缺失的第一个正数](./docs/Algorithm/leetcode/41.md)
     - [44. 通配符匹配](./docs/Algorithm/leetcode/44.md)
     - [50. Pow(x,n)](./docs/Algorithm/leetcode/50.md)
