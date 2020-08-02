@@ -1,7 +1,7 @@
 import { leetcodeItem as item } from "../common.js";
 const parent = {
   id: "10.2",
-  path: "./docs/Algorithm/leetcode/"
+  path: "./docs/Algorithm/leetcode/",
 };
 
 export const leetcode = {
@@ -47,6 +47,7 @@ export const leetcode = {
     item(parent, 110, "平衡二叉树"),
     item(parent, 111, "二叉树的最小深度"),
     item(parent, 112, "路径总和"),
+    item(parent, 114, "二叉树展开为链表"),
     item(parent, 118, "杨辉三角"),
     item(parent, 119, "杨辉三角 II"),
     item(parent, 120, "三角形最小路径和"),
@@ -65,6 +66,7 @@ export const leetcode = {
     item(parent, 198, "打家劫舍"),
     item(parent, 200, "岛屿数量"),
     item(parent, 202, "快乐数"),
+    item(parent, 206, "反转链表"),
     item(parent, 209, "长度最小的子数组"),
     item(parent, 215, "数组中的第 K 个最大元素"),
     item(parent, 217, "存在重复元素"),
@@ -132,6 +134,6 @@ export const leetcode = {
     item(parent, "i46", "把数字翻译成字符串"),
     item(parent, "i51", "数组中的逆序对"),
     item(parent, "i56", "I. 数组中数字出现的次数"),
-    item(parent, "i64", "求 1+2+…+n")
-  ]
+    item(parent, "i64", "求 1+2+…+n"),
+  ],
 };
