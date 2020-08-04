@@ -1,7 +1,7 @@
 import { leetcodeItem as item } from "../common.js";
 const parent = {
   id: "10.2",
-  path: "./docs/Algorithm/leetcode/",
+  path: "./docs/Algorithm/leetcode/"
 };
 
 export const leetcode = {
@@ -67,6 +67,7 @@ export const leetcode = {
     item(parent, 200, "岛屿数量"),
     item(parent, 202, "快乐数"),
     item(parent, 206, "反转链表"),
+    item(parent, 207, "课程表"),
     item(parent, 209, "长度最小的子数组"),
     item(parent, 215, "数组中的第 K 个最大元素"),
     item(parent, 217, "存在重复元素"),
@@ -95,6 +96,7 @@ export const leetcode = {
     item(parent, 394, "字符串解码"),
     item(parent, 404, "左叶子之和"),
     item(parent, 414, "第三大的数"),
+    item(parent, 415, "字符串相加"),
     item(parent, 437, "路径总和 III"),
     item(parent, 448, "找到所有数组中消失的数字"),
     item(parent, 485, "最大连续1的个数"),
@@ -117,6 +119,7 @@ export const leetcode = {
     item(parent, 725, "打开转盘锁"),
     item(parent, 733, "图像渲染"),
     item(parent, 739, "每日温度"),
+    item(parent, 779, "第K个语法符号"),
     item(parent, 783, "二叉搜索树节点最小距离"),
     item(parent, 785, "判断二分图"),
     item(parent, 821, "新21点"),
@@ -134,6 +137,6 @@ export const leetcode = {
     item(parent, "i46", "把数字翻译成字符串"),
     item(parent, "i51", "数组中的逆序对"),
     item(parent, "i56", "I. 数组中数字出现的次数"),
-    item(parent, "i64", "求 1+2+…+n"),
-  ],
+    item(parent, "i64", "求 1+2+…+n")
+  ]
 };
