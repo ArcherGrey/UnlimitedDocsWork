@@ -25,7 +25,7 @@
 
 - 域：服务器可以向 `set-cookie` 响应首部添加一个 `Domain` 属性来控制哪些站点可以看到 `cookie`：
 
-```
+```auto
 Set-Cookie: name="wang"; domain="m.zhuanzhuan.58.com"
 ```
 
@@ -35,25 +35,25 @@ Set-Cookie: name="wang"; domain="m.zhuanzhuan.58.com"
 
 例如：`m.zhuanzhuan.58.com` 和 `m.zhaunzhuan.58.com/user/`这两个`url`。 `m.zhuanzhuan.58.com` 设置`cookie`
 
-```
+```auto
 Set-cookie: id="123432";domain="m.zhuanzhuan.58.com";
 ```
 
 `m.zhaunzhuan.58.com/user/` 设置`cookie`：
 
-```
+```auto
 Set-cookie：user="wang", domain="m.zhuanzhuan.58.com"; path=/user/
 ```
 
 但是访问其他路径`m.zhuanzhuan.58.com/other/`就会获得
 
-```
+```auto
 cookie: id="123432"
 ```
 
 如果访问`m.zhuanzhuan.58.com/user/`就会获得
 
-```
+```auto
   cookie: id="123432"
   cookie: user="wang"
 ```
@@ -64,14 +64,14 @@ cookie: id="123432"
 
 通过`docuemnt.cookie`可以设置和获取`Cookie`的值
 
-```
+```JavaScript
 document.cookie = "user=wang";
 console.log(document.cookie);
 ```
 
 禁止`javascript`操作`cookie`（为避免跨域脚本(`xss`)攻击，通过`javascript`的`document.cookie`无法访问带有`HttpOnly`标记的`cookie`）
 
-```
+```auto
 Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2017 07:28:00 GMT; Secure; HttpOnly
 ```
 

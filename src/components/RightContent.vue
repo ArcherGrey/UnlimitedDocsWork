@@ -1,6 +1,8 @@
 <template>
   <div class="content-wrap">
-    <div id="content" ref="content" @scroll="onScroll"></div>
+    <div id="content" ref="content" @scroll="onScroll">
+      <markdown-it-vue :content="content" :options="options" />
+    </div>
     <el-button
       type="primary"
       icon="el-icon-top"
@@ -13,14 +15,28 @@
 </template>
 
 <script>
+import MarkdownItVue from "markdown-it-vue";
+import "markdown-it-vue/dist/markdown-it-vue.css";
 const cubic = value => Math.pow(value, 3);
 const easeInOutCubic = value =>
   value < 0.5 ? cubic(value * 2) / 2 : 1 - cubic((1 - value) * 2) / 2;
 export default {
   name: "RightContent",
+  components: { MarkdownItVue },
+  props: {
+    content: { type: String }
+  },
   data() {
     return {
-      showBackTop: false
+      showBackTop: false,
+      options: {
+        linkAttributes: {
+          attrs: {
+            target: "_self",
+            rel: "index"
+          }
+        }
+      }
     };
   },
   methods: {

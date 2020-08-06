@@ -53,10 +53,10 @@ export default {
         this.axios.get(item.path).then(response => {
           this.showContentAnime();
           // 更新 content 内容
-          document.getElementById("content").innerHTML = this.$marked(
-            response.data
-          );
-
+          // document.getElementById("content").innerHTML = this.$marked(
+          //   response.data
+          // );
+          this.$emit("changeContent", response.data);
           // 新页面重新拉回顶部
           this.$emit("initScroll");
         });

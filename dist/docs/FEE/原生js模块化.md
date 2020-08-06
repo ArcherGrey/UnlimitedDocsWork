@@ -4,11 +4,11 @@
 
 反模式指没有使用任何模块系统，把不同的函数放到一起就算是一个模块：
 
-```
-function f1(){
+```js
+function f1() {
   //...
 }
-function f2(){
+function f2() {
   //...
 }
 ```
@@ -22,7 +22,7 @@ function f2(){
 
 为了解决上面的缺点，可以把模块写成一个字面量，所有模块成员都放到这个对象中：
 
-```
+```js
 var module1 = new Object({
   _count : 0,
   f1 : function(){
@@ -40,7 +40,7 @@ var module1 = new Object({
 
 使用立即执行函数可以解决上面的问题：
 
-```
+```js
 var module1 = (function(){
   var _count = 0;
   var f1 = function(){
@@ -62,7 +62,7 @@ var module1 = (function(){
 
 如果一个模块需要继承另一个模块，则需要传参：
 
-```
+```js
 var module1 = (function(mod){
   mod.m3 = function (){
     //...
@@ -73,7 +73,7 @@ var module1 = (function(mod){
 
 ## 命名空间
 
-```
+```js
 //math.js
 namespace('math', [], function(){
   function add(a, b) { return a + b; }

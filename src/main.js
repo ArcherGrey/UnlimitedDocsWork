@@ -5,8 +5,8 @@ import "element-ui/lib/theme-chalk/index.css";
 
 // 动画库
 import anime from "animejs";
-// markdown 转换
-import marked from "marked";
+// // markdown 转换
+// import marked from "marked";
 
 // 引入 axios vue-axios
 import axios from "axios";
@@ -22,7 +22,7 @@ Vue.use(VueAxios, axios);
 
 // 全局变量使用
 Vue.prototype.$anime = anime;
-Vue.prototype.$marked = marked;
+// Vue.prototype.$marked = marked;
 
 Vue.config.productionTip = false;
 

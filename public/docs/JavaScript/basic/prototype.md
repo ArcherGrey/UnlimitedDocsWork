@@ -4,7 +4,7 @@
 
 准确的说，这些属性和方法定义在 `Object` 的构造函数上的 `prototype` 属性上，而非对象实例本身：
 
-```
+```JavaScript
 var a = {} // a 是一个对象实例
 console.log(a.prototype) // undefined
 var b = function (){} // b 是一个函数
@@ -16,7 +16,7 @@ console.log(b.prototype) // 不是undefined ，应该是b 可以看作构造函�
 `JavaScript` 中任意对象都有一个内置属性 `__proto__`，隐式原型指向创建这个对象的函数（`constructor`）的 `prototype`。
 `Object.prototype` 这个对象是个例外，它的 `__proto__` 值为 null:
 
-```
+```JavaScript
 console.log( typeof Array );   // 'function'
 console.log( Array.prototype ); //数组构造函数 Array 也是一个函数，并且在 Array 的原型中除了指向 Array 的 constructor 之外还有其他的内置对象。
 ```
@@ -25,7 +25,7 @@ console.log( Array.prototype ); //数组构造函数 Array 也是一个函数，
 
 每一个函数在创建之后都会拥有一个名为 `prototype` 的属性，这个属性指向函数的原型对象。通过`Function.prototype.bind`方法构造出来的函数是个例外，它没有`prototype`属性:
 
-```
+```JavaScript
 var fn = function() {}
 console.log( fn.prototype ); //创建一个函数时，都会有一个 prototype 属性指向它的原型。而 fn.prototype 中有一个 constructor 属性指向 fn 函数。
 ```
@@ -37,7 +37,7 @@ console.log( fn.prototype ); //创建一个函数时，都会有一个 prototype
 
 ## 关系
 
-```
+```JavaScript
 // 构造函数
 function fn(){};
 
@@ -61,7 +61,7 @@ javascript 对象有一个指向一个原型对象的链，当试图访问一个
 
 看一个例子：
 
-```
+```JavaScript
 // 让我们假设我们有一个对象 o, 其有自己的属性 a 和 b：
 // {a: 1, b: 2}
 // o 的 [[Prototype]] 有属性 b 和 c：
@@ -94,7 +94,7 @@ javascript 没有其他基于类的语言所定义的方法，任何函数都可
 
 当继承的函数被调用的时候， `this` 指向的是当前继承的对象，而不是继承的函数所在的原型对象：
 
-```
+```JavaScript
 var o = {
   a: 2,
   m: function(){
@@ -121,7 +121,7 @@ console.log(p.m()); // 5
 
 > 语法结构创建的对象
 
-```
+```JavaScript
 var o = {a: 1};
 
 // o 这个对象继承了Object.prototype上面的所有属性
@@ -151,7 +151,7 @@ function f(){
 
 > 构造器创建的对象
 
-```
+```JavaScript
 function Graph() {
   this.vertices = [];
   this.edges = [];
@@ -170,7 +170,7 @@ var g = new Graph();
 
 > `Object.create` 创建的对象 (ES5)
 
-```
+```JavaScript
 var a = {a: 1};
 // a ---> Object.prototype ---> null
 
@@ -188,7 +188,7 @@ console.log(d.hasOwnProperty); // undefined, 因为d没有继承Object.prototype
 
 > `class` 关键字创建对象 (ES6)
 
-```
+```JavaScript
 "use strict";
 
 class Polygon {

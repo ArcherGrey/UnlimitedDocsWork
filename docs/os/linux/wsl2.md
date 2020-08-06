@@ -10,7 +10,7 @@ wsl (`windows subsystem for linux`) 是适用于 linux 的 windows 子系统，�
 
 2. 用管理员身份打开 powerShell，运行命令：
 
-```
+```shell
 // 安装组件
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart

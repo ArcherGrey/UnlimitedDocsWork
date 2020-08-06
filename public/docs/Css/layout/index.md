@@ -64,33 +64,33 @@ box-sizing 属性允许您以特定的方式定义匹配某个区域的特定元
 - `IE7` 文字越多左右 `padding` 逐渐变大，设置 `overflow:visible` 可解决该问题
 - 按钮的 `padding` 和高度计算不兼容：
 
-```
-button{
-    line-height:20px;
-    padding:10px;
-    border:none;
+```css
+button {
+  line-height: 20px;
+  padding: 10px;
+  border: none;
 }
-//结果为：
+/*  结果为：
 IE7: 45px
 firefox:42px
 chrome/IE8+:40px
-
+*/
 ---
-// 可以使用label来实现类似效果，然后把按钮进行可访问性隐藏即可
+/* 可以使用label来实现类似效果，然后把按钮进行可访问性隐藏即可 */
 <button id="btn"></button>
 <label for="btn">按钮</label>
-label{
-    display:inline-block;
-    line-height:20px;
-    padding:10px;
-    border:none;
+label {
+  display: inline-block;
+  line-height: 20px;
+  padding: 10px;
+  border: none;
 }
-//结果为：
+/*  结果为：
 IE7: 40px
 firefox:40px
 IE8+:40px
 chrome:40px
-
+*/
 ```
 
 - `firefox` 和 `IE8+` 浏览器在`overflow:scroll` 或 `auto` 时，存在`padding-bottom` 缺失现象

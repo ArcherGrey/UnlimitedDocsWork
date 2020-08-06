@@ -26,24 +26,16 @@ mounted(){
 
 场景：父组件想在子组件 `mount` 时触发事件
 
-```
+```html
 // 不使用 hook
 <!-- parent -->
 <parent-component>
   <child-component @mounted="handleChildMounted"></child-component>
 </parent-component>
 
-// child
-export default {
-  mounted() {
-    this.$emit('mounted')
-  }
-}
-
-// 使用 hook
+// child export default { mounted() { this.$emit('mounted') } } // 使用 hook
 <!-- parent -->
 <parent-component>
-  <child-component @hook:mounted="handleChildMounted">
-  </child-component>
+  <child-component @hook:mounted="handleChildMounted"> </child-component>
 </parent-component>
 ```

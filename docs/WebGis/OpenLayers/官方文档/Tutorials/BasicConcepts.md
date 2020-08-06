@@ -6,13 +6,13 @@ OpenLayers 的核心组件就是 map `(ol/Map)`，它被渲染到一个 `target`
 
 下面的标签用来创建一个 `div` 来包含地图：
 
-```
+```html
 <div id="map" style="width: 100%, height: 400px"></div>
 ```
 
 下面的代码构造了一个 map 对象，target 是容器的 `id`：
 
-```
+```JavaScript
 import Map from 'ol/Map';
 
 var map = new Map({target: 'map'});
@@ -22,7 +22,7 @@ var map = new Map({target: 'map'});
 
 map 不能用来居中、缩放或者其他操作。这些属性通过 `ol/View` 实例来设置：
 
-```
+```JavaScript
 import View from 'ol/View';
 
 map.setView(new View({
@@ -39,7 +39,7 @@ map.setView(new View({
 
 OpenLayers 使用 `ol/source/Source` 子类来为 layer 获取远程数据。这些服务可用于 OpenStreetMap 或 Bing 等免费和商业地图平铺服务、WMS 或 WMTS 等 OGC 源以及 GeoJSON 或 KML 等格式的矢量数据：
 
-```
+```JavaScript
 import OSM from 'ol/source/OSM';
 
 var osmSource = OSM();
@@ -54,7 +54,7 @@ layer 是 source 的数据可视化。OpenLayers 有四种基本 layers：
 - `ol/layer/Vector` - 客户端渲染矢量数据
 - `ol/layer/VectorTile` - 渲染矢量平铺形式的数据
 
-```
+```JavaScript
 import TileLayer from 'ol/layer/Tile';
 
 var osmLayer = new TileLayer({source: osmSource});
@@ -63,7 +63,7 @@ map.addLayer(osmLayer);
 
 ## 总结
 
-```
+```JavaScript
 import Map from 'ol/Map';
 import View from 'ol/View';
 import OSM from 'ol/source/OSM';

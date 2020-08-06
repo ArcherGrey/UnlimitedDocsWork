@@ -17,10 +17,10 @@ HTML5 提供了两种在客户端存储数据的新方法：
 
 如何创建和访问 `localStorage`：
 
-```
+```html
 <script type="text/javascript">
-localStorage.lastname="Smith";
-document.write(localStorage.lastname);
+  localStorage.lastname = "Smith";
+  document.write(localStorage.lastname);
 </script>
 ```
 
@@ -30,10 +30,10 @@ document.write(localStorage.lastname);
 
 如何创建并访问一个 `sessionStorage`：
 
-```
+```html
 <script type="text/javascript">
-sessionStorage.lastname="Smith";
-document.write(sessionStorage.lastname);
+  sessionStorage.lastname = "Smith";
+  document.write(sessionStorage.lastname);
 </script>
 ```
 

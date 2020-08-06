@@ -47,7 +47,7 @@
 
 例子：
 
-```
+```JavaScript
 let data = [];
 $.ajax({
     url:www.javascript.com,
@@ -72,7 +72,7 @@ console.log('代码执行结束');
 
 执行栈是一种数据结构，如果执行一个函数就会把该函数放到栈顶，当函数返回的时候，就会将这个函数从栈顶弹出：
 
-```
+```JavaScript
 function m(x,y){
     return x*y;
 }
@@ -105,7 +105,7 @@ p(5);
 不同类型的任务会进入对应的 `Event Queue`，比如 `setTimeout` 和 `setInterval` 会进入相同的 `Event Queue`。
 事件循环的顺序，决定代码的执行顺序。进入整体代码(宏任务)后，开始第一次循环。接着执行所有的微任务。然后再次从宏任务开始，找到其中一个任务队列执行完毕，再执行所有的微任务。听起来有点绕，用一段代码说明：
 
-```
+```JavaScript
 setTimeout(function() {
     console.log('setTimeout');
 })

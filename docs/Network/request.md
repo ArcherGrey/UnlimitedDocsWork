@@ -10,7 +10,7 @@
 
 发送请求时，数据被添加到 url 的末尾，数据以问号开始，key value 之间用等号链接，每对之间用 `&` 分割，数据常常被称为查询字符串：
 
-```
+```auto
 xxx.xx.com?name1=value&name2=value
 ```
 

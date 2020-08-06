@@ -23,7 +23,7 @@
 
 MongoDB 将数据目录存储在 db 目录下。但是这个数据目录不会主动创建，我们在安装完成后需要创建它(创建一个名字为 `data` 的文件夹再在里面创建一个名字为 `db` 的文件夹)：
 
-```
+```shell
 mkdir data
 cd data
 mkdir db
@@ -35,7 +35,7 @@ mkdir db
 
 为了从命令提示符下运行 `MongoDB` 服务器，你必须从 `MongoDB` 目录的 `bin` 目录中执行 `mongod.exe` 文件:
 
-```
+```shell
 mongod --dbpath 刚才创建db的位置
 mongo.exe
 ```
@@ -44,14 +44,14 @@ mongo.exe
 
 创建数据库和日志文件目录
 
-```
+```shell
 mkdir c:\data\db
 mkdir c:\data\log
 ```
 
 创建配置文件， `C:\mongodb\mongod.cfg`：
 
-```
+```shell
 systemLog:
     destination: file
     path: c:\data\log\mongod.log
@@ -61,12 +61,12 @@ storage:
 
 安装服务：
 
-```
+```shell
 C:\mongodb\bin\mongod.exe --config "C:\mongodb\mongod.cfg" --install
 ```
 
 启动服务：
 
-```
+```shell
 net start MongoDB
 ```

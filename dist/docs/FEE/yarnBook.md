@@ -331,7 +331,7 @@ yarn owner remove <user> <package>
 
 淘宝镜像
 
-```
+```shell
 yarn config set registry https://registry.npm.taobao.org
 
 //还原镜像yarn config set registry http://registry.npmjs.org
@@ -339,7 +339,7 @@ yarn config set registry https://registry.npm.taobao.org
 
 配置文件
 
-```
+```shell
 https://yarnpkg.com/en/docs/package-json
 https://yarnpkg.com/en/docs/yarnrc
 https://yarnpkg.com/en/docs/yarn-lock

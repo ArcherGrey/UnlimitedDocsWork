@@ -12,7 +12,7 @@
 
 基本思想:即在子类型构造函数的内部调用超类型构造函数：
 
-```
+```JavaScript
 function Father(){
 	this.colors = ["red","blue","green"];
 }
@@ -48,7 +48,7 @@ console.log(instance2.colors);//"red,blue,green" 可见引用类型值是独立�
 
 基本思路: 使用原型链实现对原型属性和方法的继承,通过借用构造函数来实现对实例属性的继承：
 
-```
+```JavaScript
 function Father(name){
 	this.name = name;
 	this.colors = ["red","blue","green"];
@@ -83,7 +83,7 @@ instance1.sayAge();//10
 
 在`object()`函数内部, 先创建一个临时性的构造函数, 然后将传入的对象作为这个构造函数的原型,最后返回了这个临时类型的一个新实例:
 
-```
+```JavaScript
 function object(o){
 	function F(){}
 	F.prototype = o;
@@ -99,7 +99,7 @@ function object(o){
 
 寄生式继承的思路与(寄生)构造函数和工厂模式类似, 即创建一个仅用于封装继承过程的函数,该函数在内部以某种方式来增强对象,最后再像真的是它做了所有工作一样返回对象. 如下:
 
-```
+```JavaScript
 function createAnother(original){
 	var clone = object(original);//通过调用object函数创建一个新对象
 	clone.sayHi = function(){//以某种方式来增强这个对象
@@ -115,7 +115,7 @@ function createAnother(original){
 
 寄生组合式继承就是为了降低调用父类构造函数的开销而出现的:
 
-```
+```JavaScript
 function extend(subClass,superClass){
 	var prototype = object(superClass.prototype);//创建对象
 	prototype.constructor = subClass;//增强对象

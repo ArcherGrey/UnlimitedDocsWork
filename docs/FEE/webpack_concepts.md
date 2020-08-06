@@ -147,7 +147,7 @@ output: {
 
 在使用 `loader` 之前需要安装对应的 `loader`:
 
-```
+```shell
 npm install --save-dev css-loader
 npm install --save-dev ts-loader
 ```

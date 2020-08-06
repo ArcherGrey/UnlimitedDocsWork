@@ -60,7 +60,7 @@
 
 1. 伸缩容器上使用主轴侧轴对齐
 
-```
+```html
 <style>
 .parent{
     display: flex;
@@ -72,7 +72,7 @@
 
 2. 伸缩项目上使用 `margin:auto`
 
-```
+```html
 <style>
 .parent{
     display: flex;
@@ -85,7 +85,7 @@
 
 两端对齐:
 
-```
+```html
 <style>
 .parent{
     display: flex;
@@ -96,7 +96,7 @@
 
 底端对齐：
 
-```
+```html
 <style>
 .parent{
     display: flex;
@@ -107,7 +107,7 @@
 
 输入框按钮：
 
-```
+```html
 <style>
 .inputBox{
     display: flex;
@@ -125,7 +125,7 @@
 
 等分布局：
 
-```
+```html
 <style>
 body,p{margin: 0;}
 .parent{
@@ -150,7 +150,7 @@ body,p{margin: 0;}
 
 多列自适应：
 
-```
+```html
 <style>
 p{margin: 0;}
 .parent{display: flex;}
@@ -175,7 +175,7 @@ p{margin: 0;}
 
 悬挂布局：
 
-```
+```html
 <style>
 .box{
     display: flex;
@@ -199,7 +199,7 @@ p{margin: 0;}
 
 全屏布局：
 
-```
+```html
 <style>
 body,p{margin: 0;}
 body,html,.parent{height: 100%;}

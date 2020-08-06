@@ -13,7 +13,7 @@
 
 下面的伪代码实现快速排序：
 
-```
+```auto
     QUICKSORT(A,p,r)
 
     if p<r
@@ -24,7 +24,7 @@
 
 下面的伪代码实现数组的划分：
 
-```
+```auto
     PARTITION(A,p,r)
 
     x=A[r]

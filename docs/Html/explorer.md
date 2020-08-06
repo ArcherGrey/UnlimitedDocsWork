@@ -1,7 +1,5 @@
 # 浏览器内部工作原理
 
-<div id='directory'>
-
 - [前言](#1)
 - [渲染引擎](#2)
   - [分类](#2.1)
@@ -16,8 +14,6 @@
   - [过程](#5.2)
   - [宽度计算](#5.3)
 - [绘制](#6)
-
-</div>
 
 <span id='1'></span>
 
@@ -148,14 +144,14 @@
 
 `DOM` 和标签基本是一一对应关系，例如下面的标签：
 
-```
+```html
 <html>
-    <body>
-        <p>hello</p>
-        <div>
-            <img src="1.png" />
-        </div>
-    </body>
+  <body>
+    <p>hello</p>
+    <div>
+      <img src="1.png" />
+    </div>
+  </body>
 </html>
 ```
 

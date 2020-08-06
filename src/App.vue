@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <left-menu @initScroll="initScroll" />
-    <right-content ref="right" />
+    <left-menu @initScroll="initScroll" @changeContent="changeContent" />
+    <right-content ref="right" :content="content" />
   </div>
 </template>
 
@@ -16,12 +16,17 @@ export default {
     LeftMenu
   },
   data() {
-    return {};
+    return {
+      content: "# 文档合集"
+    };
   },
   mounted() {
     this.indexAnime();
   },
   methods: {
+    changeContent(val) {
+      this.content = val;
+    },
     initScroll() {
       this.$refs.right.backTop();
     },

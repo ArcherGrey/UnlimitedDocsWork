@@ -12,7 +12,7 @@
 
 基础组件目录：
 
-```
+```auto
 custom-dialog.vue
 custom-grid.vue
 custom-input.vue
