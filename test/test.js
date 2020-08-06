@@ -1,39 +1,26 @@
 /**
- * @param {number} numCourses
- * @param {number[][]} prerequisites
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
  * @return {boolean}
  */
-var canFinish = function(numCourses, prerequisites) {
-  let edges = new Array(numCourses);
-  for (let i = 0; i < edges.length; ++i) {
-    edges[i] = [];
-  }
-  // 入度队列
-  let indeg = new Array(numCourses).fill(0);
-
-  // 构建有向图
-  for (let point of prerequisites) {
-    edges[point[1]].push(point[0]);
-    indeg[point[0]]++;
-  }
-  let q = [];
-  for (let i = 0; i < numCourses; ++i) {
-    if (!indeg[i]) {
-      // 入度为 0 的节点先入队
-      q.push(i);
-    }
-  }
-
-  let visited = 0;
+var isSymmetric = function(root) {
+  const q = [root, root];
   while (q.length) {
-    ++visited;
-    let u = q.pop();
-    for (let v of edges[u]) {
-      indeg[v]--;
-      if (!indeg[v]) {
-        q.push(v);
-      }
-    }
+    let u = q.shift(),
+      v = q.shift();
+    if (!u && !v) continue;
+    if (!u || !v || u.val != v.val) return false;
+    // 每次把需要比较的一对按顺序加入
+    q.push(u.left);
+    q.push(v.right);
+    q.push(u.right);
+    q.push(v.left);
   }
-  return visited == numCourses;
+  return true;
 };

@@ -6,5 +6,8 @@ const parent = {
 export const tree = {
   id: "10.3",
   label: "树",
-  children: [item(parent, "二叉树深度优先遍历", "dfs")]
+  children: [
+    item(parent, "二叉树遍历", "btTravers"),
+    item(parent, "二叉树常见问题", "btQs")
+  ]
 };
