@@ -30,6 +30,9 @@ export default {
     return {
       showBackTop: false,
       options: {
+        markdownIt: {
+          html: true
+        },
         linkAttributes: {
           attrs: {
             target: "_self",
