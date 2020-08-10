@@ -4,6 +4,7 @@
 - [判断二叉树是否对称](#判断二叉树是否对称)
 - [构造二叉树](#构造二叉树)
   - [中序后序构造二叉树](#中序后序构造二叉树)
+  - [前序中序构造二叉树](#前序中序构造二叉树)
 
 ## 二叉树最大深度
 
@@ -187,6 +188,97 @@ var buildTree = function(inorder, postorder) {
     return node;
   };
   return fn(0, inorder.length - 1, 0, postorder.length - 1);
+};
+
+```
+
+### 前序中序构造二叉树
+
+递归:
+
+```JavaScript
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {number[]} preorder
+ * @param {number[]} inorder
+ * @return {TreeNode}
+ */
+var buildTree = function(preorder, inorder) {
+  if (!preorder.length) return null;
+  let root = new TreeNode(preorder[0]);
+  // 找到中序遍历中根节点的位置
+  let i = 0;
+  for (; i < inorder.length; ++i) {
+    if (inorder[i] === preorder[0]) {
+      break;
+    }
+  }
+  // 中序
+  // 左：[0,i-1] 长度 i
+  // 右：[i+1,...]
+
+  // 先序
+  // 左：[1,i] 长度 i
+  // 右：[i+1,...]
+  root.left = buildTree(preorder.slice(1, i + 1), inorder.slice(0, i));
+  root.right = buildTree(preorder.slice(i + 1), inorder.slice(i + 1));
+  return root;
+};
+
+
+```
+
+迭代:
+
+```JavaScript
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {number[]} preorder
+ * @param {number[]} inorder
+ * @return {TreeNode}
+ */
+var buildTree = function(preorder, inorder) {
+  if (!preorder.length) return null;
+  let root = new TreeNode(preorder[0]);
+  // 当前节点的所有还没有考虑过右儿子的祖先节点 栈顶就是当前节点
+  let stack = [root];
+  // 指向中序遍历的位置
+  let index = 0;
+  for (let i = 1; i < preorder.length; ++i) {
+    let val = preorder[i];
+    let top = stack[stack.length - 1];
+    // 中序遍历中指向的节点和当前节点不一致
+    // 当前节点左子节点指向当前先序遍历节点,把该节点入栈作为当前节点
+    if (top.val != inorder[index]) {
+      top.left = new TreeNode(val);
+      stack.push(top.left);
+    } else {
+      // 当前节点和中序遍历指向节点一致
+      while (
+        stack.length > 0 &&
+        stack[stack.length - 1].val == inorder[index]
+      ) {
+        top = stack[stack.length - 1];
+        stack.pop();
+        ++index;
+      }
+      top.right = new TreeNode(val);
+      stack.push(top.right);
+    }
+  }
+  return root;
 };
 
 ```

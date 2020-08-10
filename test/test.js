@@ -1,36 +1,34 @@
 /**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
+ * // Definition for a Node.
+ * function Node(val, left, right, next) {
+ *    this.val = val === undefined ? null : val;
+ *    this.left = left === undefined ? null : left;
+ *    this.right = right === undefined ? null : right;
+ *    this.next = next === undefined ? null : next;
+ * };
  */
 
 /**
- * @param {number[]} inorder
- * @param {number[]} postorder
- * @return {TreeNode}
+ * @param {Node} root
+ * @return {Node}
  */
-var buildTree = function(inorder, postorder) {
-  // 创建 hash 表存储中序序列 [value,index]
-  let mem = new Map();
-  for (let i = 0; i < inorder.length; ++i) {
-    mem.set(inorder[i], i);
+var connect = function(root) {
+  if (!root) return root;
+  let node = root;
+  while (node.left) {
+    let head = node;
+    while (head) {
+      // 情况1 当前节点的左右子节点
+      head.left.next = head.right;
+      // 情况2 当前节点的同层相邻节点存在
+      if (head.next) {
+        head.right.next = head.next.left;
+      }
+      // 如果同层还有相邻节点，移动到相邻节点
+      head = head.next;
+    }
+    // 下一层
+    node = node.left;
   }
-  // 参数分别是中序后序的左右子树边界
-  const fn = (is, ie, ps, pe) => {
-    //
-    if (ie < is || pe < ps) return null;
-    // 后序遍历的最后一个位置是根节点
-    let root = postorder[pe];
-    // 获取中序遍历中根节点的位置
-    let ri = mem.get(root);
-
-    // 递归构造子树
-    let node = new TreeNode(root);
-    node.left = fn(is, ri - 1, ps, ps + ri - is - 1);
-    node.right = fn(ri + 1, ie, ps + ri - is, pe - 1);
-    return node;
-  };
-  return fn(0, inorder.length - 1, 0, postorder.length - 1);
+  return root;
 };
