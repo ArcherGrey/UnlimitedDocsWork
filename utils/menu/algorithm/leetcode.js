@@ -57,6 +57,7 @@ export const leetcode = {
     item(parent, 121, "买卖股票的最佳时机"),
     item(parent, 122, "买卖股票的最佳时机 II"),
     item(parent, 125, "验证回文串"),
+    item(parent, 130, "被围绕的区域"),
     item(parent, 133, "克隆图"),
     item(parent, 136, "只出现一次的数字"),
     item(parent, 144, "二叉树的前序遍历"),

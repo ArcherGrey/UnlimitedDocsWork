@@ -29,7 +29,8 @@ blockquote {
 }
 
 /* 目录样式 */
-h1 + ul {
+h1 + ul,
+.toc {
   background: $background-color-2;
   border: var(--border-style) $h1-border-bottom-color;
   padding: 10px 30px;
@@ -115,4 +116,10 @@ table {
 .markdown-body {
   height: 100%;
   width: 100%;
+}
+
+// 选中内容样式
+::selection {
+  color: lightgreen;
+  background-color: darkorange;
 }
