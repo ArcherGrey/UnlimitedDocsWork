@@ -1,46 +1,35 @@
 /**
- * @param {character[][]} board
- * @return {void} Do not return anything, modify board in-place instead.
+ * // Definition for a Node.
+ * function Node(val, neighbors) {
+ *    this.val = val === undefined ? 0 : val;
+ *    this.neighbors = neighbors === undefined ? [] : neighbors;
+ * };
  */
-var solve = function(board) {
-  const dx = [1, -1, 0, 0];
-  const dy = [0, 0, 1, -1];
-  let n = board.length;
-  if (!n) return;
-  let m = board[0].length;
-  let q = [];
-  // 左右边界
-  for (let i = 0; i < n; ++i) {
-    if (board[i][0] === "O") q.push([i, 0]);
-    if (board[i][m - 1] === "O") q.push([i, m - 1]);
-  }
-  // 上下边界
-  for (let i = 1; i < m - 1; ++i) {
-    if (board[0][i] === "O") q.push([0, i]);
-    if (board[n - 1][i] === "O") q.push([n - 1, i]);
-  }
 
-  // 广度优先遍历
+/**
+ * @param {Node} node
+ * @return {Node}
+ */
+var cloneGraph = function(node) {
+  if (!node) return node;
+  // 哈希表
+  let m = new Map();
+  // 队列
+  let q = [node];
+  // 克隆第一个节点并存储到 hash 表中
+  m.set(node, new Node(node.val));
   while (q.length) {
-    let x = q[0][0],
-      y = q[0][1];
-    q.shift();
-    // 标记
-    board[x][y] = "A";
-    for (let i = 0; i < 4; ++i) {
-      let mx = x + dx[i],
-        my = y + dy[i];
-      if (mx < 0 || mx > n - 1 || my < 0 || my > m - 1 || board[mx][my] != "O")
-        continue;
-      q.push([mx, my]);
+    let n = q.shift();
+    for (let neighbor of n.neighbors) {
+      // 没有访问过
+      if (!m.has(neighbor)) {
+        // 标记访问，克隆节点，加入队列
+        m.set(neighbor, new Node(neighbor.val));
+        q.push(neighbor);
+      }
+      // 更新邻居列表
+      m.get(n).neighbors.push(m.get(neighbor));
     }
   }
-
-  // 遍历矩阵
-  for (let i = 0; i < n; ++i) {
-    for (let j = 0; j < m; ++j) {
-      if (board[i][j] === "A") board[i][j] = "O";
-      else if (board[i][j] === "O") board[i][j] = "X";
-    }
-  }
+  return m.get(node);
 };
