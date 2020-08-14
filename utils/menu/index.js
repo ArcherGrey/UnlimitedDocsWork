@@ -1,7 +1,7 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-07-31 17:23:19
+ * @LastEditTime: 2020-08-14 09:59:15
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
@@ -17,7 +17,7 @@ import { visualIndex } from "./visual.js";
 import { gitIndex } from "./git.js";
 import { macIndex, linuxIndex } from "./os/index.js";
 import { javascriptBasic, javascriptAdvanced } from "./javascript/index.js";
-// import { FETools } from "./index/FE_Tools.js";
+import { npmIndex } from "./npm.js";
 // import { Question } from "./Question.js";
 export const menu = [
   {
@@ -52,7 +52,8 @@ export const menu = [
   },
   {
     id: "7",
-    label: "后端"
+    label: "npm",
+    children: npmIndex
   },
   {
     id: "8",
@@ -93,16 +94,9 @@ export const menu = [
     id: "12",
     label: "可视化",
     children: visualIndex
+  },
+  {
+    id: "13",
+    label: "后端"
   }
-  // {
-  //   id: "12",
-  //   label: "问题总结",
-  //   children: [
-  //     {
-  //       id: "12.1",
-  //       label: "css",
-  //       path: "./docs/question"
-  //     }
-  //   ]
-  // }
 ];

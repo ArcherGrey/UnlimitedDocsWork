@@ -100,6 +100,7 @@ yarn server
   - npm
     - anywhere 随时在本地搭建 http 环境
     - validate-commit-msg 检查项目中 Commit message 是否规范。
+      - CommitLint 上面的已经不更新了作者推荐这个
     - Commitizen 是一个撰写合格 Commit message 的工具。
     - conventional-changelog 就是生成 Change log 的工具
     - nrm npm 镜像管理工具
