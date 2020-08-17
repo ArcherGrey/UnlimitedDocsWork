@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-08-14 09:55:38
+ * @LastEditTime: 2020-08-17 15:42:27
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -82,6 +82,8 @@
   - [webpack 概念](./docs/FEE/webpack_concepts.md)
   - [自动化导入模块](./docs/FEE/reqcontext.md)
 - [npm]()
+  - [索引](./docs/Npm/index.md)
+  - [husky](./docs/Npm/husky.md)
 - [可视化]()
 - [后端相关]()
   - [nodejs]()
@@ -242,6 +244,7 @@
 - [git]()
   - [github 无法登录](./docs/Git/host.md)
   - [git 简明教程](./docs/Git/git.md)
+  - [Git Hooks](./docs/Git/githook.md)
 - [工作总结]()
 - [翻译]
   - [SICP](./docs/translate/SICP.md)
@@ -259,7 +262,9 @@
     - [wsl2 安装](./docs/os/linux/wsl2.md)
   - [mac]
     - [mac 常用操作](./docs/os/mac/mac.md)
-- [规范]
+- [规范]()
   - [git 提交规范](./docs/Lint/git_commit.md)
   - [css 命名规范](./docs/Lint/css.md)
   - [JavaScript 分号结尾](./docs/Lint/semicolon.md)
+- [markdown]()
+  - [GFM emoji](./docs/Markdown/gfmemoji.md)

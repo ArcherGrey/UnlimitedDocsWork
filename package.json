@@ -19,7 +19,7 @@
     "vue-axios": "^2.1.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.1.1",
+    "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.1",
     "@vue/cli-plugin-babel": "^4.4.0",
     "@vue/cli-plugin-eslint": "^4.4.0",
@@ -28,6 +28,7 @@
     "compression-webpack-plugin": "^4.0.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.5",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.2",
     "vue-template-compiler": "^2.6.11"
@@ -50,5 +51,10 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
 }
