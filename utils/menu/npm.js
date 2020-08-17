@@ -6,5 +6,6 @@ const parent = {
 export const npmIndex = [
   item(parent, "索引", "index"),
   item(parent, "CommitLint", "CommitLint"),
-  item(parent, "husky", "husky")
+  item(parent, "husky", "husky"),
+  item(parent, "nrm", "nrm")
 ];
