@@ -1,8 +1,6 @@
 <template>
-  <div class="content-wrap">
-    <div id="content" ref="content" @scroll="onScroll">
-      <markdown-it-vue :content="content" :options="options" />
-    </div>
+  <div id="content" ref="content" @scroll="onScroll">
+    <markdown-it-vue :content="content" :options="options" />
     <el-button
       type="primary"
       icon="el-icon-top"
@@ -71,47 +69,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.content-wrap {
-  position: relative;
-  flex: 1 1 auto;
+#content {
   @media screen and (max-width: 400px) {
-    height: 66%;
-    width: 100%;
+    height: 92%;
+    width: 90%;
+    padding: 10px;
   }
   @media screen and (max-width: 2000px) and (min-width: 800px) {
-    width: 66%;
-    height: 100%;
+    width: 92%;
+    height: 90%;
+    padding: 20px;
   }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  #content {
-    @media screen and (max-width: 400px) {
-      height: 92%;
-      width: 90%;
-      padding: 10px;
-    }
-    @media screen and (max-width: 2000px) and (min-width: 800px) {
-      width: 92%;
-      height: 90%;
-      padding: 20px;
-    }
-
-    overflow-y: scroll;
-    color: #0b0c0b;
-    border: 1px solid #e1e4e8;
-    background-color: #f1f8ff;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
-      sans-serif, Apple Color Emoji, Segoe UI Emoji;
-    font-size: 16px;
-    line-height: 1.5;
-    word-wrap: break-word;
-  }
-  /* 回到顶部样式 */
-  .backtop-button {
-    position: absolute;
-    bottom: 6%;
-    right: 5%;
-  }
+  flex: 1 1 auto;
+  margin: 0 20px;
+  overflow-y: scroll;
+  color: #0b0c0b;
+  border: 1px solid #e1e4e8;
+  background-color: #f1f8ff;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
 }
+/* 回到顶部样式 */
+.backtop-button {
+  position: fixed;
+  bottom: 6%;
+  right: 5%;
+}
+// }
 </style>

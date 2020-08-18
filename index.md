@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-08-18 10:30:47
+ * @LastEditTime: 2020-08-18 13:23:31
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -52,6 +52,7 @@
     - [记忆化](./docs/JavaScript/adv/mem.md)
     - [防抖和节流](./docs/JavaScript/adv/debounce.md)
     - [设计模式](./docs/JavaScript/adv/design.md)
+    - [观察者模式和发布订阅模式](./docs/JavaScript/adv/observer.md)
 
 - [网络]()
   - [请求方式](./docs/Network/request.md)
@@ -273,3 +274,5 @@
   - [JavaScript 分号结尾](./docs/Lint/semicolon.md)
 - [markdown]()
   - [GFM emoji](./docs/Markdown/gfmemoji.md)
+  - [flowchart 流程图](./docs/Markdown/flowchart.md)
+  - [markdown-it-vue 支持语法](./docs/Markdown/markdown_it_vue.md)
