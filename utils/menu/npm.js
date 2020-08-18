@@ -7,5 +7,7 @@ export const npmIndex = [
   item(parent, "索引", "index"),
   item(parent, "CommitLint", "CommitLint"),
   item(parent, "husky", "husky"),
-  item(parent, "nrm", "nrm")
+  item(parent, "nrm", "nrm"),
+  item(parent, "AnyWhere", "anywhere"),
+  item(parent, "rimraf", "rimraf")
 ];

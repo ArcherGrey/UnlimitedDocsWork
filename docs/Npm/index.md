@@ -5,6 +5,12 @@
   - [x] `husky` `git hook` 阻止错误的提交
 - [ ] `npm`
   - [x] `nrm` 镜像管理工具
-- [ ] 本地开发使用
-  - [ ] `anywhere` 随时在本地搭建 `http` 环境
-  - [ ] `rimraf` 快速删除文件
+- [ ] 其他
+  - [x] `anywhere` 随时在本地搭建 `http` 环境
+  - [x] `rimraf` 快速删除文件
+- [ ] `markdown` 解析
+  - [ ] markedjs
+  - [ ] markdown-it
+  - [ ] markdown-it-vue
+- [ ] 网页转换为 pdf 或者图片
+  - [ ] html2canvas
