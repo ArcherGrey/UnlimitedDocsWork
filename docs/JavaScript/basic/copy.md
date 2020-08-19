@@ -45,11 +45,46 @@ b=4;
 
 对其中任何一个对象进行修改都会导致另一个对象的修改。
 
+只拷贝对象的第一层属性：
+
+```js
+var shallowCopy = function(obj) {
+  // 只拷贝对象
+  if (typeof obj !== "object") return;
+  // 根据obj的类型判断是新建一个数组还是对象
+  var newObj = obj instanceof Array ? [] : {};
+  // 遍历obj，并且判断是obj的属性才拷贝
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      newObj[key] = obj[key];
+    }
+  }
+  return newObj;
+};
+```
+
 ## 深拷贝
 
 如果不希望两个对象之间有关联，那就需要使用深拷贝。
 
 可以通过递归来解决这个问题，把父对象中所有属于对象的属性类型都遍历赋给子对象既可。
+
+如果是对象就递归：
+
+```js
+// 只能拷贝数组或者对象
+var deepCopy = function(obj) {
+  if (typeof obj !== "object") return;
+  var newObj = obj instanceof Array ? [] : {};
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      newObj[key] =
+        typeof obj[key] === "object" ? deepCopy(obj[key]) : obj[key];
+    }
+  }
+  return newObj;
+};
+```
 
 ## 数组深拷贝
 

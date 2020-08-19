@@ -124,6 +124,7 @@ export const leetcode = {
     item(parent, 605, "种花问题"),
     item(parent, 624, "数组列表中的最大距离"),
     item(parent, 628, "三个数的最大乘积"),
+    item(parent, 647, "回文子串"),
     item(parent, 680, "验证回文字符串 Ⅱ"),
     item(parent, 687, "最长同值路径"),
     item(parent, 696, "计数二进制子串"),

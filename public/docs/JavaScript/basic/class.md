@@ -1,10 +1,30 @@
 # `JavaScript` 中的继承
 
-- [构造函数继承](#构造函数继承)
-- [组合继承](#组合继承)
-- [原型继承](#原型继承)
-- [寄生式继承](#寄生式继承)
-- [寄生组合式继承](#寄生组合式继承)
+[toc]
+
+## 原型链继承
+
+```js
+function SuperType() {
+  this.property = true;
+}
+SuperType.prototype.showValue = function() {
+  console.log(this.property);
+};
+function SubType(val) {
+  this.sub = val;
+}
+// 子类原型指向父类实例
+SubType.prototype = new SuperType();
+SubType.prototype.showSub = function() {
+  console.log(this.sub);
+};
+```
+
+问题：
+
+- 引用类型属性被所有实例共享
+- 创建子类的实例时，不能像超类构造函数中传递参数
 
 ## 构造函数继承
 

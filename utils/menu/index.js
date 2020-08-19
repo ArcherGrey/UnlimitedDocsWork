@@ -1,13 +1,13 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-08-17 15:25:31
+ * @LastEditTime: 2020-08-19 09:29:01
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
 
 import { vueIndex } from "./vue.js";
-import { leetcode, tree, sort } from "./algorithm/index.js";
+import { leetcode, tree, sort, string } from "./algorithm/index.js";
 import { cssApply, cssLayout, cssBasic } from "./css/index.js";
 import { feeIndex } from "./fee.js";
 import { networkIndex } from "./network.js";
@@ -82,7 +82,8 @@ export const menu = [
       },
       leetcode,
       tree,
-      sort
+      sort,
+      string
     ]
   },
   {
