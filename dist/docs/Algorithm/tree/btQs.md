@@ -1,10 +1,6 @@
 # 二叉树常见问题
 
-- [二叉树最大深度](#二叉树最大深度)
-- [判断二叉树是否对称](#判断二叉树是否对称)
-- [构造二叉树](#构造二叉树)
-  - [中序后序构造二叉树](#中序后序构造二叉树)
-  - [前序中序构造二叉树](#前序中序构造二叉树)
+[toc]
 
 ## 二叉树最大深度
 
@@ -281,4 +277,100 @@ var buildTree = function(preorder, inorder) {
   return root;
 };
 
+```
+
+## 二叉树的最近公共祖先
+
+:::info
+最近公共祖先的定义： 设节点 root 为节点 p, q 的某公共祖先，若其左子节点 root.left 和右子节点 root.right 都不是 p,q 的公共祖先，则称 root 是 “最近的公共祖先”
+:::
+
+根据以上定义，若 `root` 是 `p,q` 的 最近公共祖先 ，则只可能为以下情况之一：
+
+- `p` 和 `q` 在 `root` 的子树中，且分列 `root` 的 异侧（即分别在左、右子树中）；
+- `p = root` ，且 `q` 在 `root` 的左或右子树中；
+- `q = root` ，且 `p` 在 `root` 的左或右子树中；
+
+递归解析：
+
+1. 终止条件：
+   1. 当越过叶节点，则直接返回 `null`
+   2. 当 `root` 等于 `p, q` ，则直接返回 `root` ；
+2. 递推工作：
+   1. 开启递归左子节点，返回值记为 `left` ；
+   2. 开启递归右子节点，返回值记为 `right` ；
+3. 返回值： 根据 `left` 和 `right` ，可展开为四种情况；
+   1. 当 `left` 和 `right` 同时为空 ：说明 `root` 的左 / 右子树中都不包含 `p,q` ，返回 null ；
+   2. 当 `left` 和 `right` 同时不为空 ：说明 `p, q` 分列在 `root` 的 异侧 （分别在 左 / 右子树），因此 `root` 为最近公共祖先，返回 `root` ；
+   3. 当 `left` 为空 ，`right` 不为空 ：`p,q` 都不在 `root` 的左子树中，直接返回 `right` 。具体可分为两种情况：
+      1. `p,q`其中一个在 `root` 的 右子树 中，此时 `right` 指向 `p`（假设为 `p` ）；
+      2. `p,q` 两节点都在 `root` 的 右子树 中，此时的 `right` 指向 最近公共祖先节点 ；
+   4. 当 `left` 不为空 ， `right` 为空 ：与情况 3. 同理；
+
+```ts
+/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */
+
+function lowestCommonAncestor(
+  root: TreeNode | null,
+  p: number,
+  q: number
+): TreeNode | null {
+  if (!root || root.val == p || root.val == q) return root;
+  let left = lowestCommonAncestor(root.left, p, q);
+  let right = lowestCommonAncestor(root.right, p, q);
+  // 情况1
+  if (!left && !right) return null;
+  // 情况3
+  if (!left) return right;
+  // 情况4
+  if (!right) return left;
+  // 情况2
+  return root;
+}
+```
+
+## 二叉搜索树的最近公共祖先
+
+给定一个二叉搜索树, 找到该树中两个指定节点的最近公共祖先
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+/**
+ * @param {TreeNode} root
+ * @param {TreeNode} p
+ * @param {TreeNode} q
+ * @return {TreeNode}
+ */
+var lowestCommonAncestor = function(root, p, q) {
+  const pv = p.val,
+    qv = q.val;
+  let node = root;
+  while (node) {
+    const v = node.val;
+    if (v > pv && v > qv) {
+      node = node.left;
+    } else if (v < pv && v < qv) {
+      node = node.right;
+    } else return node;
+  }
+  return null;
+};
 ```
