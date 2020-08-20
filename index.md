@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-08-20 11:42:30
+ * @LastEditTime: 2020-08-20 18:01:24
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -97,6 +97,7 @@
   - [mongodb]()
     - [使用说明](./docs/Database/mongo/index.md)
 - [算法]()
+
   - [排序查找]()
     - [二分查找](./docs/Algorithm/sort/bs.md)
     - [快速排序](./docs/Algorithm/sort/quick.md)
@@ -105,6 +106,7 @@
     - [二叉树常见问题](./docs/Algorithm/tree/btQs.md)
   - [leetcode 探索]()
     - 待完成 [队列&栈](./docs/Algorithm/leetcode_Class/queue_stack.md)
+    - [哈希表](./docs/Algorithm/leetcode_Class/hash.md)
   - [leetcode 题解]()
     - [1. 两数之和](./docs/Algorithm/leetcode/1.md)
     - 待补充 [5. 最长回文子串](./docs/Algorithm/leetcode/5.md)
@@ -228,6 +230,8 @@
     - [680. 验证回文字符串 Ⅱ](./docs/Algorithm/leetcode/680.md)
     - [687. 最长同值路径](./docs/Algorithm/leetcode/687.md)
     - [696. 计数二进制子串](./docs/Algorithm/leetcode/696.md)
+    - [705. 设计哈希集合](./docs/Algorithm/leetcode/705.md)
+    - [706. 706. 设计哈希映射](./docs/Algorithm/leetcode/706.md)
     - [718. 最长重复子数组](./docs/Algorithm/leetcode/718.md)
     - [725. 打开转盘锁](./docs/Algorithm/leetcode/725.md)
     - [733. 图像渲染](./docs/Algorithm/leetcode/733.md)
@@ -251,6 +255,7 @@
     - 待完成[面试题 51. 数组中的逆序对](./docs/Algorithm/leetcode/i51.md)
     - [面试题 56 - I. 数组中数字出现的次数](./docs/Algorithm/leetcode/i56.md)
     - [面试题 64. 求 1+2+…+n](./docs/Algorithm/leetcode/i64.md)
+
 - [git]()
   - [github 无法登录](./docs/Git/host.md)
   - [git 简明教程](./docs/Git/git.md)

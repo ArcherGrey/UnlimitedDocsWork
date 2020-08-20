@@ -130,6 +130,8 @@ export const leetcode = {
     item(parent, 680, "验证回文字符串 Ⅱ"),
     item(parent, 687, "最长同值路径"),
     item(parent, 696, "计数二进制子串"),
+    item(parent, 705, "设计哈希集合"),
+    item(parent, 706, "设计哈希映射"),
     item(parent, 718, "最长重复子数组"),
     item(parent, 725, "打开转盘锁"),
     item(parent, 733, "图像渲染"),
