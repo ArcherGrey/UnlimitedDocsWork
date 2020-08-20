@@ -115,6 +115,7 @@ export const leetcode = {
     item(parent, 494, "目标和"),
     item(parent, 501, "二叉搜索树中的众数"),
     item(parent, 509, "斐波那契数"),
+    item(parent, 529, "扫雷游戏"),
     item(parent, 532, "数组中的 K-diff 数对"),
     item(parent, 542, "01 矩阵"),
     item(parent, 560, "和为k的子数组"),

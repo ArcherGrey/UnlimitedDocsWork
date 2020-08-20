@@ -1,16 +1,16 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-08-19 18:03:52
+ * @LastEditTime: 2020-08-20 11:42:30
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
 
 # 个人文档目录
 
-- [HTML]()
+- [浏览器]()
   - [浏览器内部工作原理](./docs/Html/explorer.md)
-- [CSS]()
+- [HTML&CSS]()
   - [基础]()
     - [word-break、word-wrap、white-space](./docs/Css/basic/word.md)
     - [自适应和响应式](./docs/Css/basic/rdad.md)
@@ -213,6 +213,7 @@
     - 待补充 [494. 目标和](./docs/Algorithm/leetcode/494.md)
     - [501. 二叉搜索树中的众数](./docs/Algorithm/leetcode/501.md)
     - [509. 斐波那契数](./docs/Algorithm/leetcode/509.md)
+    - [529. 扫雷游戏](./docs/Algorithm/leetcode/529.md)
     - [532. 数组中的 K-diff 数对](./docs/Algorithm/leetcode/532.md)
     - [542. 01 矩阵](./docs/Algorithm/leetcode/542.md)
     - 待补充 [560. 和为 k 的子数组](./docs/Algorithm/leetcode/560.md)

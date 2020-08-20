@@ -374,3 +374,66 @@ var lowestCommonAncestor = function(root, p, q) {
   return null;
 };
 ```
+
+## 二叉树的序列化与反序列化
+
+:::info
+
+序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输到另一个计算机环境，采取相反方式重构得到原数据
+:::
+
+基于先序遍历
+
+```js
+/**
+ * Definition for a binary tree node.
+ * function TreeNode(val) {
+ *     this.val = val;
+ *     this.left = this.right = null;
+ * }
+ */
+
+/**
+ * Encodes a tree to a single string.
+ *
+ * @param {TreeNode} root
+ * @return {string}
+ */
+var serialize = function(root) {
+  let str = "";
+  if (!root) str += "null,";
+  else {
+    str += root.val + ",";
+    str += serialize(root.left);
+    str += serialize(root.right);
+  }
+  return str;
+};
+
+/**
+ * Decodes your encoded data to tree.
+ *
+ * @param {string} data
+ * @return {TreeNode}
+ */
+var deserialize = function(data) {
+  let a = data.split(",");
+  a.pop();
+  function rd(arr) {
+    if (arr[0] == "null") {
+      arr.shift();
+      return null;
+    }
+    let root = new TreeNode(arr.shift());
+    root.left = rd(arr);
+    root.right = rd(arr);
+    return root;
+  }
+  return rd(a);
+};
+
+/**
+ * Your functions will be called as such:
+ * deserialize(serialize(root));
+ */
+```

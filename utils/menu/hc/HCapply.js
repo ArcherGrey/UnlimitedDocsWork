@@ -1,9 +1,9 @@
 import { item } from "../common.js";
 const parent = {
   id: "2.1",
-  path: "./docs/Css/apply/"
+  path: "./docs/HC/apply/"
 };
-export const cssApply = {
+export const HCapply = {
   id: "2.1",
   label: "应用",
   children: [
