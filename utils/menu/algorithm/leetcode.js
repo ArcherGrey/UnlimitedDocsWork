@@ -111,6 +111,7 @@ export const leetcode = {
     item(parent, 415, "字符串相加"),
     item(parent, 437, "路径总和 III"),
     item(parent, 448, "找到所有数组中消失的数字"),
+    item(parent, 459, "重复的子字符串"),
     item(parent, 485, "最大连续1的个数"),
     item(parent, 494, "目标和"),
     item(parent, 501, "二叉搜索树中的众数"),

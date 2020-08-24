@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-08-20 18:01:24
+ * @LastEditTime: 2020-08-24 17:49:55
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -211,6 +211,7 @@
     - [415. 字符串相加](./docs/Algorithm/leetcode/415.md)
     - [437. 路径总和 III](./docs/Algorithm/leetcode/437.md)
     - [448. 找到所有数组中消失的数字](./docs/Algorithm/leetcode/448.md)
+    - [459. 重复的子字符串](./docs/Algorithm/leetcode/459.md)
     - [485. 最大连续 1 的个数](./docs/Algorithm/leetcode/485.md)
     - 待补充 [494. 目标和](./docs/Algorithm/leetcode/494.md)
     - [501. 二叉搜索树中的众数](./docs/Algorithm/leetcode/501.md)
