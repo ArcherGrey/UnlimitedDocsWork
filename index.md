@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-08-24 17:49:55
+ * @LastEditTime: 2020-08-25 13:31:27
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -12,20 +12,22 @@
   - [浏览器内部工作原理](./docs/Html/explorer.md)
 - [HTML&CSS]()
   - [基础]()
-    - [word-break、word-wrap、white-space](./docs/Css/basic/word.md)
-    - [自适应和响应式](./docs/Css/basic/rdad.md)
-    - [水平垂直居中](./docs/Css/basic/vhmid.md)
-    - [伪类伪元素](./docs/Css/basic/pseudo.md)
+    - [word-break、word-wrap、white-space](./docs/HC/basic/word.md)
+    - [自适应和响应式](./docs/HC/basic/rdad.md)
+    - [水平垂直居中](./docs/HC/basic/vhmid.md)
+    - [定位](./docs/HC/basic/position.md)
+    - [伪类伪元素](./docs/HC/basic/pseudo.md)
   - [应用]()
-    - [纯 CSS 自定义关闭按钮](./docs/Css/apply/closebutton.md)
-    - [利用伪元素自定义图标](./docs/Css/apply/fakeicon.md)
-    - [滚动效果](./docs/Css/apply/roll.md)
-    - [可调整宽高 div](./docs/Css/apply/resizediv.md)
-    - [伪类实现悬浮动画](./docs/Css/apply/hoverAnime.md)
+    - [纯 CSS 自定义关闭按钮](./docs/HC/apply/closebutton.md)
+    - [利用伪元素自定义图标](./docs/HC/apply/fakeicon.md)
+    - [滚动效果](./docs/HC/apply/roll.md)
+    - [可调整宽高 div](./docs/HC/apply/resizediv.md)
+    - [伪类实现悬浮动画](./docs/HC/apply/hoverAnime.md)
   - [布局]()
-    - [盒模型](./docs/Css/layout/index.md)
-    - [flex](./docs/Css/layout/flex.md)
-    - [圣杯 双飞翼 布局](./docs/Css/layout/layout1.md)
+    - [盒模型](./docs/HC/layout/index.md)
+    - [flex](./docs/HC/layout/flex.md)
+    - [圣杯 双飞翼 布局](./docs/HC/layout/layout1.md)
+    - [固定宽度布局](./docs/HC/layout/width1.md)
 - [JS]()
 
   - [基础]()
@@ -213,6 +215,7 @@
     - [448. 找到所有数组中消失的数字](./docs/Algorithm/leetcode/448.md)
     - [459. 重复的子字符串](./docs/Algorithm/leetcode/459.md)
     - [485. 最大连续 1 的个数](./docs/Algorithm/leetcode/485.md)
+    - [491. 递增子序列](./docs/Algorithm/leetcode/491.md)
     - 待补充 [494. 目标和](./docs/Algorithm/leetcode/494.md)
     - [501. 二叉搜索树中的众数](./docs/Algorithm/leetcode/501.md)
     - [509. 斐波那契数](./docs/Algorithm/leetcode/509.md)
