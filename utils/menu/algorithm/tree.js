@@ -8,6 +8,7 @@ export const tree = {
   label: "树",
   children: [
     item(parent, "二叉树遍历", "btTravers"),
-    item(parent, "二叉树常见问题", "btQs")
+    item(parent, "二叉树常见问题", "btQs"),
+    item(parent, "回溯", "backtrack")
   ]
 };

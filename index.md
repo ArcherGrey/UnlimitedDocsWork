@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-08-25 13:31:27
+ * @LastEditTime: 2020-08-27 09:38:54
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -106,6 +106,9 @@
   - [树]()
     - [二叉树遍历](./docs/Algorithm/tree/btTravers.md)
     - [二叉树常见问题](./docs/Algorithm/tree/btQs.md)
+    - [回溯](./docs/Algorithm/tree/backtrack.md)
+  - [图]()
+    - [欧拉图](./docs/Algorithm/graph/euler.md)
   - [leetcode 探索]()
     - 待完成 [队列&栈](./docs/Algorithm/leetcode_Class/queue_stack.md)
     - [哈希表](./docs/Algorithm/leetcode_Class/hash.md)
@@ -118,6 +121,7 @@
     - [14. 最长公共前缀](./docs/Algorithm/leetcode/14.md)
     - [15. 三数之和](./docs/Algorithm/leetcode/15.md)
     - [16. 最接近的三数之和](./docs/Algorithm/leetcode/16.md)
+    - [17. 电话号码的字母组合](./docs/Algorithm/leetcode/17.md)
     - [20. 有效的括号](./docs/Algorithm/leetcode/20.md)
     - [21. 合并两个有序链表](./docs/Algorithm/leetcode/21.md)
     - [26. 删除排序数组中的重复项](./docs/Algorithm/leetcode/26.md)
@@ -200,6 +204,7 @@
     - [297. 二叉树的序列化与反序列化](./docs/Algorithm/leetcode/297.md)
     - [303. 区域和检索 - 数组不可变](./docs/Algorithm/leetcode/303.md)
     - [309. 最佳买卖股票时机含冷冻期](./docs/Algorithm/leetcode/309.md)
+    - [332. 重新安排行程](./docs/Algorithm/leetcode/332.md)
     - [336. 回文对](./docs/Algorithm/leetcode/336.md)
     - [337. 打家劫舍 III](./docs/Algorithm/leetcode/337.md)
     - [343. 整数拆分](./docs/Algorithm/leetcode/343.md)
