@@ -1,7 +1,7 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-08-27 09:37:06
+ * @LastEditTime: 2020-08-28 18:33:56
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
@@ -75,25 +75,7 @@ export const menu = [
   {
     id: "10",
     label: "算法",
-    children: [
-      {
-        id: "10.1",
-        label: "leetcode探索",
-        children: [
-          {
-            id: "10.1.1",
-            label: "队列&栈",
-            path: "./docs/Algorithm/leetcode_Class/queue_stack.md"
-          }
-        ]
-      },
-      leetcode,
-      tree,
-      graph,
-      sort,
-      string,
-      book
-    ]
+    children: [leetcode, tree, graph, sort, string, book]
   },
   {
     id: "11",
