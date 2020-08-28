@@ -243,3 +243,21 @@ var singleNumber = function(nums) {
 ### 两个数组的交集
 
 给定两个数组，编写一个函数来计算它们的交集。
+
+```js
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+var intersection = function(nums1, nums2) {
+  // 用两个数组初始化哈希集合
+  let s1 = new Set(nums1);
+  let s2 = new Set(nums2);
+  // 遍历其中一个哈希集合，查看另一个中是否存在
+  for (let x of s1) {
+    if (!s2.has(x)) s1.delete(x);
+  }
+  return [...s1];
+};
+```
