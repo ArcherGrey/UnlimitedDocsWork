@@ -194,7 +194,7 @@ public:
 
 插入和搜索的平均时间复杂度为 `O(1)`，空间复杂度为 `O(n)`
 
-## 应用
+## 哈希集合应用
 
 ### 存在重复元素
 
@@ -261,3 +261,138 @@ var intersection = function(nums1, nums2) {
   return [...s1];
 };
 ```
+
+## 哈希映射应用
+
+### 两数之和
+
+给定一个整数数组 `nums`  和一个目标值 `target`，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
+
+你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+  // 哈希映射保存 {target-cur:index}
+  let m = new Map();
+  for (let i = 0; i < nums.length; ++i) {
+    let cur = nums[i];
+    if (m.has(cur)) return [m.get(cur), i];
+    m.set(target - cur, i);
+  }
+};
+```
+
+### 同构字符串
+
+给定两个字符串  `s`  和  `t`，判断它们是否是同构的。
+
+如果  `s`  中的字符可以被替换得到  `t` ，那么这两个字符串是同构的。
+
+所有出现的字符都必须用另一个字符替换，同时保留字符的顺序。两个字符不能映射到同一个字符上，但字符可以映射自己本身。
+
+```auto
+示例 1:
+
+输入: s = "egg", t = "add"
+输出: true
+
+示例 2:
+
+输入: s = "foo", t = "bar"
+输出: false
+```
+
+```js
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {boolean}
+ */
+var isIsomorphic = function(s, t) {
+  // 两个哈希映射分别保存两个字符串对应的映射
+  // 结果为真 a->b b->a
+  // 所以两个映射都应该满足条件
+  let m1 = new Map();
+  let m2 = new Map();
+  // 题目已经假设长度一样
+  for (let i = 0; i < s.length; ++i) {
+    if (!m1.has(s[i])) {
+      m1.set(s[i], t[i]);
+    } else {
+      if (m1.get(s[i]) != t[i]) return false;
+    }
+    if (!m2.has(t[i])) {
+      m2.set(t[i], s[i]);
+    } else {
+      if (m2.get(t[i]) != s[i]) return false;
+    }
+  }
+  return true;
+};
+```
+
+### 两个列表的最小索引总和
+
+假设 `Andy` 和 `Doris` 想在晚餐时选择一家餐厅，并且他们都有一个表示最喜爱餐厅的列表，每个餐厅的名字用字符串表示。
+
+你需要帮助他们用最少的索引和找出他们共同喜爱的餐厅。 如果答案不止一个，则输出所有答案并且不考虑顺序。 你可以假设总是存在一个答案。
+
+```auto
+示例 1:
+
+输入:
+["Shogun", "Tapioca Express", "Burger King", "KFC"]
+["Piatti", "The Grill at Torrey Pines", "Hungry Hunter Steakhouse", "Shogun"]
+输出: ["Shogun"]
+解释: 他们唯一共同喜爱的餐厅是“Shogun”。
+```
+
+```js
+/**
+ * @param {string[]} list1
+ * @param {string[]} list2
+ * @return {string[]}
+ */
+var findRestaurant = function(list1, list2) {
+  // 哈希映射保存餐厅的索引
+  // 遍历第一个初始哈希映射
+  // 遍历第二个如果有相同的更新结果
+
+  let m = new Map();
+  let max = list2.length + list1.length,
+    ans = [];
+  for (let i = 0; i < list1.length; ++i) {
+    m.set(list1[i], i);
+  }
+  for (let i = 0; i < list2.length; ++i) {
+    if (m.has(list2[i])) {
+      // 如果存在相同的且索引值小于当前的
+      // 替换结果 替换当前值
+      if (max > m.get(list2[i]) + i) {
+        max = m.get(list2[i]) + i;
+        ans = [list2[i]];
+      } else if (max == m.get(list2[i]) + i) {
+        // 如果相等就加入结果数组
+        ans.push(list2[i]);
+      }
+    }
+  }
+  return ans;
+};
+```
+
+## 滑动窗口 + 哈希表
+
+- 219
+- 424
+- 1004
+
+1. 窗口更新条件
+2. 判断窗口是否满足要求
+
+遍历窗口右侧扩展,然后判断是否满足条件,缩小左侧

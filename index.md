@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-08-28 09:25:56
+ * @LastEditTime: 2020-08-31 17:54:04
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -181,6 +181,7 @@
     - [198. 打家劫舍](./docs/Algorithm/leetcode/198.md)
     - [200. 岛屿数量](./docs/Algorithm/leetcode/200.md)
     - [202. 快乐数](./docs/Algorithm/leetcode/202.md)
+    - [205. 同构字符串](./docs/Algorithm/leetcode/205.md)
     - [206. 反转链表](./docs/Algorithm/leetcode/206.md)
     - [207. 课程表](./docs/Algorithm/leetcode/207.md)
     - [209. 长度最小的子数组](./docs/Algorithm/leetcode/209.md)
@@ -216,6 +217,7 @@
     - [404. 左叶子之和](./docs/Algorithm/leetcode/404.md)
     - [414. 第三大的数](./docs/Algorithm/leetcode/414.md)
     - [415. 字符串相加](./docs/Algorithm/leetcode/415.md)
+    - [424. 替换后的最长重复字符](./docs/Algorithm/leetcode/424.md)
     - [437. 路径总和 III](./docs/Algorithm/leetcode/437.md)
     - [448. 找到所有数组中消失的数字](./docs/Algorithm/leetcode/448.md)
     - [459. 重复的子字符串](./docs/Algorithm/leetcode/459.md)
@@ -232,6 +234,7 @@
     - [566. 重塑矩阵](./docs/Algorithm/leetcode/566.md)
     - [572. 另一个树的子树](./docs/Algorithm/leetcode/572.md)
     - [581. 最短无序连续子数组](./docs/Algorithm/leetcode/581.md)
+    - [599. 两个列表的最小索引总和](./docs/Algorithm/leetcode/599.md)
     - [605. 种花问题](./docs/Algorithm/leetcode/605.md)
     - [624. 数组列表中的最大距离](./docs/Algorithm/leetcode/624.md)
     - [628. 三个数的最大乘积](./docs/Algorithm/leetcode/628.md)
@@ -254,6 +257,7 @@
     - [974. 和可被 K 整除的子数组](./docs/Algorithm/leetcode/974.md)
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
     - [990. 等式方程的可满足性](./docs/Algorithm/leetcode/990.md)
+    - [1004. 最大连续 1 的个数 III](./docs/Algorithm/leetcode/1004.md)
     - [1014. 最佳观光组合](./docs/Algorithm/leetcode/1014.md)
     - [1025. 除数博弈](./docs/Algorithm/leetcode/1025.md)
     - [1028. 从先序遍历还原二叉树](./docs/Algorithm/leetcode/1028.md)
