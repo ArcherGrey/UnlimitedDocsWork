@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-09-02 15:24:34
+ * @LastEditTime: 2020-09-04 17:22:15
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -109,9 +109,13 @@
     - [回溯](./docs/Algorithm/tree/backtrack.md)
   - [图]()
     - [欧拉图](./docs/Algorithm/graph/euler.md)
+  - [字符串]()
+    - [kmp](./docs/Algorithm/string/kmp.md)
   - [leetcode 探索]()
     - 待完成 [队列&栈](./docs/Algorithm/leetcode_Class/queue_stack.md)
     - [哈希表](./docs/Algorithm/leetcode_Class/hash.md)
+    - [递归](./docs/Algorithm/leetcode_Class/recursion.md)
+    - 待补充 [动态规划](./docs/Algorithm/leetcode_Class/dynamic.md)
   - [leetcode 题解]()
     - [1. 两数之和](./docs/Algorithm/leetcode/1.md)
     - [3. 无重复字符的最长子串](./docs/Algorithm/leetcode/3.md)
@@ -209,6 +213,7 @@
     - [287. 寻找重复数](./docs/Algorithm/leetcode/287.md)
     - [288. 单词的唯一缩写](./docs/Algorithm/leetcode/288.md)
     - [297. 二叉树的序列化与反序列化](./docs/Algorithm/leetcode/297.md)
+    - [300. 最长上升子序列](./docs/Algorithm/leetcode/300.md)
     - [303. 区域和检索 - 数组不可变](./docs/Algorithm/leetcode/303.md)
     - [309. 最佳买卖股票时机含冷冻期](./docs/Algorithm/leetcode/309.md)
     - [311. 稀疏矩阵的乘法](./docs/Algorithm/leetcode/311.md)
@@ -219,7 +224,9 @@
     - [347. 前 K 个高频元素](./docs/Algorithm/leetcode/347.md)
     - [349. 两个数组的交集](./docs/Algorithm/leetcode/349.md)
     - [350. 两个数组的交集 II](./docs/Algorithm/leetcode/350.md)
+    - [354. 俄罗斯套娃信封问题](./docs/Algorithm/leetcode/354.md)
     - [378. 有序矩阵中第 K 小的元素](./docs/Algorithm/leetcode/378.md)
+    - [380. 常数时间插入、删除和获取随机元素](./docs/Algorithm/leetcode/380.md)
     - [392. 判断子序列](./docs/Algorithm/leetcode/392.md)
     - [394. 字符串解码](./docs/Algorithm/leetcode/394.md)
     - [404. 左叶子之和](./docs/Algorithm/leetcode/404.md)
@@ -251,6 +258,7 @@
     - [647. 回文子串](./docs/Algorithm/leetcode/647.md)
     - [652. 寻找重复的子树](./docs/Algorithm/leetcode/652.md)
     - [657. 机器人能否返回原点](./docs/Algorithm/leetcode/657.md)
+    - [673. 最长递增子序列的个数](./docs/Algorithm/leetcode/673.md)
     - [680. 验证回文字符串 Ⅱ](./docs/Algorithm/leetcode/680.md)
     - [687. 最长同值路径](./docs/Algorithm/leetcode/687.md)
     - [696. 计数二进制子串](./docs/Algorithm/leetcode/696.md)
@@ -266,6 +274,7 @@
     - [785. 判断二分图](./docs/Algorithm/leetcode/785.md)
     - [821. 新 21 点](./docs/Algorithm/leetcode/821.md)
     - [841. 钥匙和房间](./docs/Algorithm/leetcode/841.md)
+    - [918. 环形子数组的最大和](./docs/Algorithm/leetcode/918.md)
     - [974. 和可被 K 整除的子数组](./docs/Algorithm/leetcode/974.md)
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
     - [990. 等式方程的可满足性](./docs/Algorithm/leetcode/990.md)

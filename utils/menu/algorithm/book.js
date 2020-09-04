@@ -8,6 +8,8 @@ export const book = {
   label: "leetcode 探索",
   children: [
     item(parent, "队列&栈", "queue_stack"),
-    item(parent, "哈希表", "hash")
+    item(parent, "哈希表", "hash"),
+    item(parent, "递归", "recursion"),
+    item(parent, "动态规划", "dynamic")
   ]
 };
