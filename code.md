@@ -1,6 +1,7 @@
-|  类型  |  xxx   |       name       |      value       |
-| :----: | :----: | :--------------: | :--------------: |
-| github | base64 | QXJjaGVyR3JleQ== | Z3I0NzcyNTgxMg== |
+|  类型  |  xxx   |       name       |          value           |
+| :----: | :----: | :--------------: | :----------------------: |
+| github | base64 | QXJjaGVyR3JleQ== |     Z3I0NzcyNTgxMg==     |
+|  npm   | base64 |   Z3JlZW5ncmV5   | MTFiNTZkZjQxMjk2NzI2YQ== |
 
 # 邮箱
 
