@@ -164,7 +164,7 @@ function kmp(q, p) {
   let match = -1;
 
   // 遍历主串
-  for (let i = 0; i < n - 1; ++i) {
+  for (let i = 0; i < n; ++i) {
     while (match != -1 && p[match + 1] != q[i]) {
       match = next[match];
     }

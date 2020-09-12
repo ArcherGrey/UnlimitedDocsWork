@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-09-08 11:24:38
+ * @LastEditTime: 2020-09-11 09:14:23
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -131,9 +131,12 @@
     - [21. 合并两个有序链表](./docs/Algorithm/leetcode/21.md)
     - [26. 删除排序数组中的重复项](./docs/Algorithm/leetcode/26.md)
     - [27. 移除元素](./docs/Algorithm/leetcode/27.md)
+    - [28. 实现 strStr()](./docs/Algorithm/leetcode/28.md)
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [35. 搜索插入位置](./docs/Algorithm/leetcode/35.md)
     - [36. 有效的数独](./docs/Algorithm/leetcode/36.md)
+    - [39. 组合总和](./docs/Algorithm/leetcode/39.md)
+    - [40. 组合总和 II](./docs/Algorithm/leetcode/40.md)
     - [41. 缺失的第一个正数](./docs/Algorithm/leetcode/41.md)
     - [43. 字符串相乘](./docs/Algorithm/leetcode/43.md)
     - [44. 通配符匹配](./docs/Algorithm/leetcode/44.md)
@@ -196,6 +199,7 @@
     - [209. 长度最小的子数组](./docs/Algorithm/leetcode/209.md)
     - [213. 打家劫舍 II](./docs/Algorithm/leetcode/213.md)
     - [215. 数组中的第 K 个最大元素](./docs/Algorithm/leetcode/215.md)
+    - [216. 组合总和 III](./docs/Algorithm/leetcode/216.md)
     - [217. 存在重复元素](./docs/Algorithm/leetcode/217.md)
     - [219. 存在重复元素 II](./docs/Algorithm/leetcode/219.md)
     - [221. 最大正方形](./docs/Algorithm/leetcode/221.md)
@@ -231,6 +235,7 @@
     - [380. 常数时间插入、删除和获取随机元素](./docs/Algorithm/leetcode/380.md)
     - [392. 判断子序列](./docs/Algorithm/leetcode/392.md)
     - [394. 字符串解码](./docs/Algorithm/leetcode/394.md)
+    - [401. 二进制手表](./docs/Algorithm/leetcode/401.md)
     - [404. 左叶子之和](./docs/Algorithm/leetcode/404.md)
     - [414. 第三大的数](./docs/Algorithm/leetcode/414.md)
     - [415. 字符串相加](./docs/Algorithm/leetcode/415.md)
@@ -239,6 +244,7 @@
     - [448. 找到所有数组中消失的数字](./docs/Algorithm/leetcode/448.md)
     - [454. 四数相加 II](./docs/Algorithm/leetcode/454.md)
     - [459. 重复的子字符串](./docs/Algorithm/leetcode/459.md)
+    - [471. 编码最短长度的字符串](./docs/Algorithm/leetcode/471.md)
     - [485. 最大连续 1 的个数](./docs/Algorithm/leetcode/485.md)
     - [486. 预测赢家](./docs/Algorithm/leetcode/486.md)
     - [491. 递增子序列](./docs/Algorithm/leetcode/491.md)
@@ -287,6 +293,7 @@
     - [1025. 除数博弈](./docs/Algorithm/leetcode/1025.md)
     - [1027. 最长等差数列](./docs/Algorithm/leetcode/1027.md)
     - [1028. 从先序遍历还原二叉树](./docs/Algorithm/leetcode/1028.md)
+    - [1055. 形成字符串的最短路径](./docs/Algorithm/leetcode/1055.md)
     - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
     - [1371. 每个元音包含偶数次的最长子字符串](./docs/Algorithm/leetcode/1371.md)
     - [1388. 3n 块披萨](./docs/Algorithm/leetcode/1388.md)
