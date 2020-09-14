@@ -122,6 +122,7 @@ export const leetcode = {
     item(parent, 349, "两个数组的交集"),
     item(parent, 350, "两个数组的交集 II"),
     item(parent, 354, "俄罗斯套娃信封问题"),
+    item(parent, 368, "最大整除子集"),
     item(parent, 378, "有序矩阵中第K小的元素"),
     item(parent, 380, "常数时间插入、删除和获取随机元素"),
     item(parent, 392, "判断子序列"),
