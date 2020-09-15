@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-09-14 10:01:19
+ * @LastEditTime: 2020-09-15 17:08:31
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -135,6 +135,7 @@
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [35. 搜索插入位置](./docs/Algorithm/leetcode/35.md)
     - [36. 有效的数独](./docs/Algorithm/leetcode/36.md)
+    - [37. 解数独](./docs/Algorithm/leetcode/37.md)
     - [39. 组合总和](./docs/Algorithm/leetcode/39.md)
     - [40. 组合总和 II](./docs/Algorithm/leetcode/40.md)
     - [41. 缺失的第一个正数](./docs/Algorithm/leetcode/41.md)
@@ -238,6 +239,7 @@
     - [394. 字符串解码](./docs/Algorithm/leetcode/394.md)
     - [401. 二进制手表](./docs/Algorithm/leetcode/401.md)
     - [404. 左叶子之和](./docs/Algorithm/leetcode/404.md)
+    - [413. 等差数列划分](./docs/Algorithm/leetcode/413.md)
     - [414. 第三大的数](./docs/Algorithm/leetcode/414.md)
     - [415. 字符串相加](./docs/Algorithm/leetcode/415.md)
     - [424. 替换后的最长重复字符](./docs/Algorithm/leetcode/424.md)

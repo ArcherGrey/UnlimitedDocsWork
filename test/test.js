@@ -1,27 +1,18 @@
 /**
- * @param {number[]} nums
- * @return {number[]}
+ * @param {number[][]} costs
+ * @return {number}
  */
-var largestDivisibleSubset = function(nums) {
-  let n = nums.length;
-  if (n == 0) return [];
-  let X = new Array(n).fill([]);
+var minCost = function(costs) {
+  if (costs.length == 0) return 0;
+  let l = costs.length;
 
-  // 先排序
-  nums.sort((a, b) => a - b);
-  for (let i = 0; i < n; ++i) {
-    let x = [];
-    // 在前面寻找最大整除子集最长的
-    for (let j = 0; j < i; ++j) {
-      if (nums[i] % nums[j] == 0 && X[j].length > x.length) x = X[j];
+  let a = [...costs[0]];
+  let b = new Array(3).fill(0);
+  for (let i = 1; i < l; ++i) {
+    for (let j = 0; j < 3; ++j) {
+      b[j] = costs[i][j] + Math.min(a[(j + 1) % 3], a[(j + 2) % 3]);
     }
-    X[i] = [...x, nums[i]];
+    a = [...b];
   }
-  let ans = [];
-  for (let i = 0; i < X.length; ++i) {
-    if (X[i].length > ans.length) {
-      ans = [...X[i]];
-    }
-  }
-  return ans;
+  return Math.min(...a);
 };
