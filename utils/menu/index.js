@@ -1,7 +1,7 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-08-28 18:33:56
+ * @LastEditTime: 2020-09-16 11:50:19
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
@@ -16,7 +16,7 @@ import {
   graph
 } from "./algorithm/index.js";
 import { HCapply, HClayout, HCbasic } from "./hc/index.js";
-import { feeIndex } from "./fee.js";
+import { FEEBasic, webpack } from "./fee/index.js";
 import { networkIndex } from "./network.js";
 import { lintIndex } from "./lint.js";
 import { explorerIndex } from "./explorer.js";
@@ -50,7 +50,7 @@ export const menu = [
   {
     id: "5",
     label: "前端工程化",
-    children: feeIndex
+    children: [FEEBasic, webpack]
   },
   {
     id: "6",
