@@ -1,15 +1,30 @@
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var maxSubArray = function(nums) {
-  if (nums.length == 0) return 0;
-  let dp = [nums[0]];
-  for (let i = 1; i < nums.length; ++i) {
-    if (dp[i - 1] >= 0) {
-      dp[i] = dp[i - 1] + nums[i];
-    } else dp[i] = nums[i];
-    // else dp[i] = 0;
+// 求乘积
+var mult = function() {
+  console.log("开始计算乘积");
+  var a = 1;
+  for (var i = 0; i < arguments.length; ++i) {
+    a *= arguments[i];
   }
-  return Math.max(...dp);
+  return a;
 };
+
+mult(2, 3); // 6
+
+// 加入缓存代理
+var proxyMult = (function() {
+  var cache = new Map();
+  return function() {
+    var args = Array.prototype.join.call(arguments, ",");
+
+    if (cache.has(args)) {
+      return cache.get(args);
+    } else {
+      var ans = mult.apply(this, arguments);
+      cache.set(args, ans);
+      return ans;
+    }
+  };
+})();
+
+proxyMult(1, 2, 3, 4, 5); // 120 调用 mult
+proxyMult(1, 2, 3, 4, 5); // 120 不调用 mult 直接从缓存中取

@@ -1,45 +1,109 @@
 # 设计模式
 
-- [单例模式](#单例模式)
-- [策略模式](#策略模式)
-- [代理模式](#代理模式)
-- [中介者模式](#中介者模式)
-- [装饰者模式](#装饰者模式)
+参考 JavaScript 设计模式与开发实践
 
-> 设计模式：在面向对象软件设计过程中针对特定问题的简洁而优雅的解决方案
+[toc]
 
 ## 单例模式
 
-> 保证一个类仅有一个实例，并提供一个访问它的全局访问方式。实现的方法为先判断实例是否存在，如果存在直接返回，不存在就创建了后再返回，这样就确保了一个类只有一个实例对象。
+> 保证一个类仅有一个实例，并提供一个访问它的全局访问方式。
 
-适用场景：一个单一对象，比如：弹窗，无论点击多少次都只应该创建一次。
+```js
+// 单例类
+var Singleton = function(name) {
+  this.name = name;
+};
+
+Singleton.prototype.getName = function() {
+  console.log(this.name);
+};
+Singleton.getInstance = (function() {
+  var instance = null;
+  return function(name) {
+    if (!instance) instance = new Singleton(name);
+    else {
+      instance.name = name;
+    }
+    return instance;
+  };
+})();
+// 创建单例对象
+var a = Singleton.getInstance("s1");
+a.getName(); // s1
+var b = Singleton.getInstance("s2");
+b.getName(); // s2
+console.log(a == b); // true
+```
+
+:::warning
+上面实现了一个单例类，但是还有一个问题，那就是这个类对于使用者是不透明的，不是使用常见的 `new` 来创建实例对象
+:::
+
+### 代理实现单例模式
+
+为了解决上面的问题可以用代理来实现单例模式：
 
 ```JavaScript
-class CreateUser {
-    constructor(name) {
-        this.name = name;
-        this.getName();
-    }
-    getName() {
-         return this.name;
-    }
+class Singleton {
+  constructor(name) {
+    this.name = name;
+    this.getName();
+  }
+  getName() {
+    return this.name;
+  }
+  setName(name) {
+    this.name = name;
+  }
 }
 // 代理实现单例模式
 var ProxyMode = (function() {
-    var instance = null;
-    return function(name) {
-        if(!instance) {
-            instance = new CreateUser(name);
-        }
-        return instance;
-    }
+  var instance = null;
+  return function(name) {
+    if (!instance) {
+      instance = new Singleton(name);
+    } else instance.setName(name);
+    return instance;
+  };
 })();
 // 测试单体模式的实例
 var a = new ProxyMode("aaa");
+console.log(a.name); // aaa
 var b = new ProxyMode("bbb");
+console.log(b.name); // bbb
 // 因为单体模式是只实例化一次，所以下面的实例是相等的
-console.log(a === b);    //true
+console.log(a === b); //true
 
+```
+
+### 惰性单例
+
+:::info
+指的是在需要的时候才创建对象实例。惰性单例是单例模式的重点
+:::
+
+创建唯一的浮窗:
+
+```js
+var getSingle = function(fn) {
+  var result;
+  return function() {
+    return result || (result = fn.apply(this, arguments));
+  };
+};
+var createLoginLayer = function() {
+  var div = document.createElement("div");
+  div.innerHTML = "我是登录浮窗";
+  div.style.display = "none";
+  document.body.appendChild(div);
+
+  return div;
+};
+var createSingleLoginLayer = getSingle(createLoginLayer);
+document.getElementById("loginBtn").onclick = function() {
+  var loginLayer = createSingleLoginLayer();
+  loginLayer.style.display = "block";
+};
 ```
 
 ## 策略模式
@@ -48,7 +112,10 @@ console.log(a === b);    //true
 
 目的就是讲算法的使用和实现分离。
 
-一个基于策略模式的程序至少由两部分组成，第一部分是策略类，封装具体的算法，并且负责具体的计算过程；第二部分是环境类，接受请求然后将其委托给某个策略类。
+一个基于策略模式的程序至少由两部分组成:
+
+1. 策略类，封装具体的算法，并且负责具体的计算过程；
+2. 环境类，接受请求然后将其委托给某个策略类。
 
 ```JavaScript
 /*策略类*/
@@ -70,9 +137,147 @@ var calculateBouns =function(level,money) {
 console.log(calculateBouns('A',10000)); // 40000
 ```
 
+### 应用场景-表单校验
+
+未使用策略模式：
+
+```js
+var registerForm = document.getElementById("registerForm");
+registerForm.onsubmit = function() {
+  if (registerForm.userName.value === "") {
+    alert("用户名不能为空");
+    return false;
+  }
+  if (registerForm.password.value.length < 6) {
+    alert("密码长度不能少于 6 位");
+    return false;
+  }
+  if (!/(^1[3|5|8][0-9]{9}$)/.test(registerForm.phoneNumber.value)) {
+    alert("手机号码格式不正确");
+    return false;
+  }
+};
+```
+
+使用策略模式：
+
+```js
+var strategies = {
+    isNonEmpty: function( value, errorMsg ){
+        if ( value === '' ){
+            return errorMsg ;
+        }
+    },
+    minLength: function( value, length, errorMsg ){
+        if ( value.length < length ){
+            return errorMsg;
+        }
+    },
+    isMobile: function( value, errorMsg ){ // 手机号码格式
+        if ( !/(^1[3|5|8][0-9]{9}$)/.test( value ) ){
+            return errorMsg;
+        }
+    }
+};
+var Validator = function(){
+    this.cache = []; // 保存校验规则
+};
+Validator.prototype.add = function(dom,rule,errorMsg)
+    var ary = rule.split( ':' );
+    this.cache.push(function(){ //
+        var strategy = ary.shift();
+        ary.unshift( dom.value );
+        ary.push( errorMsg ); //
+        return strategies[strategy].apply(dom, ary);
+    });
+};
+Validator.prototype.start = function(){
+    for ( var i = 0, validatorFunc; validatorFunc = this.cache[ i++ ]; ){
+        var msg = validatorFunc(); // 开始校验，并取得校验后的返回信息
+        if ( msg ){ // 如果有确切的返回值，说明校验没有通过
+              return msg;
+        }
+    }
+};
+var validataFunc = function(){
+    var validator = new Validator(); // 创建一个 validator 对象
+    /***************添加一些校验规则****************/
+    validator.add( registerForm.userName, 'isNonEmpty', '用户名不能为空' );
+    validator.add( registerForm.password, 'minLength:6', '密码长度不能少于 6位');
+    validator.add( registerForm.phoneNumber, 'isMobile', '手机号码格式不正确' );
+    var errorMsg = validator.start(); // 获得校验结果
+    return errorMsg; // 返回校验结果
+}
+var registerForm = document.getElementById( 'registerForm' );
+registerForm.onsubmit = function(){
+    var errorMsg = validataFunc(); // 如果 errorMsg 有确切的返回值，说明未通过校验
+    if ( errorMsg ){
+        alert ( errorMsg );
+        return false; // 阻止表单提交
+    }
+};
+
+```
+
+### 总结
+
+优点：
+
+- 利用组合、委托、多态等思想可以有效避免多重条件选择语句
+- 提供了对开放-封闭原则完美支持，使得策略易于切换、理解、扩展
+- 复用性
+
+缺点：
+
+- 会增加很多策略类或策略对象
+- 必须了解所有策略
+
 ## 代理模式
 
-> 为一个对象提供一个代用品或者占位符，以便控制对它的访问
+:::info
+为一个对象提供一个代用品或者占位符，以便控制对它的访问
+:::
+
+### 保护代理
+
+通过代理过滤来筛选请求，这样的代理就是**保护代理**：
+
+```js
+// A
+var A = {
+  send: function(target, msg) {
+    console.log("A 发出：" + msg);
+    target.receive(msg);
+  }
+};
+
+// 保护代理
+var proxy = {
+  receive: function(msg) {
+    if (typeof msg === "number") B.receive(msg);
+    else console.log("消息类型不是数字，被过滤");
+  }
+};
+
+// B
+var B = {
+  receive: function(msg) {
+    console.log("B 收到：" + msg);
+  }
+};
+
+A.send(proxy, "abc");
+A.send(proxy, 123);
+/* 结果 */
+// A 发出：abc
+// 消息类型不是数字，被过滤
+// A 发出：123
+// B 收到：123
+```
+
+### 虚拟代理
+
+请求传递到代理，在满足某种条件之后代理再把请求继续传递，这样就是**虚拟代理**
 
 图片懒加载：先通过一个 `loading` 图占位，然后通过异步方式加载图片，等图片加载好了再把完成的图片加载到标签里。
 
@@ -99,6 +304,45 @@ var proxyImage = (function() {
     }
 })();
 proxyImage.setSrc('./pic.png');
+```
+
+### 缓存代理
+
+缓存代理可以为一些开销大的运算结果提供暂时的缓存，下次计算如果参数还是一样就可以直接使用缓存的结果
+
+计算乘积：
+
+```js
+// 求乘积
+var mult = function() {
+  console.log("开始计算乘积");
+  var a = 1;
+  for (var i = 0; i < arguments.length; ++i) {
+    a *= arguments[i];
+  }
+  return a;
+};
+
+mult(2, 3); // 6
+
+// 加入缓存代理
+var proxyMult = (function() {
+  var cache = new Map();
+  return function() {
+    var args = Array.prototype.join.call(arguments, ",");
+
+    if (cache.has(args)) {
+      return cache.get(args);
+    } else {
+      var ans = mult.apply(this, arguments);
+      cache.set(args, ans);
+      return ans;
+    }
+  };
+})();
+
+proxyMult(1, 2, 3, 4, 5); // 120 调用 mult
+proxyMult(1, 2, 3, 4, 5); // 120 不调用 mult 直接从缓存中取
 ```
 
 ## 中介者模式
