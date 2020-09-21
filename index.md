@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-09-15 17:08:31
+ * @LastEditTime: 2020-09-21 10:00:56
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -141,6 +141,7 @@
     - [41. 缺失的第一个正数](./docs/Algorithm/leetcode/41.md)
     - [43. 字符串相乘](./docs/Algorithm/leetcode/43.md)
     - [44. 通配符匹配](./docs/Algorithm/leetcode/44.md)
+    - [47. 全排列 II](./docs/Algorithm/leetcode/47.md)
     - [49. 字母异位词分组](./docs/Algorithm/leetcode/49.md)
     - [50. Pow(x,n)](./docs/Algorithm/leetcode/50.md)
     - [53. 最大子序和](./docs/Algorithm/leetcode/53.md)
@@ -256,6 +257,7 @@
     - [509. 斐波那契数](./docs/Algorithm/leetcode/509.md)
     - [529. 扫雷游戏](./docs/Algorithm/leetcode/529.md)
     - [532. 数组中的 K-diff 数对](./docs/Algorithm/leetcode/532.md)
+    - [538. 把二叉搜索树转换为累加树](./docs/Algorithm/leetcode/538.md)
     - [542. 01 矩阵](./docs/Algorithm/leetcode/542.md)
     - 待补充 [560. 和为 k 的子数组](./docs/Algorithm/leetcode/560.md)
     - [561. 数组拆分 I](./docs/Algorithm/leetcode/561.md)
@@ -266,6 +268,7 @@
     - [605. 种花问题](./docs/Algorithm/leetcode/605.md)
     - [624. 数组列表中的最大距离](./docs/Algorithm/leetcode/624.md)
     - [628. 三个数的最大乘积](./docs/Algorithm/leetcode/628.md)
+    - [637. 二叉树的层平均值](./docs/Algorithm/leetcode/637.md)
     - [647. 回文子串](./docs/Algorithm/leetcode/647.md)
     - [652. 寻找重复的子树](./docs/Algorithm/leetcode/652.md)
     - [657. 机器人能否返回原点](./docs/Algorithm/leetcode/657.md)

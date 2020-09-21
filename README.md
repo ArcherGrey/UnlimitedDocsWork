@@ -75,6 +75,9 @@ yarn server
       - [react 小书（入门）](http://huziketang.mangojuice.top/books/react/)
       - [react 小书配套练习](http://scriptoj.mangojuice.top/problemsGroups/593a2e29b3838c385539fa4f)
       - [redux 文档](https://www.redux.org.cn/)
+  - 编辑器
+    - [基于浏览器嵌入式编辑器 CodeMirror](https://github.com/codemirror/codemirror)
+      - [实现一个编辑器](https://codemirror.net/1/story.html)
   - 操作 dom
     - jQuery
   - 截取 html 网页转换 pdf 图片
@@ -171,6 +174,7 @@ yarn server
 - prettier 自动格式化
 - koroFileHeader 生成文件头部注释和函数注释
 - kanban 工作任务管理
+- TODO Highlight 高亮 todo
 
 ---
 

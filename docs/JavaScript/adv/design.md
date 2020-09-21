@@ -219,7 +219,7 @@ registerForm.onsubmit = function(){
 
 ```
 
-### 总结
+### 优缺点
 
 优点：
 
@@ -344,6 +344,119 @@ var proxyMult = (function() {
 proxyMult(1, 2, 3, 4, 5); // 120 调用 mult
 proxyMult(1, 2, 3, 4, 5); // 120 不调用 mult 直接从缓存中取
 ```
+
+## 迭代器模式
+
+:::info
+迭代器模式是指提供一种方法顺序访问一个聚合对象中的各个元素，而又不需要暴露该对象的内部表示，大部分流行语言都有内置的迭代器实现
+:::
+
+### 内部迭代器和外部迭代器
+
+:::info
+内部迭代器调用很方便，外界不需要关心内部实现，也只会在初始调用一次，缺点在于规则固定
+:::
+
+实现一个 `each` 函数接收两个参数，第一个是被迭代的数组，第二个是回调函数
+
+```js
+/**
+ * @description: 迭代器函数
+ * @param {Array} arr 被迭代数组
+ * @param {Function} callback 回调函数
+ * @return {type}
+ */
+function each(arr, callback) {
+  for (let i = 0; i < arr.length; ++i) {
+    callback.call(arr, i, arr[i]);
+  }
+}
+
+each([1, 2, 3], (i, n) => {
+  console.log(i, n);
+});
+
+const compare = (o1, o2) => {
+  if (o1.length != o2.length) {
+    console.log("不相等");
+    return;
+  }
+  let equal = true;
+  each(o1, (i, n) => {
+    if (o2[i] != n) {
+      equal = false;
+      console.log("不相等");
+    }
+  });
+  if (equal) {
+    console.log("相等");
+  }
+};
+
+let a1 = [1, 2, 3];
+let a2 = [1, 2, 3];
+let a3 = [1, 2, 3, 4, 5];
+
+compare(a1, a2); // 相等
+compare(a1, a3); // 不相等
+```
+
+:::info
+外部迭代器必须显式请求迭代下一个元素，更加灵活
+:::
+
+```js
+/**
+ * @description: 外部迭代器
+ * @param {Array} obj 迭代对象
+ * @return {type}
+ */
+function Iterator(obj) {
+  let cur = 0;
+  const next = () => {
+    cur++;
+  };
+  const isDone = () => {
+    return cur >= obj.length;
+  };
+  const getCur = () => {
+    return obj[cur];
+  };
+  return {
+    next,
+    isDone,
+    getCur
+  };
+}
+
+const compare = (o1, o2) => {
+  debugger;
+  while (!o1.isDone() && !o2.isDone()) {
+    if (o1.getCur() != o2.getCur()) {
+      console.log("不相等");
+      return;
+    }
+    o1.next();
+    o2.next();
+  }
+  if (!o1.isDone() || !o2.isDone()) {
+    console.log("不相等");
+    return;
+  }
+  console.log("相等");
+};
+
+var a1 = Iterator([1, 2, 3]);
+var a2 = Iterator([1, 2, 3]);
+var a3 = Iterator([1, 2, 3, 4, 5]);
+
+compare(a1, a2); // 相等
+compare(a1, a3); // 不相等
+```
+
+## 发布-订阅模式
+
+详见 `JavaScript 进阶 观察者模式和发布订阅模式`
 
 ## 中介者模式
 
