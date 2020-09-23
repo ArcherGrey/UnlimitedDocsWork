@@ -157,6 +157,7 @@ export const leetcode = {
     item(parent, 581, "最短无序连续子数组"),
     item(parent, 599, "两个列表的最小索引总和"),
     item(parent, 605, "种花问题"),
+    item(parent, 617, "合并二叉树"),
     item(parent, 624, "数组列表中的最大距离"),
     item(parent, 628, "三个数的最大乘积"),
     item(parent, 637, "二叉树的层平均值"),

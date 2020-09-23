@@ -25,6 +25,7 @@ export const javascriptBasic = {
     item(parent, "执行机制", "run"),
     item(parent, "this", "this"),
     item(parent, "类型判断", "typeof"),
-    item(parent, "变量提升", "hoisting")
+    item(parent, "变量提升", "hoisting"),
+    item(parent, "switch", "switch")
   ]
 };

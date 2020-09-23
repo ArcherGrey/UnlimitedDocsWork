@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-09-21 10:00:56
+ * @LastEditTime: 2020-09-23 10:33:24
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -50,6 +50,7 @@
     - [this](./docs/JavaScript/basic/this.md)
     - [类型判断](./docs/JavaScript/basic/typeof.md)
     - [变量提升](./docs/JavaScript/basic/hoisting.md)
+    - [switch](./docs/JavaScript/basic/switch.md)
   - [进阶]()
     - [函数式编程](./docs/JavaScript/adv/func.md)
     - [记忆化](./docs/JavaScript/adv/mem.md)
@@ -266,6 +267,7 @@
     - [581. 最短无序连续子数组](./docs/Algorithm/leetcode/581.md)
     - [599. 两个列表的最小索引总和](./docs/Algorithm/leetcode/599.md)
     - [605. 种花问题](./docs/Algorithm/leetcode/605.md)
+    - [617. 合并二叉树](./docs/Algorithm/leetcode/617.md)
     - [624. 数组列表中的最大距离](./docs/Algorithm/leetcode/624.md)
     - [628. 三个数的最大乘积](./docs/Algorithm/leetcode/628.md)
     - [637. 二叉树的层平均值](./docs/Algorithm/leetcode/637.md)
