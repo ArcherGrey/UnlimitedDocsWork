@@ -1,10 +1,11 @@
-import { item } from "./common.js";
+import { buildItemByType } from "./common.js";
 const parent = {
   id: "8",
   path: "./docs/Git/"
 };
+const buildItem = buildItemByType(parent);
 export const gitIndex = [
-  item(parent, "github 无法登录", "host"),
-  item(parent, "git 简明教程", "git"),
-  item(parent, "Git Hooks", "githook")
+  buildItem("github 无法登录", "host"),
+  buildItem("git 简明教程", "git"),
+  buildItem("Git Hooks", "githook")
 ];

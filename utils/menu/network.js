@@ -1,10 +1,11 @@
-import { item } from "./common.js";
+import { buildItemByType } from "./common.js";
 const parent = {
   id: "4",
   path: "./docs/Network/"
 };
+const buildItem = buildItemByType(parent);
 export const networkIndex = [
-  item(parent, "get & post", "request"),
-  item(parent, "session & cookie", "cookie"),
-  item(parent, "sessionStorage 和 localStorage", "storage")
+  buildItem("get & post", "request"),
+  buildItem("session & cookie", "cookie"),
+  buildItem("sessionStorage 和 localStorage", "storage")
 ];

@@ -1,13 +1,14 @@
-import { item } from "./common.js";
+import { buildItemByType } from "./common.js";
 const parent = {
   id: "7",
   path: "./docs/Npm/"
 };
+const buildItem = buildItemByType(parent);
 export const npmIndex = [
-  item(parent, "索引", "index"),
-  item(parent, "CommitLint", "CommitLint"),
-  item(parent, "husky", "husky"),
-  item(parent, "nrm", "nrm"),
-  item(parent, "AnyWhere", "anywhere"),
-  item(parent, "rimraf", "rimraf")
+  buildItem("索引", "index"),
+  buildItem("CommitLint", "CommitLint"),
+  buildItem("husky", "husky"),
+  buildItem("nrm", "nrm"),
+  buildItem("AnyWhere", "anywhere"),
+  buildItem("rimraf", "rimraf")
 ];
