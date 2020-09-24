@@ -1,12 +1,12 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-09-23 17:06:21
+ * @LastEditTime: 2020-09-24 16:47:18
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
 
-import { vueIndex } from "./vue.js";
+import { fe_libsIndex } from "./fe_libs.js";
 import { algorithmIndex } from "./algorithm.js";
 import { hcIndex } from "./hc.js";
 import { feeIndex } from "./fee.js";
@@ -48,7 +48,7 @@ export const menu = [
   {
     id: "6",
     label: "前端框架和库",
-    children: [vueIndex]
+    children: fe_libsIndex
   },
   {
     id: "7",
