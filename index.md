@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-09-23 15:09:47
+ * @LastEditTime: 2020-09-28 18:19:22
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -79,7 +79,6 @@
     - [vdom](./docs/FE_framework/vue/life.md)
     - [vue hook](./docs/FE_framework/vue/vhook.md)
     - [插槽](./docs/FE_framework/vue/slot.md)
-    - [watch](./docs/FE_framework/vue/watch.md)
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)
 - [前端工程化]()
   - [原生 js 实现模块化](./docs/FEE/原生js模块化.md)

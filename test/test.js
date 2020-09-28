@@ -6,27 +6,19 @@
  * }
  */
 /**
- * @param {TreeNode} root
- * @return {number[]}
+ * @param {number[]} inorder
+ * @param {number[]} postorder
+ * @return {TreeNode}
  */
-var findMode = function(root) {
-  let m = new Map();
-  let max = 0;
-  let ans = [];
-  function preOrder(n) {
-    if (!n) return;
-    if (!m.has(n.val)) m.set(n.val, 1);
-    else m.set(n.val, m.get(n.val) + 1);
-
-    if (m.get(n.val) > max) {
-      ans = [n.val];
-      max = m.get(n.val);
-    } else if (m.get(n.val) === max) {
-      ans.push(n.val);
-    }
-    preOrder(n.left);
-    preOrder(n.right);
+var buildTree = function(inorder, postorder) {
+  function fn(a, b, c, d) {
+    if (b < a || d < c) return null;
+    let r = postorder[d];
+    let ri = inorder.indexOf(r);
+    let node = new TreeNode(r);
+    node.left = fn(a, ri - 1, c, c + ri - 1 - a);
+    node.right = fn(ri + 1, b, c + ri - a, d - 1);
+    return node;
   }
-  preOrder(root);
-  return ans;
+  return fn(0, inorder.length - 1, 0, postorder.length - 1);
 };
