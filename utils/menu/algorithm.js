@@ -174,6 +174,7 @@ const leetcode = {
     buildItem1(680, "验证回文字符串 Ⅱ"),
     buildItem1(687, "最长同值路径"),
     buildItem1(696, "计数二进制子串"),
+    buildItem1(701, "二叉搜索树中的插入操作"),
     buildItem1(705, "设计哈希集合"),
     buildItem1(706, "设计哈希映射"),
     buildItem1(718, "最长重复子数组"),

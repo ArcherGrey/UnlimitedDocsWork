@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-09-28 18:19:22
+ * @LastEditTime: 2020-09-30 09:47:00
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -278,6 +278,7 @@
     - [680. 验证回文字符串 Ⅱ](./docs/Algorithm/leetcode/680.md)
     - [687. 最长同值路径](./docs/Algorithm/leetcode/687.md)
     - [696. 计数二进制子串](./docs/Algorithm/leetcode/696.md)
+    - [701. 二叉搜索树中的插入操作](./docs/Algorithm/leetcode/701.md)
     - [705. 设计哈希集合](./docs/Algorithm/leetcode/705.md)
     - [706. 706. 设计哈希映射](./docs/Algorithm/leetcode/706.md)
     - [718. 最长重复子数组](./docs/Algorithm/leetcode/718.md)
