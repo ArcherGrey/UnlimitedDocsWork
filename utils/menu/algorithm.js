@@ -78,6 +78,7 @@ const leetcode = {
     buildItem1(130, "被围绕的区域"),
     buildItem1(133, "克隆图"),
     buildItem1(136, "只出现一次的数字"),
+    buildItem1(141, "环形链表"),
     buildItem1(144, "二叉树的前序遍历"),
     buildItem1(145, "二叉树的后序遍历"),
     buildItem1(146, "LRU 缓存机制"),

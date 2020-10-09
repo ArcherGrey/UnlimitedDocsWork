@@ -469,6 +469,68 @@ compare(a1, a3); // 不相等
 
 命令模式的由来其实是回调函数的一个面向对象的替代品
 
+```js
+/**
+ * @description: 命令模式对象构造函数
+ * @param {Object} receiver 接收命令对象
+ * @return {type}
+ */
+const CommandMode = function(receiver) {
+  // 执行命令
+  this.excute = function() {
+    // 接收命令对象执行命令
+    receiver.doSomething();
+  };
+
+  // 撤销命令
+  this.undo = function() {
+    // 接收命令对象撤销命令
+    receiver.undoSomething();
+  };
+};
+
+/**
+ * @description: 设置命令
+ * @param {Object} commander 命令发布对象
+ * @param {Object} command 命令对象
+ * @return {type}
+ */
+const setCommand = function(commander, command) {
+  // 回调函数触发命令执行撤销
+  commander.callback1 = function() {
+    command.excute();
+  };
+  commander.callback2 = function() {
+    command.undo();
+  };
+};
+
+const r = {
+  doSomething: () => {
+    console.log("执行命令");
+  },
+  undoSomething: () => {
+    console.log("撤销命令");
+  }
+};
+
+const c = {
+  fire1: function() {
+    console.log("触发回调1");
+    this.callback1();
+  },
+  fire2: function() {
+    console.log("触发回调2");
+    this.callback2();
+  }
+};
+
+const commandInstance = new CommandMode(r);
+setCommand(c, commandInstance);
+c.fire1();
+c.fire2();
+```
+
 ## 中介者模式
 
 > 通过一个中介者对象，其他所有的相关对象都通过该中介者对象来通信，而不是相互引用，当其中的一个对象发生改变时，只需要通知中介者对象即可。通过中介者模式可以解除对象与对象之间的紧耦合关系

@@ -1,7 +1,7 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-09-24 16:47:18
+ * @LastEditTime: 2020-10-09 15:39:32
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
@@ -19,6 +19,7 @@ import { osIndex } from "./os.js";
 import { esIndex } from "./es.js";
 import { npmIndex } from "./npm.js";
 import { markdownIndex } from "./markdown.js";
+import { cloudIndex } from "./cloud.js";
 export const menu = [
   {
     id: "1",
@@ -84,5 +85,10 @@ export const menu = [
     id: "13",
     label: "markdown",
     children: markdownIndex
+  },
+  {
+    id: "14",
+    label: "云服务",
+    children: cloudIndex
   }
 ];
