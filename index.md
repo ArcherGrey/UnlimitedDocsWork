@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-10-09 14:32:34
+ * @LastEditTime: 2020-10-12 10:15:06
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -51,11 +51,13 @@
     - [类型判断](./docs/JavaScript/basic/typeof.md)
     - [变量提升](./docs/JavaScript/basic/hoisting.md)
     - [switch](./docs/JavaScript/basic/switch.md)
+    - [Promise](./docs/JavaScript/basic/Promise.md)
   - [进阶]()
     - [函数式编程](./docs/JavaScript/adv/func.md)
     - [记忆化](./docs/JavaScript/adv/mem.md)
     - [防抖和节流](./docs/JavaScript/adv/debounce.md)
     - [设计模式](./docs/JavaScript/adv/design.md)
+    - [设计模式进阶](./docs/JavaScript/adv/design2.md)
     - [观察者模式和发布订阅模式](./docs/JavaScript/adv/observer.md)
 
 - [网络]()
@@ -258,6 +260,7 @@
     - [501. 二叉搜索树中的众数](./docs/Algorithm/leetcode/501.md)
     - [509. 斐波那契数](./docs/Algorithm/leetcode/509.md)
     - [529. 扫雷游戏](./docs/Algorithm/leetcode/529.md)
+    - [530. 二叉搜索树的最小绝对差](./docs/Algorithm/leetcode/530.md)
     - [532. 数组中的 K-diff 数对](./docs/Algorithm/leetcode/532.md)
     - [538. 把二叉搜索树转换为累加树](./docs/Algorithm/leetcode/538.md)
     - [542. 01 矩阵](./docs/Algorithm/leetcode/542.md)
@@ -345,3 +348,4 @@
   - [markdown-it-vue 支持语法](./docs/Markdown/markdown_it_vue.md)
 - [云服务]()
   - [docker]()
+    - [概述](./docs/Cloud/overview.md)

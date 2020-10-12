@@ -154,6 +154,7 @@ const leetcode = {
     buildItem1(501, "二叉搜索树中的众数"),
     buildItem1(509, "斐波那契数"),
     buildItem1(529, "扫雷游戏"),
+    buildItem1(530, "二叉搜索树的最小绝对差"),
     buildItem1(532, "数组中的 K-diff 数对"),
     buildItem1(538, "把二叉搜索树转换为累加树"),
     buildItem1(542, "01 矩阵"),

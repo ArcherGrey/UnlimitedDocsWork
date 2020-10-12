@@ -60,6 +60,7 @@ yarn server
 - [前端技术博客](http://www.conardli.top/blog/)
 - [洛谷 acm](https://www.luogu.com.cn/)
 - [自学博客](https://github.com/jwasham/coding-interview-university)
+- [设计模式](https://refactoring.guru/design-patterns/typescript)
 
 ---
 

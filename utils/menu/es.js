@@ -33,7 +33,8 @@ const esBasic = {
     buildItem1("this", "this"),
     buildItem1("类型判断", "typeof"),
     buildItem1("变量提升", "hoisting"),
-    buildItem1("switch", "switch")
+    buildItem1("switch", "switch"),
+    buildItem1("Promise", "Promise")
   ]
 };
 
@@ -48,6 +49,7 @@ const esAdvanced = {
     buildItem2("记忆化", "mem"),
     buildItem2("防抖和节流", "debounce"),
     buildItem2("设计模式", "design"),
+    buildItem2("设计模式ts", "design2"),
     buildItem2("观察者模式和发布订阅模式", "observer")
   ]
 };
