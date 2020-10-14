@@ -1,26 +1,36 @@
 /**
- * Definition for a binary tree node.
- * function TreeNode(val) {
- *     this.val = val;
- *     this.left = this.right = null;
- * }
+ * @param {string[]} A
+ * @return {string[]}
  */
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-var getMinimumDifference = function(root) {
-  let arr = [];
-  function inorder(node) {
-    if (!node) return;
-    inorder(node.left);
-    arr.push(node.val);
-    inorder(node.right);
+var commonChars = function(A) {
+  if (A.length == 0) return [];
+
+  let a = countAlpha(A[0].split(""));
+  for (let j = 1; j < A.length; ++j) {
+    let b = countAlpha(A[j].split(""));
+    // 每次比较相同的取更小的
+    for (let i = 0; i < 26; ++i) {
+      a[i] = Math.min(a[i], b[i]);
+    }
   }
-  inorder(root);
-  let min = arr[1] - arr[0];
-  for (let i = 1; i < arr.length - 1; i++) {
-    min = Math.min(min, arr[i + 1] - arr[i]);
+
+  let ans = [];
+  for (let i = 0; i < 26; ++i) {
+    let c = a[i];
+    while (c) {
+      ans.push(String.fromCharCode(i + 97));
+      c--;
+    }
   }
-  return min;
+  return ans;
 };
+
+// 统计每个字符串字母个数
+function countAlpha(t) {
+  let c = new Array(26).fill(0);
+  for (let i = 0; i < t.length; ++i) {
+    let index = t[i].charCodeAt() - 97;
+    c[index]++;
+  }
+  return c;
+}
