@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-10-14 09:50:44
+ * @LastEditTime: 2020-10-16 14:02:33
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -17,6 +17,7 @@
     - [水平垂直居中](./docs/HC/basic/vhmid.md)
     - [定位](./docs/HC/basic/position.md)
     - [伪类伪元素](./docs/HC/basic/pseudo.md)
+    - [object 标签](./docs/HC/basic/object.md)
   - [应用]()
     - [纯 CSS 自定义关闭按钮](./docs/HC/apply/closebutton.md)
     - [利用伪元素自定义图标](./docs/HC/apply/fakeicon.md)
@@ -300,6 +301,7 @@
     - [873. 最长的斐波那契子序列的长度](./docs/Algorithm/leetcode/873.md)
     - [918. 环形子数组的最大和](./docs/Algorithm/leetcode/918.md)
     - [974. 和可被 K 整除的子数组](./docs/Algorithm/leetcode/974.md)
+    - [977. 有序数组的平方](./docs/Algorithm/leetcode/977.md)
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
     - [990. 等式方程的可满足性](./docs/Algorithm/leetcode/990.md)
     - [1002. 查找常用字符](./docs/Algorithm/leetcode/1002.md)

@@ -194,6 +194,7 @@ const leetcode = {
     buildItem1(873, "最长的斐波那契子序列的长度"),
     buildItem1(918, "环形子数组的最大和"),
     buildItem1(974, "和可被 K 整除的子数组"),
+    buildItem1(977, "有序数组的平方"),
     buildItem1(983, "最低票价"),
     buildItem1(990, "等式方程的可满足性"),
     buildItem1(1002, "查找常用字符"),

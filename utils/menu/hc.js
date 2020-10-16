@@ -18,7 +18,8 @@ const HCbasic = {
     buildItem1("响应式 & 自适应", "rdad"),
     buildItem1("水平垂直居中", "vhmid"),
     buildItem1("伪类伪元素", "pseudo"),
-    buildItem1("定位", "position")
+    buildItem1("定位", "position"),
+    buildItem1("object 标签", "object")
   ]
 };
 
