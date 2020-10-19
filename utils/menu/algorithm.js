@@ -191,6 +191,7 @@ const leetcode = {
     buildItem1(785, "判断二分图"),
     buildItem1(821, "新21点"),
     buildItem1(841, "钥匙和房间"),
+    buildItem1(844, "比较含退格的字符串"),
     buildItem1(873, "最长的斐波那契子序列的长度"),
     buildItem1(918, "环形子数组的最大和"),
     buildItem1(974, "和可被 K 整除的子数组"),

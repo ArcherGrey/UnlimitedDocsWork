@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-10-16 14:02:33
+ * @LastEditTime: 2020-10-19 09:44:40
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -298,6 +298,7 @@
     - [785. 判断二分图](./docs/Algorithm/leetcode/785.md)
     - [821. 新 21 点](./docs/Algorithm/leetcode/821.md)
     - [841. 钥匙和房间](./docs/Algorithm/leetcode/841.md)
+    - [844. 比较含退格的字符串](./docs/Algorithm/leetcode/844.md)
     - [873. 最长的斐波那契子序列的长度](./docs/Algorithm/leetcode/873.md)
     - [918. 环形子数组的最大和](./docs/Algorithm/leetcode/918.md)
     - [974. 和可被 K 整除的子数组](./docs/Algorithm/leetcode/974.md)

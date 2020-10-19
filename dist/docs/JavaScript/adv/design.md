@@ -458,11 +458,84 @@ compare(a1, a3); // 不相等
 
 详见 `JavaScript 进阶 观察者模式和发布订阅模式`
 
+## 命令模式
+
+:::info
+命令模式是最简单和优雅的模式之一，命令指的是执行某些特定事情的指令。
+最常见的应用场景是需要消除请求发送和请求接收者之间的耦合关系
+:::
+
+### JavaScript 中的命令模式
+
+命令模式的由来其实是回调函数的一个面向对象的替代品
+
+```js
+/**
+ * @description: 命令模式对象构造函数
+ * @param {Object} receiver 接收命令对象
+ * @return {type}
+ */
+const CommandMode = function(receiver) {
+  // 执行命令
+  this.excute = function() {
+    // 接收命令对象执行命令
+    receiver.doSomething();
+  };
+
+  // 撤销命令
+  this.undo = function() {
+    // 接收命令对象撤销命令
+    receiver.undoSomething();
+  };
+};
+
+/**
+ * @description: 设置命令
+ * @param {Object} commander 命令发布对象
+ * @param {Object} command 命令对象
+ * @return {type}
+ */
+const setCommand = function(commander, command) {
+  // 回调函数触发命令执行撤销
+  commander.callback1 = function() {
+    command.excute();
+  };
+  commander.callback2 = function() {
+    command.undo();
+  };
+};
+
+const r = {
+  doSomething: () => {
+    console.log("执行命令");
+  },
+  undoSomething: () => {
+    console.log("撤销命令");
+  }
+};
+
+const c = {
+  fire1: function() {
+    console.log("触发回调1");
+    this.callback1();
+  },
+  fire2: function() {
+    console.log("触发回调2");
+    this.callback2();
+  }
+};
+
+const commandInstance = new CommandMode(r);
+setCommand(c, commandInstance);
+c.fire1();
+c.fire2();
+```
+
 ## 中介者模式
 
 > 通过一个中介者对象，其他所有的相关对象都通过该中介者对象来通信，而不是相互引用，当其中的一个对象发生改变时，只需要通知中介者对象即可。通过中介者模式可以解除对象与对象之间的紧耦合关系
 
-中介者模式适用的场景：例如购物车需求，存在商品选择表单、颜色选择表单、购买数量表单等等，都会触发 change 事件，那么可以通过中介者来转发处理这些事件，实现各个事件间的解耦，仅仅维护中介者对象即可。
+中介者模式适用的场景：例如购物车需求，存在商品选择表单、颜色选择表单、购买数量表单等等，都会触发 change 事件，那么可以通过中介者来转\发处理这些事件，实现各个事件间的解耦，仅仅维护中介者对象即可。
 
 ```JavaScript
 var goods = {   //手机库存
