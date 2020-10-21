@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-10-19 09:44:40
+ * @LastEditTime: 2020-10-21 09:41:56
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -301,6 +301,7 @@
     - [844. 比较含退格的字符串](./docs/Algorithm/leetcode/844.md)
     - [873. 最长的斐波那契子序列的长度](./docs/Algorithm/leetcode/873.md)
     - [918. 环形子数组的最大和](./docs/Algorithm/leetcode/918.md)
+    - [925. 长按键入](./docs/Algorithm/leetcode/925.md)
     - [974. 和可被 K 整除的子数组](./docs/Algorithm/leetcode/974.md)
     - [977. 有序数组的平方](./docs/Algorithm/leetcode/977.md)
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)

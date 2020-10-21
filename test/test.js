@@ -1,23 +1,22 @@
 /**
- * @param {string} S
- * @param {string} T
+ * @param {string} name
+ * @param {string} typed
  * @return {boolean}
  */
-var backspaceCompare = function(S, T) {
-  let a = [],
-    b = [];
-  for (let s of S) {
-    if (s == "#") a.pop();
-    else a.push(s);
+var isLongPressedName = function(name, typed) {
+  const n = name.length,
+    m = typed.length;
+  let i = 0,
+    j = 0;
+  while (j < m) {
+    if (i < n && name[i] === typed[j]) {
+      i++;
+      j++;
+    } else if (j > 0 && typed[j] === typed[j - 1]) {
+      j++;
+    } else {
+      return false;
+    }
   }
-  for (let t of T) {
-    if (t == "#") b.pop();
-    else b.push(t);
-  }
-  if (a.length != b.length) return false;
-
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] != b[i]) return false;
-  }
-  return true;
+  return i === n;
 };
