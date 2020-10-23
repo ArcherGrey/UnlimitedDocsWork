@@ -105,6 +105,7 @@ const leetcode = {
     buildItem1(219, "存在重复元素 II"),
     buildItem1(221, "最大正方形"),
     buildItem1(226, "翻转二叉树"),
+    buildItem1(234, "回文链表"),
     buildItem1(235, "二叉搜索树的最近公共祖先"),
     buildItem1(236, "二叉树的最近公共祖先"),
     buildItem1(238, "除自身以外数组的乘积"),
