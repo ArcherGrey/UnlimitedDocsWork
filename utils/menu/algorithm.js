@@ -208,6 +208,7 @@ const leetcode = {
     buildItem1(1028, "从先序遍历还原二叉树"),
     buildItem1(1055, "形成字符串的最短路径"),
     buildItem1(1095, "山脉数组中查找目标值"),
+    buildItem1(1365, "有多少小于当前数字的数字"),
     buildItem1(1371, "每个元音包含偶数次的最长子字符串"),
     buildItem1(1388, "3n 块披萨"),
     buildItem1(1431, "拥有最多糖果的孩子"),

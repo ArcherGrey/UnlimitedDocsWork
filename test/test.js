@@ -1,20 +1,23 @@
 /**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
+ * @param {number[]} nums
+ * @return {number[]}
  */
-/**
- * @param {ListNode} head
- * @return {boolean}
- */
-var isPalindrome = function(head) {
-  if (!head || !head.next) return true;
-  let a = [];
-  while (head) {
-    a.push(head.val);
-    head = head.next;
+var smallerNumbersThanCurrent = function(nums) {
+  let m = new Map();
+  for (let n of nums) {
+    if (!m.has(n)) m.set(n, 1);
+    else m.set(n, m.get(n) + 1);
   }
-  return a.join("") === a.reverse().join("");
+
+  let ans = [];
+  for (let n of nums) {
+    let t = 0;
+    for (let c of m) {
+      if (c[0] < n) {
+        t += c[1];
+      }
+    }
+    ans.push(t);
+  }
+  return ans;
 };

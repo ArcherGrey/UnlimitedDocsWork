@@ -19,7 +19,8 @@ const vueIndex = {
     buildItem1("vdom", "vdom"),
     buildItem1("vue-devtools 安装使用", "devtools"),
     buildItem1("vue hook", "vhook"),
-    buildItem1("插槽", "slot")
+    buildItem1("插槽", "slot"),
+    buildItem1("组件通信", "componentCom")
   ]
 };
 
