@@ -17,7 +17,8 @@ const feeBasic = {
     ["原生 js 实现模块化", "原生js模块化"],
     ["各种模块化方案技术", "module"],
     ["yarn 常用命令", "yarnBook"],
-    ["自动化导入模块", "reqcontext"]
+    ["自动化导入模块", "reqcontext"],
+    ["封装 axios", "package_axios"]
   ])
 };
 

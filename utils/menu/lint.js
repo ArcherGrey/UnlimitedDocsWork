@@ -7,5 +7,6 @@ const buildItem = buildItemByType(parent);
 export const lintIndex = buildItem([
   ["git 提交规范", "git_commit"],
   ["css 规范", "css"],
-  ["JavaScript 分号结尾", "semicolon"]
+  ["JavaScript 分号结尾", "semicolon"],
+  ["JavaScript 风格规范", "javascript_lint"]
 ]);

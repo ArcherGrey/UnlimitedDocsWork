@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-10-27 15:00:13
+ * @LastEditTime: 2020-10-27 16:06:08
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -90,6 +90,7 @@
   - [yarn 常用命令](./docs/FEE/yarnBook.md)
   - [webpack 概念](./docs/FEE/webpack_concepts.md)
   - [自动化导入模块](./docs/FEE/reqcontext.md)
+  - [封装 axios](./docs/FEE/package_axios.md)
 - [npm]()
   - [索引](./docs/Npm/index.md)
   - [husky](./docs/Npm/husky.md)

@@ -1,13 +1,12 @@
+/**
+ * @description: 生成最底层目录
+ * @param {object} parent 父目录
+ * @param {string} type 类型： 普通类型为空，leetcode为算法类型
+ * @return {*}
+ */
 export function buildItemByType(parent, type) {
   // 普通类型
   if (!type)
-    // return (name, filename) => {
-    //   return {
-    //     id: `${parent.id}.${name}`,
-    //     label: `${name}`,
-    //     path: `${parent.path}${filename}.md`
-    //   };
-    // };
     return arr => {
       return arr.map(e => {
         return {
@@ -19,13 +18,6 @@ export function buildItemByType(parent, type) {
     };
   // leetcode 题解
   if (type === "leetcode") {
-    // return (id, name) => {
-    //   return {
-    //     id: `${parent.id}.${id}`,
-    //     label: `${id}. ${name}`,
-    //     path: `${parent.path}${id}.md`
-    //   };
-    // };
     return arr => {
       return arr.map(e => {
         return {
@@ -37,7 +29,11 @@ export function buildItemByType(parent, type) {
     };
   }
 }
-
+/**
+ * @description: 生成子目录
+ * @param {Object} parent 结构为 {id.path} 的对象
+ * @return {*}
+ */
 export function buildSubmenu(parent) {
   return (id, path) => {
     return {
