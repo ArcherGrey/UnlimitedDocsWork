@@ -4,8 +4,8 @@ const parent = {
   path: "./docs/Network/"
 };
 const buildItem = buildItemByType(parent);
-export const networkIndex = [
-  buildItem("get & post", "request"),
-  buildItem("session & cookie", "cookie"),
-  buildItem("sessionStorage 和 localStorage", "storage")
-];
+export const networkIndex = buildItem([
+  ["get & post", "request"],
+  ["session & cookie", "cookie"],
+  ["sessionStorage 和 localStorage", "storage"]
+]);

@@ -4,8 +4,8 @@ const parent = {
   path: "./docs/Lint/"
 };
 const buildItem = buildItemByType(parent);
-export const lintIndex = [
-  buildItem("git 提交规范", "git_commit"),
-  buildItem("css 规范", "css"),
-  buildItem("JavaScript 分号结尾", "semicolon")
-];
+export const lintIndex = buildItem([
+  ["git 提交规范", "git_commit"],
+  ["css 规范", "css"],
+  ["JavaScript 分号结尾", "semicolon"]
+]);

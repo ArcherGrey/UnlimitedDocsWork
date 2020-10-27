@@ -4,11 +4,11 @@ const parent = {
   path: "./docs/Npm/"
 };
 const buildItem = buildItemByType(parent);
-export const npmIndex = [
-  buildItem("索引", "index"),
-  buildItem("CommitLint", "CommitLint"),
-  buildItem("husky", "husky"),
-  buildItem("nrm", "nrm"),
-  buildItem("AnyWhere", "anywhere"),
-  buildItem("rimraf", "rimraf")
-];
+export const npmIndex = buildItem([
+  ["索引", "index"],
+  ["CommitLint", "CommitLint"],
+  ["husky", "husky"],
+  ["nrm", "nrm"],
+  ["AnyWhere", "anywhere"],
+  ["rimraf", "rimraf"]
+]);

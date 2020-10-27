@@ -13,7 +13,7 @@ const buildItem1 = buildItemByType(p1);
 const docker = {
   id: p1.id,
   label: "docker",
-  children: [buildItem1("概述", "overview")]
+  children: buildItem1([["概述", "overview"]])
 };
 
 // // webpack

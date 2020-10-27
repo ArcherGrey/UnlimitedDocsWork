@@ -13,29 +13,29 @@ const buildItem1 = buildItemByType(p1);
 const esBasic = {
   id: p1.id,
   label: "基础",
-  children: [
-    buildItem1("模板字面量", "模板字面量"),
-    buildItem1("set 和 map", "set_map"),
-    buildItem1("各种 for", "for"),
-    buildItem1("深拷贝和浅拷贝", "copy"),
-    buildItem1("内存管理", "memmanager"),
-    buildItem1("作用域和上下文", "context"),
-    buildItem1("json和jsonp", "json"),
-    buildItem1("闭包", "closure"),
-    buildItem1("包装对象", "package"),
-    buildItem1("call apply bind", "cab"),
-    buildItem1("继承", "class"),
-    buildItem1("创建对象", "create"),
-    buildItem1("== 和 ===", "equal"),
-    buildItem1("new", "new"),
-    buildItem1("原型链", "prototype"),
-    buildItem1("执行机制", "run"),
-    buildItem1("this", "this"),
-    buildItem1("类型判断", "typeof"),
-    buildItem1("变量提升", "hoisting"),
-    buildItem1("switch", "switch"),
-    buildItem1("Promise", "Promise")
-  ]
+  children: buildItem1([
+    ["模板字面量", "模板字面量"],
+    ["set 和 map", "set_map"],
+    ["各种 for", "for"],
+    ["深拷贝和浅拷贝", "copy"],
+    ["内存管理", "memmanager"],
+    ["作用域和上下文", "context"],
+    ["json和jsonp", "json"],
+    ["闭包", "closure"],
+    ["包装对象", "package"],
+    ["call apply bind", "cab"],
+    ["继承", "class"],
+    ["创建对象", "create"],
+    ["== 和 ===", "equal"],
+    ["new", "new"],
+    ["原型链", "prototype"],
+    ["执行机制", "run"],
+    ["this", "this"],
+    ["类型判断", "typeof"],
+    ["变量提升", "hoisting"],
+    ["switch", "switch"],
+    ["Promise", "Promise"]
+  ])
 };
 
 // 高级
@@ -44,14 +44,14 @@ const buildItem2 = buildItemByType(p2);
 const esAdvanced = {
   id: p2.id,
   label: "高级",
-  children: [
-    buildItem2("函数式编程", "func"),
-    buildItem2("记忆化", "mem"),
-    buildItem2("防抖和节流", "debounce"),
-    buildItem2("设计模式", "design"),
-    buildItem2("设计模式ts", "design2"),
-    buildItem2("观察者模式和发布订阅模式", "observer")
-  ]
+  children: buildItem2([
+    [("函数式编程", "func")],
+    [("记忆化", "mem")],
+    [("防抖和节流", "debounce")],
+    [("设计模式", "design")],
+    [("设计模式ts", "design2")],
+    [("观察者模式和发布订阅模式", "observer")]
+  ])
 };
 
 export const esIndex = [esBasic, esAdvanced];

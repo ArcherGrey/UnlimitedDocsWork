@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-10-26 10:33:30
+ * @LastEditTime: 2020-10-27 15:00:13
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -351,6 +351,7 @@
   - [git 提交规范](./docs/Lint/git_commit.md)
   - [css 命名规范](./docs/Lint/css.md)
   - [JavaScript 分号结尾](./docs/Lint/semicolon.md)
+  - [JavaScript 风格规范](./docs/Lint/javascript_lint.md)
 - [markdown]()
   - [GFM emoji](./docs/Markdown/gfmemoji.md)
   - [flowchart 流程图](./docs/Markdown/flowchart.md)

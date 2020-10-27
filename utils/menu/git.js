@@ -4,8 +4,8 @@ const parent = {
   path: "./docs/Git/"
 };
 const buildItem = buildItemByType(parent);
-export const gitIndex = [
-  buildItem("github 无法登录", "host"),
-  buildItem("git 简明教程", "git"),
-  buildItem("Git Hooks", "githook")
-];
+export const gitIndex = buildItem([
+  ["github 无法登录", "host"],
+  ["git 简明教程", "git"],
+  ["Git Hooks", "githook"]
+]);
