@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-10-28 14:01:12
+ * @LastEditTime: 2020-10-29 10:31:38
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -185,6 +185,7 @@
     - [121. 买卖股票的最佳时机](./docs/Algorithm/leetcode/121.md)
     - [122. 买卖股票的最佳时机 II](./docs/Algorithm/leetcode/122.md)
     - [125. 验证回文串](./docs/Algorithm/leetcode/125.md)
+    - [129. 求根到叶子节点数字之和](./docs/Algorithm/leetcode/129.md)
     - [130. 被围绕的区域](./docs/Algorithm/leetcode/130.md)
     - [133. 克隆图](./docs/Algorithm/leetcode/133.md)
     - [136. 只出现一次的数字](./docs/Algorithm/leetcode/136.md)
