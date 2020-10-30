@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-10-30 09:29:10
+ * @LastEditTime: 2020-10-30 15:27:57
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -85,12 +85,15 @@
     - [组件通信](./docs/FE_framework/vue/componentCom.md)
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)
 - [前端工程化]()
-  - [原生 js 实现模块化](./docs/FEE/原生js模块化.md)
-  - [各种模块化方案技术](./docs/FEE/module.md)
-  - [yarn 常用命令](./docs/FEE/yarnBook.md)
-  - [webpack 概念](./docs/FEE/webpack_concepts.md)
-  - [自动化导入模块](./docs/FEE/reqcontext.md)
-  - [封装 axios](./docs/FEE/package_axios.md)
+  - [模块化]()
+    - [原生 js 实现模块化](./docs/FEE/module/原生js模块化.md)
+    - [各种模块化方案技术](./docs/FEE/module/module.md)
+    - [webpack 概念](./docs/FEE/module/webpack_concepts.md)
+    - [自动化导入模块](./docs/FEE/module/reqcontext.md)
+  - [包管理工具]()
+    - [yarn 常用命令](./docs/FEE/package/yarnBook.md)
+  - [其他工具]()
+    - [封装 axios](./docs/FEE/utils/package_axios.md)
 - [npm]()
   - [索引](./docs/Npm/index.md)
   - [husky](./docs/Npm/husky.md)
