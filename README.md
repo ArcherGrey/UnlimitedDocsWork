@@ -89,6 +89,10 @@ yarn server
     - `Ramda` 支持 curry 化
   - 网页模板
     - pug 模板引擎 [文档](https://pug.bootcss.com/api/getting-started.html)
+  - 文件预览
+    - object 标签
+    - sheetjs xlsx 预览
+    - canvas-datagrid xlsx 表格展示
   - 打包工具
     - webpack [官网](https://www.webpackjs.com/)
   - 开发工具
