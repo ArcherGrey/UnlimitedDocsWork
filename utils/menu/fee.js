@@ -14,7 +14,6 @@ const feeBasic = {
   id: p1.id,
   label: "模块化",
   children: buildItem1([
-    ["原生 js 实现模块化", "原生js模块化"],
     ["各种模块化方案技术", "module"],
     ["自动化导入模块", "reqcontext"],
     ["webpack 概念", "webpack_concepts"]
@@ -24,19 +23,31 @@ const feeBasic = {
 // 包管理工具
 const p2 = bs(2, "package");
 const buildItem2 = buildItemByType(p2);
-const webpack = {
+const npmTools = {
   id: p2.id,
   label: "package",
   children: buildItem2([["yarn 常用命令", "yarnBook"]])
 };
 
 // 其他工具
-const p3 = bs(2, "utils");
+const p3 = bs(3, "utils");
 const buildItem3 = buildItemByType(p3);
-const webpack = {
+const utils = {
   id: p3.id,
   label: "其他工具",
   children: buildItem3([["封装 axios", "package_axios"]])
 };
 
-export const feeIndex = [feeBasic, webpack];
+// 原理/实现
+const p4 = bs(4, "write");
+const buildItem4 = buildItemByType(p4);
+const handWriite = {
+  id: p4.id,
+  label: "原理/实现",
+  children: buildItem4([
+    ["原生 js 实现模块化", "原生js模块化"],
+    ["简易打包器实现", "minipack"]
+  ])
+};
+
+export const feeIndex = [feeBasic, npmTools, utils, handWriite];
