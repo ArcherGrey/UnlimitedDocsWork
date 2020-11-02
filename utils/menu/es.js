@@ -45,12 +45,12 @@ const esAdvanced = {
   id: p2.id,
   label: "高级",
   children: buildItem2([
-    [("函数式编程", "func")],
-    [("记忆化", "mem")],
-    [("防抖和节流", "debounce")],
-    [("设计模式", "design")],
-    [("设计模式ts", "design2")],
-    [("观察者模式和发布订阅模式", "observer")]
+    ["函数式编程", "func"],
+    ["记忆化", "mem"],
+    ["防抖和节流", "debounce"],
+    ["设计模式", "design"],
+    ["设计模式ts", "design2"],
+    ["观察者模式和发布订阅模式", "observer"]
   ])
 };
 

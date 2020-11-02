@@ -1,38 +1,14 @@
-/**
- * @param {number[][]} grid
- * @return {number}
- */
-var islandPerimeter = function(grid) {
-  let rows = grid.length;
-  if (rows === 0) return 0;
-  let cols = grid[0].length;
-  let findIsland = false;
-  let c = 0;
-  for (let i = 0; i < rows; ++i) {
-    let m = false;
-    for (let j = 0; j < cols; ++j) {
-      if (grid[i][j]) {
-        findIsland = true;
-        m = true;
-        c += calc([i, j], rows, cols, grid);
-      }
-    }
-    if (findIsland && !m) {
-      return c;
-    }
-  }
-  return c;
-};
+function debounce(func, wait) {
+  var timer;
+  return function() {
+    // 需要保存上下文环境是因为后面的 setTimeout 调用的时候这两个值会改变
+    // 如果使用箭头函数这里可以不保存，因为箭头函数的作用域是外层作用域
+    var context = this;
+    var args = arguments;
 
-function calc(point, rs, cs, grid) {
-  let r = point[0],
-    c = point[1];
-  let a = 4;
-
-  if (r - 1 >= 0 && grid[r - 1][c] == 1) a--;
-  if (r + 1 < rs && grid[r + 1][c] == 1) a--;
-  if (c - 1 >= 0 && grid[r][c - 1] == 1) a--;
-  if (c + 1 < cs && grid[r][c + 1] == 1) a--;
-
-  return a;
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      func.apply(context, args);
+    }, wait);
+  };
 }

@@ -20,41 +20,47 @@
 
 ```JavaScript
 // 普通版
-function debounce(func,wait){
-    var timer;
-    return function(){
-        var context = this; // 因为在setTimeout中执行，所以this指向会是window，为了保持实际的上下文这里要先保存
-        var args = arguments; // 保存参数
+function debounce(func, wait) {
+  var timer;
+  return function() {
+    // 需要保存上下文环境是因为后面的 setTimeout 调用的时候这两个值会改变
+    // 如果使用箭头函数这里可以不保存，因为箭头函数的作用域是外层作用域
+    var context = this;
+    var args = arguments;
 
-        clearTimeout(timer);
-        timer = setTimeout(()=>{
-            func.apply(context,args);
-        },wait);
-    }
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      func.apply(context, args);
+    }, wait);
+  };
 }
+
 
 // 立即执行
-function debounce(func,wait,imme){
-    var timer;
-    return function(){
-        var context = this;
-        var args = arguments;
+function debounce(func, wait, imme) {
+  var timer;
+  return function() {
+    // 需要保存上下文环境是因为后面的 setTimeout 调用的时候这两个值会改变
+    // 如果使用箭头函数这里可以不保存，因为箭头函数的作用域是外层作用域
+    var context = this;
+    var args = arguments;
 
-        if(timer) clearTimeout(timer);
-        // imme 为真时立即执行
-        if(imme){
-            var call = !timer;
-            setTimeout(()=>{
-                timer = null;
-            },wait);
-            if(call) func.apply(context,args);
-        }else{
-            timer = setTimeout(()=>{
-                func.apply(context,args);
-            },wait);
-        }
+    if (timer) clearTimeout(timer);
+    // imme 为真时立即执行
+    if (imme) {
+      var call = !timer;
+      timer = setTimeout(() => {
+        timer = null;
+      }, wait);
+      if (call) func.apply(context, args);
+    } else {
+      timer = setTimeout(function() {
+        func.apply(context, args);
+      }, wait);
     }
+  };
 }
+
 ```
 
 ## 节流
@@ -67,37 +73,41 @@ function debounce(func,wait,imme){
 
 ```JavaScript
 function throttle(func, wait) {
-    var context, args;
-    var previous = 0;
+  // 初始化起始时间
+  var previous = 0;
 
-    return function() {
-        var now = +new Date();
-        context = this;
-        args = arguments;
-        if (now - previous > wait) {
-            func.apply(context, args);
-            previous = now;
-        }
+  return function() {
+    // 更新当前时间
+    var now = +new Date();
+    // 如果时间差大于等待时间旧执行
+    if (now - previous > wait) {
+      func.apply(this, arguments);
+      // 使用当前时间更新下一次起始时间
+      previous = now;
     }
+  };
 }
+
 ```
 
 - 定时器：
 
 ```JavaScript
 function throttle(func, wait) {
-    var timeout;
+  var timeout;
 
-    return function() {
-        context = this;
-        args = arguments;
-        if (!timeout) {
-            timeout = setTimeout(function(){
-                timeout = null;
-                func.apply(context, args)
-            }, wait)
-        }
-
+  return function() {
+    // 需要保存上下文环境是因为后面的 setTimeout 调用的时候这两个值会改变
+    // 如果使用箭头函数这里可以不保存，因为箭头函数的作用域是外层作用域
+    context = this;
+    args = arguments;
+    if (!timeout) {
+      timeout = setTimeout(function() {
+        timeout = null;
+        func.apply(context, args);
+      }, wait);
     }
+  };
 }
+
 ```

@@ -6,9 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="test1"></div>
-    <div class="test">123</div>
-    <div class="test">asd</div>
+    <button id="btn">测试防抖</button>
   </body>
   <style>
     html,
@@ -16,20 +14,27 @@
       height: 100%;
       width: 100%;
       margin: 0;
-      background-color: chartreuse;
-    }
-    div {
-      width: 100px;
-      height: 100px;
-    }
-    .test {
-      clear: left;
-      /* display: inline-block; */
-      background-color: blueviolet;
-    }
-    .test1 {
-      background-color: red;
-      float: left;
+      /* background-color: chartreuse; */
     }
   </style>
+  <script>
+    const dom = document.getElementById("btn");
+    const fn = function() {
+      console.log("点击");
+      console.log(arguments);
+    };
+    function throttle(func, wait) {
+      var previous = 0;
+
+      return function() {
+        var now = +new Date();
+        if (now - previous > wait) {
+          func.apply(this, arguments);
+          previous = now;
+        }
+      };
+    }
+
+    dom.addEventListener("click", throttle(fn, 1000, true));
+  </script>
 </html>

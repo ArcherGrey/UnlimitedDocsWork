@@ -87,3 +87,33 @@ var value = "Global value";
 ```
 
 在上述代码中，this 的指向在 call 和 apply 中是一致的，只不过是调用参数的形式不一样。call 是一个一个调用参数，而 apply 是调用一个数组。
+
+---
+
+> setTimeout setInterval
+
+如果使用常规函数：
+
+```js
+setTimeout(fn, 1000);
+// 此时 fn 中 this 的指向是全局环境，如果是浏览器环境就是 window
+```
+
+---
+
+> 箭头函数
+
+箭头函数自身不绑定 `this`，会将定义位置的上下文作为自己的 `this`:
+
+```js
+function t() {
+  this.x = 1;
+
+  setTimeout(() => {
+    // 这里虽然是 setTimeout,但是使用箭头函数
+    // this 指向的是 定义位置的 this
+    // 输出 1
+    console.log(this.x);
+  }, 1000);
+}
+```
