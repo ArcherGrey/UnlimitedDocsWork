@@ -183,6 +183,7 @@ app manage system
   - 业务熟悉
 - y
   - k8s 监控
+  - 复杂数据结构 ts
 
 ---
 
@@ -203,3 +204,4 @@ monitor system + data
     - pdf vue-pdf
     - csv table
     - excel sheetjs canvas-datagrid
+      - 数据量大 滑动条卡顿 滑动内存上升

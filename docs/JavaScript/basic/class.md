@@ -33,30 +33,38 @@ SubType.prototype.showSub = function() {
 基本思想:即在子类型构造函数的内部调用超类型构造函数：
 
 ```JavaScript
-function Father(){
-	this.colors = ["red","blue","green"];
+function Father(val) {
+  this.colors = ["red", "blue", "green"];
+  this.colors.push(val);
 }
-function Son(){
-	Father.call(this);//继承了Father,且向父类型传递参数
+Father.prototype.count = 1;
+Father.prototype.show = function() {
+  console.log(this.count);
+};
+function Son() {
+  Father.apply(this, arguments); //继承了Father,且向父类型传递参数
 }
-var instance1 = new Son();
-instance1.colors.push("black");
-console.log(instance1.colors);//"red,blue,green,black"
+var instance1 = new Son("black");
+
+console.log(instance1.colors); //"red,blue,green,black"
 
 var instance2 = new Son();
-console.log(instance2.colors);//"red,blue,green" 可见引用类型值是独立的
+console.log(instance2.colors); //"red,blue,green" 可见引用类型值是独立的
+
+// 无法访问父类的原型对象上的属性和方法
+console.log(instance2.count); // undefined
+console.log(instance2.show); // undefined
 ```
 
 解决了原型链的两大问题:
 
 - 保证了原型链中引用类型值的独立,不再被所有实例共享;
-
 - 子类型创建时也能够向父类型传递参数.
 
 存在的问题:
 
-- 方法都在构造函数中定义, 因此函数复用也就不可用了.
-- 超类型(如 Father)中定义的方法,对子类型而言也是不可见的.
+- 每次创建实例都会在对应实例里创建方法，无法对方法进行复用
+- 没有拼接原型链，无法继承原型对象上的属性和方法
 
 考虑此,借用构造函数的技术也很少单独使用.
 
@@ -136,6 +144,13 @@ function createAnother(original){
 寄生组合式继承就是为了降低调用父类构造函数的开销而出现的:
 
 ```JavaScript
+// 借用构造函数
+function subClass() {
+  superClass.apply(this, arugments);
+}
+
+
+// 寄生
 function extend(subClass,superClass){
 	var prototype = object(superClass.prototype);//创建对象
 	prototype.constructor = subClass;//增强对象
@@ -144,3 +159,37 @@ function extend(subClass,superClass){
 ```
 
 寄生组合式继承,集寄生式继承和组合继承的优点于一身,是实现基于类型继承的最有效方法
+
+## es6 class 继承
+
+`extends` 实现类的继承：
+
+```js
+class Person {
+  constructor(name) {
+    this.name = name;
+    this.color = ["red", "blue", "green"];
+  }
+  sayName() {
+    console.log(this.name);
+  }
+}
+
+class Student extends Person {
+  constructor(name, score) {
+    super(name);
+    this.score = score;
+  }
+  showScore() {
+    alert(this.score);
+  }
+}
+
+let s1 = new Student("s1", 99);
+s1.sayName(); // s1
+s1.showScore(); // 99
+```
+
+- super 和借用构造函数类似
+- 内部会有寄生继承
+- 其实就是寄生组合继承的语法糖
