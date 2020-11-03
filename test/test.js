@@ -1,14 +1,27 @@
-function debounce(func, wait) {
-  var timer;
-  return function() {
-    // 需要保存上下文环境是因为后面的 setTimeout 调用的时候这两个值会改变
-    // 如果使用箭头函数这里可以不保存，因为箭头函数的作用域是外层作用域
-    var context = this;
-    var args = arguments;
+/**
+ * @param {number[]} A
+ * @return {boolean}
+ */
+var validMountainArray = function(A) {
+  if (A.length < 3) return false;
 
-    clearTimeout(timer);
-    timer = setTimeout(function() {
-      func.apply(context, args);
-    }, wait);
-  };
-}
+  // 如果一开始就是下降肯定不是山脉
+  if (A[0] > A[1]) return false;
+  let m = 0; // m=0 表示上升
+  for (let i = 0; i < A.length - 1; ++i) {
+    // 趋势改变
+    if (A[i] > A[i + 1] && !m) {
+      m = 1;
+    }
+    // 上升趋势中遇到不符合的
+    if (A[i] >= A[i + 1] && !m) {
+      return false;
+    }
+
+    // 下降趋势中遇到不符合的
+    if (A[i] <= A[i + 1] && m) {
+      return false;
+    }
+  }
+  return m;
+};

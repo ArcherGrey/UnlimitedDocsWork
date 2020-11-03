@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-10-30 16:50:06
+ * @LastEditTime: 2020-11-03 09:51:14
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -312,6 +312,7 @@
     - [873. 最长的斐波那契子序列的长度](./docs/Algorithm/leetcode/873.md)
     - [918. 环形子数组的最大和](./docs/Algorithm/leetcode/918.md)
     - [925. 长按键入](./docs/Algorithm/leetcode/925.md)
+    - [941. 有效的山脉数组](./docs/Algorithm/leetcode/941.md)
     - [974. 和可被 K 整除的子数组](./docs/Algorithm/leetcode/974.md)
     - [977. 有序数组的平方](./docs/Algorithm/leetcode/977.md)
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
