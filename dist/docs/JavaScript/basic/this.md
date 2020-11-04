@@ -8,10 +8,10 @@
 
 > 全局的函数调用
 
-```JavaScript
-var name = 'test';
-function a(){
-  console.log(this==window);
+```js
+var name = "test";
+function a() {
+  console.log(this == window);
   console.log(this.name);
 }
 a(); // true test
@@ -23,12 +23,12 @@ a(); // true test
 
 > 对象方法的调用
 
-```JavaScript
-function showname(){
+```js
+function showname() {
   console.log(this.name);
 }
 var obj = {};
-obj.name = 'test';
+obj.name = "test";
 obj.show = showname;
 obj.show(); // test
 ```
@@ -39,9 +39,9 @@ obj.show(); // test
 
 > 构造函数的调用
 
-```JavaScript
-function showname(){
-  this.name = 'test';
+```js
+function showname() {
+  this.name = "test";
 }
 var obj = new showname();
 console.log(obj.name); // test
@@ -68,22 +68,52 @@ apply 方法:
 如果 argArray 不是一个有效的数组或者不是 arguments 对象，那么将导致一个 TypeError。
 如果没有提供 argArray 和 thisObj 任何一个参数，那么 Global 对象将被用作 thisObj， 并且无法被传递任何参数。
 
-```JavaScript
+```js
 var value = "Global value";
 
-    function FunA() {
-        this.value = "AAA";
-    }
+function FunA() {
+  this.value = "AAA";
+}
 
-    function FunB() {
-        console.log(this.value);
-    }
-    FunB(); //Global value 因为是在全局中调用的FunB(),this.value指向全局的value
-    FunB.call(window); //Global value,this指向window对象，因此this.value指向全局的value
-    FunB.call(new FunA()); //AAA, this指向参数new FunA()，即FunA对象
+function FunB() {
+  console.log(this.value);
+}
+FunB(); //Global value 因为是在全局中调用的FunB(),this.value指向全局的value
+FunB.call(window); //Global value,this指向window对象，因此this.value指向全局的value
+FunB.call(new FunA()); //AAA, this指向参数new FunA()，即FunA对象
 
-    FunB.apply(window); //Global value
-    FunB.apply(new FunA()); //AAA
+FunB.apply(window); //Global value
+FunB.apply(new FunA()); //AAA
 ```
 
 在上述代码中，this 的指向在 call 和 apply 中是一致的，只不过是调用参数的形式不一样。call 是一个一个调用参数，而 apply 是调用一个数组。
+
+---
+
+> setTimeout setInterval
+
+如果使用常规函数：
+
+```js
+setTimeout(fn, 1000);
+// 此时 fn 中 this 的指向是全局环境，如果是浏览器环境就是 window
+```
+
+---
+
+> 箭头函数
+
+箭头函数自身不绑定 `this`，会将定义位置的上下文作为自己的 `this`:
+
+```js
+function t() {
+  this.x = 1;
+
+  setTimeout(() => {
+    // 这里虽然是 setTimeout,但是使用箭头函数
+    // this 指向的是 定义位置的 this
+    // 输出 1
+    console.log(this.x);
+  }, 1000);
+}
+```

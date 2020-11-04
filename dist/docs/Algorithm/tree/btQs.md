@@ -9,7 +9,7 @@
 - 每个节点计算对应值，递归的时候传递到子节点
 - 类似前序遍历
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -35,7 +35,6 @@ var maxDepth = function(root) {
   fn(1, root);
   return dep;
 };
-
 ```
 
 自底向上：
@@ -43,7 +42,7 @@ var maxDepth = function(root) {
 - 对所有子节点递归调用，然后根据返回值和根节点得到结果
 - 类似后序遍历
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -61,14 +60,13 @@ var maxDepth = function(root) {
   let right = maxDepth(root.right);
   return Math.max(left, right) + 1;
 };
-
 ```
 
 ## 判断二叉树是否对称
 
 递归：
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -100,12 +98,11 @@ var isSymmetric = function(root) {
   };
   return check(root.left, root.right);
 };
-
 ```
 
 迭代：
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -132,7 +129,6 @@ var isSymmetric = function(root) {
   }
   return true;
 };
-
 ```
 
 ## 构造二叉树
@@ -148,7 +144,7 @@ var isSymmetric = function(root) {
 
 ### 中序后序构造二叉树
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -185,14 +181,13 @@ var buildTree = function(inorder, postorder) {
   };
   return fn(0, inorder.length - 1, 0, postorder.length - 1);
 };
-
 ```
 
 ### 前序中序构造二叉树
 
 递归:
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -226,13 +221,11 @@ var buildTree = function(preorder, inorder) {
   root.right = buildTree(preorder.slice(i + 1), inorder.slice(i + 1));
   return root;
 };
-
-
 ```
 
 迭代:
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -276,7 +269,6 @@ var buildTree = function(preorder, inorder) {
   }
   return root;
 };
-
 ```
 
 ## 二叉树的最近公共祖先

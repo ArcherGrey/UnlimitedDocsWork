@@ -26,16 +26,15 @@
 
 例:
 
-```JavaScript
+```js
 const config = {
-  entry: './path/to/my/entry/file.js'
+  entry: "./path/to/my/entry/file.js"
 };
-
 
 // 相当于下面的简写
 const config = {
   entry: {
-    main: './path/to/my/entry/file.js'
+    main: "./path/to/my/entry/file.js"
   }
 };
 ```
@@ -48,11 +47,11 @@ const config = {
 
 例:
 
-```JavaScript
+```js
 const config = {
   entry: {
-    app: './src/app.js',
-    vendors: './src/vendors.js'
+    app: "./src/app.js",
+    vendors: "./src/vendors.js"
   }
 };
 ```
@@ -63,11 +62,11 @@ const config = {
 
 1. 分离 应用程序(`app`) 和 第三方(`vendor`)入口
 
-```JavaScript
+```js
 const config = {
   entry: {
-    app: './src/app.js',
-    vendors: './src/vendors.js'
+    app: "./src/app.js",
+    vendors: "./src/vendors.js"
   }
 };
 ```
@@ -76,12 +75,12 @@ const config = {
 
 2. 多页面应用程序
 
-```JavaScript
+```js
 const config = {
   entry: {
-    pageOne: './src/pageOne/index.js',
-    pageTwo: './src/pageTwo/index.js',
-    pageThree: './src/pageThree/index.js'
+    pageOne: "./src/pageOne/index.js",
+    pageTwo: "./src/pageTwo/index.js",
+    pageThree: "./src/pageThree/index.js"
   }
 };
 ```
@@ -103,11 +102,11 @@ const config = {
 
 基本:
 
-```JavaScript
+```js
 const config = {
   output: {
-    filename: 'bundle.js',
-    path: '/home/proj/public/assets'
+    filename: "bundle.js",
+    path: "/home/proj/public/assets"
   }
 };
 ```
@@ -157,18 +156,15 @@ npm install --save-dev ts-loader
 - `test` 正则表达式用于筛选需要 `loader` 进行转换的文件
 - `use` 表示在转换时使用哪个 `loader`
 
-```JavaScript
+```js
 const config = {
   output: {
-    filename: 'my-first-webpack.bundle.js'
+    filename: "my-first-webpack.bundle.js"
   },
   module: {
-    rules: [
-      { test: /\.txt$/, use: 'raw-loader' }
-    ]
+    rules: [{ test: /\.txt$/, use: "raw-loader" }]
   }
 };
-
 ```
 
 ### 用法
@@ -177,29 +173,29 @@ const config = {
 
 - 配置(推荐) 在 `webpack.config.js` 中指定对应的 `loader`,不但可以减少代码量,而且出现问题可以快速定位
 
-```JavaScript
- module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          { loader: 'style-loader' },
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true
-            }
+```js
+module: {
+  rules: [
+    {
+      test: /\.css$/,
+      use: [
+        { loader: "style-loader" },
+        {
+          loader: "css-loader",
+          options: {
+            modules: true
           }
-        ]
-      }
-    ]
-  }
+        }
+      ]
+    }
+  ];
+}
 ```
 
 - 内联 在每个 `import` 语句中显式指定 `loader`,使用 `!` 将资源中的 `loader` 分开。分开的每个部分都相对于当前目录解析
 
-```JavaScript
-import Styles from 'style-loader!css-loader?modules!./styles.css';
+```js
+import Styles from "style-loader!css-loader?modules!./styles.css";
 ```
 
 - `CLI` 在 `shell` 命令中指定
@@ -226,19 +222,15 @@ webpack --module-bind jade-loader --module-bind 'css=style-loader!css-loader'
 
 使用一个插件只需要 `require` 这个插件,然后把 `new` 实例添加到 `plugins` 数组中.多数插件可以通过 `option` 自定义
 
-```JavaScript
-const HtmlWebpackPlugin = require('html-webpack-plugin'); // 通过 npm 安装
-const webpack = require('webpack'); // 用于访问内置插件
+```js
+const HtmlWebpackPlugin = require("html-webpack-plugin"); // 通过 npm 安装
+const webpack = require("webpack"); // 用于访问内置插件
 
 const config = {
   module: {
-    rules: [
-      { test: /\.txt$/, use: 'raw-loader' }
-    ]
+    rules: [{ test: /\.txt$/, use: "raw-loader" }]
   },
-  plugins: [
-    new HtmlWebpackPlugin({template: './src/index.html'})
-  ]
+  plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })]
 };
 ```
 
@@ -248,9 +240,9 @@ const config = {
 
 ### 模式用法
 
-```JavaScript
+```js
 module.exports = {
-  mode: 'production'
+  mode: "production"
 };
 ```
 

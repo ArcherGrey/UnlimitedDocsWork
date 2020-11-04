@@ -6,15 +6,15 @@
 
 - 词法作用域：内部函数可以访问函数外面的变量，是因为函数外面的变量保存在内部函数的词法作用域内，词法作用域的范围是由变量声明的位置决定，例：
 
-```JavaScript
-function init(){
-    var name = "Mozilla"; // name 是一个被 init 创建的局部变量
+```js
+function init() {
+  var name = "Mozilla"; // name 是一个被 init 创建的局部变量
 
-    // 在函数内部声明的函数，词法作用域就是外层函数
-    function displayName(){
-        alert(name); // 内层函数没有name变量，在外层函数中寻找，使用父函数中声明的变量
-    }
-    displayName();
+  // 在函数内部声明的函数，词法作用域就是外层函数
+  function displayName() {
+    alert(name); // 内层函数没有name变量，在外层函数中寻找，使用父函数中声明的变量
+  }
+  displayName();
 }
 init();
 ```
@@ -25,15 +25,15 @@ init();
 
 ## 例子
 
-```JavaScript
-var a = function(){
-    var x = 1;
-    var fn = function(){
-        console.log(x);
-    }
-    fn();
-    return fn;
-}
+```js
+var a = function() {
+  var x = 1;
+  var fn = function() {
+    console.log(x);
+  };
+  fn();
+  return fn;
+};
 
 var b = a();
 b();

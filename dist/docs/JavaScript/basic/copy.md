@@ -91,23 +91,39 @@ var deepCopy = function(obj) {
 - `for` 循环赋值
 - `concat`
 
-```JavaScript
-var a1=[1,2,3];
-var a2=a1.concat();
+```js
+var a1 = [1, 2, 3];
+var a2 = a1.concat();
 ```
 
 - `slice`
 
-```JavaScript
-var a1=[1,2,3];
-var a2=a1.slice(0)
+```js
+var a1 = [1, 2, 3];
+var a2 = a1.slice(0);
 ```
 
 - 扩展运算符
 
-```JavaScript
-var a1=[1,2,3];
-var [...a2]=a1
+```js
+var a1 = [1, 2, 3];
+var [...a2] = a1;
+```
+
+- `Object.assign`
+
+```js
+var a = { x: 1 };
+var b = Object.assign({}, a);
+```
+
+## 除了函数之外的深拷贝
+
+`json`:
+
+```js
+var a = { x: { x: 1 } };
+var b = JSON.parse(JSON.stringify(a));
 ```
 
 ## 性能问题

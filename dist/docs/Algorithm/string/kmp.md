@@ -54,7 +54,7 @@ abaabac
 
 ## 快速求 `next` 数组
 
-```JavaScript
+```js
 function buildNext(p) {
   // 初始化 next[0]=0
   let next = [0];
@@ -76,13 +76,11 @@ function buildNext(p) {
   }
   return next;
 }
-
-
 ```
 
 ## 完整代码
 
-```JavaScript
+```js
 function buildNext(p) {
   // 初始化 next[0]=0
   let next = [0];
@@ -129,7 +127,6 @@ function search(s, p) {
     }
   }
 }
-
 ```
 
 版本 2

@@ -15,12 +15,12 @@ ES6 新标准将 Set 集合与 Map 集合添加到 JS 中
 
 在 ES5 中，开发者们用对象属性来模拟这两种集合
 
-```JavaScript
+```js
 let set = Object.create(null);
 set.foo = true;
 // 检查属性的存在性
 if (set.foo) {
-    // 一些操作
+  // 一些操作
 }
 ```
 
@@ -28,7 +28,7 @@ if (set.foo) {
 
 模拟这两种集合对象的唯一区别是存储的值不同，以下这个示例是用对象模拟 Map 集合
 
-```JavaScript
+```js
 let map = Object.create(null);
 map.foo = "bar";
 // 提取一个值
@@ -40,7 +40,7 @@ console.log(value); // "bar"
 
 如果程序很简单，确实可以用对象来模拟 Set 集合与 Map 集合，但如果触碰到对象属性的某些限制，那么这个方法就会变得更加复杂。例如，所有对象的属性名必须是字符串类型，必须确保每个键名都是字符串类型且在对象中是唯一的
 
-```JavaScript
+```js
 let map = Object.create(null);
 map[5] = "foo";
 console.log(map["5"]); // "foo"
@@ -48,10 +48,10 @@ console.log(map["5"]); // "foo"
 
 本例中将对象的某个属性赋值为字符串"foo"，而这个属性的键名是数值型的 5，它会被自动转换成字符串，所以 map["5"]和 map[5]引用的其实是同一个属性。如果想分别用数字和字符串作为对象属性的键名，则内部的自动转换机制会导致很多问题。当然，用对象作为属性的键名也会遇到类似的问题
 
-```JavaScript
+```js
 let map = Object.create(null),
-key1 = {},
-key2 = {};
+  key1 = {},
+  key2 = {};
 map[key1] = "foo";
 console.log(map[key2]); // "foo"
 ```
@@ -62,12 +62,12 @@ console.log(map[key2]); // "foo"
 
 对于 Map 集合来说，如果它的属性值是假值，则在要求使用布尔值的情况下(例如在 if 语句中)会被自动转换成 false。强制转换本身没有问题，但如果考虑这个值的使用场景，就有可能导致错误发生
 
-```JavaScript
+```js
 let map = Object.create(null);
 map.count = 1;
 // 是想检查 "count" 属性的存在性，还是想检查非零值？
 if (map.count) {
-    // ...
+  // ...
 }
 ```
 
@@ -83,25 +83,25 @@ ES6 提供了新的数据结构 Set。它类似于数组，但是成员的值都
 
 Set 结构的实例有以下属性
 
-```JavaScript
-Set.prototype.constructor：构造函数，默认就是Set函数
-Set.prototype.size：返回Set实例的成员总数
+```js
+Set.prototype.constructor; //构造函数，默认就是Set函数
+Set.prototype.size; //返回Set实例的成员总数
 ```
 
 Set 实例的操作方法（用于操作数据）包括以下 4 个
 
-```JavaScript
-add(value)：添加某个值，返回Set结构本身
-has(value)：返回一个布尔值，表示该值是否为Set的成员
-delete(value)：删除某个值，返回一个布尔值，表示删除是否成功
-clear()：清除所有成员，没有返回值
+```js
+add(value); //添加某个值，返回Set结构本身
+has(value); //返回一个布尔值，表示该值是否为Set的成员
+delete value; //删除某个值，返回一个布尔值，表示删除是否成功
+clear(); //清除所有成员，没有返回值
 ```
 
 【创建 Set 集合、add()添加元素】
 
 调用 new Set()创建 Set 集合，调用 add()方法向集合中添加元素，访问集合的 size 属性可以获取集合中目前的元素数量
 
-```JavaScript
+```js
 let set = new Set();
 set.add(5);
 set.add("5");
@@ -110,7 +110,7 @@ console.log(set.size); // 2
 
 在 Set 集合中，不会对所存值进行强制的类型转换，数字 5 和字符串"5"可以作为两个独立元素存在
 
-```JavaScript
+```js
 const s = new Set();
 [2, 3, 5, 4, 5, 2, 2].forEach(x => s.add(x));
 for (let i of s) {
@@ -123,10 +123,10 @@ for (let i of s) {
 
 当然，如果向 Set 集合中添加多个对象，则它们之间彼此保持独立
 
-```JavaScript
+```js
 let set = new Set(),
-    key1 = {},
-key2 = {};
+  key1 = {},
+  key2 = {};
 set.add(key1);
 set.add(key2);
 console.log(set.size); // 2
@@ -136,7 +136,7 @@ console.log(set.size); // 2
 
 如果多次调用 add()方法并传入相同的值作为参数，那么后续的调用实际上会被忽略
 
-```JavaScript
+```js
 let set = new Set();
 set.add(5);
 set.add("5");
@@ -148,7 +148,7 @@ console.log(set.size); // 2
 
 可以使用数组来初始化一个 Set ，并且 Set 构造器会确保不重复地使用这些值
 
-```JavaScript
+```js
 let set = new Set([1, 2, 3, 4, 5, 5, 5, 5]);
 console.log(set.size); // 5
 ```
@@ -161,7 +161,7 @@ console.log(set.size); // 5
 
 通过 has()方法可以检测 Set 集合中是否存在某个值
 
-```JavaScript
+```js
 let set = new Set();
 set.add(5);
 set.add("5");
@@ -175,7 +175,7 @@ console.log(set.has(6)); // false
 
 调用 delete()方法可以移除 Set 集合中的某一个元素，调用 clear()方法会移除集合中的所有元素
 
-```JavaScript
+```js
 let set = new Set();
 set.add(5);
 set.add("5");
@@ -194,19 +194,19 @@ console.log(set.size); // 0
 
 Set 结构的实例有四个遍历方法，可以用于遍历成员
 
-```JavaScript
-keys()：返回键名的遍历器
-values()：返回键值的遍历器
-entries()：返回键值对的遍历器
-forEach()：使用回调函数遍历每个成员
+```js
+keys(); //返回键名的遍历器
+values(); //返回键值的遍历器
+entries(); //返回键值对的遍历器
+forEach(); //使用回调函数遍历每个成员
 ```
 
 **keys()、values()、entries()**
 
 `keys`方法、`values`方法、`entries`方法返回的都是遍历器对象。由于 Set 结构没有键名，只有键值（或者说键名和键值是同一个值），所以`keys`方法和`values`方法的行为完全一致
 
-```JavaScript
-let set = new Set(['red', 'green', 'blue']);
+```js
+let set = new Set(["red", "green", "blue"]);
 
 for (let item of set.keys()) {
   console.log(item);
@@ -234,14 +234,14 @@ for (let item of set.entries()) {
 
 Set 结构的实例默认可遍历，它的默认遍历器生成函数就是它的`values`方法
 
-```JavaScript
-Set.prototype[Symbol.iterator] === Set.prototype.values// true
+```js
+Set.prototype[Symbol.iterator] === Set.prototype.values; // true
 ```
 
 这意味着，可以省略`values`方法，直接用`for...of`循环遍历 Set
 
-```JavaScript
-let set = new Set(['red', 'green', 'blue']);
+```js
+let set = new Set(["red", "green", "blue"]);
 
 for (let x of set) {
   console.log(x);
@@ -255,9 +255,11 @@ for (let x of set) {
 
 Set 结构的实例的`forEach`方法，用于对每个成员执行某种操作，没有返回值
 
-```JavaScript
-let set = new Set(['a','b','c']);
-set.forEach((key, value, set) => { console.log(key,value,set);} )
+```js
+let set = new Set(["a", "b", "c"]);
+set.forEach((key, value, set) => {
+  console.log(key, value, set);
+});
 //a a ['a','b','c']
 //b b ['a','b','c']
 //c c ['a','b','c']
@@ -267,32 +269,32 @@ set.forEach((key, value, set) => { console.log(key,value,set);} )
 
 在 Set 集合的 forEach()方法中，第二个参数也与数组的一样，如果需要在回调函数中使用 this 引用，则可以将它作为第二个参数传入 forEach()函数
 
-```JavaScript
+```js
 let set = new Set([1, 2]);
 let processor = {
-    output(value) {
-        console.log(value);
-    },
-    process(dataSet) {
-        dataSet.forEach(function(value) {
-            this.output(value);
-        }, this);
-    }
+  output(value) {
+    console.log(value);
+  },
+  process(dataSet) {
+    dataSet.forEach(function(value) {
+      this.output(value);
+    }, this);
+  }
 };
 processor.process(set);
 ```
 
 以上示例中，processor.process()方法调用了 Set 集合的 forEach()方法并将 this 传入作为回调函数的 this 值，从而 this.output()方法可以正确调用 processor.output()方法。forEach()方法的回调函数只使用了第一个参数 value，所以直接省略了其他参数。在这里也可以使用箭头函数，这样就无须再将 this 作为第二个参数传入回调函数了
 
-```JavaScript
+```js
 let set = new Set([1, 2]);
 let processor = {
-    output(value) {
-        console.log(value);
-    },
-    process(dataSet) {
-        dataSet.forEach((value) => this.output(value));
-    }
+  output(value) {
+    console.log(value);
+  },
+  process(dataSet) {
+    dataSet.forEach(value => this.output(value));
+  }
 };
 processor.process(set);
 ```
@@ -305,9 +307,9 @@ processor.process(set);
 
 将数组转换为 Set 集合的过程很简单，只需给 Set 构造函数传入数组即可；将 Set 集合再转回数组的过程同样很简单，需要用到展开运算符(...)，它可以将数组中的元素分解为各自独立的函数参数。展开运算符也可以将诸如 Set 集合的可迭代对象转换为数组
 
-```JavaScript
+```js
 let set = new Set([1, 2, 3, 3, 3, 4, 5]),
-array = [...set];
+  array = [...set];
 console.log(array); // [1,2,3,4,5]
 ```
 
@@ -315,12 +317,12 @@ console.log(array); // [1,2,3,4,5]
 
 如果已经创建过一个数组，想要复制它并创建一个无重复元素的新数组，则上述这个方法就非常有用
 
-```JavaScript
+```js
 function eliminateDuplicates(items) {
-    return [...new Set(items)];
+  return [...new Set(items)];
 }
 let numbers = [1, 2, 3, 3, 3, 4, 5],
-noDuplicates = eliminateDuplicates(numbers);
+  noDuplicates = eliminateDuplicates(numbers);
 console.log(noDuplicates); // [1,2,3,4,5]
 ```
 
@@ -330,9 +332,9 @@ console.log(noDuplicates); // [1,2,3,4,5]
 
 将对象存储在 Set 的实例与存储在变量中完全一样，只要 Set 实例中的引用存在，垃圾回收机制就不能释放该对象的内存空间，于是之前提到的 Set 类型可以被看作是一个强引用的 Set 集合
 
-```JavaScript
+```js
 let set = new Set(),
-key = {};
+  key = {};
 set.add(key);
 console.log(set.size); // 1
 // 取消原始引用
@@ -352,9 +354,9 @@ key = [...set][0];
 
 用 Weakset 构造函数可以创建 WeakSet 集合，集合支持 3 个方法：add()、has()和 delete()
 
-```JavaScript
+```js
 let set = new WeakSet(),
-key = {};
+  key = {};
 // 将对象加入 set
 set.add(key);
 console.log(set.has(key)); // true
@@ -364,10 +366,10 @@ console.log(set.has(key)); // false
 
 WeakSet 集合的使用方式与 Set 集合类似，可以向集合中添加引用，从中移除引用，也可以检査集合中是否存在指定对象的引用。也可以调用 WeakSet 构造函数并传入一个可迭代对象来创建 WeakSet 集合
 
-```JavaScript
+```js
 let key1 = {},
-key2 = {},
-set = new WeakSet([key1, key2]);
+  key2 = {},
+  set = new WeakSet([key1, key2]);
 console.log(set.has(key1)); // true
 console.log(set.has(key2)); // true
 ```
@@ -378,9 +380,9 @@ console.log(set.has(key2)); // true
 
 WeakSet 与 Set 最大的区别是 WeakSet 中的对象都是弱引用，即垃圾回收机制不考虑 WeakSet 对该对象的引用，也就是说，如果其他对象都不再引用该对象，那么垃圾回收机制会自动回收该对象所占用的内存，不考虑该对象还存在于 WeakSet 之中
 
-```JavaScript
+```js
 let set = new WeakSet(),
-key = {};
+  key = {};
 set.add(key);
 console.log(set.has(key)); // true
 // 取消原始引用
@@ -422,7 +424,7 @@ ES6 中的 Map 类型是一种储存着许多键值对的有序列表，其中�
 
 如果要向 Map 集合中添加新的元素，可以调用 set()方法并分别传入键名和对应值作为两个参数；如果要从集合中获取信息，可以调用 get()方法
 
-```JavaScript
+```js
 let map = new Map();
 map.set("title", "Understanding ES6");
 map.set("year", 2017);
@@ -434,10 +436,10 @@ console.log(map.get("year")); // 2017
 
 在对象中，无法用对象作为对象属性的键名。但是在 Map 集合中，却可以这样做
 
-```JavaScript
+```js
 let map = new Map(),
-    key1 = {},
-    key2 = {};
+  key1 = {},
+  key2 = {};
 map.set(key1, 5);
 map.set(key2, 42);
 console.log(map.get(key1)); // 5
@@ -458,7 +460,7 @@ console.log(map.get(key2)); // 42
 
 Map 集合同样支持 size 属性，其代表当前集合中包含的键值对数量
 
-```JavaScript
+```js
 let map = new Map();
 map.set("name", "huochai");
 map.set("age", 25);
@@ -485,8 +487,11 @@ Map 集合的 size 属性与 Set 集合中的 size 属性类似，其值为集�
 
 可以向 Map 构造函数传入数组来初始化一个 Map 集合，这一点同样与 Set 集合相似。数组中的每个元素都是一个子数组，子数组中包含一个键值对的键名与值两个元素。因此，整个 Map 集合中包含的全是这样的两元素数组
 
-```JavaScript
-let map = new Map([["name", "huochai"], ["age", 25]]);
+```js
+let map = new Map([
+  ["name", "huochai"],
+  ["age", 25]
+]);
 console.log(map.has("name")); // true
 console.log(map.get("name")); // "huochai"
 console.log(map.has("age")); // true
@@ -500,27 +505,25 @@ console.log(map.size); // 2
 
 Map 的键实际上是跟内存地址绑定的，只要内存地址不一样，就视为两个键。这就解决了同名属性碰撞（clash）的问题，扩展别人的库的时候，如果使用对象作为键名，就不用担心自己的属性与原作者的属性同名
 
-```JavaScript
+```js
 const map = new Map();
 
-map.set(['a'], 555);
-map.get(['a']) // undefined
+map.set(["a"], 555);
+map.get(["a"]); // undefined
 ```
 
 上面代码的`set`和`get`方法，表面是针对同一个键，但实际上这是两个值，内存地址是不一样的，因此`get`方法无法读取该键，返回`undefined`
 
-```JavaScript
+```js
 const map = new Map();
 
-const k1 = ['a'];
-const k2 = ['a'];
+const k1 = ["a"];
+const k2 = ["a"];
 
-map
-.set(k1, 111)
-.set(k2, 222);
+map.set(k1, 111).set(k2, 222);
 
-map.get(k1) // 111
-map.get(k2) // 222
+map.get(k1); // 111
+map.get(k2); // 222
 ```
 
 上面代码中，变量`k1`和`k2`的值是一样的，但是它们在 Map 结构中被视为两个键
@@ -529,19 +532,19 @@ map.get(k2) // 222
 
 Map 结构原生提供三个遍历器生成函数和一个遍历方法
 
-```JavaScript
-keys()：返回键名的遍历器
-values()：返回键值的遍历器
-entries()：返回所有成员的遍历器
-forEach()：遍历 Map 的所有成员
+```js
+keys(); //返回键名的遍历器
+values(); //返回键值的遍历器
+entries(); //返回所有成员的遍历器
+forEach(); //遍历 Map 的所有成员
 ```
 
 注意：Map 的遍历顺序就是插入顺序
 
-```JavaScript
+```js
 const map = new Map([
-  ['F', 'no'],
-  ['T',  'yes'],
+  ["F", "no"],
+  ["T", "yes"]
 ]);
 
 for (let key of map.keys()) {
@@ -579,15 +582,15 @@ for (let [key, value] of map) {
 
 上面代码最后的那个例子，表示 Map 结构的默认遍历器接口，就是`entries`方法
 
-```JavaScript
-map[Symbol.iterator] === map.entries// true
+```js
+map[Symbol.iterator] === map.entries; // true
 ```
 
 **转为数组**
 
 Map 结构转为数组结构，比较快速的方法是使用扩展运算符（`...`）。
 
-```JavaScript
+```js
 const map = new Map([
   [1, 'one'],
   [2, 'two'],
@@ -609,20 +612,16 @@ const map = new Map([
 
 结合数组的`map`方法、`filter`方法，可以实现 Map 的遍历和过滤
 
-```JavaScript
+```js
 const map0 = new Map()
-  .set(1, 'a')
-  .set(2, 'b')
-  .set(3, 'c');
+  .set(1, "a")
+  .set(2, "b")
+  .set(3, "c");
 
-const map1 = new Map(
-  [...map0].filter(([k, v]) => k < 3)
-);
+const map1 = new Map([...map0].filter(([k, v]) => k < 3));
 // 产生 Map 结构 {1 => 'a', 2 => 'b'}
 
-const map2 = new Map(
-  [...map0].map(([k, v]) => [k * 2, '_' + v])
-    );
+const map2 = new Map([...map0].map(([k, v]) => [k * 2, "_" + v]));
 // 产生 Map 结构 {2 => '_a', 4 => '_b', 6 => '_c'}
 ```
 
@@ -630,21 +629,25 @@ const map2 = new Map(
 
 Map 还有一个`forEach`方法，与数组的`forEach`方法类似，也可以实现遍历
 
-```JavaScript
-const map = new Map([[1, 'one'],[2, 'two'],[3, 'three']]);
-map.forEach((value,key,map)=>{
-    //one 1 {1 => "one", 2 => "two", 3 => "three"}
-    //two 2 {1 => "one", 2 => "two", 3 => "three"}
-    //three 3 {1 => "one", 2 => "two", 3 => "three"}
-    console.log(value,key,map);
-})
+```js
+const map = new Map([
+  [1, "one"],
+  [2, "two"],
+  [3, "three"]
+]);
+map.forEach((value, key, map) => {
+  //one 1 {1 => "one", 2 => "two", 3 => "three"}
+  //two 2 {1 => "one", 2 => "two", 3 => "three"}
+  //three 3 {1 => "one", 2 => "two", 3 => "three"}
+  console.log(value, key, map);
+});
 ```
 
 注意：遍历过程中，Map 会按照键值对插入 Map 集合的顺序将相应信息传入 forEach()方法的回调函数；而在数组中，会按照数值型索引值的顺序依次传入回调函数
 
 `forEach`方法还可以接受第二个参数，用来绑定`this`
 
-```JavaScript
+```js
 const reporter = {
   report: function(key, value) {
     console.log("Key: %s, Value: %s", key, value);
@@ -672,9 +675,9 @@ WeakMap 集合最大的用途是保存 Web 页面中的 DOM 元素，例如，�
 
 ES6 中的 Weak Map 类型是一种存储着许多键值对的无序列表，列表的键名必须是非 null 类型的对象，键名对应的值则可以是任意类型。WeakMap 的接口与 Map 非常相似，通过 set()方法添加数据，通过 get()方法获取数据
 
-```JavaScript
+```js
 let map = new WeakMap(),
-    element = document.querySelector(".element");
+  element = document.querySelector(".element");
 map.set(element, "Original");
 let value = map.get(element);
 console.log(value); // "Original"
@@ -692,10 +695,13 @@ element = null;
 
 WeakMap 集合的初始化过程与 Map 集合类似，调用 WeakMap 构造函数并传入一个数组容器，容器内包含其他数组，每一个数组由两个元素构成：第一个元素是一个键名，传入的值必须是非 null 的对象；第二个元素是这个键对应的值(可以是任意类型)
 
-```JavaScript
+```js
 let key1 = {},
-    key2 = {},
-    map = new WeakMap([[key1, "Hello"], [key2, 42]]);
+  key2 = {},
+  map = new WeakMap([
+    [key1, "Hello"],
+    [key2, 42]
+  ]);
 console.log(map.has(key1)); // true
 console.log(map.get(key1)); // "Hello"
 console.log(map.has(key2)); // true
@@ -708,9 +714,9 @@ console.log(map.get(key2)); // 42
 
 WeakMap 集合只支持两个可以操作键值对的方法：has()方法可以检测给定的键在集合中是否存在；delete()方法可移除指定的键值对。WeakMap 集合与 WeakSet 集合一样，都不支持键名枚举，从而也不支持 clear()方法
 
-```JavaScript
+```js
 let map = new WeakMap(),
-    element = document.querySelector(".element");
+  element = document.querySelector(".element");
 map.set(element, "Original");
 console.log(map.has(element)); // true
 console.log(map.get(element)); // "Original"
@@ -727,30 +733,34 @@ console.log(map.get(element)); // undefined
 
 前面介绍过，WeakMap 应用的典型场合就是 DOM 节点作为键名
 
-```JavaScript
-let myElement = document.getElementById('logo');
+```js
+let myElement = document.getElementById("logo");
 let myWeakmap = new WeakMap();
 
-myWeakmap.set(myElement, {timesClicked: 0});
+myWeakmap.set(myElement, { timesClicked: 0 });
 
-myElement.addEventListener('click', function() {
-  let logoData = myWeakmap.get(myElement);
-  logoData.timesClicked++;
-}, false);
+myElement.addEventListener(
+  "click",
+  function() {
+    let logoData = myWeakmap.get(myElement);
+    logoData.timesClicked++;
+  },
+  false
+);
 ```
 
 上面代码中，`myElement`是一个 DOM 节点，每当发生`click`事件，就更新一下状态。我们将这个状态作为键值放在 WeakMap 里，对应的键名就是`myElement`。一旦这个 DOM 节点删除，该状态就会自动消失，不存在内存泄漏风险
 
 进一步说，注册监听事件的`listener`对象，就很合适用 WeakMap 实现
 
-```JavaScript
+```js
 const listener = new WeakMap();
 
 listener.set(element1, handler1);
 listener.set(element2, handler2);
 
-element1.addEventListener('click', listener.get(element1), false);
-element2.addEventListener('click', listener.get(element2), false);
+element1.addEventListener("click", listener.get(element1), false);
+element2.addEventListener("click", listener.get(element2), false);
 ```
 
 上面代码中，监听函数放在 WeakMap 里面。一旦 DOM 对象消失，跟它绑定的监听函数也会自动消失
@@ -759,12 +769,12 @@ element2.addEventListener('click', listener.get(element2), false);
 
 WeakMap 的另一个用处是部署私有属性
 
-```JavaScript
+```js
 function Person(name) {
-    this._name = name;
+  this._name = name;
 }
 Person.prototype.getName = function() {
-    return this._name;
+  return this._name;
 };
 ```
 
@@ -772,21 +782,21 @@ Person.prototype.getName = function() {
 
 在 ES5 中，可以通过以下这种模式创建一个对象接近真正的私有数据
 
-```JavaScript
+```js
 var Person = (function() {
-    var privateData = {},
-        privateId = 0;
-    function Person(name) {
-        Object.defineProperty(this, "_id", { value: privateId++ });
-        privateData[this._id] = {
-            name: name
-        };
-    }
-    Person.prototype.getName = function() {
-        return privateData[this._id].name;
+  var privateData = {},
+    privateId = 0;
+  function Person(name) {
+    Object.defineProperty(this, "_id", { value: privateId++ });
+    privateData[this._id] = {
+      name: name
     };
-    return Person;
-}());
+  }
+  Person.prototype.getName = function() {
+    return privateData[this._id].name;
+  };
+  return Person;
+})();
 ```
 
 在上面的示例中，变量 person 由一个立即调用函数表达式(IIFE)生成，包括两个私有变量 privateData 和 privateld。privateData 对象储存的是每一个实例的私有信息，privateld 则为每个实例生成一个独立 ID。当调用 person 构造函数时，属性\_id 的值会被加 1，这个属性不可枚举、不可配置并且不可写
@@ -795,17 +805,17 @@ var Person = (function() {
 
 这种方法最大的问题是，如果不主动管理，由于无法获知对象实例何时被销毁，因此 privateData 中的数据就永远不会消失。而使用 WeakMap 集合可以解决这个问题
 
-```JavaScript
+```js
 let Person = (function() {
-    let privateData = new WeakMap();
-    function Person(name) {
-        privateData.set(this, { name: name });
-    }
-    Person.prototype.getName = function() {
-        return privateData.get(this).name;
-    };
-    return Person;
-}());
+  let privateData = new WeakMap();
+  function Person(name) {
+    privateData.set(this, { name: name });
+  }
+  Person.prototype.getName = function() {
+    return privateData.get(this).name;
+  };
+  return Person;
+})();
 ```
 
 经过改进后的 Person 构造函数选用一个 WeakMap 集合来存放私有数据。由于 Person 对象的实例可以直接作为集合的键使用，无须单独维护一套 ID 的体系来跟踪数据。调用 Person 构造函数时，新条目会被添加到 WeakMap 集合中，条目的键是 this，值是对象包含的私有信息。在这个示例中，值是一个包含 name 属性的对象。调用 getName()函数时会将 this 传入 privateData.get()方法作为参数获取私有信息，亦即获取 value 对象并且访问 name 属性。只要对象实例被销毁，相关信息也会被销毁，从而保证了信息的私有性

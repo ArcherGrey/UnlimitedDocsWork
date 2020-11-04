@@ -7,7 +7,7 @@
 
 例子：
 
-```JavaScript
+```html
 <!-- 在双花括号中 -->
 {{ message | capitalize }}
 
@@ -19,7 +19,7 @@
 
 组件选项中定义
 
-```JavaScript
+```js
 filters: {
   capitalize: function (value) {
     if (!value) return ''
@@ -33,16 +33,16 @@ filters: {
 
 创建 `vue` 实例之前 全局定义
 
-```JavaScript
-Vue.filter('capitalize', function (value) {
-  if (!value) return ''
-  value = value.toString()
-  return value.charAt(0).toUpperCase() + value.slice(1)
-})
+```js
+Vue.filter("capitalize", function(value) {
+  if (!value) return "";
+  value = value.toString();
+  return value.charAt(0).toUpperCase() + value.slice(1);
+});
 
 new Vue({
   // ...
-})
+});
 ```
 
 ## 特殊

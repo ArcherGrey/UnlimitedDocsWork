@@ -43,7 +43,7 @@ console.log(a == b); // true
 
 为了解决上面的问题可以用代理来实现单例模式：
 
-```JavaScript
+```js
 class Singleton {
   constructor(name) {
     this.name = name;
@@ -73,7 +73,6 @@ var b = new ProxyMode("bbb");
 console.log(b.name); // bbb
 // 因为单体模式是只实例化一次，所以下面的实例是相等的
 console.log(a === b); //true
-
 ```
 
 ### 惰性单例
@@ -117,24 +116,24 @@ document.getElementById("loginBtn").onclick = function() {
 1. 策略类，封装具体的算法，并且负责具体的计算过程；
 2. 环境类，接受请求然后将其委托给某个策略类。
 
-```JavaScript
+```js
 /*策略类*/
 var levelOBJ = {
-    "A": function(money) {
-        return money * 4;
-    },
-    "B" : function(money) {
-        return money * 3;
-    },
-    "C" : function(money) {
-        return money * 2;
-    }
+  A: function(money) {
+    return money * 4;
+  },
+  B: function(money) {
+    return money * 3;
+  },
+  C: function(money) {
+    return money * 2;
+  }
 };
 /*环境类*/
-var calculateBouns =function(level,money) {
-    return levelOBJ[level](money);
+var calculateBouns = function(level, money) {
+  return levelOBJ[level](money);
 };
-console.log(calculateBouns('A',10000)); // 40000
+console.log(calculateBouns("A", 10000)); // 40000
 ```
 
 ### 应用场景-表单校验
@@ -281,29 +280,29 @@ A.send(proxy, 123);
 
 图片懒加载：先通过一个 `loading` 图占位，然后通过异步方式加载图片，等图片加载好了再把完成的图片加载到标签里。
 
-```JavaScript
+```js
 var imgFunc = (function() {
-    var imgNode = document.createElement('img');
-    document.body.appendChild(imgNode);
-    return {
-        setSrc: function(src) {
-            imgNode.src = src;
-        }
+  var imgNode = document.createElement("img");
+  document.body.appendChild(imgNode);
+  return {
+    setSrc: function(src) {
+      imgNode.src = src;
     }
+  };
 })();
 var proxyImage = (function() {
-    var img = new Image();
-    img.onload = function() {
-        imgFunc.setSrc(this.src);
+  var img = new Image();
+  img.onload = function() {
+    imgFunc.setSrc(this.src);
+  };
+  return {
+    setSrc: function(src) {
+      imgFunc.setSrc("./loading,gif");
+      img.src = src;
     }
-    return {
-        setSrc: function(src) {
-            imgFunc.setSrc('./loading,gif');
-            img.src = src;
-        }
-    }
+  };
 })();
-proxyImage.setSrc('./pic.png');
+proxyImage.setSrc("./pic.png");
 ```
 
 ### 缓存代理
@@ -537,42 +536,43 @@ c.fire2();
 
 中介者模式适用的场景：例如购物车需求，存在商品选择表单、颜色选择表单、购买数量表单等等，都会触发 change 事件，那么可以通过中介者来转\发处理这些事件，实现各个事件间的解耦，仅仅维护中介者对象即可。
 
-```JavaScript
-var goods = {   //手机库存
-    'red|32G': 3,
-    'red|64G': 1,
-    'blue|32G': 7,
-    'blue|32G': 6,
+```js
+var goods = {
+  //手机库存
+  "red|32G": 3,
+  "red|64G": 1,
+  "blue|32G": 7,
+  "blue|32G": 6
 };
 //中介者
 var mediator = (function() {
-    var colorSelect = document.getElementById('colorSelect');
-    var memorySelect = document.getElementById('memorySelect');
-    var numSelect = document.getElementById('numSelect');
-    return {
-        changed: function(obj) {
-            switch(obj){
-                case colorSelect:
-                    //TODO
-                    break;
-                case memorySelect:
-                    //TODO
-                    break;
-                case numSelect:
-                    //TODO
-                    break;
-            }
-        }
+  var colorSelect = document.getElementById("colorSelect");
+  var memorySelect = document.getElementById("memorySelect");
+  var numSelect = document.getElementById("numSelect");
+  return {
+    changed: function(obj) {
+      switch (obj) {
+        case colorSelect:
+          //TODO
+          break;
+        case memorySelect:
+          //TODO
+          break;
+        case numSelect:
+          //TODO
+          break;
+      }
     }
+  };
 })();
 colorSelect.onchange = function() {
-    mediator.changed(this);
+  mediator.changed(this);
 };
 memorySelect.onchange = function() {
-    mediator.changed(this);
+  mediator.changed(this);
 };
 numSelect.onchange = function() {
-    mediator.changed(this);
+  mediator.changed(this);
 };
 ```
 
@@ -584,32 +584,33 @@ numSelect.onchange = function() {
 
 例：用 AOP 装饰函数实现装饰者模式
 
-```JavaScript
+```js
 Function.prototype.before = function(beforefn) {
-    var self = this;    //保存原函数引用
-    return function(){  //返回包含了原函数和新函数的 '代理函数'
-        beforefn.apply(this, arguments);    //执行新函数，修正this
-        return self.apply(this,arguments);  //执行原函数
-    }
-}
+  var self = this; //保存原函数引用
+  return function() {
+    //返回包含了原函数和新函数的 '代理函数'
+    beforefn.apply(this, arguments); //执行新函数，修正this
+    return self.apply(this, arguments); //执行原函数
+  };
+};
 Function.prototype.after = function(afterfn) {
-    var self = this;
-    return function(){
-        var ret = self.apply(this,arguments);
-        afterfn.apply(this, arguments);
-        return ret;
-    }
-}
+  var self = this;
+  return function() {
+    var ret = self.apply(this, arguments);
+    afterfn.apply(this, arguments);
+    return ret;
+  };
+};
 var func = function() {
-    console.log('2');
-}
+  console.log("2");
+};
 //func1和func3为挂载函数
 var func1 = function() {
-    console.log('1');
-}
+  console.log("1");
+};
 var func3 = function() {
-    console.log('3');
-}
+  console.log("3");
+};
 func = func.before(func1).after(func3);
 func();
 ```

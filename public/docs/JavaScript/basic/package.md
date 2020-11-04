@@ -15,7 +15,7 @@
 
 基本数据类型可以通过字面量的形式创建：
 
-```JavaScript
+```js
 var num = 1;
 var str = "hello";
 var bool = true;
@@ -23,7 +23,7 @@ var bool = true;
 
 也可以采用对应包装对象的形式创建：
 
-```JavaScript
+```js
 var num = new Number(1);
 var str = new String("hello");
 var bool = new Boolean(true);
@@ -33,7 +33,7 @@ var bool = new Boolean(true);
 
 包装对象的原理在于每次基本类型字面量在调用包装对象实例的方法时，首先创建对于包装对象的实例，然后在实例上调用该方法，最后销毁该实例：
 
-```JavaScript
+```js
 var str = "hello";
 str.split(" ");
 //等价于
@@ -48,9 +48,9 @@ str = null;
 
 `Object` 是一切对象的构造函数，包装对象的实例也是由 `Object` 来构造的：
 
-```JavaScript
+```js
 var num = new Object(1); // 等价于 new Number(1)
-var str = new Object('hello'); // 等价于 new String('hello')
+var str = new Object("hello"); // 等价于 new String('hello')
 var bool = new Object(true); // 等价于 new Boolean(true)
 ```
 

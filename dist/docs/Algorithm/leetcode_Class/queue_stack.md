@@ -70,16 +70,16 @@ int main() {
 
 循环队列实现：
 
-```JavaScript
+```js
 /**
  * 初始化循环队列. 参数 length 是队列长度.
  * @param {number} length
  */
 var MyCircularQueue = function(length) {
-    this.queue = new Array(length);
-    this.head=-1;
-    this.tail=-1;
-    this.length=length;
+  this.queue = new Array(length);
+  this.head = -1;
+  this.tail = -1;
+  this.length = length;
 };
 
 /**
@@ -88,18 +88,18 @@ var MyCircularQueue = function(length) {
  * @return {boolean}
  */
 MyCircularQueue.prototype.enQueue = function(value) {
-    // 队满操作失败
-    if(this.isFull()){
-        return false;
-    }
-    // 空队列，头指针指向 0
-    if(this.isEmpty()){
-        this.head=0;
-    }
-    // 其余情况,尾指针向后移动
-    this.tail = (this.tail+1)%this.length;
-    this.queue[this.tail] = value;
-    return true;
+  // 队满操作失败
+  if (this.isFull()) {
+    return false;
+  }
+  // 空队列，头指针指向 0
+  if (this.isEmpty()) {
+    this.head = 0;
+  }
+  // 其余情况,尾指针向后移动
+  this.tail = (this.tail + 1) % this.length;
+  this.queue[this.tail] = value;
+  return true;
 };
 
 /**
@@ -107,18 +107,17 @@ MyCircularQueue.prototype.enQueue = function(value) {
  * @return {boolean}
  */
 MyCircularQueue.prototype.deQueue = function() {
-    // 队空操作失败
-    if(this.isEmpty())
-        return false;
-    // 队列只有一个元素，重置头尾指针
-    if(this.head===this.tail){
-        this.head=-1;
-        this.tail=-1;
-        return true;
-    }
-    // 其他情况头指针向后移动
-    this.head = (this.head+1)%this.length;
+  // 队空操作失败
+  if (this.isEmpty()) return false;
+  // 队列只有一个元素，重置头尾指针
+  if (this.head === this.tail) {
+    this.head = -1;
+    this.tail = -1;
     return true;
+  }
+  // 其他情况头指针向后移动
+  this.head = (this.head + 1) % this.length;
+  return true;
 };
 
 /**
@@ -126,7 +125,7 @@ MyCircularQueue.prototype.deQueue = function() {
  * @return {number}
  */
 MyCircularQueue.prototype.Front = function() {
-    return this.isEmpty()?-1:this.queue[this.head];
+  return this.isEmpty() ? -1 : this.queue[this.head];
 };
 
 /**
@@ -134,7 +133,7 @@ MyCircularQueue.prototype.Front = function() {
  * @return {number}
  */
 MyCircularQueue.prototype.Rear = function() {
-    return this.isEmpty()?-1:this.queue[this.tail];
+  return this.isEmpty() ? -1 : this.queue[this.tail];
 };
 
 /**
@@ -142,7 +141,7 @@ MyCircularQueue.prototype.Rear = function() {
  * @return {boolean}
  */
 MyCircularQueue.prototype.isEmpty = function() {
-    return this.head === -1;
+  return this.head === -1;
 };
 
 /**
@@ -150,7 +149,7 @@ MyCircularQueue.prototype.isEmpty = function() {
  * @return {boolean}
  */
 MyCircularQueue.prototype.isFull = function() {
-  return (this.tail+1)%this.length===this.head;
+  return (this.tail + 1) % this.length === this.head;
 };
 
 /**
@@ -173,28 +172,29 @@ MyCircularQueue.prototype.isFull = function() {
 
 模板 ：
 
-```JavaScript
+```js
 // 返回根节点和目标节点之间的最短路径长度
-function BFS(root,targer){
-    let queue=[]; // 存储等待处理的节点
-    let step=0; // 记录根节点到当前节点的步数
-    queue.push(root); // 初始状态根节点入队
-    while(queue.length===0){ // 队列不空就不断遍历
-        step++;
-        let size = queue.length;
-        for(var i=0;i<size;++i){
-            let cur = queue.shift(); // 需要处理的节点出队
-            if(cur == target){ // 如果当前节点就是目标节点就返回
-                return step;
-            }
-            // 如果不是就把当前节点的邻节点入队
-            for(var i=0;i<cur.children;++i){
-                queue.push(cur.children[i]);
-            }
-        }
+function BFS(root, targer) {
+  let queue = []; // 存储等待处理的节点
+  let step = 0; // 记录根节点到当前节点的步数
+  queue.push(root); // 初始状态根节点入队
+  while (queue.length === 0) {
+    // 队列不空就不断遍历
+    step++;
+    let size = queue.length;
+    for (var i = 0; i < size; ++i) {
+      let cur = queue.shift(); // 需要处理的节点出队
+      if (cur == target) {
+        // 如果当前节点就是目标节点就返回
+        return step;
+      }
+      // 如果不是就把当前节点的邻节点入队
+      for (var i = 0; i < cur.children; ++i) {
+        queue.push(cur.children[i]);
+      }
     }
-    return -1; // 没有找到目标节点就返回 -1
-
+  }
+  return -1; // 没有找到目标节点就返回 -1
 }
 ```
 
@@ -223,7 +223,7 @@ function BFS(root,targer){
 
 模板：
 
-```JavaScript
+```js
 /**
  * @description: 递归 DFS 伪代码 隐式栈
  * @param cur 当前节点
@@ -267,8 +267,6 @@ function DFS(root, target) {
   }
   return false;
 }
-
-
 ```
 
 参考题目：

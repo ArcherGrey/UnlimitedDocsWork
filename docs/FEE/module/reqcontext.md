@@ -22,39 +22,43 @@ index.js
 
 常规方法安装：
 
-```JavaScript
+```js
 // index.js
-import CustomDialog from "./custom-dialog.vue"
-import CustomGrid from "./custom-grid.vue"
-import CustomInput from "./custom-input.vue"
-import CustomSelect from "./custom-select.vue"
+import CustomDialog from "./custom-dialog.vue";
+import CustomGrid from "./custom-grid.vue";
+import CustomInput from "./custom-input.vue";
+import CustomSelect from "./custom-select.vue";
 
 const components = {
   CustomDialog,
   CustomGrid,
   CustomInput,
   CustomSelect
-}
+};
 
 components.forEach(component => {
-  Vue.component(component.name,component);
-})
+  Vue.component(component.name, component);
+});
 ```
 
 使用 `require.context`:
 
-```JavaScript
+```js
 /**
  * @description: 自动导入指定目录下所有组件
  * @param {string} dir 要导入的目录
  * @param {string} useSubDir 是否包括子目录
  * @param {string} regExp 匹配组件文件的正则表达式
  */
- const context = require.context(dir = './', useSubDir = false, regExp = /\w+\.vue$/);
+const context = require.context(
+  (dir = "./"),
+  (useSubDir = false),
+  (regExp = /\w+\.vue$/)
+);
 
- context.keys().forEach(key => {
-   // context(key) 可以获取对应的文件，default 表示 export default 导出的内容
-   component = context(key).default;
-   Vue.component(component.name, component)
- })
+context.keys().forEach(key => {
+  // context(key) 可以获取对应的文件，default 表示 export default 导出的内容
+  component = context(key).default;
+  Vue.component(component.name, component);
+});
 ```

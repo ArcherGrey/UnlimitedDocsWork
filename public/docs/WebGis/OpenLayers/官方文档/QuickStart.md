@@ -78,19 +78,19 @@
 
 ## 使用 JavaScript 创建一个简单的地图
 
-```JavaScript
-  var map = new ol.Map({
-    target: 'map',
-    layers: [
-      new ol.layer.Tile({
-        source: new ol.source.OSM()
-      })
-    ],
-    view: new ol.View({
-      center: ol.proj.fromLonLat([37.41, 8.82]),
-      zoom: 4
+```js
+var map = new ol.Map({
+  target: "map",
+  layers: [
+    new ol.layer.Tile({
+      source: new ol.source.OSM()
     })
-  });
+  ],
+  view: new ol.View({
+    center: ol.proj.fromLonLat([37.41, 8.82]),
+    zoom: 4
+  })
+});
 ```
 
 通过 JavaScript 代码，一个带有 OSM layer 并且定位在非洲东海岸的地图对象就生成了。
@@ -99,35 +99,35 @@
 
 1. 创建 map 对象：
 
-```JavaScript
+```js
  var map = new ol.Map({ ... });
 ```
 
 2. 通过设置 target 属性，把对象和 `<div>` 关联，值是 `<div>` 的 `id`：
 
-```JavaScript
-target: 'map'
+```js
+target: "map";
 ```
 
 3. `layers:[...]` 数组用来定义 map 对象上可用的 `layers` 列表：
 
-```JavaScript
-  layers: [
-      new ol.layer.Tile({
-        source: new ol.source.OSM()
-      })
-    ]
+```js
+layers: [
+  new ol.layer.Tile({
+    source: new ol.source.OSM()
+  })
+];
 ```
 
 layers 定义的类型确定包含哪种资源（image,tile 或者 vector）。
 
 map 对象的另一个部分就是 `View` 。简单的通过定位中间点和缩放级别来设置：
 
-```JavaScript
- view: new ol.View({
-      center: ol.proj.fromLonLat([37.41, 8.82]),
-      zoom: 4
-    })
+```js
+view: new ol.View({
+  center: ol.proj.fromLonLat([37.41, 8.82]),
+  zoom: 4
+});
 ```
 
 中间点通过经纬度来设置

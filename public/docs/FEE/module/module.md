@@ -94,17 +94,17 @@ SeaJs 是 CMD 规范的实现:
 
 一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个变量，就必须使用 `export` 关键字输出该变量。下面使用 `export` 命令输出变量:
 
-```JavaScript
-export var firstName = 'Michael';
-export var lastName = 'Jackson';
+```js
+export var firstName = "Michael";
+export var lastName = "Jackson";
 export var year = 1958;
 ```
 
 除了像上面这样，还有另外一种:
 
-```JavaScript
-var firstName = 'Michael';
-var lastName = 'Jackson';
+```js
+var firstName = "Michael";
+var lastName = "Jackson";
 var year = 1958;
 
 export { firstName, lastName, year };
@@ -114,15 +114,15 @@ export { firstName, lastName, year };
 
 除了输出变量，还可以输出函数或类（`class`）:
 
-```JavaScript
+```js
 export function multiply(x, y) {
   return x * y;
-};
+}
 ```
 
 通常情况下，`export` 输出的变量就是本来的名字，但是可以使用 `as` 关键字重命名:
 
-```JavaScript
+```js
 function v1() { ... }
 function v2() { ... }
 
@@ -135,7 +135,7 @@ export {
 
 需要特别注意的是，`export` 命令规定的是对外的接口，必须与模块内部的变量建立一一对应关系:
 
-```JavaScript
+```js
 // 报错
 export 1;
 
@@ -158,7 +158,7 @@ export {n as m};
 
 同样的，`function` 和 `class` 的输出，也必须遵守这样的写法:
 
-```JavaScript
+```js
 // 报错
 function f() {}
 export f;
@@ -177,12 +177,12 @@ export {f};
 
 使用 `export` 命令定义了模块的对外接口以后，其他文件就可以通过 `import` 命令加载这个模块:
 
-```JavaScript
+```js
 // main.js
-import { firstName, lastName, year } from './profile.js';
+import { firstName, lastName, year } from "./profile.js";
 
 function setName(element) {
-  element.textContent = firstName + ' ' + lastName;
+  element.textContent = firstName + " " + lastName;
 }
 ```
 
@@ -190,24 +190,24 @@ function setName(element) {
 
 如果想为输入的变量重新取一个名字，要使用 as 关键字，将输入的变量重命名:
 
-```JavaScript
-import { lastName as surname } from './profile.js';
+```js
+import { lastName as surname } from "./profile.js";
 ```
 
 `import` 命令输入的变量都是只读的，因为它的本质是输入接口。也就是说，不允许在加载模块的脚本里面，改写接口:
 
-```JavaScript
-import {a} from './xxx.js'
+```js
+import { a } from "./xxx.js";
 
 a = {}; // Syntax Error : 'a' is read-only;
 ```
 
 如果 `a` 是一个对象，改写 `a` 的属性是允许的:
 
-```JavaScript
-import {a} from './xxx.js'
+```js
+import { a } from "./xxx.js";
 
-a.foo = 'hello'; // 合法操作
+a.foo = "hello"; // 合法操作
 ```
 
 属性可以成功改写，并且其他模块也可以读到改写后的值。不过，这种写法很难查错，建议凡是输入的变量，都当作完全只读，不要轻易改变它的属性。
@@ -218,7 +218,7 @@ a.foo = 'hello'; // 合法操作
 
 由于 `import` 是静态执行，所以不能使用表达式和变量，这些只有在运行时才能得到结果的语法结构:
 
-```JavaScript
+```js
 // 报错
 import { 'f' + 'oo' } from 'my_module';
 
@@ -236,7 +236,7 @@ if (x === 1) {
 
 除了指定加载某个输出值，还可以使用整体加载，即用星号（`*`）指定一个对象，所有输出值都加载在这个对象上面:
 
-```JavaScript
+```js
 // circle.js
 
 export function area(radius) {
@@ -248,16 +248,16 @@ export function circumference(radius) {
 }
 
 // 整体加载
-import * as circle from './circle';
+import * as circle from "./circle";
 
-console.log('圆面积：' + circle.area(4));
-console.log('圆周长：' + circle.circumference(14));
+console.log("圆面积：" + circle.area(4));
+console.log("圆周长：" + circle.circumference(14));
 
 // 不允许运行时改变
 
 // 下面两行都是不允许的
-circle.foo = 'hello';
-circle.area = function () {};
+circle.foo = "hello";
+circle.area = function() {};
 ```
 
 ### export default
@@ -266,21 +266,21 @@ circle.area = function () {};
 
 了给用户提供方便，让他们不用阅读文档就能加载模块，就要用到 `export default` 命令，为模块指定默认输出:
 
-```JavaScript
+```js
 // export-default.js
-export default function () {
-  console.log('foo');
+export default function() {
+  console.log("foo");
 }
 
 // 其他模块加载该模块时，import命令可以为该匿名函数指定任意名字。
 
 // import-default.js
-import customName from './export-default';
+import customName from "./export-default";
 customName(); // 'foo'
 
 // export default命令用在非匿名函数前，也是可以的
 function foo() {
-  console.log('foo');
+  console.log("foo");
 }
 // foo函数的函数名foo，在模块外部是无效的。加载的时候，视同匿名函数加载
 export default foo;
@@ -290,7 +290,7 @@ export default foo;
 
 也可以用来输出类:
 
-```JavaScript
+```js
 // MyClass.js
 export default class { ... }
 
@@ -303,10 +303,10 @@ let o = new MyClass();
 
 如果在一个模块之中，先输入后输出同一个模块，`import` 语句可以与 `export` 语句写在一起:
 
-```JavaScript
-export { foo, bar } from 'my_module';
+```js
+export { foo, bar } from "my_module";
 
 // 可以简单理解为
-import { foo, bar } from 'my_module';
+import { foo, bar } from "my_module";
 export { foo, bar };
 ```

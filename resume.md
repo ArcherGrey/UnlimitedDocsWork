@@ -117,14 +117,13 @@ visual system
 - `callback` 是自定义的一个回调方法。该函数会在 `pluginArr` 数组中的 `js` 插件都加载完毕后执行。
   例子:
 
-  ```JavaScript
-
-  loadSelfPlugin(["http:cdn.jquery.js"],function() {
-  // 此时 jquery 已经加载完成，$(".hello") 有效
-     $(".hello").innerHTML = "world"
-  })
+  ```js
+  loadSelfPlugin(["http:cdn.jquery.js"], function() {
+    // 此时 jquery 已经加载完成，$(".hello") 有效
+    $(".hello").innerHTML = "world";
+  });
   // 此时正在加载外部以来，$(".hello") 报错
-  $(".hello").innerHTML = "world"
+  $(".hello").innerHTML = "world";
   ```
 
 6. 重新渲染 `html` 模版
@@ -139,15 +138,20 @@ visual system
 2. 请求数据接口获取数据并转换成定义好的 `schema` 格式；
 3. 调用 `reload` 方法，重新渲染页面
 
-```JavaScript
-loadSelfPlugin(['https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js'],() => {
-    axios.get("http://119.3.153.232:10070/FalconService/v001/rest/meta/all").then(res => {
-        let data ={
-            test: JSON.stringify(res.data, null, 2)
-        }
-        reload(data)
-    })
-})
+```js
+loadSelfPlugin(
+  ["https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"],
+  () => {
+    axios
+      .get("http://119.3.153.232:10070/FalconService/v001/rest/meta/all")
+      .then(res => {
+        let data = {
+          test: JSON.stringify(res.data, null, 2)
+        };
+        reload(data);
+      });
+  }
+);
 ```
 
 **具体技术**

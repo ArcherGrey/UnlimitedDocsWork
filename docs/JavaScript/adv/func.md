@@ -13,7 +13,7 @@
 
 只传给函数一部分参数来调用，返回一个函数来处理剩余的参数
 
-```JavaScript
+```js
 var add = function(x) {
   return function(y) {
     return x + y;
@@ -34,8 +34,8 @@ addTen(2);
 
 例：
 
-```JavaScript
-var compose = function(f,g) {
+```js
+var compose = function(f, g) {
   return function(x) {
     return f(g(x));
   };
@@ -48,14 +48,14 @@ var compose = function(f,g) {
 
 `pointfree` 模式指的是函数无须提及将要操作的数据是什么样的。一等公民的函数、柯里化（`curry`）以及组合协作起来非常有助于实现这种模式:
 
-```JavaScript
+```js
 // 非 pointfree，因为提到了数据：word
-var snakeCase = function (word) {
-  return word.toLowerCase().replace(/\s+/ig, '_');
+var snakeCase = function(word) {
+  return word.toLowerCase().replace(/\s+/gi, "_");
 };
 
 // pointfree
-var snakeCase = compose(replace(/\s+/ig, '_'), toLowerCase);
+var snakeCase = compose(replace(/\s+/gi, "_"), toLowerCase);
 ```
 
 `pointfree` 模式能够帮助我们减少不必要的命名，让代码保持简洁和通用。
@@ -66,19 +66,30 @@ var snakeCase = compose(replace(/\s+/ig, '_'), toLowerCase);
 
 可以通过加入 `trace` 函数来追踪代码执行情况
 
-```JavaScript
-var trace = curry(function(tag, x){
+```js
+var trace = curry(function(tag, x) {
   console.log(tag, x);
   return x;
 });
 
-var dasherize = compose(join('-'), toLower, split(' '), replace(/\s{2,}/ig, ' '));
+var dasherize = compose(
+  join("-"),
+  toLower,
+  split(" "),
+  replace(/\s{2,}/gi, " ")
+);
 
-dasherize('The world is a vampire');
+dasherize("The world is a vampire");
 // TypeError: Cannot read property 'apply' of undefined
 
 // 加入 trace
-var dasherize = compose(join('-'), toLower, trace("after split"), split(' '), replace(/\s{2,}/ig, ' '));
+var dasherize = compose(
+  join("-"),
+  toLower,
+  trace("after split"),
+  split(" "),
+  replace(/\s{2,}/gi, " ")
+);
 // after split [ 'The', 'world', 'is', 'a', 'vampire' ]
 ```
 
@@ -92,16 +103,17 @@ var dasherize = compose(join('-'), toLower, trace("after split"), split(' '), re
 
 例子：
 
-```JavaScript
+```js
 // 命令式
 var makes = [];
 for (i = 0; i < cars.length; i++) {
   makes.push(cars[i].make);
 }
 
-
 // 声明式
-var makes = cars.map(function(car){ return car.make; });
+var makes = cars.map(function(car) {
+  return car.make;
+});
 ```
 
 命令式编程需要先实例化数组，然后按照命令一步步执行
@@ -110,24 +122,24 @@ var makes = cars.map(function(car){ return car.make; });
 
 ## 类型签名
 
-```JavaScript
+```js
 //  strLength :: String -> Number
-var strLength = function(s){
+var strLength = function(s) {
   return s.length;
-}
+};
 
 //  join :: String -> [String] -> String
-var join = curry(function(what, xs){
+var join = curry(function(what, xs) {
   return xs.join(what);
 });
 
 //  match :: Regex -> String -> [String]
-var match = curry(function(reg, s){
+var match = curry(function(reg, s) {
   return s.match(reg);
 });
 
 //  replace :: Regex -> String -> String -> String
-var replace = curry(function(reg, sub, s){
+var replace = curry(function(reg, sub, s) {
   return s.replace(reg, sub);
 });
 ```

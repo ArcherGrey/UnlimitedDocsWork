@@ -11,7 +11,7 @@
 
 ### 先序遍历
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -40,12 +40,11 @@ function preOrder(root) {
     if (node.left) s.push(node.left); // 左节点进栈
   }
 }
-
 ```
 
 ### 中序遍历
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -85,7 +84,7 @@ function inOrder(root) {
 
 ### 后序遍历
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -124,14 +123,13 @@ function postOrder(root) {
     }
   }
 }
-
 ```
 
 ## 广度优先遍历
 
 ### 层次遍历
 
-```JavaScript
+```js
 /**
  * Definition for a binary tree node.
  * function TreeNode(val) {
@@ -173,7 +171,4 @@ var levelOrder = function(root) {
   }
   return res;
 };
-
-
-
 ```

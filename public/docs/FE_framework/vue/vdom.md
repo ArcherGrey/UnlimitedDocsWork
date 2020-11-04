@@ -4,18 +4,20 @@
 
 相对于 `DOM` 对象，原生的 `JavaScript` 对象处理起来更快更简单，`DOM` 树上的结构、属性信息都可以很容易的用 `JavaScript` 对象表示出来：
 
-```JavaScript
+```js
 var element = {
-  tagName: 'ul', // 节点标签名
-  props: { // DOM的属性，用一个对象存储键值对
-    id: 'list'
+  tagName: "ul", // 节点标签名
+  props: {
+    // DOM的属性，用一个对象存储键值对
+    id: "list"
   },
-  children: [ // 该节点的子节点
-    {tagName: 'li', props: {class: 'item'}, children: ["Item 1"]},
-    {tagName: 'li', props: {class: 'item'}, children: ["Item 2"]},
-    {tagName: 'li', props: {class: 'item'}, children: ["Item 3"]},
+  children: [
+    // 该节点的子节点
+    { tagName: "li", props: { class: "item" }, children: ["Item 1"] },
+    { tagName: "li", props: { class: "item" }, children: ["Item 2"] },
+    { tagName: "li", props: { class: "item" }, children: ["Item 3"] }
   ]
-}
+};
 ```
 
 上面对应的 HTML 写法是：
@@ -46,60 +48,62 @@ var element = {
 
 `element.js` 记录节点类型、属性、子节点
 
-```JavaScript
-function Element (tagName, props, children) {
-  this.tagName = tagName // 节点类型
-  this.props = props // 属性
-  this.children = children // 子节点
+```js
+function Element(tagName, props, children) {
+  this.tagName = tagName; // 节点类型
+  this.props = props; // 属性
+  this.children = children; // 子节点
 }
 
-module.exports = function (tagName, props, children) {
-  return new Element(tagName, props, children)
-}
+module.exports = function(tagName, props, children) {
+  return new Element(tagName, props, children);
+};
 ```
 
 建立一个列表结构可以简单表示：
 
-```JavaScript
-var el = require('./element')
+```js
+var el = require("./element");
 
-var ul = el('ul', {id: 'list'}, [
-  el('li', {class: 'item'}, ['Item 1']),
-  el('li', {class: 'item'}, ['Item 2']),
-  el('li', {class: 'item'}, ['Item 3'])
-])
+var ul = el("ul", { id: "list" }, [
+  el("li", { class: "item" }, ["Item 1"]),
+  el("li", { class: "item" }, ["Item 2"]),
+  el("li", { class: "item" }, ["Item 3"])
+]);
 ```
 
 还需要渲染函数来把结构渲染到页面上：
 
-```JavaScript
-Element.prototype.render = function () {
-  var el = document.createElement(this.tagName) // 根据tagName构建
-  var props = this.props
+```js
+Element.prototype.render = function() {
+  var el = document.createElement(this.tagName); // 根据tagName构建
+  var props = this.props;
 
-  for (var propName in props) { // 设置节点的DOM属性
-    var propValue = props[propName]
-    el.setAttribute(propName, propValue)
+  for (var propName in props) {
+    // 设置节点的DOM属性
+    var propValue = props[propName];
+    el.setAttribute(propName, propValue);
   }
 
-  var children = this.children || []
+  var children = this.children || [];
 
-  children.forEach(function (child) {
-    var childEl = (child instanceof Element)
-      ? child.render() // 如果子节点也是虚拟DOM，递归构建DOM节点
-      : document.createTextNode(child) // 如果字符串，只构建文本节点
-    el.appendChild(childEl)
-  })
+  children.forEach(function(child) {
+    var childEl =
+      child instanceof Element
+        ? child.render() // 如果子节点也是虚拟DOM，递归构建DOM节点
+        : document.createTextNode(child); // 如果字符串，只构建文本节点
+    el.appendChild(childEl);
+  });
 
-  return el
-}
+  return el;
+};
 ```
 
 `render` 方法会根据 `tagName` 构建一个真正的 `DOM` 节点，最后只需要加入到文档中：
 
-```JavaScript
-var ulRoot = ul.render()
-document.body.appendChild(ulRoot)
+```js
+var ulRoot = ul.render();
+document.body.appendChild(ulRoot);
 ```
 
 这样页面上就有了真正的 `<ul>` 的 `DOM` 结构
@@ -114,7 +118,7 @@ document.body.appendChild(ulRoot)
 
 深度优先遍历，记录差异：
 
-```JavaScript
+```js
 // diff 函数，对比两棵树
 function diff (oldTree, newTree) {
   var index = 0 // 当前节点的标志
@@ -155,50 +159,57 @@ function diffChildren (oldChildren, newChildren, index, patches) {
 
 对应几种差异可以定义相应的差异类型：
 
-```JavaScript
-var REPLACE = 0
-var REORDER = 1
-var PROPS = 2
-var TEXT = 3
+```js
+var REPLACE = 0;
+var REORDER = 1;
+var PROPS = 2;
+var TEXT = 3;
 ```
 
 替换节点，直接判断节点类型，记录需要替换的节点就可以：
 
-```JavaScript
-patches[0] = [{
-  type: REPALCE,
-  node: newNode // el('section', props, children)
-}]
+```js
+patches[0] = [
+  {
+    type: REPALCE,
+    node: newNode // el('section', props, children)
+  }
+];
 ```
 
 如果是修改属性：
 
-```JavaScript
-patches[0] = [{
-  type: REPALCE,
-  node: newNode // el('section', props, children)
-}, {
-  type: PROPS,
-  props: {
-    id: "container"
+```js
+patches[0] = [
+  {
+    type: REPALCE,
+    node: newNode // el('section', props, children)
+  },
+  {
+    type: PROPS,
+    props: {
+      id: "container"
+    }
   }
-}]
+];
 ```
 
 如果是修改文本内容：
 
-```JavaScript
-patches[2] = [{
-  type: TEXT,
-  content: "Virtual DOM2"
-}]
+```js
+patches[2] = [
+  {
+    type: TEXT,
+    content: "Virtual DOM2"
+  }
+];
 ```
 
 如果是子节点重新排序，按照同层级对比，会全部替换，这样开销就很大，实际上可以通过移动节点实现，这里就涉及到列表对比算法。
 
 获取到某个父节点的子节点的操作，就可以记录下来：
 
-```JavaScript
+```js
 patches[0] = [{
   type: REORDER,
   moves: [{remove or insert}, {remove or insert}, ...]
@@ -213,52 +224,51 @@ patches[0] = [{
 
 因为步骤一所构建的 `JavaScript` 对象树和 `render` 出来真正的 `DOM` 树的信息、结构是一样的。所以我们可以对那棵 `DOM` 树也进行深度优先的遍历，遍历的时候从步骤二生成的 `patches` 对象中找出当前遍历的节点差异，然后进行 `DOM` 操作
 
-```JavaScript
-function patch (node, patches) {
-  var walker = {index: 0}
-  dfsWalk(node, walker, patches)
+```js
+function patch(node, patches) {
+  var walker = { index: 0 };
+  dfsWalk(node, walker, patches);
 }
 
-function dfsWalk (node, walker, patches) {
-  var currentPatches = patches[walker.index] // 从patches拿出当前节点的差异
+function dfsWalk(node, walker, patches) {
+  var currentPatches = patches[walker.index]; // 从patches拿出当前节点的差异
 
-  var len = node.childNodes
-    ? node.childNodes.length
-    : 0
-  for (var i = 0; i < len; i++) { // 深度遍历子节点
-    var child = node.childNodes[i]
-    walker.index++
-    dfsWalk(child, walker, patches)
+  var len = node.childNodes ? node.childNodes.length : 0;
+  for (var i = 0; i < len; i++) {
+    // 深度遍历子节点
+    var child = node.childNodes[i];
+    walker.index++;
+    dfsWalk(child, walker, patches);
   }
 
   if (currentPatches) {
-    applyPatches(node, currentPatches) // 对当前节点进行DOM操作
+    applyPatches(node, currentPatches); // 对当前节点进行DOM操作
   }
 }
 ```
 
 `applyPatches` ，根据不同类型的差异对当前节点进行 `DOM` 操作：
 
-```JavaScript
-function applyPatches (node, currentPatches) {
-  currentPatches.forEach(function (currentPatch) {
+```js
+function applyPatches(node, currentPatches) {
+  currentPatches.forEach(function(currentPatch) {
     switch (currentPatch.type) {
       case REPLACE:
-        node.parentNode.replaceChild(currentPatch.node.render(), node)
-        break
+        node.parentNode.replaceChild(currentPatch.node.render(), node);
+        break;
       case REORDER:
-        reorderChildren(node, currentPatch.moves)
-        break
+        reorderChildren(node, currentPatch.moves);
+        break;
       case PROPS:
-        setProps(node, currentPatch.props)
-        break
+        setProps(node, currentPatch.props);
+        break;
       case TEXT:
-        node.textContent = currentPatch.content
-        break
+        node.textContent = currentPatch.content;
+        break;
       default:
-        throw new Error('Unknown patch type ' + currentPatch.type)
+        throw new Error("Unknown patch type " + currentPatch.type);
     }
-  })
+  });
 }
 ```
 
@@ -268,30 +278,30 @@ function applyPatches (node, currentPatches) {
 
 `Virtual DOM` 算法主要是实现上面步骤的三个函数：`element，diff，patch`。然后就可以实际的进行使用：
 
-```JavaScript
+```js
 // 1. 构建虚拟DOM
-var tree = el('div', {'id': 'container'}, [
-    el('h1', {style: 'color: blue'}, ['simple virtal dom']),
-    el('p', ['Hello, virtual-dom']),
-    el('ul', [el('li')])
-])
+var tree = el("div", { id: "container" }, [
+  el("h1", { style: "color: blue" }, ["simple virtal dom"]),
+  el("p", ["Hello, virtual-dom"]),
+  el("ul", [el("li")])
+]);
 
 // 2. 通过虚拟DOM构建真正的DOM
-var root = tree.render()
-document.body.appendChild(root)
+var root = tree.render();
+document.body.appendChild(root);
 
 // 3. 生成新的虚拟DOM
-var newTree = el('div', {'id': 'container'}, [
-    el('h1', {style: 'color: red'}, ['simple virtal dom']),
-    el('p', ['Hello, virtual-dom']),
-    el('ul', [el('li'), el('li')])
-])
+var newTree = el("div", { id: "container" }, [
+  el("h1", { style: "color: red" }, ["simple virtal dom"]),
+  el("p", ["Hello, virtual-dom"]),
+  el("ul", [el("li"), el("li")])
+]);
 
 // 4. 比较两棵虚拟DOM树的不同
-var patches = diff(tree, newTree)
+var patches = diff(tree, newTree);
 
 // 5. 在真正的DOM元素上应用变更
-patch(root, patches)
+patch(root, patches);
 ```
 
 实际中还需要处理事件监听等；生成虚拟 `DOM` 的时候也可以加入 `JSX` 语法。这些事情都做了的话，就可以构造一个简单的 `ReactJS` 了。

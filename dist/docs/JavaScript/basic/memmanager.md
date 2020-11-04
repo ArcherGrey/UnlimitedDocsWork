@@ -30,7 +30,7 @@ js 的内存生命周期：
 
 为了不让程序员费心分配内存，`JavaScript` 在定义变量时就完成了内存分配:
 
-```JavaScript
+```js
 var n = 123; // 给数值变量分配内存
 var s = "azerty"; // 给字符串分配内存
 
@@ -42,29 +42,33 @@ var o = {
 // 给数组及其包含的值分配内存（就像对象一样）
 var a = [1, null, "abra"];
 
-function f(a){
+function f(a) {
   return a + 2;
 } // 给函数（可调用的对象）分配内存
 
 // 函数表达式也能分配一个对象
-someElement.addEventListener('click', function(){
-  someElement.style.backgroundColor = 'blue';
-}, false);
+someElement.addEventListener(
+  "click",
+  function() {
+    someElement.style.backgroundColor = "blue";
+  },
+  false
+);
 ```
 
 ### 通过函数调用分配内存
 
 有些函数调用结果是分配对象内存：
 
-```JavaScript
+```js
 var d = new Date(); // 分配一个 Date 对象
 
-var e = document.createElement('div'); // 分配一个 DOM 元素
+var e = document.createElement("div"); // 分配一个 DOM 元素
 ```
 
 有些方法分配新变量或者新对象：
 
-```JavaScript
+```js
 var s = "azerty";
 var s2 = s.substr(0, 3); // s2 是一个新的字符串
 // 因为字符串是不变量，
@@ -100,7 +104,7 @@ var a3 = a.concat(a2);
 
 函数调用形成了一个栈帧:
 
-```JavaScript
+```js
 function foo(b) {
   var a = 10;
   return a + b + 11;
@@ -122,12 +126,14 @@ console.log(bar(7));
 
 程序运行时，每个线程分配一个`stack`，每个进程分配一个`heap`，也就是说，`stack`是线程独占的，`heap`是线程共用的。此外，`stack`创建的时候，大小是确定的，数据超过这个大小，就发生`stack overflow`错误，而`heap`的大小是不确定的，需要的话可以不断增加。所以这里只看`stack`的大小限制。下面是一个简单的测试：
 
-```JavaScript
-var i=0;
+```js
+var i = 0;
 function inc() {
-    i++;
-    if(i>41909){return;}
-    inc();
+  i++;
+  if (i > 41909) {
+    return;
+  }
+  inc();
 }
 inc();
 ```

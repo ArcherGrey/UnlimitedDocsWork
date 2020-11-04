@@ -14,3 +14,6 @@
   - [ ] markdown-it-vue
 - [ ] 网页转换为 pdf 或者图片
   - [ ] html2canvas
+- [ ] excel 预览
+  - [ ] xlsx 解析
+  - [ ] canvas-datagrid 展示

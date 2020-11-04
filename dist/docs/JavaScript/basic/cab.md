@@ -2,7 +2,7 @@
 
 `call` 也就是 `Function.prototype.call()` ，是函数类型特有的原型方法，可以传入一个指定的`this`和其他参数：
 
-```JavaScript
+```js
 function Product(name, price) {
   this.name = name;
   this.price = price;
@@ -10,27 +10,27 @@ function Product(name, price) {
 
 function Food(name, price) {
   Product.call(this, name, price);
-  this.category = 'food';
+  this.category = "food";
 }
 
-console.log(new Food('cheese', 5).name);
+console.log(new Food("cheese", 5).name);
 // expected output: "cheese"
 ```
 
 函数中`this`所指始终是调用函数的对象，如果不使用`call`：
 
-```JavaScript
+```js
 function Product(name, price) {
   this.name = name;
   this.price = price;
 }
 
 function Food(name, price) {
-  Product( name, price);
-  this.category = 'food';
+  Product(name, price);
+  this.category = "food";
 }
 
-console.log(new Food('cheese', 5).name);
+console.log(new Food("cheese", 5).name);
 // expected output: "undefined"
 ```
 
@@ -46,11 +46,13 @@ console.log(new Food('cheese', 5).name);
 
 `bind` 函数会创建一个新函数（绑定函数），新函数和被调函数（绑定函数的目标函数）具有相同的函数体。当新函数被调用时`this` 绑定到`bind` 的第一个参数：
 
-```JavaScript
+```js
 this.x = 9;
 var module = {
   x: 81,
-  getX: function() { return this.x; }
+  getX: function() {
+    return this.x;
+  }
 };
 
 module.getX(); // 返回 81
@@ -68,7 +70,7 @@ boundGetX(); // 返回 81
 
 `bind` 一个最简单的用法是使一个函数拥有预设的初始参数。这些参数（如果有的话）作为 bind()的第二个参数跟在 this（或其他对象）后面，之后它们会被插入到目标函数的参数列表的开始位置，传递给绑定函数的参数会跟在它们的后面：
 
-```JavaScript
+```js
 function list() {
   return Array.prototype.slice.call(arguments);
 }
@@ -84,7 +86,7 @@ var list3 = leadingThirtysevenList(1, 2, 3); // [37, 1, 2, 3]
 
 在默认情况下，使用 window.setTimeout() 时，this 关键字会指向 window （或全局）对象。当使用类的方法时，需要 this 引用类的实例，你可能需要显式地把 this 绑定到回调函数以便继续使用实例：
 
-```JavaScript
+```js
 function LateBloomer() {
   this.petalCount = Math.ceil(Math.random() * 12) + 1;
 }
@@ -95,10 +97,9 @@ LateBloomer.prototype.bloom = function() {
 };
 
 LateBloomer.prototype.declare = function() {
-  console.log('I am a beautiful flower with ' +
-    this.petalCount + ' petals!');
+  console.log("I am a beautiful flower with " + this.petalCount + " petals!");
 };
 
 var flower = new LateBloomer();
-flower.bloom();  // 一秒钟后, 调用'declare'方法
+flower.bloom(); // 一秒钟后, 调用'declare'方法
 ```

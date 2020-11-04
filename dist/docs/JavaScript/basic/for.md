@@ -4,9 +4,8 @@
 
 ### 语法
 
-```JavaScript
-for ([initialization]; [condition]; [final-expression])
-   statement
+```js
+for ([initialization]; [condition]; [final - expression]) statement;
 ```
 
 **头部圆括号中的所有三个表达式都是可选的**
@@ -20,25 +19,25 @@ for ([initialization]; [condition]; [final-expression])
 
 ### 示例
 
-```JavaScript
+```js
 // 常用
 for (var i = 0; i < 9; i++) {
-   console.log(i);
-   // more statements
+  console.log(i);
+  // more statements
 }
 
 // initialization 为空
 var i = 0;
 for (; i < 9; i++) {
-    console.log(i);
-    // more statements
+  console.log(i);
+  // more statements
 }
 
 // condition 为空
-for (var i = 0;; i++) {
-   console.log(i);
-   if (i > 3) break;
-   // more statements
+for (var i = 0; ; i++) {
+  console.log(i);
+  if (i > 3) break;
+  // more statements
 }
 
 // 所有都忽略
@@ -52,7 +51,6 @@ for (;;) {
 
 // statement 为空
 for (var i = 0; i < 9; i++);
-
 ```
 
 `statement` 为空的时候，后面的分号是强制性的，如果没有分号后面的语句会被视为 `statement`
@@ -69,9 +67,9 @@ for (var i = 0; i < 9; i++);
 
 ### 语法
 
-```JavaScript
+```js
 for await (variable of iterable) {
-  statement
+  statement;
 }
 ```
 
@@ -82,7 +80,7 @@ for await (variable of iterable) {
 
 ### 示例
 
-```JavaScript
+```js
 async function* asyncGenerator() {
   var i = 0;
   while (i < 3) {
@@ -114,9 +112,8 @@ IE 不兼容
 
 ### 语法
 
-```JavaScript
-for (variable in object)
-  statement
+```js
+for (variable in object) statement;
 ```
 
 |    名称    |              说明              |
@@ -127,8 +124,8 @@ for (variable in object)
 
 ### 示例
 
-```JavaScript
-var obj = {a:1, b:2, c:3};
+```js
+var obj = { a: 1, b: 2, c: 3 };
 
 for (var prop in obj) {
   console.log("obj." + prop + " = " + obj[prop]);
@@ -139,20 +136,19 @@ for (var prop in obj) {
 // "obj.b = 2"
 // "obj.c = 3"
 
-
 // 顺序不一致
 
-var obj={
-  "1":"first",
-  "two":"zoo",
-  "3":"2",
-  "three":"34",
-  "4":"1",
-  "2":"second"
+var obj = {
+  "1": "first",
+  two: "zoo",
+  "3": "2",
+  three: "34",
+  "4": "1",
+  "2": "second"
 };
 for (var i in obj) {
-    console.log(i+":"+obj[i]);
-};
+  console.log(i + ":" + obj[i]);
+}
 
 // Output:
 // 1:first
@@ -175,9 +171,9 @@ for (var i in obj) {
 
 ### 语法
 
-```JavaScript
+```js
 for (variable of iterable) {
-    //statements
+  //statements
 }
 
 // variable 每次迭代中，将不容的值分配给变量
@@ -186,18 +182,17 @@ for (variable of iterable) {
 
 ### 示例
 
-```JavaScript
+```js
 // 迭代 Array
 let iterable = [10, 20, 30];
 
 for (let value of iterable) {
-    value += 1;
-    console.log(value);
+  value += 1;
+  console.log(value);
 }
 // 11
 // 21
 // 31
-
 
 // 迭代 String
 let iterable = "boo";
@@ -208,8 +203,6 @@ for (let value of iterable) {
 // "b"
 // "o"
 // "o"
-
-
 ```
 
 ### 和 `for ... in` 的区别

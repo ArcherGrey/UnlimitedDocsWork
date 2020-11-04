@@ -49,7 +49,7 @@
 
 - 3.0.1 版本后点击重复路由会报错
 
-```JavaScript
+```js
 // 防止点击重复路由报错
 const originalPush = Router.prototype.push;
 Router.prototype.push = function push(location, onResolve, onReject) {

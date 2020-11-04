@@ -48,7 +48,7 @@
 - bread
   - 点击重复路由报错
 
-```JavaScript
+```js
 // 防止点击重复路由报错
 const originalPush = Router.prototype.push;
 Router.prototype.push = function push(location, onResolve, onReject) {

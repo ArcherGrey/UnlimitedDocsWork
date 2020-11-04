@@ -18,7 +18,7 @@
 
 一般有两种，一个是第一次是等待后执行，另一种是先执行再等待，代码：
 
-```JavaScript
+```js
 // 普通版
 function debounce(func, wait) {
   var timer;
@@ -34,7 +34,6 @@ function debounce(func, wait) {
     }, wait);
   };
 }
-
 
 // 立即执行
 function debounce(func, wait, imme) {
@@ -60,7 +59,6 @@ function debounce(func, wait, imme) {
     }
   };
 }
-
 ```
 
 ## 节流
@@ -71,7 +69,7 @@ function debounce(func, wait, imme) {
 
 - 时间戳：
 
-```JavaScript
+```js
 function throttle(func, wait) {
   // 初始化起始时间
   var previous = 0;
@@ -87,12 +85,11 @@ function throttle(func, wait) {
     }
   };
 }
-
 ```
 
 - 定时器：
 
-```JavaScript
+```js
 function throttle(func, wait) {
   var timeout;
 
@@ -109,5 +106,4 @@ function throttle(func, wait) {
     }
   };
 }
-
 ```

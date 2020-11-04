@@ -72,19 +72,19 @@
 
 如果变量定义在函数之外，则变量就处于全局作用域中：
 
-```JavaScript
+```js
 // 默认全局作用域
 var a = 1;
-function fn(){};
+function fn() {}
 ```
 
 全局作用域中的变量可以在任何其他作用域中访问和修改：
 
-```JavaScript
+```js
 var a = 1;
-function fn(){
-    console.log(a); // 显示 a
-    a = 2; // 修改 a
+function fn() {
+  console.log(a); // 显示 a
+  a = 2; // 修改 a
 }
 ```
 

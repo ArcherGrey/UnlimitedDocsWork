@@ -24,33 +24,33 @@ url 无法识别特殊字符，如果数据中含有特殊字符（如中文）�
 
 ### 封装函数
 
-```JavaScript
-function get(url,data,callback){
-    //创建xhr对象
-    var xhr;
-    if(window.XMLHttpRequest){
-        xhr = new XMLHttpRequest();
-    }else{
-        xhr = new ActiveXObject('Microsoft.XMLHTTP');
+```js
+function get(url, data, callback) {
+  //创建xhr对象
+  var xhr;
+  if (window.XMLHttpRequest) {
+    xhr = new XMLHttpRequest();
+  } else {
+    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  //异步接受响应
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        //实际操作
+        callback && callback(xhr.responseText);
+      }
     }
-    //异步接受响应
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState == 4){
-            if(xhr.status == 200){
-                //实际操作
-                callback && callback(xhr.responseText);
-            }
-        }
-    }
-    for(var key in data){
-        url += (url.indexOf("?") == -1 ? "?" : "&");
-        //编码特殊字符
-        url += encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
-    }
-    //增加随机数，防止缓存
-    xhr.open('get',url+'&'+Number(new Date()),true);
-    //发送请求
-    xhr.send();
+  };
+  for (var key in data) {
+    url += url.indexOf("?") == -1 ? "?" : "&";
+    //编码特殊字符
+    url += encodeURIComponent(key) + "=" + encodeURIComponent(data[key]);
+  }
+  //增加随机数，防止缓存
+  xhr.open("get", url + "&" + Number(new Date()), true);
+  //发送请求
+  xhr.send();
 }
 ```
 
@@ -62,8 +62,8 @@ function get(url,data,callback){
 
 使用 `XHR` 来模仿表单提交：首先将 `Content-Type` 头部信息设置为 `application/x-www-form-urlencoded`，也就是表单提交时的内容类型:
 
-```JavaScript
-xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+```js
+xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
 ```
 
 如果不设置 `Content-Type`，发送给服务器的数据就不会出现在 `$_POSR` 超级全局变量中。这时要访问同样的数据，须借助 `$HTTP_RAW_POST_DATA`
@@ -72,7 +72,7 @@ xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
 
 `POST` 数据的格式与查询字符串格式相同，名和值之间用等号链接，名值对之间用和号(`&`)分隔，如下所示：
 
-```JavaScript
+```js
 xhr.send('name="abc"&num=123');
 ```
 
@@ -88,33 +88,33 @@ xhr.send('name="abc"&num=123');
 
 ### 封装函数
 
-```JavaScript
-function post(url,data,callback){
-    //创建xhr对象
-    var xhr;
-    if(window.XMLHttpRequest){
-        xhr = new XMLHttpRequest();
-    }else{
-        xhr = new ActiveXObject('Microsoft.XMLHTTP');
+```js
+function post(url, data, callback) {
+  //创建xhr对象
+  var xhr;
+  if (window.XMLHttpRequest) {
+    xhr = new XMLHttpRequest();
+  } else {
+    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  //异步接受响应
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+        //实际操作
+        callback && callback(xhr.responseText);
+      }
     }
-    //异步接受响应
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState == 4){
-            if(xhr.status == 200){
-                //实际操作
-                callback && callback(xhr.responseText);
-            }
-        }
-    }
-    var strData = '';
-    for(var key in data){
-        strData += '&' + key + "=" + data[key];
-    }
-    strData = strData.substring(1);
-    xhr.open('post',url,true);
-    //设置请求头
-    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
-    //发送请求
-    xhr.send(strData);
+  };
+  var strData = "";
+  for (var key in data) {
+    strData += "&" + key + "=" + data[key];
+  }
+  strData = strData.substring(1);
+  xhr.open("post", url, true);
+  //设置请求头
+  xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+  //发送请求
+  xhr.send(strData);
 }
 ```

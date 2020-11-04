@@ -9,7 +9,7 @@
 
 例：
 
-```JavaScript
+```js
 var a = new b();
 
 // 相当于
@@ -20,11 +20,11 @@ b.call(a); // 将创建的对象作为 this 的上下文
 
 例 2：
 
-```JavaScript
+```js
 function create(Con, ...args) {
-  let obj = {}
-  Object.setPrototypeOf(obj, Con.prototype)
-  let result = Con.apply(obj, args)
-  return result instanceof Object ? result : obj
+  let obj = {};
+  Object.setPrototypeOf(obj, Con.prototype);
+  let result = Con.apply(obj, args);
+  return result instanceof Object ? result : obj;
 }
 ```

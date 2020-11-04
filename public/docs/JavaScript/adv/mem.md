@@ -4,7 +4,7 @@
 
 例如：使用递归计算斐波拉其数列：
 
-```JavaScript
+```js
 var fibonacci = function(n) {
   return n < 2 ? n : fibonacci(n - 1) + fibonacci(n - 2);
 };
@@ -14,7 +14,7 @@ var fibonacci = function(n) {
 
 使用一个 `mem` 数组来保存计算结果，结果可以隐藏在闭包中，当函数调用时先检查是否存在，如果已经存在就直接返回结果
 
-```JavaScript
+```js
 var fibonacci = (function(n) {
   var mem = [0, 1];
   var fib = n => {
@@ -32,7 +32,7 @@ var fibonacci = (function(n) {
 
 可以把这个代码写的更加通用，提取一个 `memoizer` 函数:
 
-```JavaScript
+```js
 var memoizer = (mem, formula) => {
   var recur = n => {
     var res = mem[n];
@@ -44,25 +44,22 @@ var memoizer = (mem, formula) => {
   };
   return recur;
 };
-
 ```
 
 所有递归的都能直接使用：
 
 - 斐波拉其：
 
-```JavaScript
+```js
 var fibonacci = memoizer([0, 1], (recur, n) => {
   return recur(n - 1) + recur(n - 2);
 });
-
 ```
 
 - 阶乘：
 
-```JavaScript
+```js
 var factorial = memoizer([1, 1], (recur, n) => {
   return recur(n - 1) * n;
 });
-
 ```

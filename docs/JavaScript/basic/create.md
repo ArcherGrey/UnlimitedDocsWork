@@ -10,13 +10,13 @@
 
 ## 工厂模式
 
-```JavaScript
+```js
 function createPerson() {
   var o = new Object();
-  o.name = 'hanmeimei';
+  o.name = "hanmeimei";
   o.say = function() {
     alert(this.name);
-  }
+  };
   return o;
 }
 var person1 = createPerson();
@@ -32,12 +32,12 @@ var person1 = createPerson();
 
 ## 构造函数模式
 
-```JavaScript
+```js
 function Person() {
-  this.name = 'hanmeimei';
+  this.name = "hanmeimei";
   this.say = function() {
-    alert(this.name)
-  }
+    alert(this.name);
+  };
 }
 var person1 = new Person();
 ```
@@ -55,13 +55,13 @@ var person1 = new Person();
 
 ## 原型模式
 
-```JavaScript
+```js
 function Person() {}
-Person.prototype.name = 'hanmeimei';
+Person.prototype.name = "hanmeimei";
 Person.prototype.say = function() {
   alert(this.name);
-}
-Person.prototype.friends = ['lilei'];
+};
+Person.prototype.friends = ["lilei"];
 var person1 = new Person();
 ```
 
@@ -75,16 +75,16 @@ var person1 = new Person();
 
 ## 组合构造函数和原型模式
 
-```JavaScript
+```js
 function Person(name) {
-  this.name = name
-  this.friends = ['lilei']
+  this.name = name;
+  this.friends = ["lilei"];
 }
 Person.prototype.say = function() {
-  console.log(this.name)
-}
-var person1 = new Person('hanmeimei')
-person1.say() //hanmeimei
+  console.log(this.name);
+};
+var person1 = new Person("hanmeimei");
+person1.say(); //hanmeimei
 ```
 
 特点：
@@ -94,7 +94,7 @@ person1.say() //hanmeimei
 
 ## 动态原型模式
 
-```JavaScript
+```js
 function Person(name) {
   this.name = name
   if(typeof this.say != 'function') {
@@ -114,33 +114,32 @@ function Person(name) {
 
 ## 寄生构造函数模式
 
-```JavaScript
+```js
 function Person(name) {
-  var o = new Object()
-  o.name = name
+  var o = new Object();
+  o.name = name;
   o.say = function() {
-    alert(this.name)
-  }
-  return o
+    alert(this.name);
+  };
+  return o;
 }
-var peron1 = new Person('hanmeimei')
-
+var peron1 = new Person("hanmeimei");
 ```
 
 和工厂模式一样，不过可以区分类型
 
 ## 稳妥构造模式
 
-```JavaScript
+```js
 function Person(name) {
-  var o = new Object()
+  var o = new Object();
   o.say = function() {
-    alert(name)
-  }
+    alert(name);
+  };
 }
-var person1 = new Person('hanmeimei');
-person1.name  // undefined
-person1.say() //hanmeimei
+var person1 = new Person("hanmeimei");
+person1.name; // undefined
+person1.say(); //hanmeimei
 ```
 
 适合在一些安全环境中，或者在防止数据被其他应用程序改动时使用
