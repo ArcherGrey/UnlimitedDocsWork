@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-11-04 09:44:12
+ * @LastEditTime: 2020-11-05 15:45:37
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -13,11 +13,10 @@
 - [HTML&CSS]()
   - [基础]()
     - [word-break、word-wrap、white-space](./docs/HC/basic/word.md)
-    - [自适应和响应式](./docs/HC/basic/rdad.md)
-    - [水平垂直居中](./docs/HC/basic/vhmid.md)
     - [定位](./docs/HC/basic/position.md)
     - [伪类伪元素](./docs/HC/basic/pseudo.md)
     - [object 标签](./docs/HC/basic/object.md)
+    - [BFC](./docs/HC/basic/bfc.md)
   - [应用]()
     - [纯 CSS 自定义关闭按钮](./docs/HC/apply/closebutton.md)
     - [利用伪元素自定义图标](./docs/HC/apply/fakeicon.md)
@@ -25,10 +24,12 @@
     - [可调整宽高 div](./docs/HC/apply/resizediv.md)
     - [伪类实现悬浮动画](./docs/HC/apply/hoverAnime.md)
   - [布局]()
+    - [自适应和响应式](./docs/HC/layout/rdad.md)
     - [盒模型](./docs/HC/layout/index.md)
     - [flex](./docs/HC/layout/flex.md)
     - [圣杯 双飞翼 布局](./docs/HC/layout/layout1.md)
     - [固定宽度布局](./docs/HC/layout/width1.md)
+    - [水平垂直居中](./docs/HC/layout/vhmid.md)
 - [JS]()
 
   - [基础]()
@@ -191,6 +192,7 @@
     - [121. 买卖股票的最佳时机](./docs/Algorithm/leetcode/121.md)
     - [122. 买卖股票的最佳时机 II](./docs/Algorithm/leetcode/122.md)
     - [125. 验证回文串](./docs/Algorithm/leetcode/125.md)
+    - [127. 单词接龙](./docs/Algorithm/leetcode/127.md)
     - [129. 求根到叶子节点数字之和](./docs/Algorithm/leetcode/129.md)
     - [130. 被围绕的区域](./docs/Algorithm/leetcode/130.md)
     - [133. 克隆图](./docs/Algorithm/leetcode/133.md)

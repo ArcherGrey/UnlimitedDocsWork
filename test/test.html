@@ -6,9 +6,18 @@
     <title>Document</title>
   </head>
   <body>
-    <button id="btn">测试防抖</button>
+    <div id="left">左列定宽</div>
+    <div id="right-fix">
+      <div id="right" class="float">右列自适应</div>
+    </div>
   </body>
   <style>
+    .float {
+      float: left;
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+    }
     html,
     body {
       height: 100%;
@@ -16,25 +25,27 @@
       margin: 0;
       /* background-color: chartreuse; */
     }
-  </style>
-  <script>
-    const dom = document.getElementById("btn");
-    const fn = function() {
-      console.log("点击");
-      console.log(arguments);
-    };
-    function throttle(func, wait) {
-      var previous = 0;
-
-      return function() {
-        var now = +new Date();
-        if (now - previous > wait) {
-          func.apply(this, arguments);
-          previous = now;
-        }
-      };
+    #left {
+      background-color: #f00;
+      float: left;
+      width: 100px;
+      height: 100%;
     }
-
-    dom.addEventListener("click", throttle(fn, 1000, true));
-  </script>
+    #right-fix {
+      width: 100%;
+      /* height: 100%; */
+      overflow: auto;
+      /* border: coral 10px solid; */
+      margin-left: -100px;
+      float: right;
+      /* 正值大于或等于#left的宽度,才能显示在同一行 */
+    }
+    #right {
+      margin-left: 100px; /*大于或等于#left的宽度*/
+      background-color: #0f0;
+      height: 100px;
+      width: 100%;
+    }
+  </style>
+  <script></script>
 </html>

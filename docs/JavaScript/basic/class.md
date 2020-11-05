@@ -145,12 +145,12 @@ function createAnother(original) {
 寄生组合式继承就是为了降低调用父类构造函数的开销而出现的:
 
 ```js
-// 借用构造函数
+// 借用构造函数 继承父类上私有属性和方法
 function subClass() {
   superClass.apply(this, arugments);
 }
 
-// 寄生
+// 寄生 继承父类上公有的属性和方法
 function extend(subClass, superClass) {
   var prototype = object(superClass.prototype); //创建对象
   prototype.constructor = subClass; //增强对象

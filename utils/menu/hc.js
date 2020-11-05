@@ -15,11 +15,10 @@ const HCbasic = {
   label: "基础",
   children: buildItem1([
     ["word-break、word-wrap、white-space", "word"],
-    ["响应式 & 自适应", "rdad"],
-    ["水平垂直居中", "vhmid"],
     ["伪类伪元素", "pseudo"],
     ["定位", "position"],
-    ["object 标签", "object"]
+    ["object 标签", "object"],
+    ["BFC", "bfc"]
   ])
 };
 
@@ -33,7 +32,9 @@ const HClayout = {
     ["盒模型介绍", "index"],
     ["flex 布局", "flex"],
     ["圣杯 双飞翼 布局", "layout1"],
-    ["固定宽度布局", "width1"]
+    ["固定宽度布局", "width1"],
+    ["水平垂直居中", "vhmid"],
+    ["响应式 & 自适应", "rdad"]
   ])
 };
 
