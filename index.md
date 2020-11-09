@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-11-05 15:45:37
+ * @LastEditTime: 2020-11-09 10:10:46
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -84,6 +84,8 @@
     - [vue hook](./docs/FE_framework/vue/vhook.md)
     - [插槽](./docs/FE_framework/vue/slot.md)
     - [组件通信](./docs/FE_framework/vue/componentCom.md)
+    - [常见问题](./docs/FE_framework/vue/question.md)
+    - [性能优化](./docs/FE_framework/vue/performance.md)
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)
 - [前端工程化]()
   - [模块化]()
@@ -316,6 +318,7 @@
     - [918. 环形子数组的最大和](./docs/Algorithm/leetcode/918.md)
     - [925. 长按键入](./docs/Algorithm/leetcode/925.md)
     - [941. 有效的山脉数组](./docs/Algorithm/leetcode/941.md)
+    - [973. 最接近原点的 K 个点](./docs/Algorithm/leetcode/973.md)
     - [974. 和可被 K 整除的子数组](./docs/Algorithm/leetcode/974.md)
     - [977. 有序数组的平方](./docs/Algorithm/leetcode/977.md)
     - [983. 最低票价](./docs/Algorithm/leetcode/983.md)
@@ -329,6 +332,7 @@
     - [1055. 形成字符串的最短路径](./docs/Algorithm/leetcode/1055.md)
     - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
     - [1207. 独一无二的出现次数](./docs/Algorithm/leetcode/1207.md)
+    - [1356. 根据数字二进制下 1 的数目排序](./docs/Algorithm/leetcode/1356.md)
     - [1365. 有多少小于当前数字的数字](./docs/Algorithm/leetcode/1365.md)
     - [1371. 每个元音包含偶数次的最长子字符串](./docs/Algorithm/leetcode/1371.md)
     - [1388. 3n 块披萨](./docs/Algorithm/leetcode/1388.md)

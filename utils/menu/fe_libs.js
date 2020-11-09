@@ -20,7 +20,9 @@ const vueIndex = {
     ["vue-devtools 安装使用", "devtools"],
     ["vue hook", "vhook"],
     ["插槽", "slot"],
-    ["组件通信", "componentCom"]
+    ["组件通信", "componentCom"],
+    ["常见问题", "question"],
+    ["性能优化", "performance"]
   ])
 };
 

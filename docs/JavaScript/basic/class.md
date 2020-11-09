@@ -190,6 +190,93 @@ s1.sayName(); // s1
 s1.showScore(); // 99
 ```
 
-- super 和借用构造函数类似
-- 内部会有寄生继承
-- 其实就是寄生组合继承的语法糖
+经过 `Babel` 转换成 `es5`:
+
+```js
+var Person = /*#__PURE__*/ (function() {
+  function Person(name) {
+    _classCallCheck(this, Person);
+
+    this.name = name;
+    this.color = ["red", "blue", "green"];
+  }
+
+  _createClass(Person, [
+    {
+      key: "sayName",
+      value: function sayName() {
+        console.log(this.name);
+      }
+    }
+  ]);
+
+  return Person;
+})();
+
+var Student = /*#__PURE__*/ (function(_Person) {
+  _inherits(Student, _Person);
+
+  var _super = _createSuper(Student);
+
+  function Student(name, score) {
+    var _this;
+
+    _classCallCheck(this, Student);
+
+    _this = _super.call(this, name);
+    _this.score = score;
+    return _this;
+  }
+
+  _createClass(Student, [
+    {
+      key: "showScore",
+      value: function showScore() {
+        alert(this.score);
+      }
+    }
+  ]);
+
+  return Student;
+})(Person);
+```
+
+其中 `_inherits`:
+
+```js
+function _inherits(subClass, superClass) {
+  // extend 的继承目标必须是函数或者是 null
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError(
+      "Super expression must either be null or a function, not " +
+        typeof superClass
+    );
+  }
+
+  // 类似于 ES5 的寄生组合式继承，使用 Object.create，设置子类 prototype 属性的 __proto__ 属性指向父类的 prototype 属性
+  subClass.prototype = Object.create(superClass && superClass.prototype, {
+    constructor: {
+      value: subClass,
+      enumerable: false,
+      writable: true,
+      configurable: true
+    }
+  });
+
+  // 设置子类的 __proto__ 属性指向父类
+  if (superClass)
+    Object.setPrototypeOf
+      ? Object.setPrototypeOf(subClass, superClass)
+      : (subClass.__proto__ = superClass);
+}
+```
+
+具体的流程就是：
+
+1. 首先执行 `_inherits(Child, Parent)`，建立 `Child` 和 `Parent` 的原型链关系
+
+- `Object.setPrototypeOf(Child.prototype, Parent.prototype)`
+- `Object.setPrototypeOf(Child, Parent)`
+
+2. 然后调用 `Parent.call(this, name)`，根据 `Parent` 构造函数的返回值类型确定子类构造函数 `this` 的初始值 `_this`
+3. 最终，根据子类构造函数，修改 `_this` 的值，然后返回该值。
