@@ -61,3 +61,6 @@ Router.prototype.replace = function replace(location) {
   return originalReplace.call(this, location).catch(err => err);
 };
 ```
+
+- messagebox
+  - 按需引用 `Vue.use(MessageBox);` 这样写会造成刷新自动弹框 改成 `Vue.component(MessageBox.name, MessageBox);` 即可解决

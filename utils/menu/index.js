@@ -1,7 +1,7 @@
 /*
  * @Author: Grey
  * @Date: 2020-04-07 18:33:04
- * @LastEditTime: 2020-10-09 15:39:32
+ * @LastEditTime: 2020-11-09 18:26:25
  * @Description: 所有文档目录
  * @FilePath: \UnlimitedDocsWork\index\index.js
  */
@@ -20,6 +20,7 @@ import { esIndex } from "./es.js";
 import { npmIndex } from "./npm.js";
 import { markdownIndex } from "./markdown.js";
 import { cloudIndex } from "./cloud.js";
+import { quesIndex } from "./question.js";
 export const menu = [
   {
     id: "1",
@@ -90,5 +91,10 @@ export const menu = [
     id: "14",
     label: "云服务",
     children: cloudIndex
+  },
+  {
+    id: "15",
+    label: "常见问题汇总",
+    children: quesIndex
   }
 ];

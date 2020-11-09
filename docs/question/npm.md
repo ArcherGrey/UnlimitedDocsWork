@@ -8,7 +8,7 @@
 
 版本更新：
 
-- npm version
+- npm version | yarn version
   - patch 0.0.1-0.0.2
   - minor 0.0.1-0.1.0
   - major 0.0.1-1.0.0
@@ -19,7 +19,7 @@
 
 发布包
 
-- npm publish
+- npm publish | yarn publish
 
 强制刪除快速
 
