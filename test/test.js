@@ -1,20 +1,29 @@
-function quickSort(A, p, r) {
-  if (p < r) {
-    let q = Partition(A, p, r);
-    quickSort(A, p, q - 1);
-    quickSort(A, q + 1, r);
+/**
+ * @param {number[]} nums
+ * @return {void} Do not return anything, modify nums in-place instead.
+ */
+var nextPermutation = function(nums) {
+  // 第一次扫描 找到 [左侧较小数]
+  let i = nums.length - 2;
+  while (i >= 0 && nums[i] >= nums[i + 1]) {
+    i--;
   }
-}
 
-function Partition(A, p, r) {
-  let x = A[r];
-  let i = p - 1; // i 之前的包含i都比x小
-  for (let j = p; j < r; ++j) {
-    if (A[j] <= x) {
-      i++;
-      [A[j], A[i]] = [A[i], A[j]];
+  // 如果存在
+  if (i >= 0) {
+    // 第二次扫描 找到 [右侧较大数]
+    let j = nums.length - 1;
+    while (j >= 0 && nums[i] >= nums[j]) {
+      j--;
     }
+    [nums[i], nums[j]] = [nums[j], nums[i]];
   }
-  [A[i + 1], A[r]] = [A[r], A[i + 1]];
-  return i + 1;
-}
+  // 交换完成后 再反转 [较大数] 右侧的即可
+  let a = i + 1,
+    b = nums.length - 1;
+  while (a < b) {
+    [nums[a], nums[b]] = [nums[b], nums[a]];
+    a++;
+    b--;
+  }
+};

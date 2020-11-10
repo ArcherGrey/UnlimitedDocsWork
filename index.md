@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-11-09 10:10:46
+ * @LastEditTime: 2020-11-10 09:51:47
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -147,6 +147,7 @@
     - [26. 删除排序数组中的重复项](./docs/Algorithm/leetcode/26.md)
     - [27. 移除元素](./docs/Algorithm/leetcode/27.md)
     - [28. 实现 strStr()](./docs/Algorithm/leetcode/28.md)
+    - [31. 下一个排列](./docs/Algorithm/leetcode/31.md)
     - [33. 搜索旋转排序数组](./docs/Algorithm/leetcode/33.md)
     - [35. 搜索插入位置](./docs/Algorithm/leetcode/35.md)
     - [36. 有效的数独](./docs/Algorithm/leetcode/36.md)

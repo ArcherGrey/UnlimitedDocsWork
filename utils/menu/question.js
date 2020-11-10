@@ -4,7 +4,7 @@ const parent = {
   path: "./docs/question/"
 };
 const buildItem = buildItemByType(parent);
-export const QuesIndex = buildItem([
+export const quesIndex = buildItem([
   ["浏览器", "browser"],
   ["css", "css"],
   ["echarts", "echarts"],
