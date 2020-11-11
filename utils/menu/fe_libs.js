@@ -22,7 +22,8 @@ const vueIndex = {
     ["插槽", "slot"],
     ["组件通信", "componentCom"],
     ["常见问题", "question"],
-    ["性能优化", "performance"]
+    ["性能优化", "performance"],
+    ["函数式组件", "functional"]
   ])
 };
 

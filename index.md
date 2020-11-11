@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-11-10 09:51:47
+ * @LastEditTime: 2020-11-11 09:44:23
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -84,6 +84,7 @@
     - [vue hook](./docs/FE_framework/vue/vhook.md)
     - [插槽](./docs/FE_framework/vue/slot.md)
     - [组件通信](./docs/FE_framework/vue/componentCom.md)
+    - [函数式组件](./docs/FE_framework/vue/functional.md)
     - [常见问题](./docs/FE_framework/vue/question.md)
     - [性能优化](./docs/FE_framework/vue/performance.md)
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)
@@ -277,6 +278,7 @@
     - 待补充 [494. 目标和](./docs/Algorithm/leetcode/494.md)
     - [501. 二叉搜索树中的众数](./docs/Algorithm/leetcode/501.md)
     - [509. 斐波那契数](./docs/Algorithm/leetcode/509.md)
+    - [514. 自由之路](./docs/Algorithm/leetcode/514.md)
     - [529. 扫雷游戏](./docs/Algorithm/leetcode/529.md)
     - [530. 二叉搜索树的最小绝对差](./docs/Algorithm/leetcode/530.md)
     - [532. 数组中的 K-diff 数对](./docs/Algorithm/leetcode/532.md)
