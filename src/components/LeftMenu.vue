@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { menu } from "../../utils/menu/index.js";
+import { menu } from "@/menu/index.js";
 export default {
   name: "LeftMenu",
   data() {

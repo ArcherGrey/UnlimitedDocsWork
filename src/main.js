@@ -13,7 +13,7 @@ import axios from "axios";
 import VueAxios from "vue-axios";
 
 // 引入全局样式
-import "../styles/common.scss";
+import "@/styles/common.scss";
 
 import App from "./App.vue";
 
