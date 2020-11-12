@@ -1,7 +1,6 @@
 import Vue from "vue";
-// 引入element
-import ElementUI from "element-ui";
-import "element-ui/lib/theme-chalk/index.css";
+// 按需引入element
+import "@/plugins/element";
 
 // 动画库
 import anime from "animejs";
@@ -17,7 +16,6 @@ import "@/styles/common.scss";
 
 import App from "./App.vue";
 
-Vue.use(ElementUI);
 Vue.use(VueAxios, axios);
 
 // 全局变量使用

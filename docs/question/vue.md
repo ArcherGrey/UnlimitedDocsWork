@@ -38,6 +38,11 @@
   - vue 与 vue-tempalte-compiler 的版本不一致造成
   - 使用 element 和 element 版本也有关，都升级到最新
   - 子组件使用的 vue 和父组件版本不一致
+- props 双向绑定 特殊写法
+  - 父组件 v-model
+    - v-model 实际上是 :value 和 @input=changeValue 的语法糖
+  - 子组件 props value
+    - 创建 value 副本，修改触发 emit input
 
 # vuex
 

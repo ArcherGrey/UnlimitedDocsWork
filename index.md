@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-11-11 09:44:23
+ * @LastEditTime: 2020-11-12 17:32:27
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -319,6 +319,7 @@
     - [844. 比较含退格的字符串](./docs/Algorithm/leetcode/844.md)
     - [873. 最长的斐波那契子序列的长度](./docs/Algorithm/leetcode/873.md)
     - [918. 环形子数组的最大和](./docs/Algorithm/leetcode/918.md)
+    - [922. 按奇偶排序数组 II](./docs/Algorithm/leetcode/922.md)
     - [925. 长按键入](./docs/Algorithm/leetcode/925.md)
     - [941. 有效的山脉数组](./docs/Algorithm/leetcode/941.md)
     - [973. 最接近原点的 K 个点](./docs/Algorithm/leetcode/973.md)
@@ -332,6 +333,7 @@
     - [1025. 除数博弈](./docs/Algorithm/leetcode/1025.md)
     - [1027. 最长等差数列](./docs/Algorithm/leetcode/1027.md)
     - [1028. 从先序遍历还原二叉树](./docs/Algorithm/leetcode/1028.md)
+    - [1047. 删除字符串中的所有相邻重复项](./docs/Algorithm/leetcode/1047.md)
     - [1055. 形成字符串的最短路径](./docs/Algorithm/leetcode/1055.md)
     - 待完成 [1095. 山脉数组中查找目标值](./docs/Algorithm/leetcode/1095.md)
     - [1207. 独一无二的出现次数](./docs/Algorithm/leetcode/1207.md)

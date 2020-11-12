@@ -23,7 +23,7 @@ export function buildItemByType(parent, type) {
         return {
           id: `${parent.id}.${e[0]}`,
           label: `${e[0]}. ${e[1]}`,
-          path: `${parent.path}${e[1]}.md`
+          path: `${parent.path}${e[0]}.md`
         };
       });
     };
