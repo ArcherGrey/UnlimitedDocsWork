@@ -58,9 +58,11 @@ yarn add husky -D
 ```shell
 // npm
 npm install --save-dev @commitlint/cli
+npm install --save-dev @commitlint/config-conventional
 
 // yarn
 yarn add @commitlint/cli -D
+yarn add @commitlint/config-conventional -D
 ```
 
 添加配置文件，下面任意一种：
