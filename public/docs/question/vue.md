@@ -43,12 +43,17 @@
     - v-model 实际上是 :value 和 @input=changeValue 的语法糖
   - 子组件 props value
     - 创建 value 副本，修改触发 emit input
+- 图片 src 使用变量来赋值，图片加载失败
+  - 原因是图片打包在挂载之前，动态绑定生效在挂载之后，导致无法访问除了 static/public 里面的内容
+  - 解决
+    - 将图片放在 public 里面 见 vue-cli 文档 public
 
 # vuex
 
 - state 重置
   - 不能直接修改 state 对象 ，这样无法触发 getter
   - 需要保存一个初始值 origin，然后 object.assign(state,origin)
+- store 简单模式 多个文件引用相同的 store 文件就可以共享状态，因为所有组件内引用的都是同一个对象实例
 
 # vue-route
 
