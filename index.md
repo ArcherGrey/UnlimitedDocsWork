@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-11-25 09:51:05
+ * @LastEditTime: 2020-11-26 11:05:09
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -54,6 +54,7 @@
     - [变量提升](./docs/JavaScript/basic/hoisting.md)
     - [switch](./docs/JavaScript/basic/switch.md)
     - [Promise](./docs/JavaScript/basic/Promise.md)
+    - [变量声明](./docs/JavaScript/basic/declare.md)
   - [进阶]()
     - [函数式编程](./docs/JavaScript/adv/func.md)
     - [记忆化](./docs/JavaScript/adv/mem.md)
@@ -118,6 +119,7 @@
   - [排序查找]()
     - [二分查找](./docs/Algorithm/sort/bs.md)
     - [快速排序](./docs/Algorithm/sort/quick.md)
+    - [基数排序](./docs/Algorithm/sort/radix.md)
   - [树]()
     - [二叉树遍历](./docs/Algorithm/tree/btTravers.md)
     - [二叉树常见问题](./docs/Algorithm/tree/btQs.md)
@@ -210,6 +212,7 @@
     - [152. 乘积最大子数组](./docs/Algorithm/leetcode/152.md)
     - [155. 最小栈](./docs/Algorithm/leetcode/155.md)
     - [159. 至多包含两个不同字符的最长子串](./docs/Algorithm/leetcode/159.md)
+    - [164. 最大间距](./docs/Algorithm/leetcode/164.md)
     - [167. 两数之和 II - 输入有序数组](./docs/Algorithm/leetcode/167.md)
     - [169. 多数元素](./docs/Algorithm/leetcode/169.md)
     - [170. 两数之和 III - 数据结构设计](./docs/Algorithm/leetcode/170.md)

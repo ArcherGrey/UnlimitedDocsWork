@@ -34,7 +34,8 @@ const esBasic = {
     ["类型判断", "typeof"],
     ["变量提升", "hoisting"],
     ["switch", "switch"],
-    ["Promise", "Promise"]
+    ["Promise", "Promise"],
+    ["变量声明", "declare"]
   ])
 };
 

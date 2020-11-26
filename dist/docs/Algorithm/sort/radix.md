@@ -1,3 +1,15 @@
+# 基数排序
+
+:::info
+基数排序是一种非比较型整数排序算法，其原理是将整数按位数切割成不同的数字，然后按每个位数分别比较。由于整数也可以表达字符串（比如名字或日期）和特定格式的浮点数，所以基数排序也不是只能使用于整数。
+:::
+
+分为两种：
+
+- `LSD(Least significant digital)`：最低有效位优先，即从右向左开始排序。
+- `MSD(Most significant digital)`：最高有效位优先，即从左往右开始排序。
+
+```js
 /**
  * @description: LSD Radix Sort
  * @param {Array} nums 待排序数组
@@ -13,7 +25,7 @@ function radixSort(nums) {
 
   // 超过最大值就结束排序
   while (maxVal >= exp) {
-    const cnt = new Array(10).fill(0); // cnt[i] 对应的就是基数为 i 的值的最后位置
+    const cnt = new Array(10).fill(0); // 统计每个基数的数量
     for (let i = 0; i < n; ++i) {
       let digit = Math.floor(nums[i] / exp) % 10; // 计算基数
       cnt[digit]++;
@@ -32,3 +44,6 @@ function radixSort(nums) {
     exp *= 10;
   }
 }
+```
+
+时间复杂度为`O (nlog(r)m)`，其中 `r` 为所采取的基数，`m` 是最大位数
