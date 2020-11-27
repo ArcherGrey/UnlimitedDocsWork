@@ -7,5 +7,6 @@ const buildItem = buildItemByType(parent);
 export const networkIndex = buildItem([
   ["get & post", "request"],
   ["session & cookie", "cookie"],
-  ["sessionStorage 和 localStorage", "storage"]
+  ["sessionStorage 和 localStorage", "storage"],
+  ["跨域", "crossdomain"]
 ]);
