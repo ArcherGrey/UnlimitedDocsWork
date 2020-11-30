@@ -210,11 +210,20 @@ monitor system + data
     - excel sheetjs canvas-datagrid
       - 数据量大 滑动条卡顿 滑动内存上升
 
-2020 11 -
+2020 11 - 2020 12
 
 hh data-fusion
 
 - x
-  - 地图
+  - 色斑图绘制
 - y
   - 重复请求拦截
+
+2020 12 -
+
+sd php
+
+- x
+  - echart 图表
+- y
+  - php 运行

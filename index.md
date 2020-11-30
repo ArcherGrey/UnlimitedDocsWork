@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-11-27 18:54:19
+ * @LastEditTime: 2020-11-30 09:57:59
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -135,6 +135,7 @@
     - [递归](./docs/Algorithm/leetcode_Class/recursion.md)
     - 待补充 [动态规划](./docs/Algorithm/leetcode_Class/dynamic.md)
   - [leetcode 题解]()
+
     - [1. 两数之和](./docs/Algorithm/leetcode/1.md)
     - [3. 无重复字符的最长子串](./docs/Algorithm/leetcode/3.md)
     - 待补充 [5. 最长回文子串](./docs/Algorithm/leetcode/5.md)
@@ -318,6 +319,7 @@
     - [733. 图像渲染](./docs/Algorithm/leetcode/733.md)
     - [739. 每日温度](./docs/Algorithm/leetcode/739.md)
     - [740. 删除与获得点数](./docs/Algorithm/leetcode/740.md)
+    - [767. 重构字符串](./docs/Algorithm/leetcode/767.md)
     - [771. 宝石与石头](./docs/Algorithm/leetcode/771.md)
     - [779. 第 K 个语法符号](./docs/Algorithm/leetcode/779.md)
     - [783. 二叉搜索树节点最小距离](./docs/Algorithm/leetcode/783.md)
