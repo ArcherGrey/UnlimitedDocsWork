@@ -5,6 +5,9 @@
     - prop 必须和 model 名称对应
     - 使用 validator 每种情况必须有 callback
     - 校验数字需要 model 后面加 number
+  - form-item 为 input 的时候 设置 key 为随机数，输入会丢失焦点
+    - 原因：input 输入会修改 form 导致 form 重绘，新生成的 input key 是随机数肯定不一样导致 input 也会重绘
+    - 解决：设置 key 为固定值，vue 就不会重绘
 - input
   - 内容过长会导致浏览器内存异常增加而卡住
   - 非 textarea 类型无法读取换行符
