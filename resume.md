@@ -216,8 +216,10 @@ hh data-fusion
 
 - x
   - 色斑图绘制
+  - 色标卡
 - y
   - 重复请求拦截
+  - geojson
 
 2020 12 -
 
