@@ -55,4 +55,13 @@ const esAdvanced = {
   ])
 };
 
-export const esIndex = [esBasic, esAdvanced];
+// 应用
+const p3 = bs(3, "app");
+const buildItem3 = buildItemByType(p3);
+const esApp = {
+  id: p3.id,
+  label: "应用",
+  children: buildItem3([["翻转字符串", "reverseStr"]])
+};
+
+export const esIndex = [esBasic, esAdvanced, esApp];
