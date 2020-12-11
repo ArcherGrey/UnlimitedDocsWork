@@ -1,7 +1,7 @@
 <!--
  * @Author: ArcherGrey
  * @Date: 2020-04-13 16:27:01
- * @LastEditTime: 2020-12-10 09:53:44
+ * @LastEditTime: 2020-12-11 09:50:39
  * @Description: 文档目录
  * @FilePath: \UnlimitedDocsWork\index.md
  -->
@@ -89,6 +89,8 @@
     - [函数式组件](./docs/FE_framework/vue/functional.md)
     - [常见问题](./docs/FE_framework/vue/question.md)
     - [性能优化](./docs/FE_framework/vue/performance.md)
+  - [Redux]()
+    - [介绍]()
   - 待完成 [html2canvas](./docs/FE_Tools/html2canvas.md)
 - [前端工程化]()
   - [模块化]()
@@ -307,6 +309,7 @@
     - [628. 三个数的最大乘积](./docs/Algorithm/leetcode/628.md)
     - [637. 二叉树的层平均值](./docs/Algorithm/leetcode/637.md)
     - [647. 回文子串](./docs/Algorithm/leetcode/647.md)
+    - [649. Dota2 参议院](./docs/Algorithm/leetcode/649.md)
     - [652. 寻找重复的子树](./docs/Algorithm/leetcode/652.md)
     - [657. 机器人能否返回原点](./docs/Algorithm/leetcode/657.md)
     - [659. 分割数组为连续子序列](./docs/Algorithm/leetcode/659.md)

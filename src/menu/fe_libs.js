@@ -27,4 +27,13 @@ const vueIndex = {
   ])
 };
 
-export const fe_libsIndex = [vueIndex];
+// redux
+const p2 = bs(2, "redux");
+const buildItem2 = buildItemByType(p2);
+const reduxIndex = {
+  id: parent.id,
+  label: "Redux",
+  children: buildItem2([["官方文档", "docs"]])
+};
+
+export const fe_libsIndex = [vueIndex, reduxIndex];

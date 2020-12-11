@@ -1,30 +1,32 @@
 /**
- * @param {number[]} bills
- * @return {boolean}
+ * @param {string} senate
+ * @return {string}
  */
-var lemonadeChange = function(bills) {
-  // 统计 5元 10元 数量
-  let five = 0,
-    ten = 0;
-  for (let b of bills) {
-    if (b == 5) {
-      five++;
-    } else if (b == 10) {
-      // 10 元需要找零 5元
-      ten++;
-      if (--five < 0) return false;
-    } else if (b == 20) {
-      // 20 需要找零 15
-      // 优先 判断 10 + 5 是否满足，因为 5 的需求更多需要保留
-      if (ten) {
-        ten--;
-        if (--five < 0) return false;
-      } else {
-        // 不满足再判断是否有 5 + 5 + 5
-        five -= 3;
-        if (five < 0) return false;
-      }
+var predictPartyVictory = function(senate) {
+  const n = senate.length;
+  // 两个数组分别保存两边的序号
+  const radiant = [],
+    dire = [];
+
+  for (const [i, ch] of Array.from(senate).entries()) {
+    if (ch === "R") {
+      radiant.push(i);
+    } else {
+      dire.push(i);
     }
   }
-  return true;
+
+  // 有一个空队就结束
+  while (radiant.length && dire.length) {
+    // 序号在前,就更新序号加入到队尾
+    if (radiant[0] < dire[0]) {
+      radiant.push(radiant[0] + n);
+    } else {
+      dire.push(dire[0] + n);
+    }
+    // 出队
+    radiant.shift();
+    dire.shift();
+  }
+  return radiant.length ? "Radiant" : "Dire";
 };
