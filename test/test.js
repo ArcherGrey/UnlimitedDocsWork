@@ -1,32 +1,31 @@
 /**
- * @param {string} senate
- * @return {string}
+ * @param {number} N
+ * @return {number}
  */
-var predictPartyVictory = function(senate) {
-  const n = senate.length;
-  // 两个数组分别保存两边的序号
-  const radiant = [],
-    dire = [];
+var monotoneIncreasingDigits = function(N) {
+  // 将给定数字划分成数组
+  const strN = N.toString()
+    .split("")
+    .map(v => +v);
 
-  for (const [i, ch] of Array.from(senate).entries()) {
-    if (ch === "R") {
-      radiant.push(i);
-    } else {
-      dire.push(i);
-    }
+  // 满足条件 i 就继续遍历
+  let i = 1;
+  while (i < strN.length && strN[i - 1] <= strN[i]) {
+    i += 1;
   }
 
-  // 有一个空队就结束
-  while (radiant.length && dire.length) {
-    // 序号在前,就更新序号加入到队尾
-    if (radiant[0] < dire[0]) {
-      radiant.push(radiant[0] + n);
-    } else {
-      dire.push(dire[0] + n);
+  // 从 i 开始的部分不满足条件
+  if (i < strN.length) {
+    // 从 i 开始反向检查不满足的就减一，直到之前的都满足条件
+    while (i > 0 && strN[i - 1] > strN[i]) {
+      strN[i - 1] -= 1;
+      i -= 1;
     }
-    // 出队
-    radiant.shift();
-    dire.shift();
+
+    // 贪心的角度 后面的位数直接补 9 就是最大的
+    for (i += 1; i < strN.length; ++i) {
+      strN[i] = 9;
+    }
   }
-  return radiant.length ? "Radiant" : "Dire";
+  return parseInt(strN.join(""));
 };

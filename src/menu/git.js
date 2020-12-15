@@ -7,5 +7,6 @@ const buildItem = buildItemByType(parent);
 export const gitIndex = buildItem([
   ["github 无法登录", "host"],
   ["git 简明教程", "git"],
-  ["Git Hooks", "githook"]
+  ["Git Hooks", "githook"],
+  ["gitbash tree 命令安装", "tree"]
 ]);
