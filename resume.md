@@ -215,11 +215,24 @@ monitor system + data
 hh data-fusion
 
 - x
-  - 色斑图绘制
-  - 色标卡
+  - 站点、气象、卫星数据查询
+  - 气象数据展示
+    - 色斑图
+    - 网格数据
+    - 站点显示
+  - 数据保存下载
 - y
-  - 重复请求拦截
-  - geojson
+  - axios 封装
+    - 重复请求拦截
+    - 拦截异常返回 提示错误
+  - leaflet
+    - 插值计算 geojson 色斑图
+    - 站点 marker 位置
+    - 网格 marker 抽稀
+  - 组件状态
+    - 简单 store 模式
+  - 样式适配
+    - rem
 
 2020 12 -
 

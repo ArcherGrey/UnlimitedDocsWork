@@ -1,25 +1,23 @@
-/**
- * @param {string} s
- * @return {number}
- */
-var firstUniqChar = function(s) {
-  if (!s.length) return -1;
-  let m = new Map();
-  for (let i = 0; i < s.length; ++i) {
-    let x = s[i];
-    if (!m.has(x)) {
-      m.set(x, i);
+var candy = function(ratings) {
+  const n = ratings.length;
+  const left = new Array(n).fill(0);
+  for (let i = 0; i < n; i++) {
+    if (i > 0 && ratings[i] > ratings[i - 1]) {
+      left[i] = left[i - 1] + 1;
     } else {
-      m.set(x, -1);
+      left[i] = 1;
     }
   }
-  let resValue = Infinity,
-    res = "";
-  for (let [key, value] of m.entries()) {
-    if (resValue > value && value != -1) {
-      resValue = value;
-      res = key;
+
+  let right = 0,
+    ret = 0;
+  for (let i = n - 1; i > -1; i--) {
+    if (i < n - 1 && ratings[i] > ratings[i + 1]) {
+      right++;
+    } else {
+      right = 1;
     }
+    ret += Math.max(left[i], right);
   }
-  return resValue == Infinity ? -1 : resValue;
+  return ret;
 };

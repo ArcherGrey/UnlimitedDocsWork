@@ -34,7 +34,8 @@ const HClayout = {
     ["圣杯 双飞翼 布局", "layout1"],
     ["固定宽度布局", "width1"],
     ["水平垂直居中", "vhmid"],
-    ["响应式 & 自适应", "rdad"]
+    ["响应式 & 自适应", "rdad"],
+    ["PostCSS插件 rem适配布局 ", "postcss_rem"]
   ])
 };
 
@@ -49,7 +50,8 @@ const HCapply = {
     ["利用伪元素自定义图标", "fakeicon"],
     ["滚动效果", "roll"],
     ["可调整宽高 div", "resizediv"],
-    ["伪类实现悬浮动画", "hoverAnime"]
+    ["伪类实现悬浮动画", "hoverAnime"],
+    ["字体问题汇总", "font"]
   ])
 };
 

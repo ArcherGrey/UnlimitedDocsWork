@@ -67,3 +67,7 @@ Router.prototype.replace = function replace(location) {
 
 - messagebox
   - 按需引用 `Vue.use(MessageBox);` 这样写会造成刷新自动弹框 改成 `Vue.component(MessageBox.name, MessageBox);` 即可解决
+- icon 打包后显示乱码
+  - 可能使用了 sass ,element 使用的 node-sass,替换即可
+    - `yarn remove sass`
+    - `yarn add node-sass`
