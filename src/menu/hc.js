@@ -18,7 +18,8 @@ const HCbasic = {
     ["伪类伪元素", "pseudo"],
     ["定位", "position"],
     ["object 标签", "object"],
-    ["BFC", "bfc"]
+    ["BFC", "bfc"],
+    ["选择器", "selector"]
   ])
 };
 
@@ -51,7 +52,8 @@ const HCapply = {
     ["滚动效果", "roll"],
     ["可调整宽高 div", "resizediv"],
     ["伪类实现悬浮动画", "hoverAnime"],
-    ["字体问题汇总", "font"]
+    ["字体问题汇总", "font"],
+    ["绘制三角", "triangle"]
   ])
 };
 

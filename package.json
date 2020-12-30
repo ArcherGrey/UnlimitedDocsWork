@@ -6,7 +6,9 @@
     "serve": "rm -rf ./public/docs & cp -r docs ./public & vue-cli-service serve",
     "build": "rm -rf ./public/docs & cp -r docs ./public & vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "update": "rm -rf ./public/docs & cp -r docs ./public"
+    "update": "rm -rf ./public/docs & cp -r docs ./public",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "animejs": "^3.2.0",
@@ -19,12 +21,18 @@
     "vue-axios": "^2.1.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.1",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/vue": "^6.1.11",
     "@vue/cli-plugin-babel": "^4.4.0",
     "@vue/cli-plugin-eslint": "^4.4.0",
     "@vue/cli-service": "^4.4.0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
     "babel-plugin-component": "^1.1.1",
     "compression-webpack-plugin": "^4.0.0",
     "eslint": "^6.7.2",
