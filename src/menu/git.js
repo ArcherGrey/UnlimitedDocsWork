@@ -8,5 +8,6 @@ export const gitIndex = buildItem([
   ["github 无法登录", "host"],
   ["git 简明教程", "git"],
   ["Git Hooks", "githook"],
-  ["gitbash tree 命令安装", "tree"]
+  ["gitbash tree 命令安装", "tree"],
+  ["使用 ssh 连接 git", "ssh"]
 ]);

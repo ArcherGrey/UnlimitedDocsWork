@@ -1,19 +1,22 @@
 /**
- * @param {number[]} stones
- * @return {number}
+ * @param {string} s
+ * @return {number[][]}
  */
-var lastStoneWeight = function(stones) {
-  const pq = new MaxPriorityQueue();
-  for (const stone of stones) {
-    pq.enqueue("x", stone);
-  }
-
-  while (pq.size() > 1) {
-    const a = pq.dequeue()["priority"];
-    const b = pq.dequeue()["priority"];
-    if (a > b) {
-      pq.enqueue("x", a - b);
+var largeGroupPositions = function (s) {
+  let l = s.length;
+  if (l < 3) return [];
+  let res = [];
+  let a = 0;
+  for (let i = 1; i < l; ++i) {
+    if (s[i] !== s[a]) {
+      if (i - 1 - a > 1) {
+        res.push([a, i - 1]);
+      }
+      a = i;
     }
   }
-  return pq.isEmpty() ? 0 : pq.dequeue()["priority"];
+  if (l - 1 - a > 1) {
+    res.push([a, l - 1]);
+  }
+  return res;
 };

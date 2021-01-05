@@ -10,5 +10,6 @@ export const npmIndex = buildItem([
   ["husky", "husky"],
   ["nrm", "nrm"],
   ["AnyWhere", "anywhere"],
-  ["rimraf", "rimraf"]
+  ["rimraf", "rimraf"],
+  ["chalk", "chalk"]
 ]);

@@ -8,3 +8,13 @@
   - 可以使用 `transform: scale(n)` 缩放
     - 问题：会把整个块都缩放，造成留白
   - 让设计师修改
+
+## 过长省略号显示
+
+```css
+.hidden {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+```
