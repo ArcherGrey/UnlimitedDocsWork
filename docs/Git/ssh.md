@@ -72,3 +72,13 @@ $ clip < ~/.ssh/id_ed25519.pub
 5. 在 "Title"（标题）字段中，为新密钥添加描述性标签。 例如，如果您使用的是个人 Mac，此密钥名称可能是 "Personal MacBook Air"
 6. 将密钥粘贴到 "Key"（密钥）字段
 7. 单击 Add SSH key
+
+## 测试 SSH 连接
+
+设置 SSH 密钥并将其添加到您的 GitHub 帐户后，可以测试连接
+
+```bash
+$ ssh -T git@github.com
+# Attempts to ssh to GitHub
+> Hi ArcherGrey! You've successfully authenticated, but GitHub does not provide shell access.
+```

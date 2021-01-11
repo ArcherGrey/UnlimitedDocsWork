@@ -26,7 +26,10 @@ const buildItem2 = buildItemByType(p2);
 const npmTools = {
   id: p2.id,
   label: "package",
-  children: buildItem2([["yarn 常用命令", "yarnBook"]])
+  children: buildItem2([
+    ["yarn 常用命令", "yarnBook"],
+    ["npx", "npx"]
+  ])
 };
 
 // 其他工具
@@ -50,4 +53,12 @@ const handWriite = {
   ])
 };
 
-export const feeIndex = [feeBasic, npmTools, utils, handWriite];
+// CI/CD 持续集成 持续部署
+const p5 = bs(5, "release");
+const buildItem5 = buildItemByType(p5);
+const release = {
+  id: p5.id,
+  label: "CI/CD",
+  children: buildItem5([["semantic-release", "semantic_release"]])
+};
+export const feeIndex = [feeBasic, npmTools, utils, handWriite, release];

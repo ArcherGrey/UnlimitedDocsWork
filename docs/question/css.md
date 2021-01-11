@@ -28,3 +28,15 @@
     border-left: 60px solid transparent;
     border-right: 60px solid transparent;
     ```
+- img
+
+  - 等比例缩放
+
+  ```css
+  img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  ```
