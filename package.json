@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
     "markdown-it-vue": "^1.1.2",
