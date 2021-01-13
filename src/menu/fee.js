@@ -38,7 +38,10 @@ const buildItem3 = buildItemByType(p3);
 const utils = {
   id: p3.id,
   label: "其他工具",
-  children: buildItem3([["封装 axios", "package_axios"]])
+  children: buildItem3([
+    ["封装 axios", "package_axios"],
+    ["前端下载", "download"]
+  ])
 };
 
 // 原理/实现
