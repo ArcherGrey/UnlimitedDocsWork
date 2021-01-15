@@ -19,7 +19,8 @@ const HCbasic = {
     ["定位", "position"],
     ["object 标签", "object"],
     ["BFC", "bfc"],
-    ["选择器", "selector"]
+    ["选择器", "selector"],
+    ["unicode", "unicode"]
   ])
 };
 
