@@ -80,3 +80,10 @@ Router.prototype.replace = function replace(location) {
     - bodyminWidth = 每列宽度之和（不设置就是 80）
     - 如果实际宽度小于 bodyminWidth 就会显示横向滚动条
     - 可以通过设置 Min-width 使得 bodyminWidth 变小来解决
+  - 表头和列不对齐
+    - 由于横向或者垂直滑动条造成
+    - 修改 gutter 样式
+    ```js
+    this.$refs.queryTable.$el.querySelector("col[name=gutter]").style.width =
+      "滑动条宽度";
+    ```

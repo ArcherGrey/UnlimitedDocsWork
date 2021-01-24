@@ -115,6 +115,7 @@ jobs: # 所有作业
   release: # release
     name: Release # 作业名称
     runs-on: ubuntu-18.04 # 运行环境
+    environment: release-test # 环境名称
     steps: # 运行步骤
       - name: Checkout # 步骤名
         uses: actions/checkout@v2 # 执行操作 这里执行 checkout 操作
@@ -128,7 +129,130 @@ jobs: # 所有作业
         run: npm ci # 需要 package.lock.json
       - name: Release
         env: # 运行的环境变量
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 ```
+
+### 插件
+
+每个 `release` 步骤都由可配置的插件实现，可以支持不同的提交消息格式、发布说明生成和发布平台
+
+插件是一个 `npm` 模块，可以应用到下面一个或多个步骤中：
+
+|        步骤        | 必要 |                                              说明                                               |
+| :----------------: | :--: | :---------------------------------------------------------------------------------------------: |
+| `verifyConditions` |  否  |                    负责验证继续发布所需的条件：配置正确、身份验证令牌有效等                     |
+|  `analyzeCommits`  |  是  | 确定下一个发布版本的类型（`major minor patch`），如果有多个插件配置那么类型将会是其中最高的类型 |
+|  `verifyRelease`   |  否  |                        验证将要发布的版本的参数（版本号、类型、标签等）                         |
+|  `generateNotes`   |  否  |                     生成发布说明，如果多个插件配置，那么结果是所有插件累计                      |
+|     `prepare`      |  否  |                                  准备发布，例如创建或更新文件                                   |
+|     `publish`      |  否  |                                         发布 `release`                                          |
+|    `addChannel`    |  否  |                            添加 `release` 通道，例如添加 `dist-tag`                             |
+|     `success`      |  否  |                                     新的`release` 成功提示                                      |
+|       `fail`       |  否  |                                       `release` 失败提示                                        |
+
+注：如果没有插件配置 `analyzeCommits` 默认使用 `@semantic-release/commit-analyzer`
+
+**默认插件**
+下面四种插件默认安装：
+
+- `@semantic-release/commit-analyzer`
+- `@semantic-release/release-notes-generator`
+- `@semantic-release/npm`
+- `@semantic-release/github`
+
+安装插件：
+
+```shell
+$ npm install @semantic-release/git @semantic-release/changelog -D
+```
+
+配置：
+
+```json
+{
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/github",
+      {
+        "assets": ["dist/**"]
+      }
+    ],
+    "@semantic-release/git"
+  ],
+  "preset": "angular"
+}
+```
+
+- 公共参数 `preset`
+- `@semantic-release/github` 参数 `assets`
+
+### 工作流设置
+
+一个分支可以定义为下面一种类型：
+
+- `release` 基于最新版本发布
+- `maintenance` 基于旧版本发布
+- `pre-release` 预发布版本
+
+分支属性
+
+- `name` 分支名
+  - 必填
+  - 支持所有类型分支
+  - 如果匹配不成功会被忽略
+  - 例：
+  ```json
+  {
+    "branches": [
+      { "name": "1.x", "range": "1.x", "channel": "1.x" }, // Only after the `1.x` is created in the repo
+      { "name": "2.x", "range": "2.x", "channel": "2.x" }, // Only after the `2.x` is created in the repo
+      { "name": "master" },
+      { "name": "next", "channel": "next" } // Only after the `next` is created in the repo
+    ]
+  }
+  ```
+- `channel`
+  - 支持所有分支类型
+  - 例：
+  ```json
+  {
+    "branches": [
+      { "name": "master" }, // `channel` is undefined so the default distribution channel will be used
+      { "name": "next", "channel": "channel-next" } // `channel` is built with the template `channel-${name}`
+    ]
+  }
+  ```
+- `range`
+
+  - 必填
+  - 只能在 `maintenance` 类分支配置
+  - 例：
+
+  ```json
+  {
+    "branches": [
+      { "name": "1.1.x", "range": "1.1.x", "channel": "1.1.x" },
+      { "name": "1.2.x", "range": "1.2.x", "channel": "1.2.x" },
+      { "name": "master" }
+    ]
+  }
+  ```
+
+- `prerelease`
+
+  - 只能在 `pre-release` 类分支配置
+  - 例：
+
+  ```json
+  {
+    "branches": [
+      { "name": "master" },
+      { "name": "pre/rc", "channel": "pre/rc", "prerelease": "rc" }, // `prerelease` is built with the template `${name.replace(/^pre\\//g, "")}`
+      { "name": "beta", "channel": "beta", "prerelease": "beta" } // `prerelease` is set to `beta` as it is the value of `name`
+    ]
+  }
+  ```
