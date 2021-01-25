@@ -15,6 +15,7 @@ const leetcode = {
   label: "leetcode题解",
   children: buildItem1([
     [1, "两数之和"],
+    [2, "两数相加"],
     [3, "无重复字符的最长子串"],
     [5, "最长回文子串"],
     [7, "整数反转"],
