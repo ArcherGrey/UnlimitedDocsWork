@@ -16,7 +16,7 @@
     "core-js": "^3.6.5",
     "element-ui": "^2.13.2",
     "markdown-it-vue": "^1.1.2",
-    "marked": "^1.1.1",
+    "marked": "^2.0.0",
     "vue": "^2.6.11",
     "vue-axios": "^2.1.5"
   },
